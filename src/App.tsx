@@ -1,74 +1,97 @@
-import { useState, useEffect } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
-import ConciergePage from './pages/ConciergePage';
-import AssistantPage from './pages/AssistantPage';
-import BlogPage from './pages/BlogPage';
-import ContactPage from './pages/ContactPage';
-import GrowthSystemPage from './pages/GrowthSystemPage';
-import SocialMediaPage from './pages/SocialMediaPage';
-import LuxuryClientPsychology from './pages/blog/LuxuryClientPsychology';
-import MarketingMistakes from './pages/blog/MarketingMistakes';
-import InstagramStrategy from './pages/blog/InstagramStrategy';
-import GenericAgenciesFail from './pages/blog/GenericAgenciesFail';
-import AIAutomationROI from './pages/blog/AIAutomationROI';
-import PremiumBrandIdentity from './pages/blog/PremiumBrandIdentity';
-import GoogleAdsGuide from './pages/blog/GoogleAdsGuide';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
+
+// Layout
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+
+// Main pages
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ConciergePage from "./pages/ConciergePage";
+import AssistantPage from "./pages/AssistantPage";
+import BlogPage from "./pages/BlogPage";
+import ContactPage from "./pages/ContactPage";
+import GrowthSystemPage from "./pages/GrowthSystemPage";
+import SocialMediaPage from "./pages/SocialMediaPage";
+
+// Blog posts
+import LuxuryClientPsychology from "./pages/blog/LuxuryClientPsychology";
+import MarketingMistakes from "./pages/blog/MarketingMistakes";
+import InstagramStrategy from "./pages/blog/InstagramStrategy";
+import GenericAgenciesFail from "./pages/blog/GenericAgenciesFail";
+import AIAutomationROI from "./pages/blog/AIAutomationROI";
+import PremiumBrandIdentity from "./pages/blog/PremiumBrandIdentity";
+import GoogleAdsGuide from "./pages/blog/GoogleAdsGuide";
+
+// Scroll to top on navigation
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+  return null;
+}
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [currentPage]);
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <HomePage onNavigate={setCurrentPage} />;
-      case 'about':
-        return <AboutPage onNavigate={setCurrentPage} />;
-      case 'concierge':
-        return <ConciergePage onNavigate={setCurrentPage} />;
-      case 'assistant':
-        return <AssistantPage onNavigate={setCurrentPage} />;
-      case 'blog':
-        return <BlogPage onNavigate={setCurrentPage} />;
-      case 'contact':
-        return <ContactPage />;
-      case 'growth-system':
-        return <GrowthSystemPage onNavigate={setCurrentPage} />;
-      case 'social-media':
-        return <SocialMediaPage onNavigate={setCurrentPage} />;
-      case 'blog-luxury-client-psychology':
-        return <LuxuryClientPsychology onNavigate={setCurrentPage} />;
-      case 'blog-marketing-mistakes':
-        return <MarketingMistakes onNavigate={setCurrentPage} />;
-      case 'blog-instagram-strategy':
-        return <InstagramStrategy onNavigate={setCurrentPage} />;
-      case 'blog-generic-agencies-fail':
-        return <GenericAgenciesFail onNavigate={setCurrentPage} />;
-      case 'blog-ai-automation-roi':
-        return <AIAutomationROI onNavigate={setCurrentPage} />;
-      case 'blog-premium-brand-identity':
-        return <PremiumBrandIdentity onNavigate={setCurrentPage} />;
-      case 'blog-google-ads-guide':
-        return <GoogleAdsGuide onNavigate={setCurrentPage} />;
-      default:
-        return <HomePage onNavigate={setCurrentPage} />;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
-      <div className="page-transition">
-        {renderPage()}
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Navigation />
+        <ScrollToTop />
+
+        <div className="page-transition">
+          <Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/smartform" element={<ConciergePage />} />
+            <Route path="/ai-chat-assistant" element={<AssistantPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/growth-system" element={<GrowthSystemPage />} />
+            <Route path="/social-media" element={<SocialMediaPage />} />
+
+            {/* Blog Posts */}
+            <Route
+              path="/blog/luxury-client-psychology"
+              element={<LuxuryClientPsychology />}
+            />
+            <Route
+              path="/blog/marketing-mistakes"
+              element={<MarketingMistakes />}
+            />
+            <Route
+              path="/blog/instagram-strategy"
+              element={<InstagramStrategy />}
+            />
+            <Route
+              path="/blog/generic-agencies-fail"
+              element={<GenericAgenciesFail />}
+            />
+            <Route
+              path="/blog/ai-automation-roi"
+              element={<AIAutomationROI />}
+            />
+            <Route
+              path="/blog/premium-brand-identity"
+              element={<PremiumBrandIdentity />}
+            />
+            <Route path="/blog/google-ads-guide" element={<GoogleAdsGuide />} />
+
+            {/* Catch-all redirect to home */}
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        </div>
+
+        <Footer />
       </div>
-      <Footer onNavigate={setCurrentPage} />
-    </div>
+    </Router>
   );
 }
 

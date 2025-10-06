@@ -5,6 +5,7 @@ import {
   Sparkles,
   Filter,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface ConciergePageProps {
   onNavigate: (page: string) => void;
@@ -31,13 +32,13 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
             inbox.
           </p>
 
-          <button
-            onClick={() => onNavigate("contact")}
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
           >
             Add The Wedding SmartForm™ to Your Website
             <ArrowRight size={20} />
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -337,13 +338,13 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
             leads, save time, and focus on what matters most—creating
             unforgettable weddings.
           </p>
-          <button
-            onClick={() => onNavigate("contact")}
+          <Link
+            to={"/contact"}
             className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
           >
-            Add The Wedding SmartForm™ to Your Website
+            Try Out The Wedding SmartForm™ Now
             <ArrowRight size={20} />
-          </button>
+          </Link>
         </div>
       </section>
     </div>

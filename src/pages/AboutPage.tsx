@@ -1,10 +1,9 @@
 import { Heart, Target, Award, ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
-interface AboutPageProps {
-  onNavigate: (page: string) => void;
-}
+export default function AboutPage() {
+  const navigate = useNavigate();
 
-export default function AboutPage({ onNavigate }: AboutPageProps) {
   return (
     <div className="bg-white pt-20">
       <section className="min-h-[70vh] flex items-center justify-center px-6 lg:px-12 py-24">
@@ -108,8 +107,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                   We don't cast a wide net. We use sophisticated targeting
                   strategies to place your brand directly in front of couples
                   who are actively planning luxury weddings and have the budget
-                  to match their vision. Every dollar of ad spend is optimized
-                  to attract qualified, high-intent leads.
+                  to match their vision.
                 </p>
               </div>
             </div>
@@ -128,8 +126,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                   Your marketing should reflect the caliber of weddings you
                   create. We develop sophisticated brand messaging,
                   editorial-style content, and elegant campaigns that position
-                  you as the premier choice for discerning couples. No generic
-                  templates, no shortcuts—only work worthy of luxury brands.
+                  you as the premier choice for discerning couples.
                 </p>
               </div>
             </div>
@@ -145,11 +142,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                   Cutting-Edge Technology
                 </h3>
                 <p className="text-lg text-neutral-700 leading-relaxed">
-                  We've invested heavily in developing proprietary AI tools that
-                  automate lead capture, qualification, and nurturing. Our AI
-                  Concierge Suite™ ensures you never miss a lead, while
-                  automatically filtering out unqualified inquiries so you can
-                  focus on the couples who matter most.
+                  We've developed proprietary AI tools that automate lead
+                  capture, qualification, and nurturing — ensuring you never
+                  miss a lead, while automatically filtering out unqualified
+                  inquiries.
                 </p>
               </div>
             </div>
@@ -177,23 +173,14 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 caliber of clients their work deserved.
               </p>
               <p>
-                Too many planners were wasting time and money on generic
-                marketing agencies that didn't understand the nuances of the
-                high-end wedding market. They were attracting price shoppers
-                instead of value buyers, resulting in misaligned expectations
-                and underwhelming bookings.
-              </p>
-              <p>
-                We saw an opportunity to bridge this gap. By combining deep
+                We saw an opportunity to bridge this gap — combining deep
                 industry knowledge with advanced digital marketing strategies
-                and proprietary AI technology, we created a marketing solution
-                specifically engineered for luxury wedding planners.
+                and proprietary AI technology.
               </p>
               <p>
                 Today, Alta Frequenza serves some of the most prestigious
-                wedding planning firms in the country. Our clients consistently
-                report dramatic increases in lead quality, booking rates, and
-                average wedding budgets.
+                wedding planning firms worldwide, consistently driving growth
+                and elevating brand perception.
               </p>
               <p className="text-white font-medium pt-4">
                 We're not just a marketing agency—we're your strategic partner
@@ -217,15 +204,8 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <div className="space-y-6 text-base md:text-lg text-neutral-700 leading-relaxed">
             <p>
               A software engineer and digital marketing strategist, Marko has
-              spent years building applications, AI automations, and marketing
-              systems across multiple industries.
-            </p>
-            <p>
-              His experience working in various marketing agencies and serving
-              clients from diverse sectors provided a comprehensive
-              understanding of digital strategy. Yet it was the luxury wedding
-              industry that revealed the greatest opportunity for
-              specialization.
+              spent years building AI automations and marketing systems across
+              multiple industries.
             </p>
             <p>
               Recognizing that elite wedding planners deserved marketing systems
@@ -250,13 +230,13 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             Join the elite wedding planners who trust us to elevate their
             marketing and grow their luxury clientele.
           </p>
-          <button
-            onClick={() => onNavigate("contact")}
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
           >
-            Book Your Strategy Session
+            Book Your Consultation
             <ArrowRight size={20} />
-          </button>
+          </Link>
         </div>
       </section>
     </div>

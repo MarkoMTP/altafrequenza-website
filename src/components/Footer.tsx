@@ -1,12 +1,11 @@
-interface FooterProps {
-  onNavigate: (page: string) => void;
-}
+import { Link } from "react-router-dom";
 
-export default function Footer({ onNavigate }: FooterProps) {
+export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Brand Info */}
           <div>
             <h3 className="text-2xl font-serif mb-4">Alta Frequenza</h3>
             <p className="text-neutral-400 text-sm leading-relaxed">
@@ -15,44 +14,58 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
           </div>
 
+          {/* Navigation */}
           <div>
             <h4 className="text-sm tracking-wide mb-4 font-medium">
               Navigation
             </h4>
             <div className="space-y-2">
-              {["home", "about", "concierge", "assistant", "blog"].map(
-                (page) => (
-                  <button
-                    key={page}
-                    onClick={() => onNavigate(page)}
-                    className="block text-neutral-400 hover:text-white text-sm transition-colors"
-                  >
-                    {page === "home"
-                      ? "Home"
-                      : page === "about"
-                      ? "About"
-                      : page === "concierge"
-                      ? "The Wedding SmartForm™"
-                      : page === "assistant"
-                      ? "AI Planner's Assistant™"
-                      : "Blog"}
-                  </button>
-                )
-              )}
+              <Link
+                to="/"
+                className="block text-neutral-400 hover:text-white text-sm transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="block text-neutral-400 hover:text-white text-sm transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                to="/smartform"
+                className="block text-neutral-400 hover:text-white text-sm transition-colors"
+              >
+                The Wedding SmartForm™
+              </Link>
+              <Link
+                to="/ai-chat-assistant"
+                className="block text-neutral-400 hover:text-white text-sm transition-colors"
+              >
+                AI Planner’s Assistant™
+              </Link>
+              <Link
+                to="/blog"
+                className="block text-neutral-400 hover:text-white text-sm transition-colors"
+              >
+                Blog
+              </Link>
             </div>
           </div>
 
+          {/* Contact Button */}
           <div>
             <h4 className="text-sm tracking-wide mb-4 font-medium">Contact</h4>
-            <button
-              onClick={() => onNavigate("contact")}
+            <Link
+              to="/contact"
               className="inline-block px-6 py-2.5 border border-white text-white hover:bg-white hover:text-neutral-900 text-sm tracking-wide transition-all"
             >
               Book a Consultation
-            </button>
+            </Link>
           </div>
         </div>
 
+        {/* Footer Bottom */}
         <div className="mt-12 pt-8 border-t border-neutral-800 text-center text-neutral-500 text-sm">
           © {new Date().getFullYear()} Alta Frequenza Marketing. All rights
           reserved.
