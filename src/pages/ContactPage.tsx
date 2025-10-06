@@ -25,27 +25,42 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="bg-white pt-20">
-      <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 py-24">
+    <div className="bg-white pt-20 overflow-x-hidden">
+      {/* Fix Voiceflow iframe overflow */}
+      <style>{`
+        #voiceflow-chat-embed iframe {
+          max-width: 100% !important;
+          width: 100% !important;
+          height: 100% !important;
+          border: none !important;
+        }
+        #voiceflow-chat-embed {
+          max-width: 100vw;
+          overflow: hidden;
+        }
+      `}</style>
+
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 py-24">
         <div className="max-w-6xl mx-auto w-full">
           {/* Header */}
           <div className="text-center mb-16">
             <p className="text-sm tracking-widest text-neutral-500 mb-4">
               GET IN TOUCH
             </p>
-            <h1 className="text-5xl md:text-7xl font-serif text-neutral-900 mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-neutral-900 mb-6">
               Book Your Strategy Session
             </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
               Ready to attract more luxury couples and grow your wedding
               planning business? Schedule a complimentary consultation to
               discover how we can help.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          {/* Layout — stacks on mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Left side — Voiceflow Chat Embed */}
-            <div className="relative min-h-[750px] border border-neutral-200 rounded-lg shadow-sm flex items-center justify-center bg-neutral-50">
+            <div className="relative min-h-[600px] sm:min-h-[750px] border border-neutral-200 rounded-lg shadow-sm flex items-center justify-center bg-neutral-50 overflow-hidden">
               {!isChatLoaded && (
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-neutral-500 animate-pulse">
                   <div className="w-10 h-10 border-4 border-amber-600 border-t-transparent rounded-full animate-spin mb-4" />
@@ -56,7 +71,7 @@ export default function ContactPage() {
               )}
               <div
                 id="voiceflow-chat-embed"
-                className={`w-full h-[750px] transition-opacity duration-700 ${
+                className={`w-full h-[600px] sm:h-[750px] transition-opacity duration-700 ${
                   isChatLoaded ? "opacity-100" : "opacity-0"
                 }`}
               />
@@ -118,7 +133,7 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <a
                     href="mailto:contact@altafrequenzamarketing.com"
-                    className="flex items-center gap-3 text-neutral-300 hover:text-white transition-colors"
+                    className="flex items-center gap-3 text-neutral-300 hover:text-white transition-colors break-all"
                   >
                     <Mail size={20} />
                     contact@altafrequenzamarketing.com
