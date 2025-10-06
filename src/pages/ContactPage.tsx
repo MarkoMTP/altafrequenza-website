@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Calendar } from "lucide-react";
 
 export default function ContactPage() {
   const [isChatLoaded, setIsChatLoaded] = useState(false);
@@ -19,7 +19,6 @@ export default function ContactPage() {
           target: document.getElementById("voiceflow-chat-embed"),
         },
       });
-      // Simulate a small delay so the fade looks smoother
       setTimeout(() => setIsChatLoaded(true), 1200);
     };
     document.body.appendChild(script);
@@ -130,6 +129,19 @@ export default function ContactPage() {
                   >
                     <Phone size={20} />
                     (555) 123-4567
+                  </a>
+                </div>
+
+                {/* Book a Call Button */}
+                <div className="mt-8">
+                  <a
+                    href="https://calendly.com/contact-altafrequenzamarketing/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-3 w-full px-6 py-4 bg-amber-600 text-white font-medium text-lg hover:bg-amber-700 transition-all"
+                  >
+                    <Calendar size={22} />
+                    Book a Call Now
                   </a>
                 </div>
               </div>

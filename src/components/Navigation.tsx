@@ -15,7 +15,7 @@ export default function Navigation({
   const navItems = [
     { label: "Home", page: "home" },
     { label: "About", page: "about" },
-    { label: "AI Wedding Concierge™", page: "concierge" },
+    { label: "The Wedding SmartForm™", page: "concierge" },
     { label: "AI Planner's Assistant™", page: "assistant" },
     { label: "Blog", page: "blog" },
   ];

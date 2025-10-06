@@ -79,7 +79,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       description:
         "Revolutionary AI-powered tools that work 24/7 to capture, qualify, and nurture luxury wedding leads. The future of client acquisition is here.",
       features: [
-        "AI Wedding Concierge™ for lead capture",
+        "The Wedding SmartForm™ for lead capture",
         "AI Planner's Assistant™ for instant responses",
         "Automatic lead quality scoring",
         "Seamless integration with your website",
@@ -100,7 +100,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
       name: "Sophie Chen",
       role: "Creative Director, The Refined Affair",
       quote:
-        "The AI Concierge has transformed how we capture leads. We never miss an inquiry, and the quality scoring saves us countless hours.",
+        "The Wedding SmartForm™ has transformed how we capture leads. We never miss an inquiry, and the quality scoring saves us countless hours.",
       rating: 5,
     },
   ];
