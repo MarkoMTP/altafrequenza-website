@@ -8,6 +8,7 @@ import {
   Users,
   Sparkles,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface GrowthSystemPageProps {
   onNavigate: (page: string) => void;
@@ -37,13 +38,13 @@ export default function GrowthSystemPage({
             couples actively searching for elevated planning services.
           </p>
 
-          <button
-            onClick={() => onNavigate("contact")}
+          <Link
+            to={"/contact"}
             className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
           >
             Start Growing Your Luxury Client Base
             <ArrowRight size={20} />
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -628,13 +629,13 @@ export default function GrowthSystemPage({
               performance-based model and how we can help you consistently
               attract luxury wedding clients.
             </p>
-            <button
-              onClick={() => onNavigate("contact")}
+            <Link
+              to={"/contact"}
               className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
             >
               Book Your Strategy Session
               <ArrowRight size={20} />
-            </button>
+            </Link>
           </div>
         </div>
       </section>
