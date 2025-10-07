@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,10 +9,21 @@ export default function Footer() {
           {/* Brand Info */}
           <div>
             <h3 className="text-2xl font-serif mb-4">Alta Frequenza</h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+            <p className="text-neutral-400 text-sm leading-relaxed mb-6">
               Helping wedding planners attract luxury couples with sophisticated
               digital marketing.
             </p>
+
+            {/* LinkedIn Link */}
+            <a
+              href="https://www.linkedin.com/in/marko-matkovic-6b6b0535a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors text-sm"
+            >
+              <Linkedin size={16} />
+              Follow us on LinkedIn
+            </a>
           </div>
 
           {/* Navigation */}
@@ -33,13 +45,25 @@ export default function Footer() {
                 About
               </Link>
               <Link
-                to="/smartform"
+                to="/growth-system"
+                className="block text-neutral-400 hover:text-white text-sm transition-colors"
+              >
+                Growth System
+              </Link>
+              <Link
+                to="/social-media"
+                className="block text-neutral-400 hover:text-white text-sm transition-colors"
+              >
+                Social Media
+              </Link>
+              <Link
+                to="/concierge"
                 className="block text-neutral-400 hover:text-white text-sm transition-colors"
               >
                 The Wedding SmartForm™
               </Link>
               <Link
-                to="/ai-chat-assistant"
+                to="/assistant"
                 className="block text-neutral-400 hover:text-white text-sm transition-colors"
               >
                 AI Planner’s Assistant™
