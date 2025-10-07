@@ -10,8 +10,8 @@ export default function Navigation() {
     { label: "About", path: "/about" },
     { label: "Growth System", path: "/growth-system" },
     { label: "Social Media", path: "/social-media" },
-    { label: "The Wedding SmartForm™", path: "/concierge" },
-    { label: "AI Planner’s Assistant™", path: "/assistant" },
+    { label: "The Wedding SmartForm™", path: "/smartform" },
+    { label: "AI Planner’s Assistant™", path: "/ai-chat-assistant" },
     { label: "Blog", path: "/blog" },
   ];
 
