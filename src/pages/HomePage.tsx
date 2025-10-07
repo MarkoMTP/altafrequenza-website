@@ -37,7 +37,6 @@ export default function HomePage() {
     }
   };
 
-  // ✅ UPDATED SERVICES ARRAY — includes both bots separately
   const services = [
     {
       icon: TrendingUp,
@@ -151,23 +150,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Alta Frequenza */}
-      <section className="py-32 px-6 lg:px-12 bg-white border-t border-b border-neutral-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-relaxed text-neutral-900 mb-12 tracking-tight">
-            Alta Frequenza Marketing is the only agency in the world
-            <br />
-            dedicated exclusively to luxury wedding planners.
+      {/* Section: The Changing Luxury Market */}
+      <section className="py-32 px-6 lg:px-12 bg-neutral-50 border-t border-neutral-200">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
+            The Changing Luxury Market
           </h2>
-          <p className="text-base md:text-lg text-neutral-700 leading-loose max-w-3xl mx-auto">
-            We understand this industry like no one else, and every system we
-            build is designed to help planners attract and secure the world's
-            most discerning couples.
+          <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
+            Luxury couples have changed. Has your marketing? In 2026–2027,
+            affluent couples expect personalization, elegance, and immediacy.
+            They're seeking a curator of unforgettable experiences — not just a
+            planner.
+          </p>
+          <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
+            Most planners still rely on outdated social tactics or referrals,
+            but high-net-worth couples are intentional and digitally
+            sophisticated. They research extensively before ever reaching out.
+          </p>
+          <p className="italic text-neutral-800 text-lg">
+            We’ve distilled what works into three pillars:{" "}
+            <span className="font-semibold">
+              Visibility, Attraction, and Automation.
+            </span>
           </p>
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services Section */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
@@ -200,7 +209,6 @@ export default function HomePage() {
                   <p className="text-lg text-neutral-600 leading-relaxed mb-6">
                     {service.description}
                   </p>
-
                   <Link
                     to={service.path}
                     className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all"
@@ -227,6 +235,49 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section: The Framework */}
+      <section className="py-32 px-6 lg:px-12 bg-neutral-900 text-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-serif mb-8">
+            The 3-Pillar System
+          </h2>
+          <p className="text-lg text-neutral-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            A comprehensive framework that combines visibility, attraction, and
+            automation to help planners consistently book high-value weddings.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 text-left">
+            <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
+              <h3 className="text-xl font-serif mb-4 text-amber-500">
+                Visibility
+              </h3>
+              <p className="text-neutral-300">
+                Strategic Google Ads positioning that captures high-intent
+                searches from affluent couples ready to invest in luxury
+                experiences.
+              </p>
+            </div>
+            <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
+              <h3 className="text-xl font-serif mb-4 text-amber-500">
+                Attraction
+              </h3>
+              <p className="text-neutral-300">
+                Editorial social media that elevates your brand and positions
+                you as the aspirational choice in your market.
+              </p>
+            </div>
+            <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
+              <h3 className="text-xl font-serif mb-4 text-amber-500">
+                Automation
+              </h3>
+              <p className="text-neutral-300">
+                Intelligent AI systems that qualify leads and book consultations
+                — while you focus on creating unforgettable weddings.
+              </p>
+            </div>
           </div>
         </div>
       </section>
