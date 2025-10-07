@@ -282,6 +282,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-24 px-6 lg:px-12 bg-neutral-50 border-t border-b border-neutral-200">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm tracking-widest text-neutral-500 mb-4">
+            FREE DOWNLOAD
+          </p>
+          <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
+            Get Your Free Copy of <br />
+            “The Luxury Wedding Planner Marketing Playbook”
+          </h2>
+          <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
+            Discover how top wedding planners attract €100K+ weddings in
+            2026–2027 using our 3-pillar system of Visibility, Attraction, and
+            Automation.
+          </p>
+
+          <form
+            onSubmit={handleEmailSubmit}
+            className="max-w-md mx-auto flex flex-col sm:flex-row gap-4"
+          >
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email address"
+              required
+              className="flex-1 px-6 py-4 bg-white border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+            />
+            <button
+              type="submit"
+              className="px-8 py-4 bg-amber-600 text-white font-medium hover:bg-amber-700 transition-colors"
+            >
+              Get the Guide
+            </button>
+          </form>
+
+          {status && <p className="mt-4 text-sm text-neutral-700">{status}</p>}
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto text-center mb-16">
