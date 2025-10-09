@@ -19,21 +19,21 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-neutral-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center h-20">
-          {/* Logo / Home link */}
+          {/* Logo */}
           <Link
             to="/"
-            className="text-2xl font-serif tracking-tight hover:opacity-70 transition-opacity"
+            className="text-[1.6rem] font-serif tracking-tight hover:opacity-70 transition-opacity whitespace-nowrap"
           >
             Alta Frequenza Marketing
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-6 ml-8">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-sm tracking-wide text-neutral-600 hover:text-neutral-900 transition-colors"
+                className="text-[0.95rem] font-medium text-neutral-700 hover:text-neutral-900 transition-colors whitespace-nowrap"
               >
                 {item.label}
               </Link>
@@ -41,23 +41,23 @@ export default function Navigation() {
 
             <Link
               to="/contact"
-              className="px-6 py-2.5 bg-neutral-900 text-white text-sm tracking-wide hover:bg-neutral-800 transition-colors"
+              className="ml-4 px-5 py-2 bg-neutral-900 text-white text-[0.9rem] font-medium tracking-wide hover:bg-neutral-800 transition-all rounded-md whitespace-nowrap"
             >
               Book Consultation
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Toggle */}
           <button
             className="lg:hidden text-neutral-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-neutral-200">
           <div className="px-6 py-6 space-y-4">
@@ -66,16 +66,15 @@ export default function Navigation() {
                 key={item.path}
                 to={item.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block w-full text-left text-base text-neutral-600 hover:text-neutral-900 transition-colors"
+                className="block text-base text-neutral-700 hover:text-neutral-900 transition-colors"
               >
                 {item.label}
               </Link>
             ))}
-
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full block text-center px-6 py-3 bg-neutral-900 text-white text-base tracking-wide hover:bg-neutral-800 transition-colors"
+              className="block w-full text-center px-6 py-3 bg-neutral-900 text-white text-base font-medium tracking-wide hover:bg-neutral-800 transition-all rounded-md"
             >
               Book Consultation
             </Link>
