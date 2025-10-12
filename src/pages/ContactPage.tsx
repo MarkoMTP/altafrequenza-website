@@ -161,7 +161,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Testimonial */}
+              {/* Testimonial
               <div className="border border-neutral-200 p-8">
                 <p className="text-sm text-neutral-600 leading-relaxed italic">
                   "Working with Alta Frequenza has been transformational for our
@@ -177,7 +177,7 @@ export default function ContactPage() {
                     Founder, Bella Notte Events
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

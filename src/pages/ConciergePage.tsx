@@ -26,10 +26,10 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
           </h1>
 
           <p className="text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto mb-12">
-            Transform your website into a 24/7 lead generation machine. The
-            Wedding SmartForm™ engages couples in natural conversation, captures
-            essential details, and delivers perfectly qualified leads to your
-            inbox.
+            Transform your website into a 24/7 lead generation experience. The
+            Wedding SmartForm™ engages couples in natural, elegant conversation,
+            gathers every key wedding detail, and delivers perfectly qualified
+            leads straight to your inbox.
           </p>
 
           <Link
@@ -51,20 +51,21 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
               </h2>
               <div className="space-y-6 text-lg text-neutral-700 leading-relaxed">
                 <p>
-                  Traditional contact forms are impersonal and often incomplete.
-                  High-net-worth couples expect a personalized experience from
-                  the moment they discover your brand.
+                  Traditional contact forms feel cold and impersonal — and for
+                  high-net-worth couples, that’s unacceptable. From their very
+                  first interaction, they expect a personalized, seamless, and
+                  luxurious experience.
                 </p>
                 <p>
-                  The Wedding SmartForm™ creates an engaging, conversational
-                  experience that feels like chatting with your personal
-                  assistant. It asks the right questions, understands context,
-                  and captures detailed information that helps you prepare for
-                  your first consultation.
+                  The Wedding SmartForm™ replaces outdated inquiry forms with a
+                  conversational assistant that feels human and attentive. It
+                  asks the right questions, understands context, and captures
+                  detailed information — all while reflecting the sophistication
+                  of your brand.
                 </p>
                 <p>
-                  Best of all? It works 24/7, never takes a day off, and ensures
-                  you never lose a lead due to delayed responses.
+                  Best of all? It works tirelessly, day and night, ensuring you
+                  never lose a lead due to delayed responses.
                 </p>
               </div>
             </div>
@@ -89,7 +90,7 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
                   </div>
                   <div className="flex-1 bg-amber-600 text-white rounded-2xl rounded-tr-none p-4">
                     <p>
-                      Wonderful! I'd be delighted to help. May I start by asking
+                      Wonderful! I’d be delighted to help. May I start by asking
                       about your wedding date and location?
                     </p>
                   </div>
@@ -113,7 +114,7 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
                   </div>
                   <div className="flex-1 bg-amber-600 text-white rounded-2xl rounded-tr-none p-4">
                     <p>
-                      Beautiful choice! Napa Valley is stunning. What's your
+                      Beautiful choice — Napa Valley is stunning. What’s your
                       approximate budget range for planning services?
                     </p>
                   </div>
@@ -121,7 +122,8 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
 
                 <div className="pt-4 border-t border-neutral-200">
                   <p className="text-sm text-neutral-500 italic text-center">
-                    Natural conversation that captures critical details
+                    A natural, conversational experience that captures critical
+                    details before you even meet.
                   </p>
                 </div>
               </div>
@@ -141,9 +143,10 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
               Automatic Lead Quality Scoring
             </h2>
             <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-              Not all leads are created equal. The Wedding SmartForm™
-              intelligently analyzes every conversation and assigns quality
-              scores so you know exactly where to focus your time.
+              Not every lead deserves your time — and The Wedding SmartForm™
+              knows it. Using intelligent analysis, it automatically scores
+              leads based on budget, readiness, and intent — so you can focus on
+              the couples who are serious about investing.
             </p>
           </div>
 
@@ -252,77 +255,43 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-neutral-50 p-8 border border-neutral-200">
-              <CheckCircle className="text-amber-600 mb-4" size={32} />
-              <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                Never Miss a Lead
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                The Wedding SmartForm™ is always on, engaging couples the moment
-                they visit your site—even at 2 AM on a Sunday. No more lost
-                opportunities due to delayed responses.
-              </p>
-            </div>
-
-            <div className="bg-neutral-50 p-8 border border-neutral-200">
-              <CheckCircle className="text-amber-600 mb-4" size={32} />
-              <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                Capture Detailed Information
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                Through natural conversation, the form gathers wedding date,
-                location, guest count, budget, style preferences, and
-                more—giving you everything you need before the first call.
-              </p>
-            </div>
-
-            <div className="bg-neutral-50 p-8 border border-neutral-200">
-              <CheckCircle className="text-amber-600 mb-4" size={32} />
-              <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                Automatic Prioritization
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                The built-in quality scoring system instantly identifies which
-                leads are serious, high-budget couples versus casual browsers,
-                so you invest time wisely.
-              </p>
-            </div>
-
-            <div className="bg-neutral-50 p-8 border border-neutral-200">
-              <CheckCircle className="text-amber-600 mb-4" size={32} />
-              <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                Seamless Integration
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                The Wedding SmartForm™ integrates beautifully with your existing
-                website and brand. Couples experience a premium, personalized
-                interaction that elevates your brand.
-              </p>
-            </div>
-
-            <div className="bg-neutral-50 p-8 border border-neutral-200">
-              <CheckCircle className="text-amber-600 mb-4" size={32} />
-              <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                Mobile Optimized
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                Most luxury couples browse on their phones. The Wedding
-                SmartForm™ works flawlessly on all devices, ensuring a premium
-                experience regardless of how they find you.
-              </p>
-            </div>
-
-            <div className="bg-neutral-50 p-8 border border-neutral-200">
-              <CheckCircle className="text-amber-600 mb-4" size={32} />
-              <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                Data & Insights
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                Access detailed analytics on lead sources, conversation
-                patterns, and conversion rates. Use this data to continuously
-                refine your marketing strategy.
-              </p>
-            </div>
+            {[
+              {
+                title: "Never Miss a Lead",
+                text: "The Wedding SmartForm™ is always on, engaging couples the moment they visit your site — even at 2 AM on a Sunday. No more lost opportunities due to delayed responses.",
+              },
+              {
+                title: "Capture Detailed Information",
+                text: "Through thoughtful conversation, the form gathers wedding date, location, guest count, budget, and style preferences — giving you everything you need before the first call.",
+              },
+              {
+                title: "Automatic Prioritization",
+                text: "Built-in lead scoring identifies serious, high-budget couples so you spend time where it matters most.",
+              },
+              {
+                title: "Seamless Integration",
+                text: "The SmartForm blends effortlessly with your brand and website, offering a personalized, high-end experience.",
+              },
+              {
+                title: "Mobile Optimized",
+                text: "Luxury couples browse on mobile first. The SmartForm ensures a flawless, premium experience across all devices.",
+              },
+              {
+                title: "Data & Insights",
+                text: "Access detailed analytics on lead sources, conversation trends, and conversion performance to refine your strategy.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-neutral-50 p-8 border border-neutral-200"
+              >
+                <CheckCircle className="text-amber-600 mb-4" size={32} />
+                <h3 className="text-xl font-medium text-neutral-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -334,9 +303,10 @@ export default function ConciergePage({ onNavigate }: ConciergePageProps) {
             Lead Generation Powerhouse
           </h2>
           <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-            Join the elite wedding planners using AI technology to capture more
-            leads, save time, and focus on what matters most—creating
-            unforgettable weddings.
+            Experience the future of client acquisition — designed exclusively
+            for planners who expect more. Capture high-value leads effortlessly,
+            and focus on what truly matters: creating unforgettable celebrations
+            for extraordinary couples.
           </p>
           <Link
             to={"/contact"}

@@ -321,7 +321,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto text-center mb-16">
           <p className="text-sm tracking-widest text-neutral-500 mb-4">
@@ -357,7 +357,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA */}
       <section className="py-24 px-6 lg:px-12 bg-amber-50">
