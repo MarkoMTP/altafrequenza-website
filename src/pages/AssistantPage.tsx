@@ -22,7 +22,7 @@ export default function AssistantPage({ onNavigate }: AssistantPageProps) {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-8 text-neutral-900">
-            AI Planner's Assistant™
+            The Wedding Planner AI Assistant™
           </h1>
 
           <p className="text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto mb-12">

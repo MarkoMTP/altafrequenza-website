@@ -79,7 +79,7 @@ export default function HomePage() {
         "Calendar integration for instant call booking",
         "Seamless handoff to your team for hot leads",
       ],
-      path: "/assistant",
+      path: "/ai-chat-assistant",
     },
   ];
 
