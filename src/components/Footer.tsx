@@ -56,17 +56,12 @@ export default function Footer() {
               >
                 Social Media
               </Link>
-              <Link
-                to="/concierge"
-                className="block text-neutral-400 hover:text-white text-sm transition-colors"
-              >
-                The Wedding SmartForm™
-              </Link>
+
               <Link
                 to="/assistant"
                 className="block text-neutral-400 hover:text-white text-sm transition-colors"
               >
-                AI Planner’s Assistant™
+                The Wedding Planner AI Assistant™
               </Link>
               <Link
                 to="/blog"

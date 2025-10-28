@@ -8,10 +8,9 @@ export default function Navigation() {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Growth System", path: "/growth-system" },
-    { label: "Social Media", path: "/social-media" },
-    { label: "The Wedding SmartForm™", path: "/smartform" },
-    { label: "AI Planner’s Assistant™", path: "/ai-chat-assistant" },
+    { label: "The Growth System™", path: "/growth-system" },
+    { label: "Elegant Presence™", path: "/social-media" },
+    { label: "The Wedding Planner AI Assistant™", path: "/ai-chat-assistant" },
     { label: "Blog", path: "/blog" },
   ];
 

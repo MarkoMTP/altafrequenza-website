@@ -66,23 +66,10 @@ export default function HomePage() {
       ],
       path: "/social-media",
     },
+
     {
       icon: Bot,
-      title: "The Wedding SmartForm™",
-      subtitle: "AI Lead Capture Automation",
-      description:
-        "An intelligent form that replaces your traditional contact page. It instantly engages couples, collects detailed wedding information, and automatically qualifies inquiries based on budget and intent — all before you ever speak to them.",
-      features: [
-        "AI-powered pre-qualification of inquiries",
-        "Customizable questions for detailed lead profiles",
-        "Automatic lead routing to your inbox or CRM",
-        "Integration with your website or landing pages",
-      ],
-      path: "/concierge",
-    },
-    {
-      icon: Bot,
-      title: "AI Planner’s Assistant™",
+      title: "The Wedding Planner AI Assistant™",
       subtitle: "AI Chat Concierge for Planners",
       description:
         "A 24/7 virtual assistant that lives on your website to answer FAQs, collect leads, and book consultations in real time — making your brand feel responsive, high-end, and always available.",
