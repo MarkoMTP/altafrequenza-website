@@ -1,5 +1,6 @@
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogPage() {
   const featuredPost = {
@@ -85,128 +86,160 @@ export default function BlogPage() {
   ];
 
   return (
-    <div className="bg-white pt-20">
-      {/* Header */}
-      <section className="py-24 px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sm tracking-widest text-neutral-500 mb-4">
-              INSIGHTS & STRATEGIES
-            </p>
-            <h1 className="text-5xl md:text-7xl font-serif text-neutral-900 mb-6">
-              The Alta Frequenza Journal
-            </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
-              Expert insights on luxury wedding marketing, client psychology,
-              and growing your planning business.
-            </p>
-          </div>
+    <>
+      <Helmet>
+        <title>
+          The Alta Frequenza Journal | Luxury Wedding Marketing Insights
+        </title>
+        <meta
+          name="description"
+          content="Explore expert insights from Alta Frequenza Marketing on luxury wedding marketing, client psychology, branding, Google Ads, and AI automation for wedding planners."
+        />
+        <meta
+          name="keywords"
+          content="wedding planner marketing, luxury wedding marketing, Google Ads for wedding planners, wedding planner SEO, destination wedding marketing, wedding planner branding"
+        />
+        <meta
+          property="og:title"
+          content="The Alta Frequenza Journal | Luxury Wedding Marketing Insights"
+        />
+        <meta
+          property="og:description"
+          content="Expert strategies on wedding planner marketing, client psychology, and growing your luxury planning business."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.altafrequenzamarketing/blog"
+        />
+        <meta
+          property="og:image"
+          content="https://www.altafrequenzamarketing/og-blog.jpg"
+        />
+      </Helmet>
+      <div className="bg-white pt-20">
+        {/* Header */}
+        <section className="py-24 px-6 lg:px-12">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-sm tracking-widest text-neutral-500 mb-4">
+                INSIGHTS & STRATEGIES
+              </p>
+              <h1 className="text-5xl md:text-7xl font-serif text-neutral-900 mb-6">
+                The Alta Frequenza Journal
+              </h1>
+              <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+                Expert insights on luxury wedding marketing, client psychology,
+                and growing your planning business.
+              </p>
+            </div>
 
-          {/* Featured Post */}
-          <div className="mb-24">
-            <article className="grid md:grid-cols-2 gap-12 items-center bg-neutral-50 border border-neutral-200 overflow-hidden">
-              <div className="h-full">
-                <img
-                  src={featuredPost.image}
-                  alt={featuredPost.title}
-                  className="w-full h-full object-cover min-h-[400px]"
-                />
-              </div>
-              <div className="p-8 md:p-12">
-                <div className="inline-block px-3 py-1 bg-amber-600 text-white text-xs tracking-wider mb-4">
-                  FEATURED
+            {/* Featured Post */}
+            <div className="mb-24">
+              <article className="grid md:grid-cols-2 gap-12 items-center bg-neutral-50 border border-neutral-200 overflow-hidden">
+                <div className="h-full">
+                  <img
+                    src={featuredPost.image}
+                    alt={featuredPost.title}
+                    className="w-full h-full object-cover min-h-[400px]"
+                  />
                 </div>
-                <p className="text-sm tracking-wide text-amber-600 mb-3">
-                  {featuredPost.category}
-                </p>
-                <h2 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-4 leading-tight">
-                  {featuredPost.title}
-                </h2>
-                <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                  {featuredPost.excerpt}
-                </p>
-                <div className="flex items-center gap-6 text-sm text-neutral-600 mb-6">
-                  <div className="flex items-center gap-2">
-                    <Calendar size={16} />
-                    {featuredPost.date}
+                <div className="p-8 md:p-12">
+                  <div className="inline-block px-3 py-1 bg-amber-600 text-white text-xs tracking-wider mb-4">
+                    FEATURED
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Clock size={16} />
-                    {featuredPost.readTime}
+                  <p className="text-sm tracking-wide text-amber-600 mb-3">
+                    {featuredPost.category}
+                  </p>
+                  <h2 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-4 leading-tight">
+                    {featuredPost.title}
+                  </h2>
+                  <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                    {featuredPost.excerpt}
+                  </p>
+                  <div className="flex items-center gap-6 text-sm text-neutral-600 mb-6">
+                    <div className="flex items-center gap-2">
+                      <Calendar size={16} />
+                      {featuredPost.date}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock size={16} />
+                      {featuredPost.readTime}
+                    </div>
                   </div>
+                  <Link
+                    to={`/blog/${featuredPost.slug}`}
+                    className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all font-medium"
+                  >
+                    Read Article <ArrowRight size={16} />
+                  </Link>
                 </div>
-                <Link
-                  to={`/blog/${featuredPost.slug}`}
-                  className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all font-medium"
-                >
-                  Read Article <ArrowRight size={16} />
+              </article>
+            </div>
+
+            {/* Blog Posts */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {posts.map((post, index) => (
+                <Link key={index} to={`/blog/${post.slug}`} className="group">
+                  <article className="cursor-pointer">
+                    <div className="mb-4 overflow-hidden bg-neutral-100">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <p className="text-xs tracking-wide text-amber-600 mb-2">
+                      {post.category}
+                    </p>
+                    <h3 className="text-xl font-serif text-neutral-900 mb-3 leading-tight group-hover:text-amber-600 transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-neutral-700 leading-relaxed mb-4">
+                      {post.excerpt}
+                    </p>
+                    <div className="flex items-center gap-4 text-xs text-neutral-500 mb-4">
+                      <div className="flex items-center gap-1">
+                        <Calendar size={14} />
+                        {post.date}
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock size={14} />
+                        {post.readTime}
+                      </div>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-sm text-neutral-900 group-hover:gap-3 transition-all">
+                      Read More <ArrowRight size={14} />
+                    </div>
+                  </article>
                 </Link>
-              </div>
-            </article>
+              ))}
+            </div>
           </div>
+        </section>
 
-          {/* Blog Posts */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post, index) => (
-              <Link key={index} to={`/blog/${post.slug}`} className="group">
-                <article className="cursor-pointer">
-                  <div className="mb-4 overflow-hidden bg-neutral-100">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <p className="text-xs tracking-wide text-amber-600 mb-2">
-                    {post.category}
-                  </p>
-                  <h3 className="text-xl font-serif text-neutral-900 mb-3 leading-tight group-hover:text-amber-600 transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-neutral-700 leading-relaxed mb-4">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-4 text-xs text-neutral-500 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Calendar size={14} />
-                      {post.date}
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock size={14} />
-                      {post.readTime}
-                    </div>
-                  </div>
-                  <div className="inline-flex items-center gap-2 text-sm text-neutral-900 group-hover:gap-3 transition-all">
-                    Read More <ArrowRight size={14} />
-                  </div>
-                </article>
-              </Link>
-            ))}
+        {/* CTA */}
+        <section className="py-24 px-6 lg:px-12 bg-neutral-900 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-serif mb-6">
+              Ready to Transform Your
+              <br />
+              Marketing Strategy?
+            </h2>
+            <p className="text-lg text-neutral-300 mb-10 leading-relaxed">
+              Learn how Alta Frequenza Marketing can help you attract more
+              luxury couples and grow your wedding planning business.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-white text-neutral-900 text-lg tracking-wide hover:bg-neutral-100 transition-all"
+            >
+              Book Your Strategy Session
+              <ArrowRight size={20} />
+            </Link>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 px-6 lg:px-12 bg-neutral-900 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif mb-6">
-            Ready to Transform Your
-            <br />
-            Marketing Strategy?
-          </h2>
-          <p className="text-lg text-neutral-300 mb-10 leading-relaxed">
-            Learn how Alta Frequenza Marketing can help you attract more luxury
-            couples and grow your wedding planning business.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-white text-neutral-900 text-lg tracking-wide hover:bg-neutral-100 transition-all"
-          >
-            Book Your Strategy Session
-            <ArrowRight size={20} />
-          </Link>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

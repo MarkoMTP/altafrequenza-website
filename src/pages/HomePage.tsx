@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import {
   ArrowRight,
   Sparkles,
@@ -101,214 +102,246 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="bg-white">
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 text-sm tracking-wide text-neutral-600">
-            <Sparkles size={16} className="text-amber-600" />
-            Boutique Marketing for Luxury Wedding Planners
-          </div>
+    <>
+      <Helmet>
+        <title>
+          Alta Frequenza Marketing | Luxury Wedding Planner Marketing Agency
+        </title>
+        <meta
+          name="description"
+          content="Alta Frequenza Marketing helps luxury wedding planners attract high-end international couples through Google Ads, social media, and AI automation."
+        />
+        <meta
+          name="keywords"
+          content="wedding planner marketing, luxury wedding planner, Google Ads for wedding planners, wedding planner social media, destination wedding marketing, wedding planner SEO"
+        />
+        <meta
+          property="og:title"
+          content="Alta Frequenza Marketing | Luxury Wedding Planner Marketing Agency"
+        />
+        <meta
+          property="og:description"
+          content="Helping wedding planners attract high-net-worth couples through visibility, attraction, and automation."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://altafrequenzamarketing.com/" />
+        <meta
+          property="og:image"
+          content="https://altafrequenzamarketing.com/og-image.jpg"
+        />
+      </Helmet>
+      <div className="bg-white">
+        {/* Hero Section */}
+        <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 text-sm tracking-wide text-neutral-600">
+              <Sparkles size={16} className="text-amber-600" />
+              Boutique Marketing for Luxury Wedding Planners
+            </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight mb-8 text-neutral-900">
-            Helping Wedding Planners
-            <br />
-            <span className="italic">Attract Luxury Couples</span>
-            <br />
-            with Digital Marketing
-          </h1>
-
-          <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            We specialize in positioning elite wedding planners in front of
-            high-net-worth couples who value exceptional service and
-            unforgettable celebrations.
-          </p>
-
-          <Link
-            to="/contact"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white text-base tracking-wide hover:bg-neutral-800 transition-all"
-          >
-            Book Your Strategy Session
-            <ArrowRight
-              size={20}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </Link>
-        </div>
-      </section>
-
-      {/* Section: The Changing Luxury Market */}
-      <section className="py-32 px-6 lg:px-12 bg-neutral-50 border-t border-neutral-200">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
-            The Changing Luxury Market
-          </h2>
-          <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
-            Luxury couples have changed. Has your marketing? In 2026–2027,
-            affluent couples expect personalization, elegance, and immediacy.
-            They're seeking a curator of unforgettable experiences — not just a
-            planner.
-          </p>
-          <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
-            Most planners still rely on outdated social tactics or referrals,
-            but high-net-worth couples are intentional and digitally
-            sophisticated. They research extensively before ever reaching out.
-          </p>
-          <p className="italic text-neutral-800 text-lg">
-            We’ve distilled what works into three pillars:{" "}
-            <span className="font-semibold">
-              Visibility, Attraction, and Automation.
-            </span>
-          </p>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <p className="text-sm tracking-widest text-neutral-500 mb-4">
-              OUR SERVICES
-            </p>
-            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
-              Comprehensive Solutions for
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight mb-8 text-neutral-900">
+              Helping Wedding Planners
               <br />
-              Elite Wedding Planners
-            </h2>
-          </div>
+              <span className="italic">Attract Luxury Couples</span>
+              <br />
+              with Digital Marketing
+            </h1>
 
-          <div className="space-y-16">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="grid md:grid-cols-2 gap-12 items-start border-t border-neutral-200 pt-16"
-              >
-                <div>
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-neutral-900 text-white mb-6">
-                    <service.icon size={28} />
-                  </div>
-                  <h3 className="text-3xl font-serif text-neutral-900 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm tracking-wide text-amber-600 mb-4">
-                    {service.subtitle}
-                  </p>
-                  <p className="text-lg text-neutral-600 leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                  <Link
-                    to={service.path}
-                    className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all"
-                  >
-                    Learn More <ChevronRight size={16} />
-                  </Link>
-                </div>
+            <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+              We specialize in positioning elite wedding planners in front of
+              high-net-worth couples who value exceptional service and
+              unforgettable celebrations.
+            </p>
 
-                <div className="bg-neutral-50 p-8">
-                  <h4 className="text-sm tracking-wide font-medium text-neutral-900 mb-4">
-                    Key Features
-                  </h4>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-3 text-neutral-700"
-                      >
-                        <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section: The Framework */}
-      <section className="py-32 px-6 lg:px-12 bg-neutral-900 text-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif mb-8">
-            The 3-Pillar System
-          </h2>
-          <p className="text-lg text-neutral-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-            A comprehensive framework that combines visibility, attraction, and
-            automation to help planners consistently book high-value weddings.
-          </p>
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
-              <h3 className="text-xl font-serif mb-4 text-amber-500">
-                Visibility
-              </h3>
-              <p className="text-neutral-300">
-                Strategic Google Ads positioning that captures high-intent
-                searches from affluent couples ready to invest in luxury
-                experiences.
-              </p>
-            </div>
-            <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
-              <h3 className="text-xl font-serif mb-4 text-amber-500">
-                Attraction
-              </h3>
-              <p className="text-neutral-300">
-                Editorial social media that elevates your brand and positions
-                you as the aspirational choice in your market.
-              </p>
-            </div>
-            <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
-              <h3 className="text-xl font-serif mb-4 text-amber-500">
-                Automation
-              </h3>
-              <p className="text-neutral-300">
-                Intelligent AI systems that qualify leads and book consultations
-                — while you focus on creating unforgettable weddings.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 px-6 lg:px-12 bg-neutral-50 border-t border-b border-neutral-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm tracking-widest text-neutral-500 mb-4">
-            FREE DOWNLOAD
-          </p>
-          <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-            Get Your Free Copy of <br />
-            “The Luxury Wedding Planner Marketing Playbook”
-          </h2>
-          <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-            Discover how top wedding planners attract €100K+ weddings in
-            2026–2027 using our 3-pillar system of Visibility, Attraction, and
-            Automation.
-          </p>
-
-          <form
-            onSubmit={handleEmailSubmit}
-            className="max-w-md mx-auto flex flex-col sm:flex-row gap-4"
-          >
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              required
-              className="flex-1 px-6 py-4 bg-white border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
-            />
-            <button
-              type="submit"
-              className="px-8 py-4 bg-amber-600 text-white font-medium hover:bg-amber-700 transition-colors"
+            <Link
+              to="/contact"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white text-base tracking-wide hover:bg-neutral-800 transition-all"
             >
-              Get the Guide
-            </button>
-          </form>
+              Book Your Strategy Session
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </Link>
+          </div>
+        </section>
 
-          {status && <p className="mt-4 text-sm text-neutral-700">{status}</p>}
-        </div>
-      </section>
+        {/* Section: The Changing Luxury Market */}
+        <section className="py-32 px-6 lg:px-12 bg-neutral-50 border-t border-neutral-200">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
+              The Changing Luxury Market
+            </h2>
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
+              Luxury couples have changed. Has your marketing? In 2026–2027,
+              affluent couples expect personalization, elegance, and immediacy.
+              They're seeking a curator of unforgettable experiences — not just
+              a planner.
+            </p>
+            <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
+              Most planners still rely on outdated social tactics or referrals,
+              but high-net-worth couples are intentional and digitally
+              sophisticated. They research extensively before ever reaching out.
+            </p>
+            <p className="italic text-neutral-800 text-lg">
+              We’ve distilled what works into three pillars:{" "}
+              <span className="font-semibold">
+                Visibility, Attraction, and Automation.
+              </span>
+            </p>
+          </div>
+        </section>
 
-      {/* Testimonials
+        {/* Services Section */}
+        <section className="py-24 px-6 lg:px-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-20">
+              <p className="text-sm tracking-widest text-neutral-500 mb-4">
+                OUR SERVICES
+              </p>
+              <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
+                Comprehensive Solutions for
+                <br />
+                Elite Wedding Planners
+              </h2>
+            </div>
+
+            <div className="space-y-16">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="grid md:grid-cols-2 gap-12 items-start border-t border-neutral-200 pt-16"
+                >
+                  <div>
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-neutral-900 text-white mb-6">
+                      <service.icon size={28} />
+                    </div>
+                    <h3 className="text-3xl font-serif text-neutral-900 mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm tracking-wide text-amber-600 mb-4">
+                      {service.subtitle}
+                    </p>
+                    <p className="text-lg text-neutral-600 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+                    <Link
+                      to={service.path}
+                      className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all"
+                    >
+                      Learn More <ChevronRight size={16} />
+                    </Link>
+                  </div>
+
+                  <div className="bg-neutral-50 p-8">
+                    <h4 className="text-sm tracking-wide font-medium text-neutral-900 mb-4">
+                      Key Features
+                    </h4>
+                    <ul className="space-y-3">
+                      {service.features.map((feature, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-start gap-3 text-neutral-700"
+                        >
+                          <div className="w-1.5 h-1.5 bg-amber-600 rounded-full mt-2 flex-shrink-0"></div>
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section: The Framework */}
+        <section className="py-32 px-6 lg:px-12 bg-neutral-900 text-white">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-serif mb-8">
+              The 3-Pillar System
+            </h2>
+            <p className="text-lg text-neutral-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+              A comprehensive framework that combines visibility, attraction,
+              and automation to help planners consistently book high-value
+              weddings.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 text-left">
+              <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
+                <h3 className="text-xl font-serif mb-4 text-amber-500">
+                  Visibility
+                </h3>
+                <p className="text-neutral-300">
+                  Strategic Google Ads positioning that captures high-intent
+                  searches from affluent couples ready to invest in luxury
+                  experiences.
+                </p>
+              </div>
+              <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
+                <h3 className="text-xl font-serif mb-4 text-amber-500">
+                  Attraction
+                </h3>
+                <p className="text-neutral-300">
+                  Editorial social media that elevates your brand and positions
+                  you as the aspirational choice in your market.
+                </p>
+              </div>
+              <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
+                <h3 className="text-xl font-serif mb-4 text-amber-500">
+                  Automation
+                </h3>
+                <p className="text-neutral-300">
+                  Intelligent AI systems that qualify leads and book
+                  consultations — while you focus on creating unforgettable
+                  weddings.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-24 px-6 lg:px-12 bg-neutral-50 border-t border-b border-neutral-200">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm tracking-widest text-neutral-500 mb-4">
+              FREE DOWNLOAD
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
+              Get Your Free Copy of <br />
+              “The Luxury Wedding Planner Marketing Playbook”
+            </h2>
+            <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
+              Discover how top wedding planners attract €100K+ weddings in
+              2026–2027 using our 3-pillar system of Visibility, Attraction, and
+              Automation.
+            </p>
+
+            <form
+              onSubmit={handleEmailSubmit}
+              className="max-w-md mx-auto flex flex-col sm:flex-row gap-4"
+            >
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email address"
+                required
+                className="flex-1 px-6 py-4 bg-white border border-neutral-300 text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-amber-600"
+              />
+              <button
+                type="submit"
+                className="px-8 py-4 bg-amber-600 text-white font-medium hover:bg-amber-700 transition-colors"
+              >
+                Get the Guide
+              </button>
+            </form>
+
+            {status && (
+              <p className="mt-4 text-sm text-neutral-700">{status}</p>
+            )}
+          </div>
+        </section>
+
+        {/* Testimonials
       <section className="py-24 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto text-center mb-16">
           <p className="text-sm tracking-widest text-neutral-500 mb-4">
@@ -346,25 +379,27 @@ export default function HomePage() {
         </div>
       </section> */}
 
-      {/* Final CTA */}
-      <section className="py-24 px-6 lg:px-12 bg-amber-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-            Ready to Attract More Luxury Couples?
-          </h2>
-          <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-            Book a complimentary strategy session to discover how Alta Frequenza
-            Marketing can elevate your wedding planning business to new heights.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
-          >
-            Book Your Consultation
-            <ArrowRight size={20} />
-          </Link>
-        </div>
-      </section>
-    </div>
+        {/* Final CTA */}
+        <section className="py-24 px-6 lg:px-12 bg-amber-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
+              Ready to Attract More Luxury Couples?
+            </h2>
+            <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
+              Book a complimentary strategy session to discover how Alta
+              Frequenza Marketing can elevate your wedding planning business to
+              new heights.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
+            >
+              Book Your Consultation
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
