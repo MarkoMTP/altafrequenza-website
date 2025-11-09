@@ -7,6 +7,12 @@
   </url>
 
   <url>
+    <loc>https://altafrequenzamarketing.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://altafrequenzamarketing.com/social-media</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
