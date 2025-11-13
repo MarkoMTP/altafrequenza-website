@@ -225,7 +225,7 @@ export default function ContactPage() {
                   <ul className="space-y-4 text-neutral-700">
                     <li>
                       <span className="font-medium">
-                        Complimentary 45-minute strategy session
+                        Complimentary 20-minute strategy session
                       </span>{" "}
                       to analyze your current marketing and identify growth
                       opportunities.

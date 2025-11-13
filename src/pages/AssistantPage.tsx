@@ -4,6 +4,13 @@ import {
   CheckCircle,
   ArrowRight,
   Sparkles,
+  ChevronLeft,
+  Send,
+  Mic,
+  Headphones,
+  Home,
+  MessageCircle,
+  HelpCircle,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -16,22 +23,22 @@ export default function AssistantPage({ onNavigate }: AssistantPageProps) {
   return (
     <>
       <Helmet>
-        <title>AI Wedding Planner Assistant™ | Alta Frequenza Marketing</title>
+        <title>The Smart Wedding Assistant™ | Alta Frequenza Marketing</title>
         <meta
           name="description"
-          content="The AI Wedding Planner Assistant™ by Alta Frequenza Marketing helps wedding planners respond instantly to leads 24/7, improving client experience and increasing consultation bookings."
+          content="The Smart Wedding Assistant™ helps luxury wedding planners respond instantly to couples 24/7 — answering questions, collecting details, and booking consultations automatically."
         />
         <meta
           name="keywords"
-          content="AI wedding planner assistant, wedding planner chatbot, wedding planner marketing, luxury wedding automation, AI for wedding planners, destination wedding marketing"
+          content="AI wedding planner assistant, wedding planner chatbot, luxury wedding automation, AI for wedding planners, destination wedding marketing"
         />
         <meta
           property="og:title"
-          content="AI Wedding Planner Assistant™ | Alta Frequenza Marketing"
+          content="The Smart Wedding Assistant™ | Alta Frequenza Marketing"
         />
         <meta
           property="og:description"
-          content="Offer instant, intelligent responses to potential clients — 24/7. Powered by Alta Frequenza Marketing."
+          content="Offer instant, intelligent responses to couples — 24/7. Capture details and book calls effortlessly with The Smart Wedding Assistant™."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -47,371 +54,369 @@ export default function AssistantPage({ onNavigate }: AssistantPageProps) {
           href="https://altafrequenzamarketing.com/assistant"
         />
       </Helmet>
+
       <div className="bg-white pt-20">
+        {/* HERO */}
         <section className="min-h-[70vh] flex items-center justify-center px-6 lg:px-12 py-24">
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 text-sm tracking-wide text-neutral-600">
               <Sparkles size={16} className="text-amber-600" />
-              AI-Powered Website Assistant
+              Your 24/7 Digital Assistant for Wedding Planners
             </div>
 
             <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-8 text-neutral-900">
-              The Wedding Planner AI Assistant™
+              The Smart Wedding Assistant™
             </h1>
 
             <p className="text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto mb-12">
-              A 24/7 intelligent chatbot that answers frequently asked
-              questions, guides couples through your services, and ensures no
-              inquiry goes unanswered—even when you're unavailable.
+              A beautifully designed digital assistant that welcomes couples,
+              answers instantly, collects details, and guides them to book a
+              consultation — in your brand’s tone, day or night.
             </p>
 
             <Link
               to={"/contact"}
               className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
             >
-              Add the AI Planner's Assistant™ to Your Website
+              Add The Smart Wedding Assistant™ to Your Website
               <ArrowRight size={20} />
             </Link>
           </div>
         </section>
 
+        {/* VISUAL CHAT MOCKUP */}
         <section className="py-24 px-6 lg:px-12 bg-neutral-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="bg-white border border-neutral-200 p-8 shadow-lg">
-                <div className="flex items-center gap-3 mb-6 pb-4 border-b border-neutral-200">
-                  <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center">
-                    <MessageSquare size={20} className="text-white" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-neutral-900">
-                      Chat with us
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            {/* Chat Example */}
+            <div className="mx-auto w-full max-w-[480px]">
+              <div className="rounded-[28px] overflow-hidden shadow-xl border border-neutral-200 bg-amber-50">
+                {/* Header */}
+                <div className="relative bg-gradient-to-r from-amber-700 to-yellow-500 text-white px-5 sm:px-6 py-5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                      <ChevronLeft size={18} />
                     </div>
-                    <div className="text-sm text-green-600 flex items-center gap-1">
-                      <div className="w-2 h-2 bg-green-600 rounded-full"></div>
-                      Online now
+                    <div className="flex-1">
+                      <div className="text-sm font-medium">
+                        Serafina Weddings
+                      </div>
+                      <div className="text-xs text-white/80">
+                        Your Smart Wedding Assistant
+                      </div>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                      <Sparkles size={18} />
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3 flex-row-reverse">
-                    <div className="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center flex-shrink-0">
-                      <span className="text-sm">👰</span>
-                    </div>
-                    <div className="flex-1 bg-neutral-100 rounded-2xl rounded-tr-none p-4">
-                      <p className="text-neutral-800 text-sm">
-                        Do you handle destination weddings?
+                {/* Conversation */}
+                <div className="h-[440px] overflow-y-auto bg-[#fffdf7] px-4 sm:px-5 py-5">
+                  <div className="max-w-[88%]">
+                    <div className="bg-white shadow-sm rounded-2xl p-4 border border-neutral-100">
+                      <p className="text-[13.5px] text-neutral-800">
+                        Hi there 👋 I’m your Smart Wedding Assistant from{" "}
+                        <span className="font-medium">Serafina Weddings</span>.
+                        We design elegant destination weddings across Italy —
+                        from Lake Como to the Amalfi Coast. How can I help you
+                        today?
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
-                      <Sparkles size={16} className="text-white" />
-                    </div>
-                    <div className="flex-1 bg-amber-600 text-white rounded-2xl rounded-tl-none p-4">
-                      <p className="text-sm">
-                        Absolutely! We specialize in destination weddings and
-                        have coordinated celebrations in Italy, France, Mexico,
-                        and throughout the Caribbean. We handle all logistics,
-                        vendor coordination, and guest management.
-                      </p>
-                    </div>
+                  <div className="mt-4 space-y-3">
+                    {[
+                      "View Planning Packages",
+                      "Schedule a Consultation",
+                      "See Our Favorite Venues",
+                    ].map((label) => (
+                      <div key={label}>
+                        <button
+                          disabled
+                          className="rounded-full bg-amber-100 text-amber-900 text-[13px] px-4 py-2 border border-amber-200 shadow-inner cursor-not-allowed"
+                        >
+                          {label}
+                        </button>
+                      </div>
+                    ))}
                   </div>
 
-                  <div className="flex items-start gap-3 flex-row-reverse">
-                    <div className="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center flex-shrink-0">
-                      <span className="text-sm">👰</span>
-                    </div>
-                    <div className="flex-1 bg-neutral-100 rounded-2xl rounded-tr-none p-4">
-                      <p className="text-neutral-800 text-sm">
-                        What's included in your full-service planning?
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-full bg-amber-600 flex items-center justify-center flex-shrink-0">
-                      <Sparkles size={16} className="text-white" />
-                    </div>
-                    <div className="flex-1 bg-amber-600 text-white rounded-2xl rounded-tl-none p-4">
-                      <p className="text-sm">
-                        Our full-service planning includes venue selection,
-                        vendor curation, budget management, design & styling,
-                        timeline creation, day-of coordination, and unlimited
-                        consultations. We're with you from engagement to
-                        send-off!
+                  <div className="max-w-[88%] mt-6">
+                    <div className="bg-white shadow-sm rounded-2xl p-4 border border-neutral-100">
+                      <p className="text-[13.5px] text-neutral-800">
+                        Our full-service planning covers venue scouting, vendor
+                        management, design, and on-the-day coordination —
+                        everything you need for a seamless celebration.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 pt-4 border-t border-neutral-200">
-                  <input
-                    type="text"
-                    placeholder="Type your message..."
-                    disabled
-                    className="flex-1 px-4 py-2 border border-neutral-300 rounded-full text-sm text-neutral-400"
-                  />
-                  <button
-                    disabled
-                    className="px-4 py-2 bg-neutral-300 text-white rounded-full text-sm"
-                  >
-                    Send
-                  </button>
+                {/* Input */}
+                <div className="bg-[#fff8e9] border-t border-amber-200 px-4 sm:px-5 py-3">
+                  <div className="flex items-center gap-2">
+                    <input
+                      disabled
+                      placeholder="Type your message..."
+                      className="flex-1 bg-white/70 border border-amber-200 rounded-xl px-3 py-2 text-[13.5px] text-neutral-700 placeholder:text-amber-900/50 cursor-not-allowed"
+                    />
+                    <button
+                      disabled
+                      className="p-2 rounded-full bg-amber-100 border border-amber-200 text-amber-800 cursor-not-allowed"
+                    >
+                      <Mic size={16} />
+                    </button>
+                    <button
+                      disabled
+                      className="p-2 rounded-full bg-amber-100 border border-amber-200 text-amber-800 cursor-not-allowed"
+                    >
+                      <Headphones size={16} />
+                    </button>
+                    <button
+                      disabled
+                      className="p-2 rounded-full bg-amber-100 border border-amber-200 text-amber-800 cursor-not-allowed"
+                    >
+                      <Send size={16} />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Footer */}
+                <div className="bg-white border-t border-neutral-200">
+                  <div className="text-[11px] text-neutral-500 px-4 py-2 text-center">
+                    Powered by Alta Frequenza Marketing
+                  </div>
+                  <div className="flex items-center justify-around px-4 py-3 text-neutral-600">
+                    <div className="flex flex-col items-center gap-1 text-xs">
+                      <Home size={18} />
+                      <span>Home</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 text-xs">
+                      <MessageCircle size={18} />
+                      <span>Chats</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1 text-xs">
+                      <HelpCircle size={18} />
+                      <span>FAQ</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div>
-                <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-                  Instant Answers, Anytime
-                </h2>
-                <div className="space-y-6 text-lg text-neutral-700 leading-relaxed">
-                  <p>
-                    High-net-worth couples expect immediate responses. If they
-                    visit your website at midnight with questions about your
-                    services, they won't wait until morning for answers—they'll
-                    move on to a competitor.
-                  </p>
-                  <p>
-                    The AI Planner's Assistant™ ensures every visitor receives
-                    instant, accurate responses to common questions about your
-                    services, pricing, availability, and process. It's like
-                    having a knowledgeable assistant available 24/7.
-                  </p>
-                  <p>
-                    By providing immediate value and guidance, the Assistant
-                    keeps couples engaged, builds trust, and dramatically
-                    increases the likelihood they'll book a consultation with
-                    you.
-                  </p>
-                </div>
+              {/* CTA under visual */}
+              <div className="mt-8 text-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-amber-600 text-white text-lg rounded-full hover:bg-amber-700 transition-all"
+                >
+                  Want to see a demo with your branding — for free?
+                  <ArrowRight size={20} />
+                </Link>
               </div>
+            </div>
+
+            {/* Text Column */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
+                Elegant Conversations. Instant Results.
+              </h2>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                Every couple wants to feel heard — even before they meet you.
+                The Smart Wedding Assistant™ responds instantly with warmth,
+                clarity, and detail, mirroring your brand voice perfectly.
+              </p>
+              <p className="text-lg text-neutral-700 leading-relaxed">
+                It doesn’t just answer questions — it qualifies, captures
+                details like wedding date, location, and guest count, and guides
+                couples to book a consultation when interest peaks.
+              </p>
             </div>
           </div>
         </section>
 
-        <section className="py-24 px-6 lg:px-12">
+        {/* WHY IT WORKS */}
+        <section className="py-24 px-6 lg:px-12 bg-white">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <p className="text-sm tracking-widest text-neutral-500 mb-4">
+              WHY IT WORKS
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
+              Why The Smart Wedding Assistant™ Converts So Well
+            </h2>
+          </div>
+
+          <div className="max-w-5xl mx-auto space-y-8 text-lg text-neutral-700 leading-relaxed">
+            <p>
+              <span className="font-medium">
+                Couples expect instant answers.
+              </span>
+              High-end clients rarely wait for replies. The planner who responds
+              first usually earns the booking.
+            </p>
+            <p>
+              <span className="font-medium">
+                Emotion drives early decisions.
+              </span>
+              When excitement peaks, the Assistant keeps them engaged and
+              connected — before they explore other planners.
+            </p>
+            <p>
+              <span className="font-medium">It mirrors your expertise.</span>
+              Because it’s trained on your brand’s language, every conversation
+              feels confident, warm, and authentic.
+            </p>
+            <p>
+              <span className="font-medium">
+                It qualifies leads automatically.
+              </span>
+              No more back-and-forth with unready inquiries — you speak only
+              with couples who are serious and aligned with your services.
+            </p>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS */}
+        <section className="py-24 px-6 lg:px-12 bg-neutral-50">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <p className="text-sm tracking-widest text-neutral-500 mb-4">
                 HOW IT WORKS
               </p>
               <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
-                Seamlessly Integrated
-                <br />
-                Into Your Website Experience
+                A Seamless Extension of Your Brand Experience
               </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-neutral-50 p-8 border border-neutral-200">
-                <div className="text-5xl font-serif text-amber-600 mb-4">
-                  01
+              {[
+                {
+                  step: "01",
+                  title: "An Elegant First Impression",
+                  text: "A refined chat bubble appears on your site — subtle, inviting, and on-brand.",
+                },
+                {
+                  step: "02",
+                  title: "Smart Conversations That Feel Human",
+                  text: "It answers with empathy and precision, reflecting your brand’s personality.",
+                },
+                {
+                  step: "03",
+                  title: "Effortless Lead Capture",
+                  text: "Collects details and smoothly directs couples to book a consultation or call.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.step}
+                  className="bg-white p-8 border border-neutral-200"
+                >
+                  <div className="text-5xl font-serif text-amber-600 mb-4">
+                    {item.step}
+                  </div>
+                  <h3 className="text-xl font-medium text-neutral-900 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-neutral-700">{item.text}</p>
                 </div>
-                <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                  Couple Visits Website
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  A sophisticated chat widget appears on your website. It's
-                  elegant, unobtrusive, and on-brand—no generic chatbot look
-                  here.
-                </p>
-              </div>
-
-              <div className="bg-neutral-50 p-8 border border-neutral-200">
-                <div className="text-5xl font-serif text-amber-600 mb-4">
-                  02
-                </div>
-                <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                  AI Provides Answers
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  The AI Assistant answers questions about your services,
-                  packages, process, and availability based on the information
-                  you've provided.
-                </p>
-              </div>
-
-              <div className="bg-neutral-50 p-8 border border-neutral-200">
-                <div className="text-5xl font-serif text-amber-600 mb-4">
-                  03
-                </div>
-                <h3 className="text-xl font-medium text-neutral-900 mb-3">
-                  Smooth Handoff
-                </h3>
-                <p className="text-neutral-700 leading-relaxed">
-                  When ready, the AI seamlessly transitions the couple to book a
-                  consultation or speak with you directly. No friction, no lost
-                  leads.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
+        {/* TRAINED TO SPEAK LIKE YOU */}
+        <section className="py-24 px-6 lg:px-12 bg-white">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <p className="text-sm tracking-widest text-neutral-500 mb-4">
+              BRAND PERSONALIZATION
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
+              Trained to Speak Like You
+            </h2>
+          </div>
+
+          <div className="max-w-4xl mx-auto text-lg text-neutral-700 leading-relaxed space-y-6 text-center">
+            <p>
+              Every Smart Wedding Assistant™ is built from scratch — tailored to
+              your brand, your tone, and your process. We study your website,
+              social content, and service flow to teach your Assistant how{" "}
+              <span className="italic">you</span> communicate.
+            </p>
+            <p>
+              It learns your style, the language you use with couples, and how
+              you explain your packages. Within days, it becomes an intelligent
+              reflection of your business — answering questions and guiding
+              couples just as you would.
+            </p>
+            <p className="font-medium">
+              The result? Conversations that feel human, warm, and aligned with
+              your brand — while saving you hours every week.
+            </p>
+          </div>
+        </section>
+
+        {/* BENEFITS */}
         <section className="py-24 px-6 lg:px-12 bg-neutral-900 text-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm tracking-widest text-neutral-400 mb-4">
-                KEY BENEFITS
-              </p>
-              <h2 className="text-4xl md:text-5xl font-serif mb-6">
-                Why You Need an AI Assistant
-                <br />
-                on Your Website
-              </h2>
-            </div>
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <p className="text-sm tracking-widest text-neutral-400 mb-4">
+              KEY BENEFITS
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif mb-6">
+              Why Wedding Planners Love It
+            </h2>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-neutral-800 p-8 border border-neutral-700">
-                <Clock className="text-amber-600 mb-4" size={32} />
-                <h3 className="text-xl font-medium mb-3">
-                  Save Countless Hours
-                </h3>
-                <p className="text-neutral-300 leading-relaxed">
-                  Stop answering the same questions repeatedly. The AI handles
-                  FAQs automatically, freeing you to focus on consultations and
-                  creating weddings.
-                </p>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: <Clock className="text-amber-600 mb-4" size={32} />,
+                title: "Reclaim Your Creative Time",
+                text: "Automate FAQs and first-touch inquiries while you focus on creating unforgettable events.",
+              },
+              {
+                icon: <CheckCircle className="text-amber-600 mb-4" size={32} />,
+                title: "Capture Every Opportunity",
+                text: "It responds instantly across time zones — turning midnight visitors into qualified leads.",
+              },
+              {
+                icon: (
+                  <MessageSquare className="text-amber-600 mb-4" size={32} />
+                ),
+                title: "Guide Couples Effortlessly",
+                text: "Every response builds trust and leads them smoothly toward booking a consultation.",
+              },
+              {
+                icon: <Sparkles className="text-amber-600 mb-4" size={32} />,
+                title: "Elevate Your Brand Presence",
+                text: "Fast, elegant communication reflects professionalism and exclusivity.",
+              },
+            ].map((b) => (
+              <div
+                key={b.title}
+                className="bg-neutral-800 p-8 border border-neutral-700 text-left"
+              >
+                {b.icon}
+                <h3 className="text-xl font-medium mb-3">{b.title}</h3>
+                <p className="text-neutral-300 leading-relaxed">{b.text}</p>
               </div>
-
-              <div className="bg-neutral-800 p-8 border border-neutral-700">
-                <CheckCircle className="text-amber-600 mb-4" size={32} />
-                <h3 className="text-xl font-medium mb-3">Never Lose a Lead</h3>
-                <p className="text-neutral-300 leading-relaxed">
-                  Couples visiting your site at 3 AM get immediate answers. No
-                  more losing high-quality leads simply because you were asleep
-                  or busy.
-                </p>
-              </div>
-
-              <div className="bg-neutral-800 p-8 border border-neutral-700">
-                <MessageSquare className="text-amber-600 mb-4" size={32} />
-                <h3 className="text-xl font-medium mb-3">Guide the Journey</h3>
-                <p className="text-neutral-300 leading-relaxed">
-                  The Assistant actively guides couples through your services,
-                  helping them understand your value and positioning you as the
-                  expert.
-                </p>
-              </div>
-
-              <div className="bg-neutral-800 p-8 border border-neutral-700">
-                <Sparkles className="text-amber-600 mb-4" size={32} />
-                <h3 className="text-xl font-medium mb-3">
-                  Premium Brand Experience
-                </h3>
-                <p className="text-neutral-300 leading-relaxed">
-                  Sophisticated, instant responses elevate your brand. Couples
-                  perceive you as professional, accessible, and technologically
-                  advanced.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="text-5xl font-serif text-amber-600 mb-3">
-                  40%
-                </div>
-                <p className="text-neutral-300">
-                  Increase in Consultation Bookings
-                </p>
-              </div>
-              <div>
-                <div className="text-5xl font-serif text-amber-600 mb-3">
-                  90%
-                </div>
-                <p className="text-neutral-300">Questions Answered Instantly</p>
-              </div>
-              <div>
-                <div className="text-5xl font-serif text-amber-600 mb-3">
-                  24/7
-                </div>
-                <p className="text-neutral-300">Availability for Couples</p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        <section className="py-24 px-6 lg:px-12">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm tracking-widest text-neutral-500 mb-4">
-                COMMON USE CASES
-              </p>
-              <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
-                Questions the AI Assistant
-                <br />
-                Handles Effortlessly
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-neutral-50 p-6 border-l-4 border-amber-600">
-                <p className="text-neutral-800 italic">
-                  "Do you handle destination weddings?"
-                </p>
-              </div>
-              <div className="bg-neutral-50 p-6 border-l-4 border-amber-600">
-                <p className="text-neutral-800 italic">
-                  "What's included in full-service planning?"
-                </p>
-              </div>
-              <div className="bg-neutral-50 p-6 border-l-4 border-amber-600">
-                <p className="text-neutral-800 italic">
-                  "How far in advance should we book?"
-                </p>
-              </div>
-              <div className="bg-neutral-50 p-6 border-l-4 border-amber-600">
-                <p className="text-neutral-800 italic">
-                  "What's your pricing structure?"
-                </p>
-              </div>
-              <div className="bg-neutral-50 p-6 border-l-4 border-amber-600">
-                <p className="text-neutral-800 italic">
-                  "Do you work with specific vendors?"
-                </p>
-              </div>
-              <div className="bg-neutral-50 p-6 border-l-4 border-amber-600">
-                <p className="text-neutral-800 italic">
-                  "Can you help with day-of coordination only?"
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-12 bg-amber-50 p-8 border border-amber-200 text-center">
-              <p className="text-lg text-neutral-800 leading-relaxed">
-                The AI Assistant is trained on your specific services, packages,
-                and process.
-                <br />
-                <span className="font-medium">
-                  Every answer is accurate, on-brand, and personalized to your
-                  business.
-                </span>
-              </p>
-            </div>
-          </div>
-        </section>
-
+        {/* FINAL CTA */}
         <section className="py-24 px-6 lg:px-12 bg-amber-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-              Provide Instant, Premium Service
-              <br />
-              Around the Clock
+              Offer Immediate, Personalized Service — Even While You Sleep
             </h2>
             <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-              Stop losing leads to slow response times. Let your AI Planner's
-              Assistant™ engage couples, answer questions, and guide them toward
-              booking a consultation—even while you sleep.
+              Stop losing luxury leads to slow responses. The Smart Wedding
+              Assistant™ greets couples instantly, answers beautifully, and
+              guides them to book — all in your voice.
             </p>
             <Link
               to={"/contact"}
               className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
             >
-              Try Out The AI Planner's Assistant™ Now
+              Request Your Free Personalized Demo
               <ArrowRight size={20} />
             </Link>
           </div>

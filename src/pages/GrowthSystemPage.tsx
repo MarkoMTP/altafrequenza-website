@@ -326,7 +326,7 @@ export default function GrowthSystemPage() {
                 <Sparkles className="text-amber-500 mb-3" size={28} />
                 <h4 className="text-xl mb-2">Landing Page Build</h4>
                 <p className="text-neutral-400">
-                  +€500 — conversion-optimized & styled for luxury clients
+                  +€800 — conversion-optimized & styled for luxury clients
                 </p>
               </div>
               <div className="bg-neutral-800 p-6 border border-neutral-700">

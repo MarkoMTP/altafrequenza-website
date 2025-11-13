@@ -58,7 +58,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                to="/assistant"
+                to="/ai-chat-assistant"
                 className="block text-neutral-400 hover:text-white text-sm transition-colors"
               >
                 The Wedding Planner AI Assistant™
