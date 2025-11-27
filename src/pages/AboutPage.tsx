@@ -9,11 +9,11 @@ export default function AboutPage() {
     <>
       <Helmet>
         <title>
-          About Alta Frequenza Marketing | Luxury Wedding Marketing Experts
+          About Alta Frequenza Marketing | Wedding Planner Marketing Experts
         </title>
         <meta
           name="description"
-          content="Learn about Alta Frequenza Marketing — a boutique agency helping luxury wedding planners attract high-end international couples through Google Ads, social media, and AI automation."
+          content="Learn about Alta Frequenza Marketing — a boutique agency helping  wedding planners attract high-end international couples through Google Ads, social media, and AI automation."
         />
         <meta
           name="keywords"
@@ -21,11 +21,11 @@ export default function AboutPage() {
         />
         <meta
           property="og:title"
-          content="About Alta Frequenza Marketing | Luxury Wedding Marketing Experts"
+          content="About Alta Frequenza Marketing |  Wedding Planner Marketing Experts"
         />
         <meta
           property="og:description"
-          content="Alta Frequenza Marketing helps elite wedding planners grow their luxury clientele through refined marketing and technology."
+          content="Alta Frequenza Marketing helps  wedding planners grow their luxury clientele through refined marketing and technology."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -47,11 +47,11 @@ export default function AboutPage() {
             <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-8 text-neutral-900">
               A Boutique Marketing Agency
               <br />
-              <span className="italic">Dedicated to Luxury Weddings</span>
+              <span className="italic">Dedicated to the wedding industry</span>
             </h1>
             <p className="text-xl text-neutral-600 leading-relaxed max-w-3xl mx-auto">
-              We exist for one purpose: to help elite wedding planners attract
-              and book the high-net-worth couples they deserve to work with.
+              We exist for one purpose: to help wedding planners attract and
+              book consistently couples they deserve to work with.
             </p>
           </div>
         </section>
@@ -61,11 +61,11 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-                  Why We Specialize in High-End Wedding Planners
+                  Why We Specialize in Wedding Planners
                 </h2>
                 <div className="space-y-6 text-lg text-neutral-700 leading-relaxed">
                   <p>
-                    The luxury wedding industry is unique. It requires a deep
+                    The wedding industry is unique. It requires a deep
                     understanding of affluent consumer psychology, refined
                     aesthetics, and the art of positioning a brand as truly
                     exclusive.
@@ -76,7 +76,7 @@ export default function AboutPage() {
                     that attract tire-kickers and budget shoppers.
                   </p>
                   <p>
-                    We're different. We've studied the luxury wedding market
+                    We're different. We've studied the wedding market
                     extensively. We know what high-net-worth couples are looking
                     for, where they search, and what messaging resonates with
                     them.
@@ -139,8 +139,8 @@ export default function AboutPage() {
                   <p className="text-lg text-neutral-700 leading-relaxed">
                     We don't cast a wide net. We use sophisticated targeting
                     strategies to place your brand directly in front of couples
-                    who are actively planning luxury weddings and have the
-                    budget to match their vision.
+                    who are actively searching for a wedding planner and have
+                    the budget to match their vision.
                   </p>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
               <div className="space-y-6 text-lg text-neutral-300 leading-relaxed">
                 <p>
                   Alta Frequenza Marketing was founded after years of working
-                  inside the luxury wedding industry and witnessing a persistent
+                  inside the wedding industry and witnessing a persistent
                   problem: talented wedding planners struggling to attract the
                   caliber of clients their work deserved.
                 </p>
@@ -241,9 +241,9 @@ export default function AboutPage() {
                 multiple industries.
               </p>
               <p>
-                Recognizing that elite wedding planners deserved marketing
-                systems as refined as the celebrations they create, Marko
-                founded Alta Frequenza Marketing.
+                Recognizing that wedding planners deserved marketing systems as
+                refined as the celebrations they create, Marko founded Alta
+                Frequenza Marketing.
               </p>
               <p className="text-neutral-900 font-medium">
                 By combining technical innovation with marketing expertise, he
@@ -260,8 +260,8 @@ export default function AboutPage() {
               Experience the Alta Frequenza Difference
             </h2>
             <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-              Join the elite wedding planners who trust us to elevate their
-              marketing and grow their luxury clientele.
+              Join the wedding planners who trust us to elevate their marketing
+              and grow their luxury clientele.
             </p>
             <Link
               to="/contact"

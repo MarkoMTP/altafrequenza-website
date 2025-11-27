@@ -44,7 +44,7 @@ export default function HomePage() {
       title: "Wedding Planner Growth System™",
       subtitle: "Google Ads",
       description:
-        "Precision-targeted Google Ads campaigns designed exclusively for luxury wedding planners. We position you in front of high-net-worth couples actively searching for elevated planning services.",
+        "Precision-targeted Google Ads campaigns designed exclusively for wedding planners. We position you in front of high-net-worth couples actively searching for elevated planning services.",
       features: [
         "Custom keyword strategy for luxury wedding searches",
         "High-intent lead generation",
@@ -105,19 +105,19 @@ export default function HomePage() {
     <>
       <Helmet>
         <title>
-          Alta Frequenza Marketing | Luxury Wedding Planner Marketing Agency
+          Alta Frequenza Marketing | Wedding Planner Marketing Agency
         </title>
         <meta
           name="description"
-          content="Alta Frequenza Marketing helps luxury wedding planners attract high-end international couples through Google Ads, social media, and AI automation."
+          content="Alta Frequenza Marketing helps  wedding planners attract high-end international couples through Google Ads, social media, and AI automation."
         />
         <meta
           name="keywords"
-          content="wedding planner marketing, luxury wedding planner, Google Ads for wedding planners, wedding planner social media, destination wedding marketing, wedding planner SEO"
+          content="wedding planner marketing,  wedding planner, Google Ads for wedding planners, wedding planner social media, destination wedding marketing, wedding planner SEO"
         />
         <meta
           property="og:title"
-          content="Alta Frequenza Marketing | Luxury Wedding Planner Marketing Agency"
+          content="Alta Frequenza Marketing |  Wedding Planner Marketing Agency"
         />
         <meta
           property="og:description"
@@ -136,19 +136,19 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 text-sm tracking-wide text-neutral-600">
               <Sparkles size={16} className="text-amber-600" />
-              Boutique Marketing for Luxury Wedding Planners
+              Boutique Marketing for Wedding Planners
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight mb-8 text-neutral-900">
               Helping Wedding Planners
               <br />
-              <span className="italic">Attract Luxury Couples</span>
+              <span className="italic">Attract Couples</span>
               <br />
               with Digital Marketing
             </h1>
 
             <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-              We specialize in positioning elite wedding planners in front of
+              We specialize in positioning wedding planners in front of
               high-net-worth couples who value exceptional service and
               unforgettable celebrations.
             </p>
@@ -170,18 +170,18 @@ export default function HomePage() {
         <section className="py-32 px-6 lg:px-12 bg-neutral-50 border-t border-neutral-200">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
-              The Changing Luxury Market
+              The Changing Market
             </h2>
             <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
-              Luxury couples have changed. Has your marketing? In 2026–2027,
-              affluent couples expect personalization, elegance, and immediacy.
-              They're seeking a curator of unforgettable experiences — not just
-              a planner.
+              Couples have changed. Has your marketing? In 2026–2027, affluent
+              couples expect personalization, elegance, and immediacy. They're
+              seeking a curator of unforgettable experiences — not just a
+              planner.
             </p>
             <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
               Most planners still rely on outdated social tactics or referrals,
-              but high-net-worth couples are intentional and digitally
-              sophisticated. They research extensively before ever reaching out.
+              but today's couples are intentional and digitally sophisticated.
+              They research extensively before ever reaching out.
             </p>
             <p className="italic text-neutral-800 text-lg">
               We’ve distilled what works into three pillars:{" "}
@@ -202,7 +202,7 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
                 Comprehensive Solutions for
                 <br />
-                Elite Wedding Planners
+                Wedding Planners
               </h2>
             </div>
 
@@ -273,7 +273,7 @@ export default function HomePage() {
                 </h3>
                 <p className="text-neutral-300">
                   Strategic Google Ads positioning that captures high-intent
-                  searches from affluent couples ready to invest in luxury
+                  searches from affluent couples ready to invest in bespoke
                   experiences.
                 </p>
               </div>
@@ -383,7 +383,7 @@ export default function HomePage() {
         <section className="py-24 px-6 lg:px-12 bg-amber-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-              Ready to Attract More Luxury Couples?
+              Ready to Attract More Couples?
             </h2>
             <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
               Book a complimentary strategy session to discover how Alta
