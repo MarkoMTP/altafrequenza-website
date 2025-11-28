@@ -82,7 +82,7 @@ export default function SocialMediaPage({ onNavigate }: SocialMediaPageProps) {
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 text-sm tracking-wide text-neutral-600">
               <Sparkles size={16} className="text-amber-600" />
-              Social Media for Luxury Wedding Planners
+              Social Media for Wedding Planners
             </div>
 
             <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-8 text-neutral-900">
@@ -115,7 +115,7 @@ export default function SocialMediaPage({ onNavigate }: SocialMediaPageProps) {
               THE CHALLENGE
             </p>
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-              Luxury Clients Judge You by Your Online Presence
+              Clients Judge You by Your Online Presence
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed mb-16">
               Before they ever click “inquire,” high-end couples spend hours
@@ -283,13 +283,7 @@ export default function SocialMediaPage({ onNavigate }: SocialMediaPageProps) {
               </h4>
               <ul className="space-y-4 text-neutral-300">
                 <li>📈 +2,800 followers in 3 months</li>
-                <li>💬 9 high-quality inquiries</li>
-                <li>💍 3 weddings booked worth over €100K</li>
               </ul>
-              <p className="text-sm text-neutral-400 mt-6 italic">
-                “Marko helped us create consistent leads every month that led to
-                bookings.” — <strong>My Tuscan Wedding</strong>
-              </p>
             </div>
           </div>
 
@@ -298,7 +292,7 @@ export default function SocialMediaPage({ onNavigate }: SocialMediaPageProps) {
               Add Meta Growth System™ to your Social Media package for
             </p>
             <p className="text-3xl font-serif text-amber-500 mb-4">
-              €1,000 first month • €500/month ongoing
+              €1,000 first month • €440/month ongoing
             </p>
             <p className="text-sm text-neutral-500 mb-8">
               Includes Meta Ads strategy, creative setup, targeting, and

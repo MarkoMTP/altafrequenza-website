@@ -27,7 +27,7 @@ export default function HomePage() {
       );
 
       if (res.ok) {
-        setStatus("✅ Thanks! Check your email for the case study.");
+        setStatus("✅ Thanks! Check your email for the guide.");
         setEmail("");
       } else {
         setStatus("❌ Something went wrong. Please try again.");
@@ -44,60 +44,42 @@ export default function HomePage() {
       title: "Wedding Planner Growth System™",
       subtitle: "Google Ads",
       description:
-        "Precision-targeted Google Ads campaigns designed exclusively for wedding planners. We position you in front of high-net-worth couples actively searching for elevated planning services.",
+        "A Google Ads system engineered for destination wedding planners who want predictable inquiries from high-spending international couples ready to invest €80K–€1M+ into their wedding.",
       features: [
-        "Custom keyword strategy for luxury wedding searches",
-        "High-intent lead generation",
-        "Conversion-optimized landing pages",
-        "Monthly performance analytics and strategy calls",
+        "Precision luxury keyword targeting",
+        "High-quality inquiries from US, UK, UAE & beyond",
+        "Pre-qualification system for filtering low budgets",
+        "Weekly optimization + monthly clarity reports",
       ],
       path: "/growth-system",
     },
     {
       icon: Sparkles,
-      title: "The Wedding Planner Social Media Package™",
-      subtitle: "Social Media Marketing",
+      title: "Elegant Presence™",
+      subtitle: "Social Media Management",
       description:
-        "Sophisticated social media management that showcases your portfolio and attracts discerning couples. We craft content that reflects the elegance and exclusivity of your brand.",
+        "A high-end social media presence crafted to elevate your brand and build trust with  couples. Your weddings deserve to look as exquisite online as they do in real life.",
       features: [
-        "Editorial-style content creation",
-        "Strategic Instagram & Pinterest presence",
-        "Engagement with luxury wedding audiences",
-        "Brand storytelling that converts followers into inquiries",
+        "Curated content for a premium aesthetic",
+        "Stories, reels & weekly posting",
+        "Brand personality + trust-building captions",
+        "Content tailored for international buyers",
       ],
       path: "/social-media",
     },
-
     {
       icon: Bot,
-      title: "The Wedding Planner AI Assistant™",
-      subtitle: "AI Chat Concierge for Planners",
+      title: "AI Wedding Planner Assistant™",
+      subtitle: "24/7 AI Lead Capture",
       description:
-        "A 24/7 virtual assistant that lives on your website to answer FAQs, collect leads, and book consultations in real time — making your brand feel responsive, high-end, and always available.",
+        "Your on-brand AI assistant that responds instantly to inquiries, qualifies leads, answers questions, and books calls — even when you're busy planning weddings.",
       features: [
-        "Conversational AI chat that feels human and on-brand",
-        "Instant answers to FAQs, pricing, and availability",
-        "Calendar integration for instant call booking",
-        "Seamless handoff to your team for hot leads",
+        "Instant automated responses",
+        "Lead capture + qualification",
+        "Fully branded to your voice and process",
+        "Works 24/7 for international couples",
       ],
       path: "/ai-chat-assistant",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Isabella Martinez",
-      role: "Founder, Bella Notte Events",
-      quote:
-        "Since partnering with Alta Frequenza, our average wedding budget has increased by 180%. They understand the luxury market like no other agency.",
-      rating: 5,
-    },
-    {
-      name: "Sophie Chen",
-      role: "Creative Director, The Refined Affair",
-      quote:
-        "The Wedding SmartForm™ has transformed how we capture leads. We never miss an inquiry, and the quality scoring saves us countless hours.",
-      rating: 5,
     },
   ];
 
@@ -109,55 +91,39 @@ export default function HomePage() {
         </title>
         <meta
           name="description"
-          content="Alta Frequenza Marketing helps  wedding planners attract high-end international couples through Google Ads, social media, and AI automation."
+          content="Alta Frequenza Marketing helps destination wedding planners attract predictable, high-quality inquiries from international couples using Google Ads, social media, and automation."
         />
         <meta
           name="keywords"
-          content="wedding planner marketing,  wedding planner, Google Ads for wedding planners, wedding planner social media, destination wedding marketing, wedding planner SEO"
-        />
-        <meta
-          property="og:title"
-          content="Alta Frequenza Marketing |  Wedding Planner Marketing Agency"
-        />
-        <meta
-          property="og:description"
-          content="Helping wedding planners attract high-net-worth couples through visibility, attraction, and automation."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://altafrequenzamarketing.com/" />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-image.jpg"
+          content=" wedding planner marketing, Google Ads for wedding planners, destination wedding marketing, social media management wedding planners"
         />
       </Helmet>
+
       <div className="bg-white">
-        {/* Hero Section */}
+        {/* HERO */}
         <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20">
           <div className="max-w-5xl mx-auto text-center">
             <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 text-sm tracking-wide text-neutral-600">
               <Sparkles size={16} className="text-amber-600" />
-              Boutique Marketing for Wedding Planners
+              Marketing for Wedding Planners
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight mb-8 text-neutral-900">
-              Helping Wedding Planners
+              Consistent Wedding Leads —
               <br />
-              <span className="italic">Attract Couples</span>
-              <br />
-              with Digital Marketing
+              Without Guessing or Relying on Referrals.
             </h1>
 
             <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-              We specialize in positioning wedding planners in front of
-              high-net-worth couples who value exceptional service and
-              unforgettable celebrations.
+              We help wedding planners generate predictable, high-quality
+              inquiries from couples ready to invest in unforgettable weddings.
             </p>
 
             <Link
               to="/contact"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white text-base tracking-wide hover:bg-neutral-800 transition-all"
             >
-              Book Your Strategy Session
+              Book Your Private Strategy Session
               <ArrowRight
                 size={20}
                 className="group-hover:translate-x-1 transition-transform"
@@ -166,33 +132,32 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section: The Changing Luxury Market */}
+        {/* MARKET SHIFT */}
         <section className="py-32 px-6 lg:px-12 bg-neutral-50 border-t border-neutral-200">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
-              The Changing Market
+              The Reality in 2025: Couples Don’t Book Like They Used To
             </h2>
-            <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
-              Couples have changed. Has your marketing? In 2026–2027, affluent
-              couples expect personalization, elegance, and immediacy. They're
-              seeking a curator of unforgettable experiences — not just a
-              planner.
+
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+              High-end couples research across 8–15 touchpoints. They compare
+              planners internationally. They expect your brand to show up
+              consistently before they trust you.
             </p>
-            <p className="text-lg text-neutral-700 mb-8 leading-relaxed">
-              Most planners still rely on outdated social tactics or referrals,
-              but today's couples are intentional and digitally sophisticated.
-              They research extensively before ever reaching out.
+
+            <p className="text-lg text-neutral-700 mb-8 leading-relaxed max-w-3xl mx-auto">
+              Organic marketing alone isn’t enough. SEO takes months. Instagram
+              reach is unpredictable. Referrals are inconsistent.
             </p>
-            <p className="italic text-neutral-800 text-lg">
-              We’ve distilled what works into three pillars:{" "}
-              <span className="font-semibold">
-                Visibility, Attraction, and Automation.
-              </span>
+
+            <p className="italic text-neutral-800 text-lg max-w-3xl mx-auto">
+              To stand out, you need a predictable acquisition system — not
+              another Instagram post.
             </p>
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* SERVICES */}
         <section className="py-24 px-6 lg:px-12">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
@@ -200,7 +165,7 @@ export default function HomePage() {
                 OUR SERVICES
               </p>
               <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
-                Comprehensive Solutions for
+                Growth Solutions for
                 <br />
                 Wedding Planners
               </h2>
@@ -255,64 +220,154 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Section: The Framework */}
+        {/* PACKAGES SECTION */}
+        <section className="py-24 px-6 lg:px-12 bg-white border-t border-neutral-200">
+          <div className="max-w-6xl mx-auto text-center mb-16">
+            <p className="text-sm tracking-widest text-neutral-500 mb-4">
+              OUR PACKAGES
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
+              Simple, Clear Packages for Every Stage of Growth
+            </h2>
+            <p className="text-lg text-neutral-700 max-w-3xl mx-auto mt-6 leading-relaxed">
+              Whether you need visibility, enquiries, automation — or all three
+              — our packages give you exactly what you need to grow without
+              confusion or guesswork.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {/* PACKAGE 1 */}
+            <div className="bg-neutral-50 p-10 border border-neutral-300">
+              <h3 className="text-2xl font-serif text-neutral-900 mb-3">
+                ⭐ Visibility + Leads Suite
+              </h3>
+              <p className="text-neutral-600 mb-6">
+                Ideal for planners who want predictable enquiries and a polished
+                social media presence.
+              </p>
+              <ul className="space-y-3 text-neutral-700 mb-6">
+                <li>✔ Google Ads Growth System™</li>
+                <li>✔ Elegant Presence™ Social Media</li>
+                <li>✔ Unified brand voice across ads + Instagram</li>
+                <li>✔ Visibility and enquiries working together</li>
+              </ul>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all"
+              >
+                Learn More <ChevronRight size={16} />
+              </Link>
+            </div>
+
+            {/* PACKAGE 2 */}
+            <div className="bg-neutral-50 p-10 border border-neutral-300">
+              <h3 className="text-2xl font-serif text-neutral-900 mb-3">
+                ⭐ Automation Growth Suite
+              </h3>
+              <p className="text-neutral-600 mb-6">
+                For planners who want enquiries AND automated responses,
+                pre-qualification, and booking.
+              </p>
+              <ul className="space-y-3 text-neutral-700 mb-6">
+                <li>✔ Google Ads Growth System™</li>
+                <li>✔ AI Wedding Planner Assistant™</li>
+                <li>✔ Instant replies + lead qualification</li>
+                <li>✔ 24/7 automated follow-up</li>
+              </ul>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all"
+              >
+                Learn More <ChevronRight size={16} />
+              </Link>
+            </div>
+
+            {/* PACKAGE 3 */}
+            <div className="bg-neutral-50 p-10 border border-neutral-300">
+              <h3 className="text-2xl font-serif text-neutral-900 mb-3">
+                ⭐ Full Growth Suite
+              </h3>
+              <p className="text-neutral-600 mb-6">
+                The complete growth engine: visibility, enquiries, and
+                automation working together.
+              </p>
+              <ul className="space-y-3 text-neutral-700 mb-6">
+                <li>✔ Google Ads Growth System™</li>
+                <li>✔ Elegant Presence™ Social Media</li>
+                <li>✔ AI Wedding Planner Assistant™</li>
+                <li>✔ Your full marketing ecosystem — done for you</li>
+              </ul>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all"
+              >
+                Learn More <ChevronRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* FRAMEWORK */}
         <section className="py-32 px-6 lg:px-12 bg-neutral-900 text-white">
           <div className="max-w-6xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif mb-8">
-              The 3-Pillar System
+              The 3-Pillar Growth Framework
             </h2>
+
             <p className="text-lg text-neutral-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              A comprehensive framework that combines visibility, attraction,
-              and automation to help planners consistently book high-value
-              weddings.
+              Our system balances visibility, attraction, and consistency — the
+              three elements couples look for when choosing a planner.
             </p>
+
             <div className="grid md:grid-cols-3 gap-8 text-left">
               <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
                 <h3 className="text-xl font-serif mb-4 text-amber-500">
                   Visibility
                 </h3>
                 <p className="text-neutral-300">
-                  Strategic Google Ads positioning that captures high-intent
-                  searches from affluent couples ready to invest in bespoke
-                  experiences.
+                  Strategic Google Ads positioning so couples searching for a
+                  wedding planner find you first — at the exact moment they’re
+                  ready to inquire.
                 </p>
               </div>
+
               <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
                 <h3 className="text-xl font-serif mb-4 text-amber-500">
                   Attraction
                 </h3>
                 <p className="text-neutral-300">
-                  Editorial social media that elevates your brand and positions
-                  you as the aspirational choice in your market.
+                  A curated social presence that elevates your brand and makes
+                  wealthy couples feel confident and inspired.
                 </p>
               </div>
+
               <div className="bg-neutral-800 p-8 rounded-lg border border-neutral-700">
                 <h3 className="text-xl font-serif mb-4 text-amber-500">
-                  Automation
+                  Consistency
                 </h3>
                 <p className="text-neutral-300">
-                  Intelligent AI systems that qualify leads and book
-                  consultations — while you focus on creating unforgettable
-                  weddings.
+                  Automation and systems that capture, qualify, and follow up
+                  with leads — even while you're planning weddings.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* CASE STUDY OPT-IN */}
         <section className="py-24 px-6 lg:px-12 bg-neutral-50 border-t border-b border-neutral-200">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-sm tracking-widest text-neutral-500 mb-4">
-              FREE DOWNLOAD
+              Case Study
             </p>
+
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-              Get Your Free Copy of <br />
-              “The Luxury Wedding Planner Marketing Playbook”
+              See How We Generated 35 Qualified Luxury Inquiries in 5 Months
             </h2>
             <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-              Discover how top wedding planners attract €100K+ weddings in
-              2026–2027 using our 3-pillar system of Visibility, Attraction, and
-              Automation.
+              Discover the exact strategy used to attract high-spending couples
+              — with multiple bookings and more in follow-up.
             </p>
 
             <form
@@ -331,7 +386,7 @@ export default function HomePage() {
                 type="submit"
                 className="px-8 py-4 bg-amber-600 text-white font-medium hover:bg-amber-700 transition-colors"
               >
-                Get the Guide
+                Get the Case Study
               </button>
             </form>
 
@@ -341,55 +396,19 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Testimonials
-      <section className="py-24 px-6 lg:px-12">
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <p className="text-sm tracking-widest text-neutral-500 mb-4">
-            CLIENT TESTIMONIALS
-          </p>
-          <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
-            Trusted by Elite Wedding Planners
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-neutral-50 p-10 border border-neutral-200"
-            >
-              <div className="flex gap-1 mb-6">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <div key={i} className="w-5 h-5 bg-amber-600"></div>
-                ))}
-              </div>
-              <p className="text-lg text-neutral-700 leading-relaxed mb-6 italic">
-                "{testimonial.quote}"
-              </p>
-              <div>
-                <div className="font-medium text-neutral-900">
-                  {testimonial.name}
-                </div>
-                <div className="text-sm text-neutral-600">
-                  {testimonial.role}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-        {/* Final CTA */}
+        {/* FINAL CTA */}
         <section className="py-24 px-6 lg:px-12 bg-amber-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
-              Ready to Attract More Couples?
+              Ready to Attract High-End International Couples?
             </h2>
+
             <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-              Book a complimentary strategy session to discover how Alta
-              Frequenza Marketing can elevate your wedding planning business to
-              new heights.
+              Book a private strategy session and discover how the Wedding
+              Planner Growth System™ can turn your business into a predictable,
+              high-quality inquiry machine.
             </p>
+
             <Link
               to="/contact"
               className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
