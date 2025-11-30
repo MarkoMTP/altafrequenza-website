@@ -315,6 +315,7 @@ export default function GrowthSystemPage() {
         </section>
 
         {/* PRICING */}
+        {/* PRICING */}
         <section className="py-24 px-6 lg:px-12 bg-neutral-900 text-white">
           <div className="max-w-6xl mx-auto text-center mb-16">
             <p className="text-sm uppercase tracking-widest text-neutral-400 mb-3">
@@ -324,34 +325,44 @@ export default function GrowthSystemPage() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
-              Designed for planners who want measurable results — not vague
-              retainers or complex setups.
+              Two ways to work together — depending on whether you want a
+              long-term partner managing your enquiries, or a complete system
+              built for you in one day with 3 months of support.
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-[3fr,2fr] gap-12 items-start">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+            {/* MAIN RETAINER OFFER */}
             <div className="bg-neutral-800 p-10 border border-neutral-700 text-left">
               <h3 className="text-2xl font-serif mb-4 text-amber-500">
                 Wedding Planner Growth System™
               </h3>
               <p className="text-neutral-300 mb-6">
-                The complete Google Ads system for planners who want consistent
-                enquiries from serious couples — anywhere in the world.
+                For planners who want ongoing optimisation, stable enquiry flow,
+                and a long-term partner improving results every single month.
               </p>
+
               <ul className="space-y-3 mb-8 text-neutral-300">
                 <li>
-                  <strong>€980 setup</strong> — one-time
+                  <strong>€880 setup</strong> — one-time
                 </li>
-                <li>✔ Full keyword strategy</li>
+                <li>✔ Full high-intent keyword strategy</li>
                 <li>✔ Campaign & ad creation</li>
-                <li>✔ Tracking setup</li>
-                <li>✔ Funnel optimization</li>
+                <li>✔ Conversion tracking & analytics</li>
+                <li>✔ Enquiry funnel optimisation</li>
+
                 <li className="pt-3">
-                  <strong>€440/month management</strong>
+                  <strong>€400/month management</strong>
                 </li>
-                <li>✔ Weekly optimization</li>
-                <li>✔ Monthly reporting</li>
-                <li>✔ Lead quality analysis</li>
+                <li>✔ Weekly optimisation</li>
+                <li>✔ Search term filtering</li>
+                <li>✔ Monthly insights + next steps</li>
+
+                <li className="pt-3">
+                  <strong>+ 5% performance fee</strong>
+                </li>
+                <li>✔ Only on weddings booked through the system</li>
+                <li>✔ Keeps incentives aligned — we grow when you grow</li>
               </ul>
 
               <Link
@@ -363,28 +374,42 @@ export default function GrowthSystemPage() {
               </Link>
             </div>
 
-            {/* ADD ONS */}
-            <div className="space-y-8">
-              <h3 className="text-2xl font-serif mb-2">Optional Add-Ons</h3>
-              <div className="grid gap-6">
-                <div className="bg-neutral-800 p-6 border border-neutral-700">
-                  <Sparkles className="text-amber-500 mb-3" size={28} />
-                  <h4 className="text-xl mb-2">Landing Page</h4>
-                  <p className="text-neutral-400">
-                    +€800 — A conversion-optimized landing page for better lead
-                    quality and easier call bookings.
-                  </p>
-                </div>
-                <div class="bg-neutral-800 p-6 border border-neutral-700">
-                  <Target class="text-amber-500 mb-3" size={28} />
-                  <h4 class="text-xl mb-2">AI Wedding Planner Assistant</h4>
-                  <p class="text-neutral-400">
-                    +€1,500 setup + €150/mo — A fully branded AI assistant that
-                    answers questions, pre-qualifies leads, and books calls
-                    24/7.
-                  </p>
-                </div>
-              </div>
+            {/* VIP ONE-DAY LAUNCH OFFER */}
+            <div className="bg-neutral-800 p-10 border border-neutral-700 text-left">
+              <h3 className="text-2xl font-serif mb-4 text-amber-500">
+                VIP Done In 24 Hours Launch + 3-Month Support
+              </h3>
+              <p className="text-neutral-300 mb-6">
+                A premium, done-in-a-day experience for planners who want the
+                entire system built fast — without ongoing monthly management.
+              </p>
+
+              <ul className="space-y-3 mb-8 text-neutral-300">
+                <li>
+                  <strong>€1,500</strong> — one-time
+                </li>
+                <li>✔ Full campaign setup (delivered in one day)</li>
+                <li>✔ High-intent keyword strategy</li>
+                <li>✔ Ads, extensions & optimisation rules</li>
+                <li>✔ Tracking + conversion pipeline setup</li>
+                <li>✔ Enquiry funnel & form optimisation</li>
+
+                <li className="pt-3 font-semibold text-white">
+                  Includes 3 Months of Support:
+                </li>
+                <li>✔ Monthly performance review</li>
+                <li>✔ Keyword filter recommendations</li>
+                <li>✔ Growth roadmap for scaling</li>
+                <li>✔ Support via email for tweaks & questions</li>
+              </ul>
+
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-neutral-900 text-base tracking-wide hover:bg-neutral-100 transition-all"
+              >
+                Book Your VIP Launch
+                <ArrowRight size={20} />
+              </Link>
             </div>
           </div>
         </section>
