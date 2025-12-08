@@ -344,25 +344,20 @@ export default function GrowthSystemPage() {
 
               <ul className="space-y-3 mb-8 text-neutral-300">
                 <li>
-                  <strong>€880 setup</strong> — one-time
+                  <strong>€980 setup</strong> — one-time
                 </li>
                 <li>✔ Full high-intent keyword strategy</li>
                 <li>✔ Campaign & ad creation</li>
                 <li>✔ Conversion tracking & analytics</li>
                 <li>✔ Enquiry funnel optimisation</li>
+                <li>✔ Landing Page For Free</li>
 
                 <li className="pt-3">
-                  <strong>€400/month management</strong>
+                  <strong>€680/monthly management</strong>
                 </li>
                 <li>✔ Weekly optimisation</li>
                 <li>✔ Search term filtering</li>
                 <li>✔ Monthly insights + next steps</li>
-
-                <li className="pt-3">
-                  <strong>+ 5% performance fee</strong>
-                </li>
-                <li>✔ Only on weddings booked through the system</li>
-                <li>✔ Keeps incentives aligned — we grow when you grow</li>
               </ul>
 
               <Link
