@@ -5,7 +5,6 @@ import {
   Target,
   TrendingUp,
   CheckCircle,
-  Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -17,56 +16,40 @@ export default function GrowthSystemPage() {
         <title>Wedding Planner Growth System™ | Alta Frequenza Marketing</title>
         <meta
           name="description"
-          content="The Wedding Planner Growth System™ — a proven Google Ads system for wedding planners around the world who want consistent, serious inquiries for full-service weddings."
-        />
-        <meta
-          name="keywords"
-          content="wedding planner marketing, Google Ads for wedding planners, wedding planner leads, wedding planner advertising, enquiry system"
-        />
-        <meta
-          property="og:title"
-          content="Wedding Planner Growth System™ | Alta Frequenza Marketing"
-        />
-        <meta
-          property="og:description"
-          content="A proven lead generation system for wedding planners worldwide who want serious, high-value enquiries for full-service weddings."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://altafrequenzamarketing.com/" />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-image.jpg"
+          content="The most advanced Google Ads system ever built for wedding planners — engineered to attract serious, high-value enquiries worldwide."
         />
       </Helmet>
 
       <div className="bg-white pt-20">
-        {/* HERO */}
-        <section className="min-h-[80vh] flex items-center justify-center px-6 lg:px-12 py-24 bg-gradient-to-b from-amber-50 to-white">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-300 text-sm uppercase tracking-wide text-neutral-700">
+        {/* -------------------------------- HERO ------------------------------- */}
+        <section className="px-6 lg:px-12 py-32 text-center bg-gradient-to-b from-amber-50 to-white">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 border border-neutral-300 text-sm uppercase tracking-wide text-neutral-600 mb-8">
               <TrendingUp size={16} className="text-amber-600" />
-              Proven Lead Generation for Wedding Planners
+              Google Ads for Wedding Planners
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-6 text-neutral-900">
+            <h1 className="text-5xl md:text-7xl font-serif text-neutral-900 mb-6 leading-tight">
               The Wedding Planner <br /> Growth System™
             </h1>
 
-            <p className="text-xl text-neutral-700 leading-relaxed max-w-3xl mx-auto mb-10">
-              A Google Ads system engineered for wedding planners worldwide who
-              want consistent enquiries from couples planning meaningful,
-              full-service weddings.
+            <p className="text-xl text-neutral-700 leading-relaxed max-w-3xl mx-auto mb-6">
+              The most advanced Google Ads system ever created for wedding
+              planners — delivering consistent, high-quality enquiries from
+              couples planning meaningful, full-service weddings.
             </p>
 
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto mb-12">
-              Imagine checking your inbox each week and seeing new consultation
-              requests from couples who are serious, aligned with your style,
-              and ready to invest in a professionally planned wedding.
+              Imagine receiving consultation requests every week from couples
+              who are serious, aligned with your style, and ready to invest.
+              <span className="font-semibold">
+                That's what this system delivers.
+              </span>
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg hover:bg-neutral-800 transition-all"
             >
               Start Getting Better Enquiries
               <ArrowRight size={22} />
@@ -74,104 +57,153 @@ export default function GrowthSystemPage() {
           </div>
         </section>
 
-        {/* PROBLEM SECTION */}
-        <section className="py-24 px-6 lg:px-12 bg-neutral-900 text-white">
-          <div className="max-w-5xl mx-auto text-center">
-            <p className="text-sm uppercase tracking-widest text-neutral-400 mb-3">
-              WHY MOST PLANNER ADS DON’T DELIVER
-            </p>
-            <h2 className="text-4xl md:text-5xl font-serif mb-10">
-              You’re Getting Clicks — But Not the Right Couples
+        {/* ---------------------- WHY WE ARE #1 EXPERTS ------------------------- */}
+        <section className="px-6 lg:px-12 py-28 bg-neutral-900 text-white">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-serif mb-10 text-center">
+              Why We’re the #1 Experts in Google Ads for Wedding Planners
             </h2>
-            <p className="text-lg text-neutral-300 leading-relaxed max-w-3xl mx-auto mb-16">
-              Most planners try Google Ads, get low-budget or DIY enquiries, and
-              assume “ads don’t work.” The real problem isn’t ads — it’s using
-              the wrong keywords, the wrong message, or no tracking at all. The
-              Growth System™ fixes this by focusing on couples planning
-              full-service weddings with meaningful budgets.
+
+            <p className="text-lg text-neutral-300 leading-relaxed max-w-3xl mx-auto text-center mb-12">
+              Most agencies run ads for every niche.
+              <span className="font-semibold text-white">
+                We’ve run more Google Ads campaigns for wedding planners than
+                any agency in the world.
+              </span>
             </p>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-neutral-800 p-8 border border-neutral-700">
-                <h3 className="text-xl font-semibold mb-3 text-amber-500">
-                  ❌ Too Broad Targeting
-                </h3>
-                <p className="text-neutral-300">
-                  Generic keywords attract everyone — especially low-budget
-                  couples searching for DIY help or day-of coordination only.
-                </p>
-              </div>
-              <div className="bg-neutral-800 p-8 border border-neutral-700">
-                <h3 className="text-xl font-semibold mb-3 text-amber-500">
-                  ❌ The Wrong Message
-                </h3>
-                <p className="text-neutral-300">
-                  Most ads sound like price lists. Your ideal couples want
-                  clarity, trust, and reassurance — not “packages.”
-                </p>
-              </div>
-              <div className="bg-neutral-800 p-8 border border-neutral-700">
-                <h3 className="text-xl font-semibold mb-3 text-amber-500">
-                  ❌ No Tracking
-                </h3>
-                <p className="text-neutral-300">
-                  Without tracking, you can’t tell which searches or locations
-                  actually produce booked weddings.
-                </p>
-              </div>
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <ul className="space-y-3 text-neutral-200 text-lg">
+                <li>• Which keywords attract full-planning vs DIY</li>
+                <li>• Which budgets filter out day-of only</li>
+                <li>• How lead quality changes by region</li>
+              </ul>
+              <ul className="space-y-3 text-neutral-200 text-lg">
+                <li>• What messaging luxury couples respond to</li>
+                <li>• Seasonal patterns in enquiry quality</li>
+                <li>• Which cities deliver the highest value clients</li>
+              </ul>
+            </div>
+
+            <p className="text-neutral-300 text-lg mb-8">
+              Our system is built from real performance data across:
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8 text-neutral-300 text-lg">
+              <ul className="space-y-2">
+                <li>
+                  ✔ United States — LA, NYC, Miami, Houston, Chicago, Austin…
+                </li>
+                <li>✔ Europe — Italy, France, UK, Spain, Switzerland…</li>
+                <li>✔ Mexico & Caribbean</li>
+              </ul>
+              <ul className="space-y-2">
+                <li>✔ Middle East</li>
+                <li>✔ Asia & Australia</li>
+                <li>✔ 20+ wedding markets globally</li>
+              </ul>
+            </div>
+
+            <p className="italic text-neutral-300 text-center mt-12 text-lg max-w-3xl mx-auto">
+              When we say we’re the specialists, it’s because we’ve already seen
+              — and solved — every mistake planners make inside Google Ads.
+            </p>
+          </div>
+        </section>
+
+        {/* ------------------------- PROBLEM SECTION --------------------------- */}
+        <section className="px-6 lg:px-12 py-24 bg-white">
+          <div className="max-w-5xl mx-auto text-center mb-20">
+            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
+              The Real Problem
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-6">
+              You’re Getting Clicks —
+              <span className="block md:inline">But Not the Right Couples</span>
+            </h2>
+            <p className="text-lg text-neutral-700 max-w-3xl mx-auto">
+              Most Google Ads fail because they attract price-shoppers, DIY
+              brides, or couples looking only for day-of coordination. The
+              Growth System™ fixes that permanently.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="bg-neutral-50 border border-neutral-200 p-8">
+              <h3 className="text-xl font-semibold text-amber-600 mb-3">
+                ❌ Too Broad Targeting
+              </h3>
+              <p className="text-neutral-700">
+                Generic keywords attract unqualified, low-budget enquiries.
+              </p>
+            </div>
+
+            <div className="bg-neutral-50 border border-neutral-200 p-8">
+              <h3 className="text-xl font-semibold text-amber-600 mb-3">
+                ❌ Wrong Messaging
+              </h3>
+              <p className="text-neutral-700">
+                Luxury couples want expertise, clarity, and taste — not
+                “packages.”
+              </p>
+            </div>
+
+            <div className="bg-neutral-50 border border-neutral-200 p-8">
+              <h3 className="text-xl font-semibold text-amber-600 mb-3">
+                ❌ No Tracking
+              </h3>
+              <p className="text-neutral-700">
+                Without proper tracking, you can’t scale what actually books
+                weddings.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* HOW IT WORKS */}
-        <section className="py-24 px-6 lg:px-12">
-          <div className="max-w-6xl mx-auto text-center mb-20">
-            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-3">
+        {/* ------------------------- HOW IT WORKS ------------------------------ */}
+        <section className="px-6 lg:px-12 py-28">
+          <div className="max-w-5xl mx-auto text-center mb-20">
+            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
               HOW IT WORKS
             </p>
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900">
-              The Three Steps to a Predictable Lead Machine
+              The Three Steps to a Predictable Enquiry Machine
             </h2>
           </div>
 
-          <div className="space-y-20 max-w-6xl mx-auto">
+          <div className="space-y-28 max-w-5xl mx-auto">
             {/* STEP 1 */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-neutral-900 text-white mb-5">
+                <div className="w-14 h-14 flex items-center justify-center bg-neutral-900 text-white rounded-full mb-5">
                   <Search size={24} />
                 </div>
-                <h3 className="text-3xl font-serif text-neutral-900 mb-4">
-                  1. Target Only Serious, High-Intent Couples
+                <h3 className="text-3xl font-serif mb-4">
+                  1. Target Only High-Intent Couples
                 </h3>
-                <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                  We target searches used by couples actively looking for
-                  professional wedding planners — not DIY help, not day-of
-                  coordination, not budget planning.
+                <p className="text-neutral-700 text-lg mb-6">
+                  We target search terms used only by couples ready for
+                  professional planning.
                 </p>
-                <ul className="space-y-3 text-neutral-700">
-                  <li>✔ “Wedding planner near me”</li>
+
+                <ul className="space-y-2 text-neutral-700 text-lg">
                   <li>✔ “Full-service wedding planner [city]”</li>
-                  <li>✔ “Wedding planner Chicago / NYC / LA / Miami”</li>
+                  <li>✔ “Luxury wedding planner [region]”</li>
+                  <li>✔ “Wedding planner LA / NYC / Chicago”</li>
                   <li>
-                    ✔ “Destination wedding planner Mexico / Italy / Hawaii”
+                    ✔ “Destination wedding planner Italy / Mexico / Hawaii”
                   </li>
                 </ul>
-                <p className="text-neutral-700 mt-6">
-                  The goal is simple: stop paying for low-budget enquiries and
-                  focus your ad spend on couples looking for full planning
-                  support.
-                </p>
               </div>
 
               <div>
-                <p className="text-neutral-700 leading-relaxed">
-                  Instead of showing up everywhere, you appear exactly where
-                  your ideal couples are searching — by location, budget range,
-                  and intent level.
+                <p className="text-neutral-700 text-lg mb-6">
+                  You stop paying for day-of, DIY, or budget enquiries. You
+                  appear ONLY where qualified couples are searching.
                 </p>
-                <div className="mt-6 p-6 bg-white border border-neutral-300">
-                  <p className="text-sm italic text-neutral-600">
+
+                <div className="p-6 bg-neutral-50 border border-neutral-200">
+                  <p className="text-sm italic text-neutral-700">
                     “Marko helped us generate consistent leads every month —
                     real couples who booked weddings through our campaigns.”
                   </p>
@@ -183,247 +215,208 @@ export default function GrowthSystemPage() {
             </div>
 
             {/* STEP 2 */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-16 items-start">
               <div className="order-2 md:order-1">
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-neutral-900 text-white mb-5">
+                <div className="w-14 h-14 flex items-center justify-center bg-neutral-900 text-white rounded-full mb-5">
                   <Target size={24} />
                 </div>
-                <h3 className="text-3xl font-serif text-neutral-900 mb-4">
-                  2. Turn Clicks Into Booked Consultations
+                <h3 className="text-3xl font-serif mb-4">
+                  2. Convert Clicks Into Booked Calls
                 </h3>
-                <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                  Traffic alone doesn’t book weddings. We optimize every step to
-                  ensure more couples enquire — and book a call with you.
-                </p>
-                <ul className="space-y-3 text-neutral-700">
+
+                <ul className="space-y-2 text-neutral-700 text-lg mb-6">
                   <li>✔ High-trust ad messaging</li>
-                  <li>✔ Smooth enquiry flow</li>
-                  <li>✔ Optional landing page for conversions</li>
-                  <li>✔ Light pre-qualification filters</li>
+                  <li>✔ Conversion-optimized forms</li>
+                  <li>✔ Optional landing page</li>
+                  <li>✔ Pre-qualification filters</li>
                 </ul>
-                <p className="text-neutral-700 mt-6">
-                  Every click matters — we make sure they turn into real
-                  conversations with couples who value your expertise.
+
+                <p className="text-neutral-700 text-lg">
+                  Every step is optimized so your enquiries are serious,
+                  aligned, and ready.
                 </p>
               </div>
-
-              <div className="order-1 md:order-2" />
             </div>
 
             {/* STEP 3 */}
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-16 items-start">
               <div>
-                <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-neutral-900 text-white mb-5">
+                <div className="w-14 h-14 flex items-center justify-center bg-neutral-900 text-white rounded-full mb-5">
                   <BarChart size={24} />
                 </div>
-                <h3 className="text-3xl font-serif text-neutral-900 mb-4">
-                  3. Weekly Optimization & Long-Term Growth
+                <h3 className="text-3xl font-serif mb-4">
+                  3. Weekly Optimization
                 </h3>
-                <p className="text-lg text-neutral-700 leading-relaxed mb-6">
-                  After launch, we refine the system weekly based on real data,
-                  not assumptions.
-                </p>
-                <ul className="space-y-2 text-neutral-700">
-                  <li>Keywords & search terms</li>
-                  <li>Ad copy + extensions</li>
-                  <li>Locations & devices</li>
-                  <li>Negative keywords</li>
-                  <li>Bid strategies</li>
+
+                <ul className="space-y-2 text-neutral-700 text-lg">
+                  <li>• Keyword refinement</li>
+                  <li>• Search-term filtering</li>
+                  <li>• Location performance</li>
+                  <li>• Messaging updates</li>
+                  <li>• Bid strategy improvement</li>
                 </ul>
-                <p className="text-neutral-700 mt-6">
-                  Lead quality improves, cost per enquiry drops, and your
-                  pipeline becomes far more stable — season after season.
+
+                <p className="text-neutral-700 text-lg mt-6">
+                  Lead quality increases, cost drops, and enquiries become
+                  predictable.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* RESULTS SECTION */}
-        <section className="py-24 px-6 lg:px-12 bg-neutral-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-widest text-neutral-500 mb-3">
-                REAL RESULTS
-              </p>
-              <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-4">
-                Proven Across Different Markets
-              </h2>
-              <p className="text-lg text-neutral-700 max-w-3xl mx-auto">
-                Whether you're in the US, Europe, Mexico, Asia, or Australia —
-                the system adapts to your market and targets your ideal couples.
-              </p>
+        {/* ----------------------------- RESULTS ------------------------------ */}
+        <section className="px-6 lg:px-12 py-24 bg-neutral-50">
+          <div className="max-w-6xl mx-auto text-center mb-20">
+            <p className="text-sm uppercase tracking-widest text-neutral-500 mb-4">
+              REAL RESULTS
+            </p>
+            <h2 className="text-4xl font-serif text-neutral-900 mb-4">
+              Proven Across Different Markets
+            </h2>
+            <p className="text-neutral-700 text-lg max-w-3xl mx-auto">
+              The system adapts to the US, Europe, Mexico, Middle East, and
+              beyond.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="p-8 bg-white border border-neutral-200">
+              <h3 className="text-xl font-serif mb-3">France ↔ US Planner</h3>
+              <ul className="space-y-2 text-neutral-700">
+                <li>
+                  <CheckCircle className="inline text-amber-600" /> 50+
+                  enquiries
+                </li>
+                <li>
+                  <CheckCircle className="inline text-amber-600" /> 6 bookings
+                </li>
+                <li>
+                  <CheckCircle className="inline text-amber-600" /> €120K–190K
+                  budgets
+                </li>
+              </ul>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* CASE STUDY 1 */}
-              <div className="bg-white border border-neutral-200 p-8">
-                <h3 className="text-xl font-serif text-neutral-900 mb-3">
-                  6 Months — France & US Planner
-                </h3>
-                <ul className="space-y-2 text-neutral-700 mb-4">
-                  <li>
-                    <CheckCircle className="inline text-amber-600 mr-2" />
-                    50+ qualified enquiries
-                  </li>
-                  <li>
-                    <CheckCircle className="inline text-amber-600 mr-2" />6
-                    booked weddings
-                  </li>
-                  <li>
-                    <CheckCircle className="inline text-amber-600 mr-2" />
-                    Avg budgets €120K–€190K
-                  </li>
-                </ul>
-              </div>
+            <div className="p-8 bg-white border border-neutral-200">
+              <h3 className="text-xl font-serif mb-3">US ↔ Mexico Planner</h3>
+              <ul className="space-y-2 text-neutral-700">
+                <li>
+                  <CheckCircle className="inline text-amber-600" /> 28 enquiries
+                </li>
+                <li>
+                  <CheckCircle className="inline text-amber-600" /> 4 bookings
+                </li>
+              </ul>
+            </div>
 
-              {/* CASE STUDY 2 */}
-              <div className="bg-white border border-neutral-200 p-8">
-                <h3 className="text-xl font-serif text-neutral-900 mb-3">
-                  4 Months — US & Mexico Planner
-                </h3>
-                <ul className="space-y-2 text-neutral-700 mb-4">
-                  <li>
-                    <CheckCircle className="inline text-amber-600 mr-2" />
-                    28 qualified enquiries
-                  </li>
-                  <li>
-                    <CheckCircle className="inline text-amber-600 mr-2" />4
-                    booked weddings
-                  </li>
-                </ul>
-              </div>
-
-              {/* CASE STUDY 3 */}
-              <div className="bg-white border border-neutral-200 p-8">
-                <h3 className="text-xl font-serif text-neutral-900 mb-3">
-                  6 Weeks — Italy Planner
-                </h3>
-                <ul className="space-y-2 text-neutral-700 mb-4">
-                  <li>
-                    <CheckCircle className="inline text-amber-600 mr-2" />8
-                    leads in ~1.5 months
-                  </li>
-                  <li>
-                    <CheckCircle className="inline text-amber-600 mr-2" />
-                    €1,200 ad spend total
-                  </li>
-                </ul>
-              </div>
+            <div className="p-8 bg-white border border-neutral-200">
+              <h3 className="text-xl font-serif mb-3">Italy Planner</h3>
+              <ul className="space-y-2 text-neutral-700">
+                <li>
+                  <CheckCircle className="inline text-amber-600" /> 8 enquiries
+                  in 6 weeks
+                </li>
+                <li>
+                  <CheckCircle className="inline text-amber-600" /> €1,200 ad
+                  spend
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
-        {/* PRICING */}
-        {/* PRICING */}
-        <section className="py-24 px-6 lg:px-12 bg-neutral-900 text-white">
-          <div className="max-w-6xl mx-auto text-center mb-16">
-            <p className="text-sm uppercase tracking-widest text-neutral-400 mb-3">
+        {/* ----------------------------- PRICING ------------------------------ */}
+        <section className="px-6 lg:px-12 py-28 bg-neutral-900 text-white">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <p className="text-sm uppercase tracking-widest text-neutral-400 mb-4">
               INVESTMENT
             </p>
             <h2 className="text-4xl md:text-5xl font-serif mb-6">
               Simple, Transparent Pricing
             </h2>
-            <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
-              Two ways to work together — depending on whether you want a
-              long-term partner managing your enquiries, or a complete system
-              built for you in one day with 3 months of support.
-            </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-            {/* MAIN RETAINER OFFER */}
-            <div className="bg-neutral-800 p-10 border border-neutral-700 text-left">
-              <h3 className="text-2xl font-serif mb-4 text-amber-500">
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* RETAINER */}
+            <div className="bg-neutral-800 p-10 border border-neutral-700">
+              <h3 className="text-2xl font-serif text-amber-500 mb-4">
                 Wedding Planner Growth System™
               </h3>
               <p className="text-neutral-300 mb-6">
-                For planners who want ongoing optimisation, stable enquiry flow,
-                and a long-term partner improving results every single month.
+                Ongoing optimisation & stable enquiries.
               </p>
 
-              <ul className="space-y-3 mb-8 text-neutral-300">
+              <ul className="text-neutral-300 space-y-2 mb-8">
                 <li>
-                  <strong>€980 setup</strong> — one-time
+                  <strong>€980 setup</strong> — one time
                 </li>
-                <li>✔ Full high-intent keyword strategy</li>
-                <li>✔ Campaign & ad creation</li>
-                <li>✔ Conversion tracking & analytics</li>
-                <li>✔ Enquiry funnel optimisation</li>
-                <li>✔ Landing Page For Free</li>
-
-                <li className="pt-3">
-                  <strong>€680/monthly management</strong>
+                <li>✔ High-intent keyword strategy</li>
+                <li>✔ Campaign setup</li>
+                <li>✔ Tracking & analytics</li>
+                <li>✔ Landing page included</li>
+                <li className="pt-4">
+                  <strong>€680/month</strong>
                 </li>
                 <li>✔ Weekly optimisation</li>
-                <li>✔ Search term filtering</li>
-                <li>✔ Monthly insights + next steps</li>
+                <li>✔ Monthly insights</li>
               </ul>
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-neutral-900 text-base tracking-wide hover:bg-neutral-100 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-neutral-900 hover:bg-neutral-100"
               >
-                Talk About Your Numbers
-                <ArrowRight size={20} />
+                Talk About Your Numbers <ArrowRight size={20} />
               </Link>
             </div>
 
-            {/* VIP ONE-DAY LAUNCH OFFER */}
-            <div className="bg-neutral-800 p-10 border border-neutral-700 text-left">
-              <h3 className="text-2xl font-serif mb-4 text-amber-500">
-                VIP Done In 24 Hours Launch + 3-Month Support
+            {/* VIP */}
+            <div className="bg-neutral-800 p-10 border border-neutral-700">
+              <h3 className="text-2xl font-serif text-amber-500 mb-4">
+                VIP 24-Hour Launch™ + 3-Month Support
               </h3>
               <p className="text-neutral-300 mb-6">
-                A premium, done-in-a-day experience for planners who want the
-                entire system built fast — without ongoing monthly management.
+                A premium, done-in-a-day experience.
               </p>
 
-              <ul className="space-y-3 mb-8 text-neutral-300">
+              <ul className="text-neutral-300 space-y-2 mb-8">
                 <li>
-                  <strong>€1,500</strong> — one-time
+                  <strong>€1,500</strong> — one time
                 </li>
-                <li>✔ Full campaign setup (delivered in one day)</li>
-                <li>✔ High-intent keyword strategy</li>
-                <li>✔ Ads, extensions & optimisation rules</li>
-                <li>✔ Tracking + conversion pipeline setup</li>
-                <li>✔ Enquiry funnel & form optimisation</li>
-
-                <li className="pt-3 font-semibold text-white">
-                  Includes 3 Months of Support:
-                </li>
-                <li>✔ Monthly performance review</li>
-                <li>✔ Keyword filter recommendations</li>
-                <li>✔ Growth roadmap for scaling</li>
-                <li>✔ Support via email for tweaks & questions</li>
+                <li>✔ Full campaign in 24 hours</li>
+                <li>✔ High-intent strategy</li>
+                <li>✔ Tracking setup</li>
+                <li>✔ Form optimisation</li>
+                <li className="pt-4">Includes 3 months:</li>
+                <li>✔ Monthly review</li>
+                <li>✔ Keyword filtering</li>
+                <li>✔ Growth roadmap</li>
               </ul>
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-white text-neutral-900 text-base tracking-wide hover:bg-neutral-100 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white text-neutral-900 hover:bg-neutral-100"
               >
-                Book Your VIP Launch
-                <ArrowRight size={20} />
+                Book Your VIP Launch <ArrowRight size={20} />
               </Link>
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-24 px-6 lg:px-12 text-center bg-white">
+        <section className="px-6 lg:px-12 py-24 text-center bg-white">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-4xl font-serif text-neutral-900 mb-6">
               Ready to Bring In Better Enquiries?
             </h3>
-            <p className="text-lg text-neutral-700 mb-10 leading-relaxed">
-              If you're done with price-shoppers and inconsistent enquiries —
-              and want a steady flow of serious couples — the Growth System™ is
-              for you.
+            <p className="text-lg text-neutral-700 mb-10">
+              If you're done with price-shoppers and unpredictable leads, The
+              Growth System™ will change your business.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg tracking-wide hover:bg-neutral-800 transition-all"
+              className="inline-flex items-center gap-3 px-10 py-5 bg-neutral-900 text-white text-lg hover:bg-neutral-800"
             >
               Book Your Strategy Session
               <ArrowRight size={22} />

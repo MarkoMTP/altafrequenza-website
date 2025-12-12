@@ -44,7 +44,7 @@ export default function HomePage() {
       title: "Wedding Planner Growth System™",
       subtitle: "Google Ads",
       description:
-        "A Google Ads system engineered for destination wedding planners who want predictable inquiries from high-spending international couples ready to invest €80K–€1M+ into their wedding.",
+        "A Google Ads system tailored for wedding planners who want a predictable flow of high-intent inquiries from couples seeking a premium, professionally guided wedding - locally or internationally.",
       features: [
         "Precision luxury keyword targeting",
         "High-quality inquiries from US, UK, UAE & beyond",
@@ -58,7 +58,7 @@ export default function HomePage() {
       title: "Elegant Presence™",
       subtitle: "Social Media Management",
       description:
-        "A high-end social media presence crafted to elevate your brand and build trust with  couples. Your weddings deserve to look as exquisite online as they do in real life.",
+        "A high-end social media presence crafted to elevate your brand and build trust with couples. Your weddings deserve to look as exquisite online as they do in real life.",
       features: [
         "Curated content for a premium aesthetic",
         "Stories, reels & weekly posting",
@@ -91,7 +91,7 @@ export default function HomePage() {
         </title>
         <meta
           name="description"
-          content="Alta Frequenza Marketing helps destination wedding planners attract predictable, high-quality inquiries from international couples using Google Ads, social media, and automation."
+          content="Alta Frequenza Marketing helps destination wedding planners attract predictable, high-quality inquiries from  couples using Google Ads, social media, and automation."
         />
         <meta
           name="keywords"
@@ -109,14 +109,14 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight mb-8 text-neutral-900">
-              Consistent Wedding Leads —
+              The Only Marketing Agency Built Exclusively for Wedding Planners
               <br />
-              Without Guessing or Relying on Referrals.
             </h1>
 
-            <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-              We help wedding planners generate predictable, high-quality
-              inquiries from couples ready to invest in unforgettable weddings.
+            <p className="text-lg md:text-xl text-neutral-600 max-w-2xl mx-auto leading-relaxed mb-6">
+              At Alta Frequenza, we don’t work with “multiple niches.” We
+              specialize 100% in wedding planners — their marketing, their
+              brand, their growth.
             </p>
 
             <Link
@@ -132,27 +132,86 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* MARKET SHIFT */}
+        {/* IN 2025, BOOKING REQUIRES MORE THAN LEADS */}
         <section className="py-32 px-6 lg:px-12 bg-neutral-50 border-t border-neutral-200">
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
-              The Reality in 2025: Couples Don’t Book Like They Used To
+              In 2025, Booking Couples Requires More Than Just Leads
             </h2>
 
             <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-              High-end couples research across 8–15 touchpoints. They compare
-              planners internationally. They expect your brand to show up
-              consistently before they trust you.
+              Today’s couples don’t inquire after seeing one post, one ad, or
+              one testimonial. They research across{" "}
+              <strong>8–15 touchpoints</strong> before choosing their wedding
+              planner — and they expect consistency, professionalism, and trust
+              at every stage.
             </p>
 
-            <p className="text-lg text-neutral-700 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Organic marketing alone isn’t enough. SEO takes months. Instagram
-              reach is unpredictable. Referrals are inconsistent.
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+              This means your entire digital presence must work together: your
+              website, Google Ads, and Instagram should all communicate the same
+              message: reliability, expertise, and the ability to deliver an
+              unforgettable wedding experience.
             </p>
 
             <p className="italic text-neutral-800 text-lg max-w-3xl mx-auto">
-              To stand out, you need a predictable acquisition system — not
-              another Instagram post.
+              Leads matter… but trust is what makes couples book.
+            </p>
+          </div>
+        </section>
+
+        {/* WHY GOOGLE ADS WORK */}
+        <section className="py-32 px-6 lg:px-12 bg-white border-t border-neutral-200">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
+              Why Google Ads Work Exceptionally Well for Wedding Planners
+            </h2>
+
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+              Couples search for wedding planners thousands of times every month
+              — from “wedding planner Italy” to “planner Lake Como,” “Los
+              Angeles Wedding Planner” and everything in between. When they
+              search, they are already in <strong>decision-making mode</strong>.
+            </p>
+
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+              Google Ads captures couples at the exact moment they want to hire
+              someone. They’re not passive scrollers, they’re actively planning,
+              comparing, and ready to inquire. That’s why our Google Ads systems
+              deliver consistent, high-quality inquiries for planners around the
+              world.
+            </p>
+
+            <p className="italic text-neutral-800 text-lg max-w-3xl mx-auto">
+              With the right strategy, Google becomes your most predictable lead
+              engine.
+            </p>
+          </div>
+        </section>
+
+        {/* WHY INSTAGRAM STILL MATTERS */}
+        <section className="py-32 px-6 lg:px-12 bg-neutral-50 border-t border-neutral-200">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-serif text-neutral-900 mb-8">
+              Why Instagram Still Matters in 2025
+            </h2>
+
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+              Even when couples discover you through Google Ads or referrals,
+              one of the first things they check is your Instagram. It’s where
+              they evaluate your taste, personality, creativity, and
+              consistency.
+            </p>
+
+            <p className="text-lg text-neutral-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+              A polished, well-curated Instagram builds{" "}
+              <strong>trust and desire</strong>. It reassures couples that you
+              can deliver a celebration worthy of their investment and it
+              communicates your brand style far better than text on a website.
+            </p>
+
+            <p className="italic text-neutral-800 text-lg max-w-3xl mx-auto">
+              Instagram doesn’t create demand, it confirms it.
             </p>
           </div>
         </section>
