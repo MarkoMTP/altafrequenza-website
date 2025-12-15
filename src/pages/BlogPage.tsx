@@ -217,28 +217,6 @@ export default function BlogPage() {
             </div>
           </div>
         </section>
-
-        {/* CTA */}
-        <section className="py-24 px-6 lg:px-12 bg-neutral-900 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-serif mb-6">
-              Ready to Transform Your
-              <br />
-              Marketing Strategy?
-            </h2>
-            <p className="text-lg text-neutral-300 mb-10 leading-relaxed">
-              Learn how Alta Frequenza Marketing can help you attract more
-              luxury couples and grow your wedding planning business.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-white text-neutral-900 text-lg tracking-wide hover:bg-neutral-100 transition-all"
-            >
-              Book Your Strategy Session
-              <ArrowRight size={20} />
-            </Link>
-          </div>
-        </section>
       </div>
     </>
   );
