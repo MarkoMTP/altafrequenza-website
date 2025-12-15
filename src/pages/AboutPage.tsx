@@ -76,7 +76,7 @@ export default function AboutPage() {
               <div className="w-full max-w-sm bg-white border border-slate-200 rounded-3xl shadow-md p-6 flex flex-col items-center text-center">
                 <div className="w-28 h-28 rounded-full overflow-hidden mb-4 bg-slate-100">
                   <img
-                    src="/public/myself.JPG"
+                    src="https://www.dropbox.com/scl/fi/hsv6bsy3n85vbmxyljd4h/myself.JPG?rlkey=93y62fxttby3uwmzwj0or1k39&st=kjs4nish&raw=1"
                     alt="Founder, Marko Matković"
                     className="w-full h-full object-cover"
                   />

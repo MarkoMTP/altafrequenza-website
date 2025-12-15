@@ -165,7 +165,7 @@ export default function HomePage() {
             {/* IMAGE */}
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <img
-                src="/public/hands.jpg"
+                src="https://www.dropbox.com/scl/fi/nb6q6owhc1ig8pqlqp5z3/pexels-westernsydneyweddings-34525884.jpg?rlkey=79mvrch0bt7pnydwtpbx5h491&st=uuxgthdo&raw=1"
                 alt="Wedding planner workflow"
                 className="w-full h-full object-cover"
               />
@@ -236,7 +236,7 @@ export default function HomePage() {
             {/* IMAGE */}
             <div className="rounded-3xl overflow-hidden shadow-lg">
               <img
-                src="/public/ads.jpg"
+                src="https://www.dropbox.com/scl/fi/t8d3dzw1iy4498x5q7k26/ads.jpg?rlkey=uohsisrqbm7w8bwpezz60j61d&st=8at1dxhe&raw=1"
                 alt="Google Ads dashboard"
                 className="w-full h-full object-cover"
               />
@@ -258,7 +258,7 @@ export default function HomePage() {
             <div className="flex justify-center mb-10">
               <div className="w-64 h-[420px] bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
                 <img
-                  src="/public/feed.png"
+                  src="https://www.dropbox.com/scl/fi/jefa1g9vd54uzgl13lppv/Screenshot-2025-12-15-at-22.02.35.png?rlkey=pvgb938zsmgkjkw2mism7d60l&st=7r4ad30r&raw=1"
                   className="w-full h-full object-cover"
                   alt="Instagram feed preview"
                 />
