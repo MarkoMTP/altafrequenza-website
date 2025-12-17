@@ -44,7 +44,7 @@ export default function Navigation() {
               to="/contact"
               className="ml-4 px-6 py-2.5 bg-slate-900 text-white text-[0.9rem] rounded-full hover:bg-slate-800 transition-all shadow-sm"
             >
-              Apply
+              Contact
             </Link>
           </div>
 
@@ -80,7 +80,7 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center px-6 py-3 bg-slate-900 text-white text-base rounded-full hover:bg-slate-800 transition-all"
             >
-              Apply for Partnership
+              Contact
             </Link>
           </div>
         </div>
