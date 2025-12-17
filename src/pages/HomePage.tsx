@@ -5,6 +5,7 @@ import {
   Sparkles,
   TrendingUp,
   Bot,
+  Briefcase,
   ChevronRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -66,6 +67,23 @@ export default function HomePage() {
         "Content adapted for international audiences",
       ],
       path: "/social-media",
+    },
+    {
+      icon: Briefcase,
+      title: "Your Marketing Partner",
+      subtitle: "Complete Wedding Marketing Management",
+      description:
+        "A full marketing partnership for wedding planners and venues who want their marketing handled end-to-end. From brand foundations to enquiries, you work with one experienced specialist who takes full ownership of your marketing — without hiring a full-time employee.",
+      features: [
+        "Everything included in the Wedding Growth System™ (Google Ads & Meta Ads)",
+        "Everything included in Elegant Presence™ (Social Media Management)",
+        "End-to-end marketing direction: visibility, messaging, and enquiries",
+        "Brand and positioning guidance built from the ground up",
+        "Website, content, and enquiry-flow improvements as needed",
+        "Priority access and hands-on support when decisions are needed",
+        "One point of contact, one strategy, no long-term contract",
+      ],
+      path: "/marketing-partner",
     },
     {
       icon: Bot,

@@ -8,9 +8,10 @@ export default function Navigation() {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "The Growth System™", path: "/growth-system" },
+    { label: "Growth System™", path: "/growth-system" },
     { label: "Elegant Presence™", path: "/social-media" },
-    { label: "The Wedding Planner AI Assistant™", path: "/ai-chat-assistant" },
+    { label: "Marketing Partner", path: "/marketing-partner" },
+    { label: "AI Wedding Assistant™", path: "/ai-chat-assistant" },
     { label: "Blog", path: "/blog" },
   ];
 
@@ -38,18 +39,20 @@ export default function Navigation() {
               </Link>
             ))}
 
+            {/* PRIMARY CTA */}
             <Link
               to="/contact"
-              className="ml-4 px-5 py-2 bg-slate-900 text-white text-[0.9rem] rounded-full hover:bg-slate-800 transition-all"
+              className="ml-4 px-6 py-2.5 bg-slate-900 text-white text-[0.9rem] rounded-full hover:bg-slate-800 transition-all shadow-sm"
             >
-              Contact
+              Apply
             </Link>
           </div>
 
-          {/* MOBILE BUTTON */}
+          {/* MOBILE TOGGLE */}
           <button
             className="lg:hidden text-slate-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -59,7 +62,7 @@ export default function Navigation() {
       {/* MOBILE MENU */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-slate-200 shadow-sm">
-          <div className="px-6 py-6 space-y-4">
+          <div className="px-6 py-6 space-y-5">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -71,12 +74,13 @@ export default function Navigation() {
               </Link>
             ))}
 
+            {/* MOBILE CTA */}
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full text-center px-6 py-3 bg-slate-900 text-white text-base rounded-full hover:bg-slate-800 transition-all"
             >
-              Contact
+              Apply for Partnership
             </Link>
           </div>
         </div>

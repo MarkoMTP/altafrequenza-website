@@ -41,6 +41,7 @@ export default function Footer() {
                 ["Growth System", "/growth-system"],
                 ["Elegant Presence", "/social-media"],
                 ["AI Assistant", "/ai-chat-assistant"],
+                ["Marketing Partner", "/marketing-partner"],
                 ["Blog", "/blog"],
               ].map(([label, path]) => (
                 <Link

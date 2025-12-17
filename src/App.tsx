@@ -28,6 +28,7 @@ import GenericAgenciesFail from "./pages/blog/GenericAgenciesFail";
 import AIAutomationROI from "./pages/blog/AIAutomationROI";
 import PremiumBrandIdentity from "./pages/blog/PremiumBrandIdentity";
 import GoogleAdsGuide from "./pages/blog/GoogleAdsGuide";
+import MarketingPartnerPage from "./pages/MarketingPartnerPage";
 
 // Scroll to top on navigation
 function ScrollToTop() {
@@ -56,6 +57,10 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/growth-system" element={<GrowthSystemPage />} />
             <Route path="/social-media" element={<SocialMediaPage />} />
+            <Route
+              path="/marketing-partner"
+              element={<MarketingPartnerPage />}
+            />
 
             {/* Blog Posts */}
             <Route

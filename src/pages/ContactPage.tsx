@@ -57,14 +57,14 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact | Alta Frequenza Marketing</title>
+        <title>Apply for a Marketing Partnership | Alta Frequenza</title>
         <meta
           name="description"
-          content="Contact Alta Frequenza Marketing to book your personalized strategy session. We help luxury wedding planners attract high-end couples through Google Ads, social media, and AI automation."
+          content="Apply to work with Alta Frequenza as your dedicated wedding marketing partner. End-to-end marketing for wedding planners and venues."
         />
         <meta
           name="keywords"
-          content="wedding planner marketing, social media for wedding planners, Google Ads for wedding planners, contact wedding marketing agency"
+          content="wedding planner marketing, wedding marketing partner, social media for wedding planners, Google Ads wedding planners, wedding venue marketing"
         />
       </Helmet>
 
@@ -74,34 +74,33 @@ export default function ContactPage() {
             {/* Header */}
             <div className="text-center mb-16">
               <p className="text-sm tracking-widest text-slate-500 mb-4">
-                LET’S TALK GROWTH
+                PARTNERSHIP APPLICATION
               </p>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-slate-900 mb-6">
-                Book Your Strategy Session
+                Contact Us
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Ready to attract luxury couples who value exceptional service?
-                Fill out the form below to receive a personalized plan.
+                Use this form to start a private conversation.
               </p>
             </div>
 
-            {/* Main Layout */}
+            {/* Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* ---------------- LEFT SIDE: FORM ---------------- */}
-              <div className="bg-slate-50 p-8 border border-slate-200 rounded-lg shadow-sm">
+              {/* LEFT — FORM */}
+              <div className="bg-slate-50 p-8 border border-slate-200 rounded-2xl shadow-sm">
                 {submitted ? (
                   <div className="flex flex-col items-center justify-center h-full text-center py-20">
                     <CheckCircle className="text-sky-600 mb-4" size={48} />
                     <h3 className="text-2xl font-serif mb-2">
-                      Message Sent Successfully!
+                      Application Received
                     </h3>
                     <p className="text-slate-600 max-w-md">
-                      We’ll be in touch shortly to schedule your strategy call.
+                      I’ll personally review your application and get back to
+                      you shortly with next steps.
                     </p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    {/* Full Name */}
                     <div>
                       <label className="block text-slate-700 mb-2 font-medium">
                         Full Name
@@ -113,11 +112,10 @@ export default function ContactPage() {
                         value={formData.fullName}
                         onChange={handleChange}
                         className="w-full p-3 border border-slate-300 focus:border-sky-600 outline-none"
-                        placeholder="Your name"
+                        placeholder="Your full name"
                       />
                     </div>
 
-                    {/* Email */}
                     <div>
                       <label className="block text-slate-700 mb-2 font-medium">
                         Email
@@ -129,14 +127,13 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full p-3 border border-slate-300 focus:border-sky-600 outline-none"
-                        placeholder="you@example.com"
+                        placeholder="you@yourcompany.com"
                       />
                     </div>
 
-                    {/* Website */}
                     <div>
                       <label className="block text-slate-700 mb-2 font-medium">
-                        Website
+                        Website or Instagram
                       </label>
                       <input
                         type="url"
@@ -144,21 +141,20 @@ export default function ContactPage() {
                         value={formData.website}
                         onChange={handleChange}
                         className="w-full p-3 border border-slate-300 focus:border-sky-600 outline-none"
-                        placeholder="www.yourbrand.com"
+                        placeholder="https://"
                       />
                     </div>
 
-                    {/* Services Checkboxes */}
                     <div>
                       <label className="block text-slate-700 mb-3 font-medium">
-                        Which services are you interested in?
+                        What are you interested in?
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
                         {[
-                          "Social Media Management",
-                          "Social Media + Meta Growth System™",
-                          "Wedding Planner Growth System™",
-                          "The Wedding Planner AI Assistant™",
+                          "Your Marketing Partner (Full Management)",
+                          "Wedding Growth System™ (Google Ads)",
+                          "Elegant Presence™ (Social Media)",
+                          "AI Wedding Assistant™",
                         ].map((service) => (
                           <label
                             key={service}
@@ -177,10 +173,9 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    {/* Message */}
                     <div>
                       <label className="block text-slate-700 mb-2 font-medium">
-                        Message
+                        Tell me about your situation
                       </label>
                       <textarea
                         name="message"
@@ -188,58 +183,47 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full p-3 border border-slate-300 focus:border-sky-600 outline-none resize-none"
-                        placeholder="Tell us about your goals or challenges..."
+                        placeholder="Where are you currently stuck? What would you like your marketing to look like in 6–12 months?"
                       />
                     </div>
 
-                    {/* Submit */}
                     <button
                       type="submit"
                       disabled={loading}
                       className="w-full py-4 bg-slate-900 text-white text-lg font-medium hover:bg-slate-800 transition-all"
                     >
-                      {loading ? "Sending..." : "Send Message"}
+                      {loading ? "Submitting..." : "Submit Application"}
                     </button>
                   </form>
                 )}
               </div>
 
-              {/* ---------------- RIGHT SIDE: INFO ---------------- */}
+              {/* RIGHT — INFO */}
               <div className="space-y-8">
-                {/* What to Expect */}
-                <div className="bg-slate-50 p-8 border border-slate-200">
+                <div className="bg-slate-50 p-8 border border-slate-200 rounded-2xl">
                   <h3 className="text-2xl font-serif text-slate-900 mb-6">
-                    What to Expect
+                    What Happens Next
                   </h3>
                   <ul className="space-y-4 text-slate-700">
                     <li>
-                      <span className="font-medium">
-                        Complimentary 20-minute strategy session
-                      </span>{" "}
-                      analyzing your current marketing.
+                      <strong>Personal review</strong> of your application and
+                      current positioning.
                     </li>
                     <li>
-                      <span className="font-medium">
-                        Personalized recommendations
-                      </span>{" "}
-                      to attract high-value international couples.
+                      A <strong>private strategy call</strong> if it looks like
+                      a strong fit.
                     </li>
                     <li>
-                      <span className="font-medium">Transparent pricing</span>{" "}
-                      with no pressure to commit.
+                      Clear recommendation on whether working together makes
+                      sense.
                     </li>
-                    <li>
-                      <span className="font-medium">Actionable insights</span>{" "}
-                      from specialists who work exclusively with wedding
-                      planners.
-                    </li>
+                    <li>No pressure, no long-term contracts.</li>
                   </ul>
                 </div>
 
-                {/* Direct Contact */}
-                <div className="bg-slate-900 text-white p-8">
+                <div className="bg-slate-900 text-white p-8 rounded-2xl">
                   <h3 className="text-xl font-serif mb-6">
-                    Prefer to Connect Directly?
+                    Prefer to Reach Out Directly?
                   </h3>
                   <div className="space-y-4">
                     <a
@@ -248,13 +232,6 @@ export default function ContactPage() {
                     >
                       <Mail size={20} />
                       contact@altafrequenzamarketing.com
-                    </a>
-                    <a
-                      href="tel:+15551234567"
-                      className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors"
-                    >
-                      <Phone size={20} />
-                      (555) 123-4567
                     </a>
                   </div>
 
@@ -266,7 +243,7 @@ export default function ContactPage() {
                       className="inline-flex items-center justify-center gap-3 w-full px-6 py-4 bg-sky-600 text-white text-lg font-medium hover:bg-sky-700 transition-all"
                     >
                       <Calendar size={22} />
-                      Book a Call Now
+                      Book a Call Instead
                     </a>
                   </div>
                 </div>
