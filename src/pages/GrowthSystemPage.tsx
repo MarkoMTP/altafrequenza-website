@@ -321,7 +321,7 @@ export default function GrowthSystemPage() {
                   <span className="text-sky-200">(Worth €800)</span>
                 </li>
                 <li className="pt-4 text-slate-400 line-through">€980/month</li>
-                <li className="text-white text-xl font-semibold">€680/month</li>
+                <li className="text-white text-xl font-semibold">€480/month</li>
                 <li>✔ Weekly optimisation</li>
                 <li>✔ Clear monthly insights</li>
               </ul>
