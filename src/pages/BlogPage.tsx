@@ -83,6 +83,17 @@ export default function BlogPage() {
         "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
       slug: "google-ads-guide",
     },
+
+    {
+      title: "Google Ads for Wedding Planners: A Complete Guide",
+      excerpt: "Why Instagram helps you win against other wedding planners",
+      category: "Instagram Strategy",
+      date: "Januart 30, 2025",
+      readTime: "5 min read",
+      image:
+        "https://images.pexels.com/photos/1679825/pexels-photo-1679825.jpeg?auto=compress&cs=tinysrgb&w=800",
+      slug: "why-socialmedia-matters",
+    },
   ];
 
   return (

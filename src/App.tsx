@@ -29,6 +29,7 @@ import AIAutomationROI from "./pages/blog/AIAutomationROI";
 import PremiumBrandIdentity from "./pages/blog/PremiumBrandIdentity";
 import GoogleAdsGuide from "./pages/blog/GoogleAdsGuide";
 import MarketingPartnerPage from "./pages/MarketingPartnerPage";
+import InstagramProofForWeddingPlanners from "./pages/blog/WhyInstagramMatters";
 
 // Scroll to top on navigation
 function ScrollToTop() {
@@ -88,6 +89,10 @@ function App() {
               element={<PremiumBrandIdentity />}
             />
             <Route path="/blog/google-ads-guide" element={<GoogleAdsGuide />} />
+            <Route
+              path="/blog/why-socialmedia-matters"
+              element={<InstagramProofForWeddingPlanners />}
+            />
 
             {/* Catch-all redirect to home */}
             <Route path="*" element={<HomePage />} />
