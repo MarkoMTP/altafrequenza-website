@@ -18,7 +18,7 @@ export default function GrowthSystemPage() {
         </title>
         <meta
           name="description"
-          content="A structured Google Ads system built for wedding planners charging $10k+/€10k+. Designed to bring consistent enquiries from couples actively searching right now."
+          content="A structured Google Ads system built for wedding planners. Designed to bring consistent bookings from couples actively searching for a wedding planner right now."
         />
         <meta
           name="keywords"
@@ -32,7 +32,7 @@ export default function GrowthSystemPage() {
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 text-sm uppercase tracking-wide text-slate-600 mb-8 rounded-full">
               <TrendingUp size={16} className="text-sky-600" />
-              Ads System for €10k / $10k+ Wedding Planners
+              Google Ads System for Wedding Planners
             </div>
 
             <h1 className="text-5xl md:text-7xl font-serif text-slate-900 mb-6 leading-tight">
@@ -40,23 +40,22 @@ export default function GrowthSystemPage() {
             </h1>
 
             <p className="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto mb-6">
-              A simple, structured ads system built for wedding planners who
-              charge <strong>€10,000+ / $10,000+</strong> — designed to bring
-              consistent enquiries from couples actively searching{" "}
-              <strong>right now.</strong>
+              A simple, structured ads system built for wedding planners —
+              designed to bring consistent wedding requests from couples
+              actively searching <strong>right now.</strong>
             </p>
 
             <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-12">
               Referrals and social media can be great… until they slow down.
-              This system gives you a predictable way to generate enquiries —
-              without relying on luck.
+              This system gives you a predictable way to generate wedding
+              requests — without relying on luck.
             </p>
 
             <Link
               to="/contact"
               className="inline-flex items-center gap-3 px-10 py-5 bg-sky-600 text-white text-lg hover:bg-sky-700 transition-all rounded-full shadow-md"
             >
-              Talk About Your Numbers
+              Book Your Free Consultation
               <ArrowRight size={22} />
             </Link>
           </div>
@@ -120,7 +119,7 @@ export default function GrowthSystemPage() {
               What This System Does
             </p>
             <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
-              A Predictable Flow of High-Intent Enquiries
+              A Predictable Flow of High-Intent Wedding Requests
             </h2>
 
             <p className="text-lg text-slate-700 max-w-3xl mx-auto">
@@ -132,7 +131,7 @@ export default function GrowthSystemPage() {
 
           <ul className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto text-lg text-slate-700">
             <li>✔ Get found by couples actively searching</li>
-            <li>✔ Attract higher-budget enquiries (not time-wasters)</li>
+            <li>✔ Attract higher-budget wedding requests (not time-wasters)</li>
             <li>✔ Use messaging that builds trust instantly</li>
             <li>✔ Turn clicks into booked calls</li>
             <li>✔ Keep performance stable long-term</li>
@@ -444,7 +443,7 @@ export default function GrowthSystemPage() {
               to="/contact"
               className="inline-flex items-center gap-3 px-10 py-5 bg-sky-600 text-white text-lg hover:bg-sky-700 rounded-full shadow-lg"
             >
-              Talk About Your Numbers
+              Contact Us
               <ArrowRight size={22} />
             </Link>
           </div>
