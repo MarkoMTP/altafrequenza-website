@@ -30,6 +30,7 @@ import PremiumBrandIdentity from "./pages/blog/PremiumBrandIdentity";
 import GoogleAdsGuide from "./pages/blog/GoogleAdsGuide";
 import MarketingPartnerPage from "./pages/MarketingPartnerPage";
 import InstagramProofForWeddingPlanners from "./pages/blog/WhyInstagramMatters";
+import WebsitesPage from "./pages/Website";
 
 // Scroll to top on navigation
 function ScrollToTop() {
@@ -56,8 +57,9 @@ function App() {
             <Route path="/ai-chat-assistant" element={<AssistantPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/growth-system" element={<GrowthSystemPage />} />
+            <Route path="/google-ads" element={<GrowthSystemPage />} />
             <Route path="/social-media" element={<SocialMediaPage />} />
+            <Route path="/website" element={<WebsitesPage />} />
             <Route
               path="/marketing-partner"
               element={<MarketingPartnerPage />}

@@ -184,14 +184,14 @@ export default function MarketingPartnerPage() {
                 Standard partnership investment
               </p>
               <p className="text-2xl line-through text-neutral-400 mb-4">
-                €2,400 / month
+                €2,800 / month
               </p>
 
               <p className="text-neutral-900 text-xl font-medium mb-2">
                 Currently available for
               </p>
               <p className="text-4xl font-serif text-sky-700 mb-4">
-                €1,800 / month
+                €2,000 / month
               </p>
 
               <p className="text-neutral-600">

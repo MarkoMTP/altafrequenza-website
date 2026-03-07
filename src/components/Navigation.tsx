@@ -8,10 +8,10 @@ export default function Navigation() {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Growth System™", path: "/growth-system" },
-    { label: "Elegant Presence™", path: "/social-media" },
-    { label: "Marketing Partner", path: "/marketing-partner" },
-    { label: "AI Wedding Assistant™", path: "/ai-chat-assistant" },
+    { label: "Google Ads", path: "/google-ads" },
+    { label: "Social Media", path: "/social-media" },
+    { label: "Website Creation", path: "/website" },
+    { label: "AI Assistant", path: "/ai-chat-assistant" },
     { label: "Blog", path: "/blog" },
   ];
 
@@ -19,7 +19,6 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex justify-between items-center h-20">
-          {/* LOGO */}
           <Link
             to="/"
             className="text-[1.75rem] font-serif tracking-tight text-slate-900 hover:text-sky-600 transition-colors whitespace-nowrap"
@@ -27,7 +26,6 @@ export default function Navigation() {
             Alta Frequenza
           </Link>
 
-          {/* DESKTOP NAV */}
           <div className="hidden lg:flex items-center space-x-8 ml-8">
             {navItems.map((item) => (
               <Link
@@ -39,7 +37,6 @@ export default function Navigation() {
               </Link>
             ))}
 
-            {/* PRIMARY CTA */}
             <Link
               to="/contact"
               className="ml-4 px-6 py-2.5 bg-slate-900 text-white text-[0.9rem] rounded-full hover:bg-slate-800 transition-all shadow-sm"
@@ -48,7 +45,6 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* MOBILE TOGGLE */}
           <button
             className="lg:hidden text-slate-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -59,7 +55,6 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-t border-slate-200 shadow-sm">
           <div className="px-6 py-6 space-y-5">
@@ -74,7 +69,6 @@ export default function Navigation() {
               </Link>
             ))}
 
-            {/* MOBILE CTA */}
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}

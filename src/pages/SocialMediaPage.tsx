@@ -14,13 +14,13 @@ export default function SocialMediaPage() {
     <>
       <Helmet>
         <title>
-          Elegant Presence™ Social Media for Wedding Planners and Venues | Alta
+          Social Media Management for Wedding Planners and Venues | Alta
           Frequenza Marketing
         </title>
 
         <meta
           name="description"
-          content="Elegant Presence™ is a premium social media system for wedding planners and venues. High-end content, consistent posting, and intentional storytelling that attracts serious couples."
+          content="Social media management for wedding planners and venues designed to build trust, strengthen positioning, and turn your online presence into a source of better wedding enquiries."
         />
 
         <meta
@@ -28,16 +28,19 @@ export default function SocialMediaPage() {
           content="social media for wedding planners, social media for wedding venues, instagram wedding planner, wedding planner marketing, wedding venue marketing, content creation wedding planners"
         />
 
-        <meta property="og:title" content="Elegant Presence™ Social Media" />
+        <meta
+          property="og:title"
+          content="Social Media Management for Wedding Planners and Venues"
+        />
         <meta
           property="og:description"
-          content="A modern social presence built to attract high-quality couples and communicate taste, expertise, and consistency."
+          content="A structured social media system built to strengthen trust, improve positioning, and attract better wedding enquiries."
         />
         <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="bg-white pt-20">
-        {/* HERO */}
+        {/* HERO / OUTCOME */}
         <section className="min-h-[70vh] flex items-center justify-center px-6 lg:px-12 py-24">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 border border-neutral-200 text-sm tracking-wide text-neutral-600">
@@ -46,13 +49,14 @@ export default function SocialMediaPage() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-serif text-slate-900 leading-tight mb-8">
-              Elegant Presence™
+              A Social Presence That Builds Trust Before Couples Even Contact
+              You
             </h1>
 
-            <p className="text-xl text-slate-700 max-w-2xl mx-auto leading-relaxed mb-10">
-              A refined social media system designed for wedding planners and
-              venues who want a modern, elevated online presence that
-              strengthens trust and attracts high-quality couples.
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed mb-10">
+              We help wedding planners and venues create a stronger online
+              presence that makes them look more established, more trustworthy,
+              and more worth contacting the moment couples discover their brand.
             </p>
 
             <Link
@@ -65,46 +69,48 @@ export default function SocialMediaPage() {
           </div>
         </section>
 
-        {/* WHY IT MATTERS */}
+        {/* MECHANISM */}
         <section className="py-24 px-6 lg:px-12 bg-slate-50">
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-xs tracking-[0.25em] text-sky-600 mb-4">
-              WHY YOUR PRESENCE MATTERS
+              HOW WE CREATE THE OUTCOME
             </p>
 
             <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
-              Couples decide in seconds whether they trust your brand
+              We Turn Your Instagram Into a Trust-Building Sales Asset
             </h2>
 
             <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed mb-16">
-              High-quality couples don’t book instantly, they research, compare,
-              and decide based on taste, consistency, and trust. Your online
-              presence is no longer optional, it is the reference point that
-              determines whether they inquire or move on.
+              This is not about posting for the sake of posting. We structure
+              your presence so that when couples land on your profile, they
+              instantly understand your style, your level, and why you feel like
+              the right choice.
             </p>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto text-left">
               {[
                 {
-                  title: "Inconsistent Posting",
-                  desc: "Silence online makes your brand look inactive and lowers trust instantly.",
+                  icon: <Instagram size={26} />,
+                  title: "1. Stronger Brand Presentation",
+                  desc: "We create a more polished, cohesive profile that makes your business feel more premium and more credible at first glance.",
                 },
                 {
-                  title: "Weak Storytelling",
-                  desc: "Beautiful images alone are not enough. Couples need to understand your process and philosophy.",
+                  icon: <Calendar size={26} />,
+                  title: "2. Consistent Content Structure",
+                  desc: "We plan and manage content so your brand stays visible, active, and reliable instead of looking inconsistent or forgotten.",
                 },
                 {
-                  title: "Generic Visual Identity",
-                  desc: "Mismatched colors and random content dilute your professionalism.",
-                },
-                {
-                  title: "Low Engagement",
-                  desc: "Visibility without connection is wasted potential. Engagement strengthens trust.",
+                  icon: <MessageCircle size={26} />,
+                  title: "3. Content That Moves Couples Closer",
+                  desc: "Your content is shaped to build trust, communicate value, and make enquiries feel like the natural next step.",
                 },
               ].map((item, i) => (
-                <div key={i} className="bg-white p-8 border border-neutral-200">
-                  <div className="text-4xl mb-4">❌</div>
-                  <h3 className="text-xl font-medium text-slate-900 mb-3">
+                <div
+                  key={i}
+                  className="bg-white p-8 border border-slate-200 rounded-2xl"
+                >
+                  <div className="text-sky-600 mb-4">{item.icon}</div>
+                  <h3 className="text-2xl font-serif text-slate-900 mb-3">
                     {item.title}
                   </h3>
                   <p className="text-slate-700 leading-relaxed">{item.desc}</p>
@@ -114,151 +120,187 @@ export default function SocialMediaPage() {
           </div>
         </section>
 
-        {/* THE SYSTEM */}
+        {/* WHY IT WORKS */}
         <section className="py-24 px-6 lg:px-12">
           <div className="max-w-5xl mx-auto text-center mb-16">
             <p className="text-xs tracking-[0.25em] text-sky-600 mb-4">
-              OUR APPROACH
+              WHY THIS WORKS
             </p>
             <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
-              Elegant Presence™ done-for-you social media
+              Because Couples Judge the Experience Before They Ever Contact You
             </h2>
             <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
-              We transform your Instagram into a modern portfolio that reflects
-              your style, communicates your value, and builds trust that leads
-              to real enquiries.
+              High-quality couples do not just look at photos. They read the
+              room. They pay attention to consistency, taste, structure, and how
+              professionally a brand presents itself online. A stronger social
+              presence increases confidence before the first message is ever
+              sent.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
               {
-                icon: <Instagram size={26} />,
-                title: "High-end Content Direction",
-                desc: "A cohesive aesthetic that reflects your signature style and attracts couples who appreciate quality.",
+                title: "Higher Trust",
+                desc: "A polished and active profile makes your business feel more established and more dependable.",
               },
               {
-                icon: <Calendar size={26} />,
-                title: "Consistent Posting",
-                desc: "We handle planning, scheduling and publishing so your presence stays active and reliable.",
+                title: "Stronger Perceived Value",
+                desc: "Better presentation helps couples see your service as more premium before they even speak with you.",
               },
               {
-                icon: <MessageCircle size={26} />,
-                title: "Relationship Building",
-                desc: "Engagement with followers, couples and vendors to strengthen your visibility and network.",
+                title: "Better Positioning",
+                desc: "Clearer content helps differentiate you from competitors who look inconsistent or generic.",
+              },
+              {
+                title: "More Enquiry Readiness",
+                desc: "When couples trust what they see, reaching out feels easier and safer.",
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-slate-50 p-8 border border-neutral-200 rounded-2xl"
+              >
+                <div className="text-4xl mb-4">✔</div>
+                <h3 className="text-xl font-medium text-slate-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-slate-700 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* WHAT MAKES US DIFFERENT */}
+        <section className="py-24 px-6 lg:px-12 bg-white border-t border-slate-200">
+          <div className="max-w-5xl mx-auto text-center mb-16">
+            <p className="text-xs tracking-[0.25em] text-sky-600 mb-4">
+              WHAT MAKES US DIFFERENT
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
+              Not Generic Social Media Management
+            </h2>
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed">
+              Most social media services focus on posting more. We focus on
+              helping wedding planners and venues look more trustworthy, more
+              refined, and more attractive to the kind of couples they actually
+              want to book.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "Wedding Industry-Specific",
+                desc: "We understand how couples choose planners and venues, and we shape your content around that decision-making process.",
+              },
+              {
+                title: "Built Around Enquiries, Not Just Aesthetics",
+                desc: "A beautiful feed matters, but the real goal is helping couples feel confident enough to contact you.",
+              },
+              {
+                title: "Positioning-Focused",
+                desc: "We do not just fill a content calendar. We help build a stronger brand presence that supports premium perception.",
               },
             ].map((item, i) => (
               <div
                 key={i}
                 className="bg-slate-50 p-8 border border-slate-200 rounded-2xl"
               >
-                <div className="text-sky-600 mb-4">{item.icon}</div>
                 <h3 className="text-2xl font-serif text-slate-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-slate-700">{item.desc}</p>
+                <p className="text-slate-700 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-16">
-            <p className="text-xl text-slate-800 mb-2">
-              Pricing starts at <strong>€800 per month</strong>
-            </p>
-            <p className="text-slate-500 mb-10">
-              Final pricing depends on posting frequency, content creation and
-              platforms.
-            </p>
-
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-slate-900 text-white text-lg rounded-full hover:bg-slate-800 transition-all"
-            >
-              Request a Custom Quote
-              <ArrowRight size={20} />
-            </Link>
-          </div>
         </section>
 
-        {/* META GROWTH SYSTEM */}
+        {/* SOCIAL PROOF / CASE STUDIES */}
         <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
           <div className="max-w-5xl mx-auto text-center mb-16">
             <p className="text-xs tracking-[0.25em] text-sky-400 mb-4">
-              OPTIONAL ADD ON
+              CASE STUDIES
             </p>
             <h2 className="text-4xl md:text-5xl font-serif mb-6">
-              Meta Growth System™
+              Stronger Presence. Better Signals. Better Results.
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              A simple expansion layer that uses Meta Ads to amplify your best
-              content, reach thousands of couples each month, and strengthen
-              visibility across multiple platforms.
+              Social media performance should not be judged only by likes. What
+              matters is whether the brand looks stronger, reaches the right
+              people, and supports more enquiries over time.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div>
-              <h3 className="text-3xl font-serif mb-6">
-                Turn visibility into growth
-              </h3>
-              <p className="text-lg text-slate-300 mb-6">
-                Meta Ads allow you to reach couples who already resonate with
-                your content and attract new audiences similar to your best
-                clients.
-              </p>
-
+            <div className="bg-slate-800 p-8 border border-slate-700 rounded-xl">
+              <h4 className="text-2xl font-serif mb-4">
+                Destination Wedding Planner
+              </h4>
               <ul className="space-y-3 text-slate-300">
                 <li>
                   <CheckCircle size={18} className="inline text-sky-400 mr-2" />
-                  Reach thousands of couples each month
+                  More consistent posting and brand presence
                 </li>
                 <li>
                   <CheckCircle size={18} className="inline text-sky-400 mr-2" />
-                  Retarget visitors and warm audiences
+                  Stronger positioning for luxury destination couples
                 </li>
                 <li>
                   <CheckCircle size={18} className="inline text-sky-400 mr-2" />
-                  Turn visibility into real enquiries
+                  Better trust signals before enquiry
+                </li>
+                <li>
+                  <CheckCircle size={18} className="inline text-sky-400 mr-2" />
+                  Content that supported overall lead generation efforts
                 </li>
               </ul>
             </div>
 
             <div className="bg-slate-800 p-8 border border-slate-700 rounded-xl">
-              <h4 className="text-2xl font-serif mb-4">Example Results</h4>
-              <p className="text-slate-300">
-                📈 +3,800 followers in three months
+              <h4 className="text-2xl font-serif mb-4">Liz Tuson</h4>
+              <p className="inline text-sky-400 mr-2">
+                Marko has been fantastic in helping boost my business and online
+                presence as a wedding planner in Italy. He immediately
+                understood my style and the image I wanted to convey. After only
+                a few months, I’ve already seen an increase in enquiries that
+                has led to new bookings. I highly recommend Alta Frequenza!
               </p>
             </div>
           </div>
 
-          <div className="text-center mt-16">
-            <p className="text-lg text-slate-300 mb-2">
-              Add Meta Growth System™ for
+          <div className="max-w-4xl mx-auto text-center mt-14">
+            <p className="text-slate-400">
+              Results vary depending on current brand strength, content quality,
+              posting frequency, market positioning, and how well the rest of
+              the business converts interest into enquiries.
             </p>
-            <p className="text-3xl text-sky-400 font-serif mb-4">
-              €500 per month
-            </p>
-
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-sky-600 text-white rounded-full hover:bg-sky-700 transition-all"
-            >
-              Add to Your Package
-              <ArrowRight size={20} />
-            </Link>
           </div>
         </section>
 
-        {/* CTA */}
+        {/* NEXT STEPS */}
         <section className="py-24 px-6 lg:px-12 bg-sky-50">
           <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xs tracking-[0.25em] text-sky-600 mb-4">
+              NEXT STEPS
+            </p>
+
             <h2 className="text-4xl font-serif text-slate-900 mb-6">
-              Ready to Elevate Your Online Presence?
+              Let’s See What Your Brand Could Look Like With the Right Structure
             </h2>
-            <p className="text-lg text-slate-700 mb-10">
-              If you want a modern social presence that attracts the right
-              couples and reflects the quality of your work, Elegant Presence™
-              is built for you.
+
+            <p className="text-lg text-slate-700 mb-6 max-w-3xl mx-auto">
+              If your current Instagram does not fully reflect the level of your
+              work, we can help you build a stronger, more consistent presence
+              that supports better enquiries and a better first impression.
+            </p>
+
+            <p className="text-xl text-slate-800 mb-2">
+              Pricing starts at <strong>€800 per month</strong>
+            </p>
+            <p className="text-slate-500 mb-10">
+              Final pricing depends on posting frequency, content creation
+              needs, and overall scope.
             </p>
 
             <Link

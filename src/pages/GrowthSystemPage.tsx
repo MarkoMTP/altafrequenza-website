@@ -14,41 +14,41 @@ export default function GrowthSystemPage() {
     <>
       <Helmet>
         <title>
-          Wedding Growth System™ | Google Ads for $10k+/€10k+ Wedding Planners
+          Google Ads for Wedding Planners | More Qualified Wedding Requests
         </title>
         <meta
           name="description"
-          content="A structured Google Ads system built for wedding planners. Designed to bring consistent bookings from couples actively searching for a wedding planner right now."
+          content="A Google Ads system for wedding planners designed to generate more qualified wedding requests from couples actively searching for a planner."
         />
         <meta
           name="keywords"
-          content="wedding planner marketing, google ads wedding planner, high end wedding planner leads, wedding planner google ads, wedding marketing agency, wedding ads specialist"
+          content="wedding planner marketing, google ads wedding planner, wedding planner leads, destination wedding planner google ads, luxury wedding planner marketing, wedding marketing agency"
         />
       </Helmet>
 
       <div className="bg-white pt-20">
-        {/* ------------------------------- HERO -------------------------------- */}
+        {/* ------------------------------- HERO / OUTCOME -------------------------------- */}
         <section className="px-6 lg:px-12 py-32 text-center bg-gradient-to-b from-sky-50 to-white">
           <div className="max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 border border-slate-300 text-sm uppercase tracking-wide text-slate-600 mb-8 rounded-full">
               <TrendingUp size={16} className="text-sky-600" />
-              Google Ads System for Wedding Planners
+              Google Ads for Wedding Planners
             </div>
 
             <h1 className="text-5xl md:text-7xl font-serif text-slate-900 mb-6 leading-tight">
-              The Wedding Growth System™
+              More Qualified Wedding Requests. Less Guesswork.
             </h1>
 
             <p className="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto mb-6">
-              A simple, structured ads system built for wedding planners —
-              designed to bring consistent wedding requests from couples
-              actively searching <strong>right now.</strong>
+              We help wedding planners generate a more consistent flow of
+              requests from couples actively searching for a planner, instead of
+              relying only on referrals, Instagram reach, or slow seasons.
             </p>
 
             <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-12">
-              Referrals and social media can be great… until they slow down.
-              This system gives you a predictable way to generate wedding
-              requests — without relying on luck.
+              The goal is simple: bring you more of the right requests, from
+              couples who are already looking, already interested, and far more
+              likely to take the next step.
             </p>
 
             <Link
@@ -61,97 +61,24 @@ export default function GrowthSystemPage() {
           </div>
         </section>
 
-        {/* ----------------------------- PROBLEM ------------------------------- */}
+        {/* ----------------------------- MECHANISM ------------------------------- */}
         <section className="px-6 lg:px-12 py-28 bg-white">
           <div className="max-w-5xl mx-auto text-center mb-20">
             <p className="text-sm uppercase tracking-widest text-sky-600 mb-4">
-              The Real Problem
+              HOW WE GENERATE THE OUTCOME
             </p>
             <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
-              Demand Feels Random <br className="md:hidden" />
-              (Even When Your Work Is Amazing)
+              A Structured System Built Around Buying Intent
             </h2>
             <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-              Most planners don’t struggle because of quality — they struggle
-              because the right couples don’t find them at the right time. And
-              when demand dips, you feel it immediately.
-              <strong> The Growth System™ fixes the inconsistency.</strong>
+              This is not about pushing ads in front of random people. The
+              system is built to place your business in front of couples who are
+              already searching for a wedding planner in the location you serve,
+              then guide them toward a serious enquiry.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-sky-600 mb-3">
-                ❌ Unpredictable Referrals
-              </h3>
-              <p className="text-slate-700">
-                Vendor networks and word-of-mouth fluctuate — you can’t control
-                them.
-              </p>
-            </div>
-
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-sky-600 mb-3">
-                ❌ Algorithm Dependence
-              </h3>
-              <p className="text-slate-700">
-                Social media reach changes constantly, even if you post
-                consistently.
-              </p>
-            </div>
-
-            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
-              <h3 className="text-xl font-semibold text-sky-600 mb-3">
-                ❌ No Demand Lever
-              </h3>
-              <p className="text-slate-700">
-                Without an acquisition system, growth is guessing — not
-                predictable.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ---------------------------- WHAT IT DOES --------------------------- */}
-        <section className="px-6 lg:px-12 py-24 bg-sky-50 border-t border-slate-200">
-          <div className="max-w-5xl mx-auto text-center mb-12">
-            <p className="text-sm uppercase tracking-widest text-sky-700 mb-4">
-              What This System Does
-            </p>
-            <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
-              A Predictable Flow of High-Intent Wedding Requests
-            </h2>
-
-            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-              This isn’t “run some ads and hope.” It’s a structured approach
-              built around one thing: capturing couples who are already
-              searching for a planner — in your city or your destination market.
-            </p>
-          </div>
-
-          <ul className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto text-lg text-slate-700">
-            <li>✔ Get found by couples actively searching</li>
-            <li>✔ Attract higher-budget wedding requests (not time-wasters)</li>
-            <li>✔ Use messaging that builds trust instantly</li>
-            <li>✔ Turn clicks into booked calls</li>
-            <li>✔ Keep performance stable long-term</li>
-            <li>✔ Works for US big cities and EU destination markets</li>
-          </ul>
-        </section>
-
-        {/* ------------------------------ 3 STEPS ------------------------------ */}
-        <section className="px-6 lg:px-12 py-28 bg-white">
-          <div className="max-w-5xl mx-auto text-center mb-20">
-            <p className="text-sm uppercase tracking-widest text-sky-600 mb-4">
-              HOW IT WORKS
-            </p>
-            <h2 className="text-4xl md:text-5xl font-serif text-slate-900">
-              The 3 Core Components
-            </h2>
           </div>
 
           <div className="space-y-28 max-w-5xl mx-auto">
-            {/* STEP 1 */}
             <div className="flex justify-center">
               <div className="max-w-3xl w-full">
                 <div>
@@ -159,25 +86,24 @@ export default function GrowthSystemPage() {
                     <Search size={24} />
                   </div>
                   <h3 className="text-3xl font-serif mb-4">
-                    1. High-Intent Targeting
+                    1. We Put You in Front of Couples Already Searching
                   </h3>
                   <p className="text-slate-700 text-lg mb-6">
-                    We target only the search terms used by couples ready to
-                    hire a planner, not people casually browsing or looking for
-                    cheap options.
+                    We target the kinds of searches people make when they are no
+                    longer casually browsing, but actively looking for a planner
+                    to help them move forward.
                   </p>
 
                   <ul className="space-y-2 text-slate-700 text-lg">
-                    <li>✔ “Wedding planner [city]”</li>
-                    <li>✔ “Full-service wedding planner [city]”</li>
-                    <li>✔ “Destination wedding planner [location]”</li>
-                    <li>✔ Filtering to reduce low-intent searches</li>
+                    <li>✔ Search intent, not passive scrolling</li>
+                    <li>✔ Locations aligned with your market</li>
+                    <li>✔ Messaging built around serious enquiries</li>
+                    <li>✔ Filtering to reduce low-quality clicks</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            {/* STEP 2 */}
             <div className="flex justify-center">
               <div className="max-w-3xl w-full">
                 <div>
@@ -185,25 +111,27 @@ export default function GrowthSystemPage() {
                     <Target size={24} />
                   </div>
                   <h3 className="text-3xl font-serif mb-4">
-                    2. Trust-Based Messaging
+                    2. We Turn Interest Into Requests
                   </h3>
 
-                  <ul className="space-y-2 text-slate-700 text-lg mb-6">
-                    <li>✔ Professional, high-trust ad copy</li>
-                    <li>✔ Conversion-optimised forms</li>
-                    <li>✔ Included conversion landing page</li>
-                    <li>✔ Pre-qualification prompts</li>
-                  </ul>
-
-                  <p className="text-slate-700 text-lg">
-                    Every click is guided toward an enquiry — with clarity and
-                    confidence.
+                  <p className="text-slate-700 text-lg mb-6">
+                    Getting the click is only the first step. We make sure the
+                    message, the page, and the website experience are clear
+                    enough that the right couples actually reach out.
                   </p>
+
+                  <ul className="space-y-2 text-slate-700 text-lg">
+                    <li>✔ Clear, trust-building ad messaging</li>
+                    <li>✔ Conversion-focused landing page</li>
+                    <li>✔ Request flow designed to reduce drop-off</li>
+                    <li>
+                      ✔ Pre-qualification that helps attract better-fit leads
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            {/* STEP 3 */}
             <div className="flex justify-center">
               <div className="max-w-3xl w-full">
                 <div>
@@ -211,73 +139,154 @@ export default function GrowthSystemPage() {
                     <BarChart size={24} />
                   </div>
                   <h3 className="text-3xl font-serif mb-4">
-                    3. Weekly Refinement
+                    3. We Refine the System Until It Becomes More Predictable
                   </h3>
 
-                  <ul className="space-y-2 text-slate-700 text-lg">
-                    <li>• Search-term filtering</li>
-                    <li>• Keyword refinement</li>
-                    <li>• Location performance review</li>
-                    <li>• Messaging updates</li>
-                    <li>• Budget & bid optimisation</li>
-                  </ul>
-
-                  <p className="text-slate-700 text-lg mt-6">
-                    Lead quality rises, cost per enquiry stabilises, and
-                    performance becomes predictable.
+                  <p className="text-slate-700 text-lg mb-6">
+                    Once the system is live, we improve it continuously so lead
+                    quality gets stronger, wasted spend gets reduced, and
+                    performance becomes steadier over time.
                   </p>
+
+                  <ul className="space-y-2 text-slate-700 text-lg">
+                    <li>✔ Search-term filtering</li>
+                    <li>✔ Keyword refinement</li>
+                    <li>✔ Geographic performance reviews</li>
+                    <li>✔ Messaging and conversion adjustments</li>
+                    <li>✔ Budget and bid optimization</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ------------------------------ RESULTS ------------------------------ */}
+        {/* ---------------------------- WHY IT WORKS --------------------------- */}
+        <section className="px-6 lg:px-12 py-24 bg-sky-50 border-t border-slate-200">
+          <div className="max-w-5xl mx-auto text-center mb-12">
+            <p className="text-sm uppercase tracking-widest text-sky-700 mb-4">
+              WHY THIS WORKS
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
+              Because It Reaches Couples at the Exact Moment They’re Looking
+            </h2>
+
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
+              Many marketing channels depend on timing, algorithms, or luck.
+              Search-based advertising works differently: it places you in front
+              of people who are already showing intent. That is why it can
+              become one of the clearest paths to more consistent wedding
+              enquiries.
+            </p>
+          </div>
+
+          <ul className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto text-lg text-slate-700">
+            <li>✔ Couples are already looking for what you offer</li>
+            <li>✔ You appear before they enquire elsewhere</li>
+            <li>✔ The message speaks to people ready to take action</li>
+            <li>✔ Stronger positioning increases trust quickly</li>
+            <li>✔ Better-fit enquiries reduce time wasted on poor leads</li>
+            <li>✔ Ongoing refinement improves efficiency over time</li>
+          </ul>
+        </section>
+
+        {/* ------------------------------ DIFFERENTIATOR ------------------------------ */}
+        <section className="px-6 lg:px-12 py-28 bg-white">
+          <div className="max-w-5xl mx-auto text-center mb-20">
+            <p className="text-sm uppercase tracking-widest text-sky-600 mb-4">
+              WHAT MAKES US DIFFERENT
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6">
+              Not General Marketing. Wedding Industry-Specific Lead Generation.
+            </h2>
+            <p className="text-lg text-slate-700 max-w-3xl mx-auto">
+              Most agencies know how to run ads. Very few understand how couples
+              actually choose a wedding planner, what makes them trust one, and
+              how to attract enquiries that feel aligned with your level of
+              service.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-sky-600 mb-3">
+                Wedding-Specific Positioning
+              </h3>
+              <p className="text-slate-700">
+                We build campaigns around how couples search for planners, what
+                they care about, and what makes them feel confident enough to
+                enquire.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-sky-600 mb-3">
+                Quality Over Vanity Metrics
+              </h3>
+              <p className="text-slate-700">
+                The goal is not traffic for the sake of traffic. The goal is
+                better enquiries, stronger fit, and a system that supports real
+                bookings.
+              </p>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl">
+              <h3 className="text-xl font-semibold text-sky-600 mb-3">
+                Built for Long-Term Consistency
+              </h3>
+              <p className="text-slate-700">
+                We do not treat this like a short burst of activity. We build
+                and refine the system to help you create steadier demand over
+                time.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ------------------------------ SOCIAL PROOF ------------------------------ */}
         <section className="px-6 lg:px-12 py-24 bg-slate-50 border-t border-slate-200">
           <div className="max-w-6xl mx-auto text-center mb-20">
             <p className="text-sm uppercase tracking-widest text-sky-600 mb-4">
-              EVIDENCE
+              CASE STUDIES
             </p>
             <h2 className="text-4xl font-serif text-slate-900 mb-4">
-              Proven Across Multiple Markets
+              Results Across Different Wedding Markets
             </h2>
             <p className="text-slate-700 text-lg max-w-3xl mx-auto">
-              KPI-based results (no revenue claims): duration, spend, leads,
-              CPL, and weddings booked.
+              Below are example campaign outcomes showing duration, spend,
+              enquiries, cost per lead, and weddings booked.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Italy */}
             <div className="p-8 bg-white border border-slate-200 rounded-xl">
               <h3 className="text-lg font-serif mb-3">
                 Italy Destination Planner
               </h3>
               <ul className="space-y-2 text-slate-700 text-sm">
                 <li>
-                  <CheckCircle className="inline text-sky-600" size={18} /> 5
+                  <CheckCircle className="inline text-sky-600" size={18} /> 12
                   months
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} />{" "}
-                  €1,200 / month spend
+                  €3,000 / month spend
                 </li>
                 <li>
-                  <CheckCircle className="inline text-sky-600" size={18} /> 38
-                  leads
+                  <CheckCircle className="inline text-sky-600" size={18} /> 144
+                  requests
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} />{" "}
-                  ~€150 CPL
+                  ~€250 CPL
                 </li>
                 <li>
-                  <CheckCircle className="inline text-sky-600" size={18} /> 5
+                  <CheckCircle className="inline text-sky-600" size={18} /> 14
                   weddings booked
                 </li>
               </ul>
             </div>
 
-            {/* NYC */}
             <div className="p-8 bg-white border border-slate-200 rounded-xl">
               <h3 className="text-lg font-serif mb-3">New York City Planner</h3>
               <ul className="space-y-2 text-slate-700 text-sm">
@@ -287,11 +296,11 @@ export default function GrowthSystemPage() {
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} />{" "}
-                  $1500 / month spend
+                  $1,500 / month spend
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} /> 58
-                  leads
+                  requests
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} />{" "}
@@ -304,7 +313,6 @@ export default function GrowthSystemPage() {
               </ul>
             </div>
 
-            {/* France + Italy */}
             <div className="p-8 bg-white border border-slate-200 rounded-xl">
               <h3 className="text-lg font-serif mb-3">
                 France + Italy Destination Planner
@@ -320,20 +328,19 @@ export default function GrowthSystemPage() {
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} /> 24
-                  leads
+                  requests
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} />{" "}
                   ~€225 CPL
                 </li>
                 <li>
-                  <CheckCircle className="inline text-sky-600" size={18} /> 2
+                  <CheckCircle className="inline text-sky-600" size={18} /> 4
                   weddings booked
                 </li>
               </ul>
             </div>
 
-            {/* Mexico */}
             <div className="p-8 bg-white border border-slate-200 rounded-xl">
               <h3 className="text-lg font-serif mb-3">
                 Mexico Destination Planner
@@ -349,7 +356,7 @@ export default function GrowthSystemPage() {
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} /> 40
-                  leads
+                  requests
                 </li>
                 <li>
                   <CheckCircle className="inline text-sky-600" size={18} />{" "}
@@ -365,34 +372,37 @@ export default function GrowthSystemPage() {
 
           <div className="max-w-4xl mx-auto text-center mt-14">
             <p className="text-slate-600">
-              Results vary by offer, pricing, response speed, and seasonality —
-              but the system is built to create a predictable pipeline.
+              Results vary depending on pricing, market, offer strength,
+              response speed, and seasonality — but the system is designed to
+              create a steadier pipeline of qualified requests.
             </p>
           </div>
         </section>
 
-        {/* ------------------------------ PRICING ------------------------------ */}
+        {/* ------------------------------ NEXT STEPS / INVESTMENT ------------------------------ */}
         <section className="px-6 lg:px-12 py-28 bg-slate-900 text-white">
           <div className="max-w-5xl mx-auto text-center mb-16">
             <p className="text-sm uppercase tracking-widest text-slate-400 mb-4">
-              INVESTMENT
+              NEXT STEPS
             </p>
             <h2 className="text-4xl md:text-5xl font-serif mb-6">
-              Simple, Transparent Pricing
+              See If This Makes Sense for Your Market
             </h2>
             <p className="text-slate-300 max-w-3xl mx-auto">
-              One system. One goal: consistent, high-intent enquiries.
+              If your goal is more qualified wedding requests, the next step is
+              a conversation about your market, your pricing, and whether this
+              system is the right fit for your business.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
             <div className="bg-slate-800 p-10 border border-slate-700 rounded-xl">
               <h3 className="text-2xl font-serif text-sky-400 mb-4">
-                Wedding Growth System™
+                Google Ads Management for Wedding Planners
               </h3>
               <p className="text-slate-300 mb-6">
-                Built for planners charging €10k/$10k+ who want a predictable
-                enquiry system.
+                Built for planners who want a more predictable way to generate
+                serious requests from couples actively looking to book.
               </p>
 
               <ul className="text-slate-300 space-y-2 mb-8">
@@ -400,16 +410,16 @@ export default function GrowthSystemPage() {
                 <li className="text-white text-xl font-semibold">
                   €980 setup — one time
                 </li>
-                <li>✔ High-intent targeting strategy</li>
-                <li>✔ Campaign build</li>
+                <li>✔ Campaign strategy and build</li>
                 <li>✔ Tracking setup</li>
                 <li className="bg-sky-900/40 border border-sky-500 text-sky-300 px-4 py-2 rounded-lg font-semibold">
-                  ✔ Free Conversion Landing Page{" "}
+                  ✔ Free conversion landing page{" "}
                   <span className="text-sky-200">(Worth €800)</span>
                 </li>
                 <li className="pt-4 text-slate-400 line-through">€980/month</li>
                 <li className="text-white text-xl font-semibold">€480/month</li>
                 <li>✔ Weekly optimisation</li>
+                <li>✔ Ongoing performance management</li>
                 <li>✔ Clear monthly insights</li>
               </ul>
 
@@ -417,26 +427,27 @@ export default function GrowthSystemPage() {
                 to="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 rounded-lg"
               >
-                Talk About Your Numbers <ArrowRight size={20} />
+                Talk About Your Market <ArrowRight size={20} />
               </Link>
 
               <p className="text-slate-400 text-sm mt-5">
-                Recommended ad spend: €1,000+/month (or equivalent). We’ll tell
-                you if it doesn’t make sense for your market.
+                Recommended ad spend: €800+/month or equivalent. If it does not
+                make sense for your market, we will tell you directly.
               </p>
             </div>
           </div>
         </section>
 
-        {/* ------------------------------ CTA ------------------------------ */}
+        {/* ------------------------------ FINAL CTA ------------------------------ */}
         <section className="px-6 lg:px-12 py-24 text-center bg-white">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-4xl font-serif text-slate-900 mb-6">
-              Ready for a Predictable Enquiry System?
+              Ready to Build a More Predictable Wedding Requests System?
             </h3>
             <p className="text-lg text-slate-700 mb-10">
-              Book a strategy session. We’ll look at your pricing, market, and
-              current positioning — and map the numbers before you spend.
+              Book a consultation and we’ll look at your market, positioning,
+              and whether this is the right path for generating more of the
+              right wedding requests.
             </p>
 
             <Link

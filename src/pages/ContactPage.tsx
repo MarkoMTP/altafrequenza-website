@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
-import { Mail, Phone, Calendar, CheckCircle } from "lucide-react";
+import { Mail, Calendar, CheckCircle } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -57,14 +57,16 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Apply for a Marketing Partnership | Alta Frequenza</title>
+        <title>
+          Contact Alta Frequenza | Wedding Planner & Venue Marketing
+        </title>
         <meta
           name="description"
-          content="Apply to work with Alta Frequenza as your dedicated wedding marketing partner. End-to-end marketing for wedding planners and venues."
+          content="Get in touch with Alta Frequenza to discuss Google Ads, social media management, AI lead capture, or complete marketing support for wedding planners and venues."
         />
         <meta
           name="keywords"
-          content="wedding planner marketing, wedding marketing partner, social media for wedding planners, Google Ads wedding planners, wedding venue marketing"
+          content="contact wedding marketing agency, wedding planner marketing, wedding venue marketing, google ads wedding planners, social media wedding planners"
         />
       </Helmet>
 
@@ -74,13 +76,15 @@ export default function ContactPage() {
             {/* Header */}
             <div className="text-center mb-16">
               <p className="text-sm tracking-widest text-slate-500 mb-4">
-                PARTNERSHIP APPLICATION
+                START THE CONVERSATION
               </p>
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-slate-900 mb-6">
                 Contact Us
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Use this form to start a private conversation.
+                Tell us a bit about your business and what kind of support
+                you're looking for. We’ll review it personally and get back to
+                you with the best next step.
               </p>
             </div>
 
@@ -92,11 +96,11 @@ export default function ContactPage() {
                   <div className="flex flex-col items-center justify-center h-full text-center py-20">
                     <CheckCircle className="text-sky-600 mb-4" size={48} />
                     <h3 className="text-2xl font-serif mb-2">
-                      Application Received
+                      Message Received
                     </h3>
                     <p className="text-slate-600 max-w-md">
-                      I’ll personally review your application and get back to
-                      you shortly with next steps.
+                      Thanks for reaching out. We’ll review your message and get
+                      back to you shortly with the best next step.
                     </p>
                   </div>
                 ) : (
@@ -151,10 +155,10 @@ export default function ContactPage() {
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
                         {[
-                          "Your Marketing Partner (Full Management)",
-                          "Wedding Growth System™ (Google Ads)",
-                          "Elegant Presence™ (Social Media)",
-                          "AI Wedding Assistant™",
+                          "Complete Marketing Management",
+                          "Google Ads Management",
+                          "Social Media Management",
+                          "AI Lead Capture Assistant",
                         ].map((service) => (
                           <label
                             key={service}
@@ -175,7 +179,7 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-slate-700 mb-2 font-medium">
-                        Tell me about your situation
+                        Tell us a bit about your business
                       </label>
                       <textarea
                         name="message"
@@ -183,7 +187,7 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full p-3 border border-slate-300 focus:border-sky-600 outline-none resize-none"
-                        placeholder="Where are you currently stuck? What would you like your marketing to look like in 6–12 months?"
+                        placeholder="What kind of weddings do you want more of? What feels inconsistent right now? What would you like your marketing to do better?"
                       />
                     </div>
 
@@ -192,7 +196,7 @@ export default function ContactPage() {
                       disabled={loading}
                       className="w-full py-4 bg-slate-900 text-white text-lg font-medium hover:bg-slate-800 transition-all"
                     >
-                      {loading ? "Submitting..." : "Submit Application"}
+                      {loading ? "Sending..." : "Send Message"}
                     </button>
                   </form>
                 )}
@@ -205,19 +209,19 @@ export default function ContactPage() {
                     What Happens Next
                   </h3>
                   <ul className="space-y-4 text-slate-700">
+                    <li>We review your message and current online presence.</li>
                     <li>
-                      <strong>Personal review</strong> of your application and
-                      current positioning.
+                      If it looks like a strong fit, we invite you to a private
+                      strategy call.
                     </li>
                     <li>
-                      A <strong>private strategy call</strong> if it looks like
-                      a strong fit.
+                      You get a clear recommendation on what would make the most
+                      sense for your business.
                     </li>
                     <li>
-                      Clear recommendation on whether working together makes
-                      sense.
+                      No pressure, no complicated process, and no long-term
+                      commitment required.
                     </li>
-                    <li>No pressure, no long-term contracts.</li>
                   </ul>
                 </div>
 
@@ -225,6 +229,7 @@ export default function ContactPage() {
                   <h3 className="text-xl font-serif mb-6">
                     Prefer to Reach Out Directly?
                   </h3>
+
                   <div className="space-y-4">
                     <a
                       href="mailto:contact@altafrequenzamarketing.com"
