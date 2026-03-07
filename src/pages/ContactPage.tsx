@@ -62,11 +62,11 @@ export default function ContactPage() {
         </title>
         <meta
           name="description"
-          content="Get in touch with Alta Frequenza to discuss Google Ads, social media management, AI lead capture, or complete marketing support for wedding planners and venues."
+          content="Get in touch with Alta Frequenza to discuss Google Ads, social media management, websites and landing pages, AI lead capture, SEO, GEO, and marketing support for wedding planners and venues."
         />
         <meta
           name="keywords"
-          content="contact wedding marketing agency, wedding planner marketing, wedding venue marketing, google ads wedding planners, social media wedding planners"
+          content="contact wedding marketing agency, wedding planner marketing, wedding venue marketing, google ads wedding planners, social media wedding planners, wedding planner website design, SEO for wedding planners, GEO for wedding businesses"
         />
       </Helmet>
 
@@ -83,7 +83,7 @@ export default function ContactPage() {
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                 Tell us a bit about your business and what kind of support
-                you're looking for. We’ll review it personally and get back to
+                you’re looking for. We’ll review it personally and get back to
                 you with the best next step.
               </p>
             </div>
@@ -155,10 +155,10 @@ export default function ContactPage() {
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-slate-700">
                         {[
-                          "Complete Marketing Management",
                           "Google Ads Management",
                           "Social Media Management",
-                          "AI Lead Capture Assistant",
+                          "Websites & Landing Pages",
+                          "AI Wedding Assistant",
                         ].map((service) => (
                           <label
                             key={service}
@@ -183,11 +183,11 @@ export default function ContactPage() {
                       </label>
                       <textarea
                         name="message"
-                        rows={4}
+                        rows={5}
                         value={formData.message}
                         onChange={handleChange}
                         className="w-full p-3 border border-slate-300 focus:border-sky-600 outline-none resize-none"
-                        placeholder="What kind of weddings do you want more of? What feels inconsistent right now? What would you like your marketing to do better?"
+                        placeholder="What kind of weddings do you want more of? What feels inconsistent right now? Are you looking for more wedding requests, a stronger online presence, a better website, or better visibility through Google, SEO, or AI search?"
                       />
                     </div>
 
@@ -209,17 +209,22 @@ export default function ContactPage() {
                     What Happens Next
                   </h3>
                   <ul className="space-y-4 text-slate-700">
-                    <li>We review your message and current online presence.</li>
+                    <li>
+                      We review your message, current online presence, and the
+                      way your business is positioned today.
+                    </li>
                     <li>
                       If it looks like a strong fit, we invite you to a private
                       strategy call.
                     </li>
                     <li>
                       You get a clear recommendation on what would make the most
-                      sense for your business.
+                      sense for your business, whether that is Google Ads,
+                      social media, a stronger website, or better search
+                      visibility through SEO and GEO.
                     </li>
                     <li>
-                      No pressure, no complicated process, and no long-term
+                      No pressure, no complicated process, and no long term
                       commitment required.
                     </li>
                   </ul>
@@ -248,7 +253,7 @@ export default function ContactPage() {
                       className="inline-flex items-center justify-center gap-3 w-full px-6 py-4 bg-sky-600 text-white text-lg font-medium hover:bg-sky-700 transition-all"
                     >
                       <Calendar size={22} />
-                      Book a Call Instead
+                      Book a Strategy Call
                     </a>
                   </div>
                 </div>
