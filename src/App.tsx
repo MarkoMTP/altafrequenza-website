@@ -5,6 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 // Layout
 import Navigation from "./components/Navigation";
@@ -47,6 +48,7 @@ function App() {
       <div className="min-h-screen bg-white">
         <Navigation />
         <ScrollToTop />
+        <Analytics />
 
         <div className="page-transition">
           <Routes>
