@@ -41,14 +41,63 @@ function ScrollToTop() {
   return null;
 }
 
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
+
+function CustomCursor() {
+  useEffect(() => {
+    const cursor = document.getElementById('custom-cursor');
+    const moveCursor = (e: MouseEvent) => {
+      if (cursor) {
+        cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+      }
+    };
+    window.addEventListener('mousemove', moveCursor);
+    return () => window.removeEventListener('mousemove', moveCursor);
+  }, []);
+
+  return (
+    <div 
+      id="custom-cursor" 
+      className="custom-cursor hidden md:block"
+      style={{ top: '-10px', left: '-10px' }}
+    />
+  );
+}
+
 function App() {
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-luxury-champagne selection:bg-luxury-gold/30">
+        <CustomCursor />
         <Navigation />
         <ScrollToTop />
 
-        <div className="page-transition">
+        <main>
           <Routes>
             {/* Main Pages */}
             <Route path="/" element={<HomePage />} />
@@ -99,7 +148,7 @@ function App() {
             {/* Catch-all redirect to home */}
             <Route path="*" element={<HomePage />} />
           </Routes>
-        </div>
+        </main>
 
         <Footer />
       </div>

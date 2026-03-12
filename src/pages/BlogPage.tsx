@@ -1,6 +1,7 @@
-import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Sparkles, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 
 export default function BlogPage() {
   const featuredPost = {
@@ -83,7 +84,6 @@ export default function BlogPage() {
         "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
       slug: "google-ads-guide",
     },
-
     {
       title: "Google Ads for Wedding Planners: A Complete Guide",
       excerpt: "Why Instagram helps you win against other wedding planners",
@@ -95,6 +95,25 @@ export default function BlogPage() {
       slug: "why-socialmedia-matters",
     },
   ];
+
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
   return (
     <>
@@ -128,105 +147,185 @@ export default function BlogPage() {
           content="https://www.altafrequenzamarketing/og-blog.jpg"
         />
       </Helmet>
-      <div className="bg-white pt-20">
+
+      <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">
         {/* Header */}
-        <section className="py-24 px-6 lg:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-sm tracking-widest text-neutral-500 mb-4">
+        <section className="px-6 lg:px-12 py-32 relative overflow-hidden border-b border-luxury-gold/5">
+          <div className="absolute inset-0 z-0 opacity-40">
+            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-luxury-gold/5 blur-[120px] rounded-full" />
+            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-luxury-ethereal/10 blur-[150px] rounded-full animate-pulse" />
+          </div>
+
+          <div className="max-w-7xl mx-auto relative z-10">
+            <motion.div 
+               initial="hidden"
+               animate="visible"
+               variants={staggerContainer}
+               className="text-center mb-32"
+            >
+              <motion.div 
+                variants={fadeIn}
+                className="inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-12 rounded-full font-bold shadow-sm"
+              >
+                <Sparkles size={14} />
                 INSIGHTS & STRATEGIES
-              </p>
-              <h1 className="text-5xl md:text-7xl font-serif text-neutral-900 mb-6">
-                The Alta Frequenza Journal
-              </h1>
-              <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+              </motion.div>
+
+              <motion.h1 
+                variants={fadeIn} 
+                className="text-5xl md:text-9xl font-serif text-luxury-slate mb-10 leading-[1.05] tracking-tighter"
+              >
+                The Alta Frequenza <span className="text-luxury-gold italic">Journal</span>
+              </motion.h1>
+
+              <motion.p 
+                variants={fadeIn} 
+                className="text-xl md:text-2xl text-luxury-slate/50 leading-relaxed max-w-4xl mx-auto font-light italic"
+              >
                 Expert insights on luxury wedding marketing, client psychology,
                 and growing your planning business.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
             {/* Featured Post */}
-            <div className="mb-24">
-              <article className="grid md:grid-cols-2 gap-12 items-center bg-neutral-50 border border-neutral-200 overflow-hidden">
-                <div className="h-full">
+            <motion.div 
+               initial={{ opacity: 0, y: 40 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="mb-32 group"
+            >
+              <article className="grid lg:grid-cols-2 gap-0 bg-white rounded-[4rem] border border-luxury-gold/10 overflow-hidden shadow-[0_50px_100px_-20px_rgba(15,23,42,0.1)]">
+                <div className="relative overflow-hidden aspect-video lg:aspect-auto">
                   <img
                     src={featuredPost.image}
                     alt={featuredPost.title}
-                    className="w-full h-full object-cover min-h-[400px]"
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 grayscale hover:grayscale-0"
                   />
+                  <div className="absolute inset-0 bg-luxury-gold/10 mix-blend-overlay" />
                 </div>
-                <div className="p-8 md:p-12">
-                  <div className="inline-block px-3 py-1 bg-amber-600 text-white text-xs tracking-wider mb-4">
-                    FEATURED
+                <div className="p-12 md:p-20 lg:p-24 flex flex-col justify-center">
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="px-4 py-1.5 bg-luxury-gold text-white text-[9px] font-bold uppercase tracking-[0.3em] rounded-full">
+                      FEATURED
+                    </div>
+                    <span className="text-[10px] tracking-[0.3em] text-luxury-gold font-bold uppercase">
+                      {featuredPost.category}
+                    </span>
                   </div>
-                  <p className="text-sm tracking-wide text-amber-600 mb-3">
-                    {featuredPost.category}
-                  </p>
-                  <h2 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-4 leading-tight">
+
+                  <h2 className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 leading-tight tracking-tight italic">
                     {featuredPost.title}
                   </h2>
-                  <p className="text-lg text-neutral-700 leading-relaxed mb-6">
+                  <p className="text-xl text-luxury-slate/50 leading-relaxed mb-12 font-light italic">
                     {featuredPost.excerpt}
                   </p>
-                  <div className="flex items-center gap-6 text-sm text-neutral-600 mb-6">
-                    <div className="flex items-center gap-2">
-                      <Calendar size={16} />
+
+                  <div className="flex items-center gap-10 text-[10px] uppercase tracking-[0.2em] font-bold text-luxury-slate/30 mb-12">
+                    <div className="flex items-center gap-3">
+                      <Calendar size={14} className="text-luxury-gold" />
                       {featuredPost.date}
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock size={16} />
+                    <div className="flex items-center gap-3">
+                      <Clock size={14} className="text-luxury-gold" />
                       {featuredPost.readTime}
                     </div>
                   </div>
+
                   <Link
                     to={`/blog/${featuredPost.slug}`}
-                    className="inline-flex items-center gap-2 text-neutral-900 hover:gap-3 transition-all font-medium"
+                    className="group-link relative inline-flex items-center gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-luxury-slate hover:text-luxury-gold transition-colors duration-500"
                   >
-                    Read Article <ArrowRight size={16} />
+                    Read Article 
+                    <ArrowRight size={20} className="group-hover:translate-x-4 transition-transform duration-500" />
                   </Link>
                 </div>
               </article>
-            </div>
+            </motion.div>
 
-            {/* Blog Posts */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Blog Posts Grid */}
+            <motion.div 
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true }}
+               variants={staggerContainer}
+               className="grid md:grid-cols-2 lg:grid-cols-3 gap-12"
+            >
               {posts.map((post, index) => (
-                <Link key={index} to={`/blog/${post.slug}`} className="group">
-                  <article className="cursor-pointer">
-                    <div className="mb-4 overflow-hidden bg-neutral-100">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <p className="text-xs tracking-wide text-amber-600 mb-2">
-                      {post.category}
-                    </p>
-                    <h3 className="text-xl font-serif text-neutral-900 mb-3 leading-tight group-hover:text-amber-600 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-neutral-700 leading-relaxed mb-4">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center gap-4 text-xs text-neutral-500 mb-4">
-                      <div className="flex items-center gap-1">
-                        <Calendar size={14} />
-                        {post.date}
+                <motion.div key={index} variants={fadeIn} className="group">
+                  <Link to={`/blog/${post.slug}`} className="block h-full">
+                    <article className="flex flex-col h-full bg-white rounded-[3rem] border border-luxury-gold/10 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-700">
+                      <div className="relative overflow-hidden h-72">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-luxury-gold/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock size={14} />
-                        {post.readTime}
+
+                      <div className="p-10 flex flex-col flex-1">
+                        <div className="text-[10px] tracking-[0.3em] text-luxury-gold font-bold uppercase mb-6">
+                           {post.category}
+                        </div>
+                        
+                        <h3 className="text-2xl font-serif text-luxury-slate mb-6 leading-tight group-hover:text-luxury-gold transition-colors duration-700 italic tracking-wide">
+                          {post.title}
+                        </h3>
+                        
+                        <p className="text-luxury-slate/40 text-sm font-light leading-relaxed mb-10 flex-1 italic line-clamp-3">
+                          {post.excerpt}
+                        </p>
+
+                        <div className="flex items-center justify-between pt-8 border-t border-luxury-gold/5">
+                           <div className="flex items-center gap-6 text-[9px] uppercase tracking-widest font-bold text-luxury-slate/20">
+                              <div className="flex items-center gap-2">
+                                 <Calendar size={12} />
+                                 {post.date}
+                              </div>
+                              <div className="flex items-center gap-2 text-luxury-gold/40">
+                                 <Clock size={12} />
+                                 {post.readTime}
+                              </div>
+                           </div>
+                           <ArrowRight size={18} className="text-luxury-gold -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-700" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="inline-flex items-center gap-2 text-sm text-neutral-900 group-hover:gap-3 transition-all">
-                      Read More <ArrowRight size={14} />
-                    </div>
-                  </article>
-                </Link>
+                    </article>
+                  </Link>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
+        </section>
+
+        {/* FOOTER CTA */}
+        <section className="px-6 lg:px-12 py-40 text-center bg-white relative overflow-hidden">
+           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
+           <div className="max-w-4xl mx-auto relative z-10">
+              <motion.div 
+                 initial={{ opacity: 0, scale: 0.9 }}
+                 whileInView={{ opacity: 1, scale: 1 }}
+                 viewport={{ once: true }}
+                 className="inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-12 rounded-full font-bold shadow-sm"
+              >
+                 <Award size={14} /> Authority & Insights
+              </motion.div>
+              <h2 className="text-4xl md:text-8xl font-serif text-luxury-slate mb-12 tracking-tighter leading-[1.1]">
+                 Stay <span className="text-luxury-gold italic">Ahead</span> of the Market
+              </h2>
+              <p className="text-xl text-luxury-slate/40 mb-20 font-light leading-relaxed italic max-w-2xl mx-auto">
+                 We share the exact strategies we use to help the world's leading wedding planners and venues capture high-net-worth inquiries.
+              </p>
+
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center justify-center gap-6 px-16 py-8 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
+              >
+                <span className="relative z-10">Request a Consultation</span>
+                <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+              </Link>
+           </div>
         </section>
       </div>
     </>

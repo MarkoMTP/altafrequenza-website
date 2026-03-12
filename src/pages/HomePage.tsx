@@ -7,8 +7,12 @@ import {
   Bot,
   Monitor,
   ChevronRight,
+  Star,
+  ShieldCheck,
+  Zap,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   const [email, setEmail] = useState("");
@@ -98,6 +102,25 @@ export default function HomePage() {
     },
   ];
 
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -113,123 +136,139 @@ export default function HomePage() {
 
         <meta
           name="keywords"
-          content="
-      wedding planner marketing,
-      wedding venue marketing,
-      wedding planner google ads,
-      google ads for wedding planners,
-      google ads for wedding venues,
-      wedding planner social media,
-      wedding venue social media,
-      wedding planner website design,
-      wedding venue website design,
-      destination wedding planner website,
-      SEO for wedding planners,
-      GEO for wedding businesses,
-      wedding marketing agency,
-      marketing for wedding planners,
-      marketing for wedding venues
-    "
+          content="wedding planner marketing, wedding venue marketing, wedding planner google ads, google ads for wedding planners, google ads for wedding venues, wedding planner social media, wedding venue social media, wedding planner website design, wedding venue website design, destination wedding planner website, SEO for wedding planners, GEO for wedding businesses, wedding marketing agency, marketing for wedding planners, marketing for wedding venues"
         />
-
-        <meta
-          property="og:title"
-          content="Wedding Planner & Venue Marketing Agency"
-        />
-        <meta
-          property="og:description"
-          content="Specialized marketing for wedding planners and venues to help them attract more wedding requests and book more of the right couples."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/og-image.jpg" />
       </Helmet>
 
-      <div className="bg-white text-slate-900">
+      <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen">
         {/* HERO */}
-        <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20 bg-gradient-to-b from-sky-50 via-white to-slate-50">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="mb-8 inline-flex items-center gap-2 px-4 py-2 bg-sky-100 text-sky-700 text-sm tracking-wide rounded-full shadow-sm">
-              <Sparkles size={16} />
-              Marketing for Wedding Planners & Venues
-            </div>
+        <section className="relative h-screen flex items-center justify-center px-6 lg:px-12 overflow-hidden">
+           {/* Background Decorative Elements */}
+          <div className="absolute inset-0 z-0 opacity-40">
+            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-luxury-gold/5 blur-[120px] rounded-full" />
+            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-luxury-ethereal/10 blur-[150px] rounded-full animate-pulse" />
+          </div>
 
-            <h1 className="text-5xl md:text-7xl font-serif leading-tight mb-8 text-slate-900">
-              Turn Your Marketing Into a Consistent Source of Wedding Requests
-            </h1>
-
-            <p className="text-lg md:text-xl text-slate-700 max-w-3xl mx-auto leading-relaxed mb-8">
-              We help wedding planners and wedding venues become easier to
-              discover, more trusted at first glance, and more likely to receive
-              wedding requests from couples already planning their wedding.
-            </p>
-
-            <Link
-              to="/contact"
-              className="group inline-flex items-center gap-3 px-10 py-4 bg-sky-600 text-white text-base tracking-wide hover:bg-sky-700 transition-all rounded-full shadow-lg"
+          <div className="max-w-7xl mx-auto text-center relative z-10">
+            <motion.div 
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
             >
-              Book a Strategy Session
-              <ArrowRight
-                size={20}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
+              <motion.div 
+                variants={fadeIn}
+                className="mb-10 inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold rounded-full shadow-sm"
+              >
+                <Sparkles size={14} />
+                Marketing for Wedding Planners & Venues
+              </motion.div>
+
+              <motion.h1 
+                variants={fadeIn}
+                className="text-5xl md:text-8xl font-serif leading-[1.05] mb-10 text-luxury-slate tracking-tight"
+              >
+                Turn Your Marketing Into a <span className="text-luxury-gold italic">Consistent Source</span> of Wedding Requests
+              </motion.h1>
+
+              <motion.p 
+                variants={fadeIn}
+                className="text-xl md:text-2xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-12 font-light italic"
+              >
+                We help wedding planners and wedding venues become easier to
+                discover, more trusted at first glance, and more likely to receive
+                wedding requests from couples already planning their wedding.
+              </motion.p>
+
+              <motion.div variants={fadeIn}>
+                <Link
+                  to="/contact"
+                  className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
+                >
+                  <span className="relative z-10">Book a Strategy Session</span>
+                  <ArrowRight size={20} className="relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
-        {/* WHY VISIBILITY MATTERS */}
-        <section className="py-28 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="rounded-3xl overflow-hidden shadow-lg">
-              <img
-                src="https://www.dropbox.com/scl/fi/nb6q6owhc1ig8pqlqp5z3/pexels-westernsydneyweddings-34525884.jpg?rlkey=79mvrch0bt7pnydwtpbx5h491&st=uuxgthdo&raw=1"
-                alt="Wedding planner workflow"
-                className="w-full h-full object-cover"
-              />
-            </div>
+        {/* WHY VISIBILITY MATTERS (THE REAL PROBLEM) */}
+        <section className="py-40 px-6 lg:px-12 bg-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center relative z-10">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               transition={{ duration: 1.2 }}
+               className="relative lg:h-[700px]"
+            >
+               <div className="h-full rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(15,23,42,0.1)] border border-luxury-gold/10 relative group">
+                <img
+                  src="https://www.dropbox.com/scl/fi/nb6q6owhc1ig8pqlqp5z3/pexels-westernsydneyweddings-34525884.jpg?rlkey=79mvrch0bt7pnydwtpbx5h491&st=uuxgthdo&raw=1"
+                  alt="Wedding planner workflow"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+                 <div className="absolute inset-0 bg-luxury-slate/20 mix-blend-overlay" />
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-luxury-gold/10 blur-3xl rounded-full -z-10" />
+            </motion.div>
 
-            <div className="text-left">
-              <p className="text-xs uppercase tracking-[0.25em] text-sky-600 mb-4 font-semibold">
+            <motion.div 
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true, margin: "-100px" }}
+               variants={staggerContainer}
+               className="text-left"
+            >
+              <motion.p variants={fadeIn} className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold">
                 THE REAL PROBLEM
-              </p>
+              </motion.p>
 
-              <h2 className="text-3xl md:text-4xl font-serif mb-6">
-                The Best Wedding Businesses Are Not Always the Ones Getting
-                Contacted
-              </h2>
+              <motion.h2 variants={fadeIn} className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight">
+                The Best Wedding Businesses Are <span className="text-luxury-gold italic">Not Always</span> the Ones Getting Contacted
+              </motion.h2>
 
-              <p className="text-lg text-slate-700 leading-relaxed mb-4">
-                Couples rarely compare every planner or venue in a region.
-                Usually, they contact the first few businesses that feel
-                visible, professional, and trustworthy.
-              </p>
+              <motion.div variants={fadeIn} className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed">
+                <p>
+                  Couples rarely compare every planner or venue in a region.
+                  Usually, they contact the first few businesses that feel
+                  visible, professional, and trustworthy.
+                </p>
 
-              <p className="text-lg text-slate-700 leading-relaxed mb-4">
-                If your business is hard to find or your online presence feels
-                unclear, many couples simply move on without ever contacting
-                you.
-              </p>
+                <p>
+                  If your business is hard to find or your online presence feels
+                  unclear, many couples simply move on without ever contacting
+                  you.
+                </p>
 
-              <p className="italic text-slate-800 text-lg">
-                This is not just a service problem. It is often a visibility and
-                trust problem.
-              </p>
-            </div>
+                <p className="italic text-luxury-slate font-medium text-2xl border-l-[3px] border-luxury-gold pl-8 py-2">
+                  This is not just a service problem. It is often a visibility and
+                  trust problem.
+                </p>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
-        {/* DISCOVERY SECTION */}
-        <section className="py-28 px-6 lg:px-12 bg-white border-t border-slate-200">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-sky-600 mb-4 font-semibold">
+        {/* DISCOVERY SECTION (HOW COUPLES DISCOVER YOU) */}
+        <section className="py-40 px-6 lg:px-12 bg-luxury-champagne border-y border-luxury-gold/5">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+            <motion.div 
+               initial="hidden"
+               whileInView="visible"
+               viewport={{ once: true }}
+               variants={staggerContainer}
+            >
+              <motion.p variants={fadeIn} className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold">
                 HOW COUPLES DISCOVER YOU
-              </p>
+              </motion.p>
 
-              <h2 className="text-3xl md:text-4xl font-serif mb-6">
-                Most Couples Begin Their Search Online
-              </h2>
+              <motion.h2 variants={fadeIn} className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight">
+                Most Couples Begin Their <span className="text-luxury-gold italic">Search</span> Online
+              </motion.h2>
 
-              <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
+              <motion.div variants={fadeIn} className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed">
                 <p>
                   Before couples contact you, they search. They look for
                   planners, venues, ideas, and inspiration in the exact region
@@ -242,93 +281,134 @@ export default function HomePage() {
                   running.
                 </p>
 
-                <p className="font-medium text-slate-800">
+                <p className="font-bold text-luxury-slate uppercase tracking-widest text-xs mt-12 bg-luxury-gold/10 px-6 py-3 rounded-full inline-block">
                   When your marketing is structured properly, couples searching
                   for weddings in your area are far more likely to find you
                   first.
                 </p>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
-            <div className="rounded-3xl overflow-hidden shadow-lg">
+            <motion.div 
+               initial={{ opacity: 0, x: 50 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 1.2 }}
+               className="rounded-[4rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10 group"
+            >
               <img
                 src="https://www.dropbox.com/scl/fi/t8d3dzw1iy4498x5q7k26/ads.jpg?rlkey=uohsisrqbm7w8bwpezz60j61d&st=8at1dxhe&raw=1"
                 alt="Search visibility"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
-            </div>
+               <div className="absolute inset-0 bg-luxury-slate/30 mix-blend-overlay" />
+            </motion.div>
           </div>
         </section>
 
         {/* FIRST IMPRESSIONS SECTION */}
-        <section className="py-28 px-6 lg:px-12 bg-sky-50 border-t border-slate-200">
-          <div className="max-w-5xl mx-auto text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-sky-700 mb-4 font-semibold">
+        <section className="py-40 px-6 lg:px-12 bg-white text-center relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-luxury-gold/5 blur-[150px] rounded-full pointer-events-none" />
+          
+          <div className="max-w-5xl mx-auto relative z-10">
+            <motion.p 
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               viewport={{ once: true }}
+               className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+            >
               FIRST IMPRESSIONS
-            </p>
+            </motion.p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-8">
-              Couples Form an Opinion About Your Brand in Seconds
-            </h2>
+            <motion.h2 
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="text-4xl md:text-7xl font-serif text-luxury-slate mb-12 tracking-tight leading-tight"
+            >
+              Couples Form an Opinion About Your Brand in <span className="text-luxury-gold italic">Seconds</span>
+            </motion.h2>
 
-            <div className="flex justify-center mb-10">
-              <div className="w-64 h-[420px] bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0.9 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               className="flex justify-center mb-16"
+            >
+              <div className="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-luxury-gold/20 p-2 relative group">
                 <img
                   src="https://www.dropbox.com/scl/fi/jefa1g9vd54uzgl13lppv/Screenshot-2025-12-15-at-22.02.35.png?rlkey=pvgb938zsmgkjkw2mism7d60l&st=7r4ad30r&raw=1"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-[2.5rem] transition-transform duration-1000 group-hover:scale-110"
                   alt="Instagram feed preview"
                 />
+                 <div className="absolute inset-0 bg-luxury-gold/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
               </div>
-            </div>
+            </motion.div>
 
-            <p className="text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-8">
+            <motion.p 
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               viewport={{ once: true }}
+               className="text-xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-16 font-light italic"
+            >
               Before reaching out, many couples will quickly look at your
               website, your Instagram, and the way your brand presents itself. A
               stronger online presence increases confidence and makes a wedding
               request feel like a safer next step.
-            </p>
+            </motion.p>
 
-            <div className="grid md:grid-cols-3 gap-8 mt-10">
-              <div className="text-center">
-                <div className="w-10 h-10 bg-sky-400 text-white rounded-xl mx-auto mb-3 flex items-center justify-center">
-                  <Sparkles size={20} />
-                </div>
-                <p className="text-slate-700 text-sm">
-                  Raises perceived value instantly
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-10 h-10 bg-sky-400 text-white rounded-xl mx-auto mb-3 flex items-center justify-center">
-                  <Sparkles size={20} />
-                </div>
-                <p className="text-slate-700 text-sm">
-                  Builds trust before the first message
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-10 h-10 bg-sky-400 text-white rounded-xl mx-auto mb-3 flex items-center justify-center">
-                  <Sparkles size={20} />
-                </div>
-                <p className="text-slate-700 text-sm">
-                  Helps you stand out from similar competitors
-                </p>
-              </div>
+            <div className="grid md:grid-cols-3 gap-12 mt-20">
+              {[
+                "Raises perceived value instantly",
+                "Builds trust before the first message",
+                "Helps you stand out from similar competitors"
+              ].map((text, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="text-center group"
+                >
+                  <div className="w-12 h-12 bg-luxury-slate text-white rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:bg-luxury-gold group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
+                    <Star size={20} className="group-hover:rotate-12 transition-transform" />
+                  </div>
+                  <p className="text-luxury-slate font-bold uppercase tracking-widest text-[10px] leading-relaxed">
+                    {text}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* SMALL DIFFERENTIATOR SECTION */}
-        <section className="py-24 px-6 lg:px-12 bg-white border-t border-slate-200">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-sky-600 mb-4 font-semibold">
+        {/* WHY ALTA FREQUENZA */}
+        <section className="py-40 px-6 lg:px-12 bg-luxury-slate text-white relative overflow-hidden">
+           <div className="absolute bottom-0 right-0 w-full h-1 bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
+          <div className="max-w-5xl mx-auto text-center relative z-10">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold mb-10"
+            >
               WHY ALTA FREQUENZA
-            </p>
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6">
-              Built Specifically for Wedding Planners and Venues
-            </h2>
-            <p className="text-lg text-slate-700 leading-relaxed">
+            </motion.p>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-7xl font-serif mb-12 tracking-tight"
+            >
+              Built <span className="text-luxury-gold italic">Specifically</span> for Wedding Planners and Venues
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-xl text-white/50 leading-relaxed font-light max-w-4xl mx-auto italic"
+            >
               Unlike general marketing agencies, we work specifically with
               wedding planners and wedding venues. That means the messaging, the
               positioning, the website structure, and the strategy are shaped
@@ -336,205 +416,254 @@ export default function HomePage() {
               industry. We also adapt our work to newer SEO changes and GEO,
               helping your business stay visible both in search engines and in
               AI driven discovery.
-            </p>
+            </motion.p>
           </div>
         </section>
 
         {/* SERVICES */}
-        <section className="py-24 px-6 lg:px-12 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <p className="text-xs uppercase tracking-[0.25em] text-sky-600 mb-4 font-semibold">
+        <section className="py-40 px-6 lg:px-12 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-32">
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold mb-10"
+              >
                 OUR SERVICES
-              </p>
-              <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-4">
-                The Systems Behind More Wedding Requests
-              </h2>
-              <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
+              </motion.p>
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl md:text-7xl font-serif text-luxury-slate mb-8 tracking-tight"
+              >
+                The Systems Behind <span className="text-luxury-gold italic">More Wedding Requests</span>
+              </motion.h2>
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-xl text-luxury-slate/40 max-w-3xl mx-auto font-light leading-relaxed"
+              >
                 We help wedding businesses become easier to find, stronger at
                 first impression, and more consistent in turning online
                 attention into real wedding requests.
-              </p>
+              </motion.p>
             </div>
 
-            <div className="space-y-16">
+            <div className="grid md:grid-cols-2 gap-10">
               {services.map((service, index) => (
-                <div
+                <motion.div
                   key={index}
-                  className="grid md:grid-cols-2 gap-12 items-start border-t border-slate-200 pt-16"
+                   initial={{ opacity: 0, y: 30 }}
+                   whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true }}
+                   transition={{ delay: index * 0.1 }}
+                  className="group bg-luxury-champagne/10 p-12 rounded-[4rem] border border-luxury-gold/10 hover:bg-luxury-slate hover:text-white transition-all duration-1000 shadow-sm hover:shadow-2xl flex flex-col justify-between"
                 >
                   <div>
-                    <div
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl text-white mb-6 shadow-md
-                        ${
-                          index === 0
-                            ? "bg-gradient-to-br from-sky-400 to-sky-600"
-                            : index === 1
-                            ? "bg-gradient-to-br from-indigo-400 to-indigo-600"
-                            : index === 2
-                            ? "bg-gradient-to-br from-slate-700 to-slate-900"
-                            : "bg-gradient-to-br from-emerald-500 to-emerald-700"
-                        }
-                      `}
-                    >
+                    <div className="w-16 h-16 rounded-3xl bg-luxury-slate text-white flex items-center justify-center mb-10 group-hover:bg-luxury-gold transition-colors duration-700 shadow-xl">
                       <service.icon size={28} />
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-serif text-slate-900 mb-2">
+                    <h3 className="text-3xl font-serif mb-4 group-hover:text-luxury-gold transition-colors duration-700">
                       {service.title}
                     </h3>
 
-                    <p className="text-sm tracking-wide text-sky-700 mb-4 uppercase">
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-luxury-gold font-bold mb-8 group-hover:text-white/40">
                       {service.subtitle}
                     </p>
 
-                    <p className="text-lg text-slate-700 leading-relaxed mb-6">
+                    <p className="text-lg text-luxury-slate/50 leading-relaxed mb-10 font-light group-hover:text-white/60">
                       {service.description}
                     </p>
 
-                    <Link
-                      to={service.path}
-                      className="inline-flex items-center gap-2 text-sky-700 hover:text-sky-900 hover:gap-3 transition-all text-sm font-medium"
-                    >
-                      Learn More <ChevronRight size={16} />
-                    </Link>
-                  </div>
-
-                  <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                    <h4 className="text-sm tracking-wide font-semibold text-slate-900 mb-4 uppercase">
-                      Key Features
-                    </h4>
-
-                    <ul className="space-y-3">
+                    <ul className="space-y-4 mb-12">
                       {service.features.map((feature, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-3 text-slate-700 text-sm md:text-base"
-                        >
-                          <div className="w-2 h-2 bg-sky-500 rounded-full mt-2 flex-shrink-0 shadow-sm"></div>
-                          <span>{feature}</span>
+                        <li key={idx} className="flex items-start gap-4 text-sm font-medium tracking-wide leading-relaxed">
+                          <div className="w-1.5 h-1.5 bg-luxury-gold rounded-full mt-1.5 flex-shrink-0" />
+                          <span className="group-hover:text-white/80">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
+
+                  <Link
+                    to={service.path}
+                    className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.4em] text-luxury-slate group-hover:text-luxury-gold hover:opacity-70 transition-all border-t border-luxury-gold/10 pt-8"
+                  >
+                    Explore Service <ArrowRight size={18} />
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CASE STUDY */}
-        <section className="py-24 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-sky-600 mb-4 font-semibold">
+        <section className="py-40 px-6 lg:px-12 bg-luxury-slate text-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-luxury-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2" />
+          
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <motion.p 
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               viewport={{ once: true }}
+               className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+            >
               CASE STUDY
-            </p>
+            </motion.p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6">
-              Real Wedding Requests. More Predictability. Less Guesswork.
-            </h2>
+            <motion.h2 
+               initial={{ opacity: 0, y: 30 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="text-4xl md:text-7xl font-serif mb-10 leading-tight tracking-tight"
+            >
+              Real Wedding Requests. <span className="text-luxury-gold italic">More Predictability.</span> Less Guesswork.
+            </motion.h2>
 
-            <p className="text-lg text-slate-700 mb-10 leading-relaxed">
+            <motion.p 
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               viewport={{ once: true }}
+               className="text-xl text-white/40 mb-16 font-light italic leading-relaxed"
+            >
               We helped a wedding business create a more consistent flow of
               wedding requests by improving visibility, structure, and the way
               couples experienced the brand online.
-            </p>
+            </motion.p>
 
-            <form
-              onSubmit={handleEmailSubmit}
-              className="max-w-md mx-auto flex flex-col sm:flex-row gap-4"
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="max-w-2xl mx-auto"
             >
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                required
-                className="flex-1 px-6 py-4 bg-white border border-slate-300 text-slate-900 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-full"
-              />
-              <button
-                type="submit"
-                className="px-8 py-4 bg-sky-600 text-white font-medium hover:bg-sky-700 transition-colors rounded-full shadow-md"
+              <form
+                onSubmit={handleEmailSubmit}
+                className="relative bg-white/5 backdrop-blur-xl p-4 rounded-full border border-white/10 flex flex-col sm:flex-row gap-4"
               >
-                Get the Case Study
-              </button>
-            </form>
-
-            {status && <p className="mt-4 text-sm text-slate-700">{status}</p>}
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Private Email Access..."
+                  required
+                  className="flex-1 px-8 py-5 bg-transparent text-white placeholder-white/20 focus:outline-none text-sm tracking-widest uppercase font-bold"
+                />
+                <button
+                  type="submit"
+                  className="px-12 py-5 bg-luxury-gold text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-white transition-all rounded-full shadow-2xl"
+                >
+                  Get the Case Study
+                </button>
+              </form>
+              {status && <p className="mt-8 text-xs font-bold uppercase tracking-widest text-luxury-gold">{status}</p>}
+            </motion.div>
           </div>
         </section>
 
-        {/* FRAMEWORK */}
-        <section className="py-28 px-6 lg:px-12 bg-gradient-to-b from-slate-900 to-slate-800 text-white">
-          <div className="max-w-6xl mx-auto text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-sky-300 mb-4 font-semibold">
+        {/* APPROACH (FRAMEWORK) */}
+        <section className="py-40 px-6 lg:px-12 bg-white text-luxury-slate">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+            >
               OUR APPROACH
-            </p>
-            <h2 className="text-3xl md:text-4xl font-serif mb-6">
-              More Visibility. More Trust. More Consistent Wedding Requests.
-            </h2>
+            </motion.p>
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-7xl font-serif mb-12 tracking-tight leading-tight"
+            >
+              More Visibility. More Trust. <span className="text-luxury-gold italic">More Consistent Wedding Requests.</span>
+            </motion.h2>
 
-            <p className="text-lg text-slate-200 mb-12 leading-relaxed max-w-3xl mx-auto">
+            <motion.p 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-xl font-light text-luxury-slate/40 mb-24 max-w-4xl mx-auto leading-relaxed"
+            >
               Couples need to discover you, trust you quickly, and feel
               confident enough to contact you. Our approach is built around
               those three steps.
-            </p>
+            </motion.p>
 
-            <div className="grid md:grid-cols-3 gap-8 text-left">
-              <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                <h3 className="text-xl font-serif mb-3 text-sky-300">
-                  Visibility
-                </h3>
-                <p className="text-slate-200 text-sm md:text-base">
-                  Help your business appear where couples are already looking
-                  for planners and venues across search, social, SEO, and newer
-                  AI driven discovery.
-                </p>
-              </div>
-
-              <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                <h3 className="text-xl font-serif mb-3 text-sky-300">Trust</h3>
-                <p className="text-slate-200 text-sm md:text-base">
-                  Create a stronger online presence that makes your brand feel
-                  credible, polished, premium, and worth contacting.
-                </p>
-              </div>
-
-              <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-                <h3 className="text-xl font-serif mb-3 text-sky-300">
-                  Conversion
-                </h3>
-                <p className="text-slate-200 text-sm md:text-base">
-                  Build systems that turn attention into wedding requests more
-                  efficiently by matching how couples actually browse, compare,
-                  and decide.
-                </p>
-              </div>
+            <div className="grid md:grid-cols-3 gap-12 text-left">
+              {[
+                { title: "Visibility", desc: "Help your business appear where couples are already looking for planners and venues across search, social, SEO, and newer AI driven discovery." },
+                { title: "Trust", desc: "Create a stronger online presence that makes your brand feel credible, polished, premium, and worth contacting." },
+                { title: "Conversion", desc: "Build systems that turn attention into wedding requests more efficiently by matching how couples actually browse, compare, and decide." }
+              ].map((item, i) => (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="bg-luxury-champagne/10 p-12 rounded-[3rem] border border-luxury-gold/10 hover:border-luxury-gold/30 transition-all duration-500 shadow-sm"
+                >
+                  <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-8">Phase 0{i+1}</div>
+                  <h3 className="text-3xl font-serif mb-6 italic tracking-tight text-luxury-slate border-b border-luxury-gold/10 pb-6">
+                    {item.title}
+                  </h3>
+                  <p className="text-luxury-slate/50 text-sm font-light leading-relaxed">
+                    {item.desc}
+                  </p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* FINAL CTA */}
-        <section className="py-24 px-6 lg:px-12 bg-gradient-to-r from-sky-50 to-slate-100">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6">
-              Ready to Attract More Wedding Requests?
-            </h2>
+        <section className="py-40 px-6 lg:px-12 bg-luxury-sand/10 relative overflow-hidden">
+           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
+          <div className="max-w-5xl mx-auto text-center relative z-10">
+            <motion.h2 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="text-4xl md:text-8xl font-serif text-luxury-slate mb-12 tracking-tight leading-[1.1]"
+            >
+              Ready to Attract <span className="text-luxury-gold italic">More Wedding Requests?</span>
+            </motion.h2>
 
-            <p className="text-lg text-slate-700 mb-10 leading-relaxed">
+            <motion.p 
+               initial={{ opacity: 0 }}
+               whileInView={{ opacity: 1 }}
+               viewport={{ once: true }}
+               className="text-xl text-luxury-slate/40 mb-20 font-light leading-relaxed max-w-4xl mx-auto"
+            >
               If you want your marketing to stop feeling inconsistent and start
               bringing in more of the right couples, the next step is a simple
               conversation to see what would make the most sense for your
               business.
-            </p>
+            </motion.p>
 
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-sky-600 text-white text-lg tracking-wide hover:bg-sky-700 transition-all rounded-full shadow-lg"
+            <motion.div
+               initial={{ opacity: 0, scale: 0.9 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
             >
-              Book Your Consultation
-              <ArrowRight size={20} />
-            </Link>
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center justify-center gap-6 px-16 py-8 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-[0_40px_100px_-20px_rgba(15,23,42,0.3)] overflow-hidden"
+              >
+                <span className="relative z-10 flex items-center gap-6">
+                  Book Your Consultation
+                  <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform duration-700" />
+                </span>
+                <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+              </Link>
+            </motion.div>
           </div>
         </section>
       </div>

@@ -1,8 +1,28 @@
 import { Helmet } from "react-helmet-async";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Sparkles, ArrowRight, Award, Globe, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15
+      }
+    }
+  };
+
   return (
     <>
       <Helmet>
@@ -42,73 +62,109 @@ export default function AboutPage() {
         <meta property="og:image" content="/images/og-image.jpg" />
       </Helmet>
 
-      <div className="bg-white text-slate-900">
+      <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">
         {/* HERO */}
-        <section className="min-h-[60vh] flex items-center px-6 lg:px-12 pt-24 pb-16 bg-gradient-to-b from-sky-50 via-white to-slate-50">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-[1.3fr,1fr] gap-12 items-center">
-            {/* TEXT */}
-            <div>
-              <div className="mb-4 inline-flex items-center gap-2 px-4 py-2 bg-sky-100 text-sky-700 text-xs tracking-[0.25em] rounded-full shadow-sm uppercase font-semibold">
-                <Sparkles size={16} />
-                About Alta Frequenza
-              </div>
+        <section className="relative px-6 lg:px-12 py-32 overflow-hidden border-b border-luxury-gold/5">
+          <div className="absolute inset-0 z-0 opacity-40">
+            <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-luxury-gold/5 blur-[120px] rounded-full" />
+            <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-luxury-ethereal/10 blur-[150px] rounded-full animate-pulse" />
+          </div>
 
-              <h1 className="text-4xl md:text-5xl font-serif leading-tight mb-6 text-slate-900">
-                I'm Marko Matković and I built a marketing system made
-                specifically for wedding planners and venues.
-              </h1>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid lg:grid-cols-[1.2fr,1fr] gap-24 items-center">
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={staggerContainer}
+              >
+                <motion.div
+                  variants={fadeIn}
+                  className="inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-12 rounded-full font-bold shadow-sm"
+                >
+                  <Sparkles size={14} />
+                  About Alta Frequenza
+                </motion.div>
 
-              <p className="text-lg text-slate-700 leading-relaxed mb-6">
-                Most agencies work with restaurants, real estate, dentists,
-                e-commerce… I chose one world and went all-in: wedding
-                businesses.
-              </p>
+                <motion.h1
+                  variants={fadeIn}
+                  className="text-5xl md:text-8xl font-serif text-luxury-slate mb-10 leading-[1.05] tracking-tight"
+                >
+                  I'm Marko Matković and I built a marketing system made <span className="text-luxury-gold italic">specifically</span> for wedding planners and venues.
+                </motion.h1>
 
-              <p className="text-base text-slate-700 leading-relaxed">
-                Because planners and venues don’t need random marketing. They
-                need clarity, trust, and a predictable flow of the right
-                couples.
-              </p>
-            </div>
+                <motion.div variants={fadeIn} className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed font-light italic">
+                  <p>
+                    Most agencies work with restaurants, real estate, dentists,
+                    e-commerce… I chose one world and went all-in: wedding
+                    businesses.
+                  </p>
+                  <p>
+                    Because planners and venues don’t need random marketing. They
+                    need clarity, trust, and a predictable flow of the right
+                    couples.
+                  </p>
+                </motion.div>
+              </motion.div>
 
-            {/* FOUNDER IMAGE / CARD */}
-            <div className="flex justify-center">
-              <div className="w-full max-w-sm bg-white border border-slate-200 rounded-3xl shadow-md p-6 flex flex-col items-center text-center">
-                <div className="w-28 h-28 rounded-full overflow-hidden mb-4 bg-slate-100">
-                  <img
-                    src="https://www.dropbox.com/scl/fi/hsv6bsy3n85vbmxyljd4h/myself.JPG?rlkey=93y62fxttby3uwmzwj0or1k39&st=kjs4nish&raw=1"
-                    alt="Founder, Marko Matković"
-                    className="w-full h-full object-cover"
-                  />
+              {/* FOUNDER CARD */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+                className="relative group"
+              >
+                <div className="absolute -inset-4 bg-luxury-gold/10 blur-2xl rounded-[4rem] group-hover:bg-luxury-gold/20 transition-all duration-700" />
+                <div className="relative bg-white p-12 lg:p-16 rounded-[4rem] border border-luxury-gold/10 shadow-2xl text-center">
+                  <div className="w-40 h-40 rounded-full overflow-hidden mx-auto mb-10 border-4 border-luxury-gold/20 p-2 relative">
+                    <img
+                      src="https://www.dropbox.com/scl/fi/hsv6bsy3n85vbmxyljd4h/myself.JPG?rlkey=93y62fxttby3uwmzwj0or1k39&st=kjs4nish&raw=1"
+                      alt="Founder, Marko Matković"
+                      className="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-1000"
+                    />
+                  </div>
+                  <h2 className="text-3xl font-serif text-luxury-slate mb-2 tracking-wide italic">
+                    Marko Matković
+                  </h2>
+                  <p className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-8 font-bold">
+                    Founder · Alta Frequenza
+                  </p>
+                  <p className="text-luxury-slate/50 font-light leading-relaxed text-sm italic border-t border-luxury-gold/10 pt-8">
+                    Specialized in marketing for wedding planners & venues,
+                    working with businesses across different regions and markets.
+                  </p>
                 </div>
-                <h2 className="text-xl font-serif text-slate-900 mb-1">
-                  Marko Matković
-                </h2>
-                <p className="text-xs tracking-[0.2em] uppercase text-sky-700 mb-3">
-                  Founder · Alta Frequenza
-                </p>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Specialized in marketing for wedding planners & venues,
-                  working with businesses across different regions and markets.
-                </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* ORIGIN STORY */}
-        <section className="py-20 px-6 lg:px-12 bg-white">
+        <section className="px-6 lg:px-12 py-32 bg-white relative overflow-hidden">
           <div className="max-w-4xl mx-auto">
-            <p className="text-xs uppercase tracking-[0.25em] text-sky-600 mb-4 font-semibold">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold mb-10"
+            >
               HOW ALTA FREQUENZA STARTED
-            </p>
+            </motion.p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6">
-              From “invisible” talent to a specialized partner for wedding
-              businesses
-            </h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-7xl font-serif text-luxury-slate mb-12 tracking-tight leading-tight"
+            >
+              From “invisible” talent to a <span className="text-luxury-gold italic">specialized partner</span> for wedding businesses
+            </motion.h2>
 
-            <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="space-y-10 text-xl text-luxury-slate/60 leading-relaxed font-light italic"
+            >
               <p>
                 Before officially launching Alta Frequenza Marketing, I was
                 already working behind the scenes with wedding planners and
@@ -127,102 +183,148 @@ export default function AboutPage() {
                 that.
               </p>
 
-              <p>
-                That’s why in <strong>2025</strong>, I officially launched{" "}
-                <strong>Alta Frequenza Marketing</strong>, not as a generic
+              <p className="text-luxury-slate not-italic pt-10 border-t border-luxury-gold/10">
+                That’s why in <span className="text-luxury-gold font-bold">2025</span>, I officially launched{" "}
+                <span className="font-bold uppercase tracking-widest text-sm">Alta Frequenza Marketing</span>, not as a generic
                 agency, but as a specialist focused only on wedding planners and
                 wedding venues. The goal was simple: build a system that finally
                 matches the quality of your work with the visibility you
                 deserve.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* WHAT MAKES YOU DIFFERENT */}
-        <section className="py-20 px-6 lg:px-12 bg-slate-50 border-t border-slate-200">
+        {/* DIFFERENTIATION */}
+        <section className="px-6 lg:px-12 py-32 bg-luxury-champagne border-t border-luxury-gold/5">
           <div className="max-w-5xl mx-auto">
-            <p className="text-xs uppercase tracking-[0.25em] text-sky-600 mb-4 font-semibold">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold mb-10"
+            >
               WHY I CHOSE ONE INDUSTRY
-            </p>
+            </motion.p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6">
-              I don’t try to be the best at everything, just at wedding
-              marketing.
-            </h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-7xl font-serif text-luxury-slate mb-12 tracking-tight leading-tight"
+            >
+              I don’t try to be the best at everything, just at <span className="text-luxury-gold italic">wedding marketing</span>.
+            </motion.h2>
 
-            <p className="text-lg text-slate-700 leading-relaxed mb-8">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-xl text-luxury-slate/60 mb-20 font-light italic"
+            >
               While most agencies split their attention across 20 different
               niches, I decided to master one:{" "}
-              <strong>wedding planners and venues</strong>.
-            </p>
+              <span className="text-luxury-slate font-bold not-italic">wedding planners and venues</span>.
+            </motion.p>
 
-            <div className="grid md:grid-cols-2 gap-10 text-slate-700 text-sm md:text-base">
-              <div className="space-y-3">
-                <p>
+            <div className="grid md:grid-cols-2 gap-16">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="p-12 bg-white rounded-[3.5rem] border border-luxury-gold/10 shadow-sm"
+              >
+                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Behavioral Insights</div>
+                <p className="text-luxury-slate/50 font-light italic mb-8">
                   I’ve built a system around how couples really behave when
                   they’re planning a wedding:
                 </p>
-                <ul className="space-y-2 list-disc list-inside">
-                  <li>
-                    What high-budget and mid-budget couples actually search for
-                  </li>
-                  <li>
-                    How destination couples compare planners in different
-                    regions
-                  </li>
-                  <li>
-                    Why some locations convert instantly and others need more
-                    trust-building
-                  </li>
-                  <li>Which keywords help filter out low-budget leads</li>
+                <ul className="space-y-6">
+                  {[
+                    "What high-budget and mid-budget couples actually search for",
+                    "How destination couples compare planners in different regions",
+                    "Why some locations convert instantly and others need trust",
+                    "Which keywords help filter out low-budget leads"
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-4 items-center">
+                      <div className="w-1 h-1 bg-luxury-gold rounded-full" />
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em]">{item}</span>
+                    </li>
+                  ))}
                 </ul>
-              </div>
+              </motion.div>
 
-              <div className="space-y-3">
-                <p>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="p-12 bg-white rounded-[3.5rem] border border-luxury-gold/10 shadow-sm"
+              >
+                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Brand Strategy</div>
+                <p className="text-luxury-slate/50 font-light italic mb-8">
                   I also focus on how your online presence supports those
                   decisions:
                 </p>
-                <ul className="space-y-2 list-disc list-inside">
-                  <li>How Instagram influences the final choice</li>
-                  <li>
-                    What kind of content makes couples feel safe reaching out
-                  </li>
-                  <li>
-                    How to make your brand look as professional as the weddings
-                    you plan
-                  </li>
+                <ul className="space-y-6">
+                  {[
+                    "How Instagram influences the final choice",
+                    "What kind of content makes couples feel safe reaching out",
+                    "How to make your brand look as professional as the weddings you plan"
+                  ].map((item, i) => (
+                    <li key={i} className="flex gap-4 items-center">
+                      <div className="w-1 h-1 bg-luxury-gold rounded-full" />
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em]">{item}</span>
+                    </li>
+                  ))}
                 </ul>
-              </div>
+              </motion.div>
             </div>
 
-            <p className="mt-8 text-lg text-slate-800 leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="mt-20 text-2xl text-luxury-slate font-serif italic border-l border-luxury-gold/30 pl-12 max-w-3xl"
+            >
               This specialization is why the system works and it’s built on real
               inquiry behavior, not guesswork.
-            </p>
+            </motion.p>
           </div>
         </section>
 
         {/* MISSION & PHILOSOPHY */}
-        <section className="py-24 px-6 lg:px-12 bg-slate-900 text-white">
-          <div className="max-w-5xl mx-auto">
-            <p className="text-xs uppercase tracking-[0.25em] text-sky-300 mb-4 font-semibold">
+        <section className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none opacity-20">
+            <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-luxury-gold/10 blur-[150px] rounded-full" />
+          </div>
+
+          <div className="max-w-5xl mx-auto relative z-10">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold mb-10"
+            >
               MY PHILOSOPHY
-            </p>
+            </motion.p>
 
-            <h2 className="text-3xl md:text-4xl font-serif mb-6">
-              Helping wedding planners and venues get the clients their work
-              deserves
-            </h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-7xl font-serif mb-12 tracking-tight leading-tight"
+            >
+              Helping planners and venues get the clients their <span className="text-luxury-gold italic">work deserves</span>
+            </motion.h2>
 
-            <div className="space-y-5 text-lg text-slate-100 leading-relaxed">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="space-y-8 text-xl text-white/50 leading-relaxed font-light italic"
+            >
               <p>
-                My mission is simple:{" "}
-                <strong>
-                  help wedding businesses get the right couples, consistently
-                </strong>
-                .
+                My mission is simple: <span className="text-white font-bold not-italic">help wedding businesses get the right couples, consistently</span>.
               </p>
 
               <p>
@@ -238,49 +340,69 @@ export default function AboutPage() {
                 not around the latest social trend.
               </p>
 
-              <p>For me, everything comes back to three things:</p>
+              <div className="pt-12 grid md:grid-cols-3 gap-8 text-left">
+                {[
+                  { label: "Visibility", desc: "so couples can finally see you." },
+                  { label: "Trust", desc: "so they feel safe choosing you." },
+                  { label: "Consistency", desc: "so inquiries don’t depend on luck." }
+                ].map((item, i) => (
+                  <div key={i} className="group">
+                    <div className="text-luxury-gold font-bold uppercase tracking-[0.5em] text-[10px] mb-4 group-hover:translate-x-4 transition-transform duration-700">{item.label}</div>
+                    <p className="text-white/30 text-xs font-bold uppercase tracking-widest group-hover:text-white/60 transition-colors">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
-              <ul className="space-y-2 list-disc list-inside text-slate-100">
-                <li>
-                  <strong>Visibility</strong> — so couples can finally see you.
-                </li>
-                <li>
-                  <strong>Trust</strong> — so they feel safe choosing you.
-                </li>
-                <li>
-                  <strong>Consistency</strong> — so inquiries don’t depend on
-                  luck or “good months”.
-                </li>
-              </ul>
-
-              <p>
+              <p className="pt-12 text-sm uppercase tracking-[0.4em] font-bold text-white/20 not-italic">
                 When those three work together, your business stops relying on
                 chance and starts growing on purpose.
               </p>
-            </div>
+            </motion.div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-24 px-6 lg:px-12 bg-gradient-to-r from-sky-50 to-slate-100">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-6">
-              If you’re serious about growing your wedding business, let’s talk.
-            </h2>
+        {/* FINAL CTA */}
+        <section className="px-6 lg:px-12 py-40 text-center bg-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
+          <div className="max-w-5xl mx-auto relative z-10">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-4xl md:text-8xl font-serif text-luxury-slate mb-12 tracking-tight leading-[1.1]"
+            >
+              If you’re <span className="text-luxury-gold italic">serious</span> about growing, let’s talk.
+            </motion.h2>
 
-            <p className="text-lg text-slate-700 mb-10 leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              className="text-xl text-luxury-slate/40 mb-20 font-light leading-relaxed max-w-4xl mx-auto italic"
+            >
               Whether you’re a planner or a venue, if you want clearer
               marketing, stronger visibility, and more aligned couples in your
               inbox, I’d be happy to see if we’re a good fit to work together.
-            </p>
+            </motion.p>
 
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-sky-600 text-white text-lg tracking-wide hover:bg-sky-700 transition-all rounded-full shadow-lg"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
             >
-              Book a Strategy Session
-              <ArrowRight size={20} />
-            </Link>
+              <Link
+                to="/contact"
+                className="group relative inline-flex items-center justify-center gap-6 px-16 py-8 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-[0_40px_100px_-20px_rgba(15,23,42,0.3)] overflow-hidden"
+              >
+                <span className="relative z-10 flex items-center gap-4">
+                  Book a Strategy Session
+                  <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform duration-700" />
+                </span>
+                <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+              </Link>
+            </motion.div>
           </div>
         </section>
       </div>
