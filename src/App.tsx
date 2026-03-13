@@ -33,6 +33,7 @@ import GoogleAdsGuide from "./pages/blog/GoogleAdsGuide";
 import MarketingPartnerPage from "./pages/MarketingPartnerPage";
 import InstagramProofForWeddingPlanners from "./pages/blog/WhyInstagramMatters";
 import WebsitesPage from "./pages/Website";
+import WebsiteMustHaves2026 from "./pages/blog/WebsiteMustHaves2026";
 
 // Scroll to top on navigation
 function ScrollToTop() {
@@ -143,6 +144,7 @@ function App() {
               path="/blog/premium-brand-identity"
               element={<PremiumBrandIdentity />}
             />
+            <Route path="/blog/website-must-haves-2026" element={<WebsiteMustHaves2026 />} />
             <Route path="/blog/google-ads-guide" element={<GoogleAdsGuide />} />
             <Route
               path="/blog/why-socialmedia-matters"

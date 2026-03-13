@@ -1,7 +1,7 @@
 import { Calendar, Clock, ArrowRight, Sparkles, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function BlogPage() {
   const featuredPost = {
@@ -18,6 +18,15 @@ export default function BlogPage() {
   };
 
   const posts = [
+    {
+      title: "The 2026 Standard: 5 Must-Haves (and Must-Don'ts) for Wedding Planner Websites",
+      excerpt: "Discover what your website needs—and what it must avoid—to attract higher-budget couples in 2026.",
+      category: "Website & Conversion",
+      date: "March 14, 2026",
+      readTime: "8 min read",
+      image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
+      slug: "website-must-haves-2026",
+    },
     {
       title: "5 Digital Marketing Mistakes Luxury Wedding Planners Must Avoid",
       excerpt:
@@ -96,16 +105,16 @@ export default function BlogPage() {
     },
   ];
 
-  const fadeIn = {
+  const fadeIn: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }
     }
   };
 
-  const staggerContainer = {
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
