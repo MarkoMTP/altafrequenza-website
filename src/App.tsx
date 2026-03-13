@@ -94,7 +94,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-luxury-champagne selection:bg-luxury-gold/30">
+      <div className="min-h-screen w-full bg-luxury-champagne selection:bg-luxury-gold/30 overflow-x-hidden relative flex flex-col">
         <CustomCursor />
         <Navigation />
         <ScrollToTop />
