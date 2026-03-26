@@ -9,7 +9,7 @@ export default function WebsiteMustHaves2026() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -27,11 +27,11 @@ export default function WebsiteMustHaves2026() {
     <>
       <Helmet>
         <title>
-          The 2026 Standard: 5 Must-Haves (and Must-Don'ts) for Wedding Planner Websites | Alta Frequenza
+          The 2026 Standard: 5 Must-Haves for Wedding Pro & Venue Websites | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Your website is your most powerful pre-qualification tool. Discover the 5 must-haves and must-don'ts for wedding planner websites in 2026 to attract higher-budget inquiries."
+          content="Your website is your most powerful pre-qualification tool. Discover the 5 must-haves for wedding professional and venue websites in 2026 to attract higher-budget inquiries."
         />
         <meta
           name="keywords"
@@ -39,17 +39,16 @@ export default function WebsiteMustHaves2026() {
         />
         <meta
           property="og:title"
-          content="The 2026 Standard: 5 Must-Haves (and Must-Don'ts) for Wedding Planner Websites"
+          content="The 2026 Standard: 5 Must-Haves for Wedding Pro & Venue Websites"
         />
         <meta
           property="og:description"
-          content="Discover what your website needs—and what it must avoid—to attract higher-budget couples in 2026."
+          content="Discover what your website needs to attract higher-budget couples in 2026. Expert web design for the wedding industry."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/website-must-haves-2026"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/website-must-haves-2026"

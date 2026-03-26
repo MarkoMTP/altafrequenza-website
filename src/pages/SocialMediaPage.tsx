@@ -5,8 +5,6 @@ import {
   MessageCircle,
   ArrowRight,
   CheckCircle,
-  Zap,
-  Globe,
   Award
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -19,7 +17,7 @@ export default function SocialMediaPage() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -57,9 +55,12 @@ export default function SocialMediaPage() {
         />
         <meta
           property="og:description"
-          content="A structured social media system built to strengthen trust, improve positioning, and attract better wedding enquiries."
+          content="A structured social media system built to strengthen trust, improve positioning, and attract better wedding inquiries for professionals and venues."
         />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">

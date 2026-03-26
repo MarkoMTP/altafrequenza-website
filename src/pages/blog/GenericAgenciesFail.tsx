@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft, ArrowRight, Sparkles, Award, ShieldAlert, CheckCircle } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Award, ShieldAlert } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ export default function GenericAgenciesFail() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -17,12 +17,11 @@ export default function GenericAgenciesFail() {
     <>
       <Helmet>
         <title>
-          Why Generic Marketing Agencies Fail Wedding Planners | Alta Frequenza
-          Marketing
+          Why Generic Marketing Agencies Fail Wedding Pros | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Discover why most marketing agencies fail wedding planners — and how specialized strategies from Alta Frequenza Marketing attract affluent international couples who actually convert."
+          content="Discover why generic marketing agencies fail wedding professionals and venues — and how specialized strategies from Alta Frequenza attract high-value couples."
         />
         <meta
           name="keywords"
@@ -30,21 +29,16 @@ export default function GenericAgenciesFail() {
         />
         <meta
           property="og:title"
-          content="Why Generic Marketing Agencies Fail Wedding Planners | Alta Frequenza Marketing"
+          content="Why Generic Marketing Agencies Fail Wedding Pros | Alta Frequenza"
         />
         <meta
           property="og:description"
-          content="Most marketing agencies don’t understand luxury wedding clients. Learn why specialization matters — and how Alta Frequenza Marketing delivers results."
+          content="Most marketing agencies don’t understand luxury wedding clients. Learn why specialization matters — and how Alta Frequenza delivers results."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/generic-agencies-fail"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-generic-agencies.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/generic-agencies-fail"

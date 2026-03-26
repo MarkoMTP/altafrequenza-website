@@ -4,15 +4,7 @@ import {
   CheckCircle,
   ArrowRight,
   Sparkles,
-  ChevronLeft,
-  Send,
-  Mic,
-  Headphones,
-  Home,
-  MessageCircle,
-  HelpCircle,
-  Award,
-  Zap
+  ChevronLeft
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -24,7 +16,7 @@ export default function AssistantPage() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -41,15 +33,20 @@ export default function AssistantPage() {
   return (
     <>
       <Helmet>
-        <title>The Smart Wedding Assistant™ | Alta Frequenza Marketing</title>
+        <title>The Smart Wedding Assistant™ | Alta Frequenza</title>
         <meta
           name="description"
-          content="The Smart Wedding Assistant™ helps wedding planners respond instantly to couples 24/7 — answering questions, collecting details, and booking consultations automatically."
+          content="The Smart Wedding Assistant™ helps wedding professionals and venues respond instantly to couples 24/7 — answering questions, collecting details, and booking consultations automatically."
         />
         <meta
           name="keywords"
           content="AI wedding planner assistant, wedding planner chatbot, wedding automation, AI for wedding planners, destination wedding marketing"
         />
+        <meta property="og:title" content="The Smart Wedding Assistant™ | Alta Frequenza" />
+        <meta property="og:description" content="AI assistant that helps wedding professionals respond instantly to couples 24/7." />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">

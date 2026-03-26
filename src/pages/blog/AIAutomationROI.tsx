@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft, ArrowRight, Sparkles, Zap, Award, CheckCircle } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Zap, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ export default function AIAutomationROI() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -17,12 +17,11 @@ export default function AIAutomationROI() {
     <>
       <Helmet>
         <title>
-          The ROI of AI Automation for Wedding Planners | Alta Frequenza
-          Marketing
+          The ROI of AI Automation for Wedding Pros | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Discover how AI automation transforms luxury wedding planning by increasing qualified leads, saving time, and boosting ROI. Learn how wedding planners can use AI to grow smarter."
+          content="Discover how AI automation transforms wedding businesses by increasing qualified leads, saving time, and boosting ROI. Expert marketing for wedding professionals and venues."
         />
         <meta
           name="keywords"
@@ -30,21 +29,16 @@ export default function AIAutomationROI() {
         />
         <meta
           property="og:title"
-          content="The ROI of AI Automation for Wedding Planners | Alta Frequenza Marketing"
+          content="The ROI of AI Automation for Wedding Pros | Alta Frequenza"
         />
         <meta
           property="og:description"
-          content="Learn how AI tools deliver real ROI for luxury wedding planners — from tripled qualified leads to massive time savings."
+          content="Learn how AI tools deliver real ROI for wedding professionals and venues — from tripled qualified leads to massive time savings."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/ai-automation-roi"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-ai-automation.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/ai-automation-roi"

@@ -1,4 +1,4 @@
-import { Calendar, Clock, ArrowLeft, ArrowRight, Search, Target, Pencil, Layout, Activity, BarChart3, TrendingUp, AlertCircle } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Target, Layout, BarChart3, TrendingUp, AlertCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -9,7 +9,7 @@ export default function GoogleAdsGuide() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -27,12 +27,11 @@ export default function GoogleAdsGuide() {
     <>
       <Helmet>
         <title>
-          Google Ads for Wedding Planners: A Complete Guide | Alta Frequenza
-          Marketing
+          Google Ads for Wedding Pros: The Complete Guide | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Master Google Ads to attract high-end couples searching for wedding planners. This guide by Alta Frequenza Marketing reveals the proven strategy for luxury wedding planner lead generation."
+          content="Master Google Ads to attract high-end couples searching for wedding professionals and venues. Specialized marketing strategy for the luxury wedding industry."
         />
         <meta
           name="keywords"
@@ -40,21 +39,16 @@ export default function GoogleAdsGuide() {
         />
         <meta
           property="og:title"
-          content="Google Ads for Wedding Planners: A Complete Guide | Alta Frequenza Marketing"
+          content="Google Ads for Wedding Pros: The Complete Guide | Alta Frequenza"
         />
         <meta
           property="og:description"
-          content="Discover how to attract high-quality wedding planner leads with Google Ads. Learn targeting, ad copy, and landing page optimization strategies that convert."
+          content="Discover how to attract high-quality wedding leads with Google Ads. Learn targeting, ad copy, and landing page optimization strategies."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/google-ads-guide"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-google-ads-guide.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/google-ads-guide"

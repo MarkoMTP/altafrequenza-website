@@ -5,9 +5,6 @@ import {
   Layout,
   CheckCircle,
   TrendingUp,
-  Sparkles,
-  Zap,
-  Globe,
   Award
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -20,7 +17,7 @@ export default function WebsitesPage() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -38,18 +35,23 @@ export default function WebsitesPage() {
     <>
       <Helmet>
         <title>
-          Websites & Landing Pages for Wedding Planners | Alta Frequenza
+          Websites & Landing Pages for Wedding Pros | Alta Frequenza
         </title>
 
         <meta
           name="description"
-          content="Modern websites and landing pages for wedding planners designed to turn interested visitors into high quality wedding requests."
+          content="Modern websites and landing pages for wedding professionals and venues designed to turn interested visitors into high quality wedding requests."
         />
 
         <meta
           name="keywords"
           content="wedding planner website design, destination wedding planner website, wedding landing pages, luxury wedding planner website, conversion website wedding planner"
         />
+        <meta property="og:title" content="Websites & Landing Pages for Wedding Pros" />
+        <meta property="og:description" content="Turn your website into a source of high quality wedding requests." />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">

@@ -125,19 +125,24 @@ export default function HomePage() {
     <>
       <Helmet>
         <title>
-          Wedding Planner & Venue Marketing Agency | Google Ads, Social Media,
-          Websites & Lead Generation | Alta Frequenza
+          Alta Frequenza | Marketing Agency for Wedding Pros & Venues
         </title>
 
         <meta
           name="description"
-          content="Alta Frequenza helps wedding planners and wedding venues attract more wedding requests through strategic marketing, stronger positioning, modern websites, SEO, GEO, and better online visibility."
+          content="Alta Frequenza is a marketing agency for wedding pros and venues. We help wedding professionals grow through data-driven Google Ads, AI automation, and premium social media management."
         />
 
         <meta
           name="keywords"
           content="wedding planner marketing, wedding venue marketing, wedding planner google ads, google ads for wedding planners, google ads for wedding venues, wedding planner social media, wedding venue social media, wedding planner website design, wedding venue website design, destination wedding planner website, SEO for wedding planners, GEO for wedding businesses, wedding marketing agency, marketing for wedding planners, marketing for wedding venues"
         />
+
+        <meta property="og:title" content="Alta Frequenza | Marketing Agency for Wedding Pros & Venues" />
+        <meta property="og:description" content="Helping wedding professionals grow through Google Ads, social media, and AI automation." />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen">

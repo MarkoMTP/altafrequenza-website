@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft, ArrowRight, Instagram, Sparkles, Quote, Award, Camera, Heart } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Quote, Award, Camera } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ export default function InstagramStrategy() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -17,12 +17,11 @@ export default function InstagramStrategy() {
     <>
       <Helmet>
         <title>
-          How to Use Instagram to Attract Six-Figure Wedding Clients | Alta
-          Frequenza Marketing
+          Instagram Marketing for Wedding Pros & Venues | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Discover how luxury wedding planners can use Instagram to attract high-end clients. Learn the best strategies for visuals, captions, hashtags, and Reels that convert followers into six-figure weddings."
+          content="Discover how wedding professionals and venues can use Instagram to attract high-end clients. Expert social media strategy for the luxury wedding industry."
         />
         <meta
           name="keywords"
@@ -30,21 +29,16 @@ export default function InstagramStrategy() {
         />
         <meta
           property="og:title"
-          content="How to Use Instagram to Attract Six-Figure Wedding Clients | Alta Frequenza Marketing"
+          content="Instagram Marketing for Wedding Pros & Venues | Alta Frequenza"
         />
         <meta
           property="og:description"
-          content="A complete Instagram strategy for luxury wedding planners who want to attract six-figure clients and build a premium online presence."
+          content="Complete Instagram strategy for wedding professionals and venues looking to build a premium online presence."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/instagram-strategy"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-instagram-strategy.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/instagram-strategy"

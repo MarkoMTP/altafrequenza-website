@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
-import { Mail, Calendar, CheckCircle, ArrowRight, Sparkles, Send, Globe, Award } from "lucide-react";
+import { Mail, Calendar, CheckCircle, Sparkles, Send, Globe, Award } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ContactPage() {
@@ -54,30 +54,25 @@ export default function ContactPage() {
       setLoading(false);
     }
   };
-
-  const fadeIn = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
-    }
-  };
-
   return (
     <>
       <Helmet>
         <title>
-          Contact Alta Frequenza | Wedding Planner & Venue Marketing
+          Contact Alta Frequenza | Marketing for Wedding Pros & Venues
         </title>
         <meta
           name="description"
-          content="Get in touch with Alta Frequenza to discuss Google Ads, social media management, websites and landing pages, AI lead capture, SEO, GEO, and marketing support for wedding planners and venues."
+          content="Get in touch with Alta Frequenza to discuss Google Ads, social media management, websites and landing pages, AI assistants, SEO, and marketing support for wedding professionals and venues."
         />
         <meta
           name="keywords"
           content="contact wedding marketing agency, wedding planner marketing, wedding venue marketing, google ads wedding planners, social media wedding planners, wedding planner website design, SEO for wedding planners, GEO for wedding businesses"
         />
+        <meta property="og:title" content="Contact Alta Frequenza | Marketing for Wedding Pros & Venues" />
+        <meta property="og:description" content="Get in touch to discuss marketing support for your wedding business." />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light overflow-x-hidden">

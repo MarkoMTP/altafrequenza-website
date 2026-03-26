@@ -9,7 +9,7 @@ export default function PremiumBrandIdentity() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -27,12 +27,11 @@ export default function PremiumBrandIdentity() {
     <>
       <Helmet>
         <title>
-          Crafting a Premium Brand Identity for Your Planning Business | Alta
-          Frequenza Marketing
+          Premium Brand Identity for Wedding Pros & Venues | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Learn how to build a premium brand identity that attracts high-end wedding clients. Discover strategies for positioning, visuals, and client experience that define luxury planning businesses."
+          content="Learn how to build a premium brand identity that attracts high-end wedding clients. Specialized branding and marketing for wedding professionals and venues."
         />
         <meta
           name="keywords"
@@ -40,21 +39,16 @@ export default function PremiumBrandIdentity() {
         />
         <meta
           property="og:title"
-          content="Crafting a Premium Brand Identity for Your Planning Business | Alta Frequenza Marketing"
+          content="Premium Brand Identity for Wedding Pros & Venues | Alta Frequenza"
         />
         <meta
           property="og:description"
           content="Build a refined, consistent brand identity that attracts luxury wedding clients and elevates your business reputation."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/premium-brand-identity"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-premium-brand-identity.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/premium-brand-identity"

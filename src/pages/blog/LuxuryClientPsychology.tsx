@@ -9,7 +9,7 @@ export default function LuxuryClientPsychology() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -17,11 +17,11 @@ export default function LuxuryClientPsychology() {
     <>
       <Helmet>
         <title>
-          The Psychology of Luxury Wedding Clients | Alta Frequenza Marketing
+          The Psychology of Luxury Wedding Clients | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Understand what truly drives high-net-worth couples when choosing a wedding planner. Learn the psychology behind luxury clients and how to attract them effectively."
+          content="Understand what truly drives high-net-worth couples when choosing a wedding professional or venue. Expert marketing strategy for the luxury wedding industry."
         />
         <meta
           name="keywords"
@@ -29,21 +29,16 @@ export default function LuxuryClientPsychology() {
         />
         <meta
           property="og:title"
-          content="The Psychology of Luxury Wedding Clients | Alta Frequenza Marketing"
+          content="The Psychology of Luxury Wedding Clients | Alta Frequenza"
         />
         <meta
           property="og:description"
-          content="Discover the psychology of affluent couples and how to position your wedding planning business to attract them."
+          content="Discover the psychology of affluent couples and how to position your wedding business to attract them."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/luxury-client-psychology"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-luxury-client-psychology.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/luxury-client-psychology"

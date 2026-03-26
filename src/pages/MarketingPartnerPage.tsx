@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle, Sparkles, Award, Globe, Zap, Heart } from "lucide-react";
+import { ArrowRight, CheckCircle, Zap, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -9,7 +9,7 @@ export default function MarketingPartnerPage() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -27,16 +27,21 @@ export default function MarketingPartnerPage() {
     <>
       <Helmet>
         <title>
-          Complete Wedding Marketing Management | Alta Frequenza Marketing
+          Complete Wedding Marketing Management | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="A full marketing partnership for wedding planners and venues. One experienced specialist handling your marketing end-to-end, without hiring a full-time employee."
+          content="A full marketing partnership for wedding professionals and venues. One experienced specialist handling your marketing end-to-end, without hiring a full-time employee."
         />
         <meta
           name="keywords"
           content="wedding planner marketing partner, wedding venue marketing, full service wedding marketing, wedding planner growth, marketing for wedding planners"
         />
+        <meta property="og:title" content="Complete Wedding Marketing Management" />
+        <meta property="og:description" content="A full marketing partnership for wedding professionals and venues. Handling your marketing end-to-end." />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light overflow-x-hidden">

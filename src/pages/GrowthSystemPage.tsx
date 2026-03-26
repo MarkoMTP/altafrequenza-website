@@ -5,8 +5,6 @@ import {
   Target,
   TrendingUp,
   CheckCircle,
-  Zap,
-  Globe,
   Award,
   Sparkles
 } from "lucide-react";
@@ -20,7 +18,7 @@ export default function GrowthSystemPage() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -38,16 +36,21 @@ export default function GrowthSystemPage() {
     <>
       <Helmet>
         <title>
-          Google Ads for Wedding Planners | More Qualified Wedding Requests
+          Google Ads for Wedding Pros & Venues | More Qualified Wedding Requests
         </title>
         <meta
           name="description"
-          content="A Google Ads system for wedding planners designed to generate more qualified wedding requests from couples actively searching for a planner."
+          content="A Google Ads system for wedding professionals and venues designed to generate more qualified wedding requests from couples actively searching for your services."
         />
         <meta
           name="keywords"
           content="wedding planner marketing, google ads wedding planner, wedding planner leads, destination wedding planner google ads, luxury wedding planner marketing, wedding marketing agency"
         />
+        <meta property="og:title" content="Google Ads for Wedding Pros & Venues" />
+        <meta property="og:description" content="Generate more qualified wedding requests from couples actively searching for your services." />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen">

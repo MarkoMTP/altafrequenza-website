@@ -9,7 +9,7 @@ export default function InstagramProofForWeddingPlanners() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -27,12 +27,11 @@ export default function InstagramProofForWeddingPlanners() {
     <>
       <Helmet>
         <title>
-          Why Instagram Helps You Win Against Other Wedding Planners | Alta
-          Frequenza Marketing
+          Why Instagram Helps You Win Against Other Wedding Pros | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="A website and ads can get attention — but Instagram builds credibility. Learn how wedding planners use Instagram as proof to win trust, charge more, and stand out from competitors."
+          content="A website and ads can get attention — but Instagram builds credibility. Learn how wedding professionals and venues use Instagram as proof to win trust and charge more."
         />
         <meta
           name="keywords"
@@ -40,21 +39,16 @@ export default function InstagramProofForWeddingPlanners() {
         />
         <meta
           property="og:title"
-          content="Why Instagram Helps You Win Against Other Wedding Planners | Alta Frequenza Marketing"
+          content="Why Instagram Helps You Win Against Other Wedding Pros | Alta Frequenza"
         />
         <meta
           property="og:description"
-          content="Couples use Instagram to decide who feels real, active, and trusted. Here’s how planners use it as proof to stand out and justify premium pricing."
+          content="Couples use Instagram to decide who feels real, active, and trusted. Here’s how wedding professionals use it as proof to stand out and justify premium pricing."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/instagram-helps-you-win"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-instagram-proof.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/instagram-helps-you-win"

@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Calendar, Clock, ArrowLeft, ArrowRight, Sparkles, Quote, Award, Zap } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, ArrowRight, Quote, Award, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ export default function MarketingMistakes() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -17,12 +17,11 @@ export default function MarketingMistakes() {
     <>
       <Helmet>
         <title>
-          5 Digital Marketing Mistakes Luxury Wedding Planners Must Avoid | Alta
-          Frequenza Marketing
+          5 Marketing Mistakes Wedding Pros Must Avoid | Alta Frequenza
         </title>
         <meta
           name="description"
-          content="Avoid the most common marketing mistakes luxury wedding planners make. Learn how to position your brand, attract high-end couples, and elevate your marketing strategy with Alta Frequenza Marketing."
+          content="Avoid the most common marketing mistakes wedding professionals and venues make. Learn how to position your brand and attract high-end couples effectively."
         />
         <meta
           name="keywords"
@@ -30,21 +29,16 @@ export default function MarketingMistakes() {
         />
         <meta
           property="og:title"
-          content="5 Digital Marketing Mistakes Luxury Wedding Planners Must Avoid | Alta Frequenza Marketing"
+          content="5 Marketing Mistakes Wedding Pros Must Avoid | Alta Frequenza"
         />
         <meta
           property="og:description"
-          content="Discover the top 5 marketing mistakes wedding planners make and how to fix them to attract affluent international clients."
+          content="Discover the top 5 marketing mistakes wedding professionals make and how to fix them to attract affluent international clients."
         />
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://altafrequenzamarketing.com/blog/marketing-mistakes"
-        />
-        <meta
-          property="og:image"
-          content="https://altafrequenzamarketing.com/og-marketing-mistakes.jpg"
-        />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
         <link
           rel="canonical"
           href="https://altafrequenzamarketing.com/blog/marketing-mistakes"

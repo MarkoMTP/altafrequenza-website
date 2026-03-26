@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Sparkles, ArrowRight, Award, Globe, Zap } from "lucide-react";
+import { Sparkles, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ export default function AboutPage() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -52,14 +52,16 @@ export default function AboutPage() {
 
         <meta
           property="og:title"
-          content="About Alta Frequenza | Wedding Planner & Venue Marketing"
+          content="About Alta Frequenza | Marketing Agency for Wedding Pros & Venues"
         />
         <meta
           property="og:description"
-          content="Founded by Marko Matković, Alta Frequenza focuses exclusively on helping wedding planners and venues grow through specialized marketing systems."
+          content="Founded by Marko Matković, Alta Frequenza focuses exclusively on helping wedding professionals and venues grow through specialized marketing systems."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/og-image.jpg" />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">

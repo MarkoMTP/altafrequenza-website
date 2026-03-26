@@ -4,10 +4,7 @@ import {
   ArrowRight,
   Sparkles,
   Filter,
-  Award,
-  Zap,
-  Globe,
-  Monitor
+  Award
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -19,7 +16,7 @@ export default function ConciergePage() {
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
   };
 
@@ -36,11 +33,16 @@ export default function ConciergePage() {
   return (
     <>
       <Helmet>
-        <title>The Wedding SmartForm™ | AI Lead Capture for Planners | Alta Frequenza</title>
+        <title>The Wedding SmartForm™ | AI Lead Capture for Wedding Pros | Alta Frequenza</title>
         <meta
           name="description"
-          content="The Wedding SmartForm™ is an AI-powered conversational lead capture system designed for luxury wedding planners and venues."
+          content="The Wedding SmartForm™ is an AI-powered conversational lead capture system designed for luxury wedding professionals and venues."
         />
+        <meta property="og:title" content="The Wedding SmartForm™ | AI Lead Capture for Wedding Pros" />
+        <meta property="og:description" content="AI-powered conversational lead capture system for wedding professionals." />
+        <meta property="og:image" content="/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">

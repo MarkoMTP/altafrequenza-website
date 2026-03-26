@@ -128,11 +128,11 @@ export default function BlogPage() {
     <>
       <Helmet>
         <title>
-          The Alta Frequenza Journal | Luxury Wedding Marketing Insights
+          The Alta Frequenza Journal | Wedding Marketing Insights
         </title>
         <meta
           name="description"
-          content="Explore expert insights from Alta Frequenza Marketing on luxury wedding marketing, client psychology, branding, Google Ads, and AI automation for wedding planners."
+          content="Explore expert insights from Alta Frequenza on luxury wedding marketing, client psychology, branding, Google Ads, and AI automation for wedding professionals."
         />
         <meta
           name="keywords"
@@ -140,21 +140,23 @@ export default function BlogPage() {
         />
         <meta
           property="og:title"
-          content="The Alta Frequenza Journal | Luxury Wedding Marketing Insights"
+          content="The Alta Frequenza Journal | Wedding Marketing Insights"
         />
         <meta
           property="og:description"
-          content="Expert strategies on wedding planner marketing, client psychology, and growing your luxury planning business."
+          content="Expert strategies on wedding marketing, client psychology, and growing your luxury wedding business."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.altafrequenzamarketing/blog"
+          content="https://www.altafrequenzamarketing.com/blog"
         />
         <meta
           property="og:image"
-          content="https://www.altafrequenzamarketing/og-blog.jpg"
+          content="/logo.png"
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen font-light">
