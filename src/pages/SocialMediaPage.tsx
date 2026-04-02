@@ -102,15 +102,24 @@ export default function SocialMediaPage() {
                 and more worth contacting the moment couples discover their brand.
               </motion.p>
 
-              <motion.div variants={fadeIn}>
+              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Link
                   to="/contact"
-                  className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
+                  className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-colors duration-500 rounded-full shadow-2xl group w-full sm:w-auto"
                 >
-                  <span className="relative z-10">Strengthen Your Online Presence</span>
-                  <ArrowRight size={20} className="relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+                  Strengthen Your Online Presence
+                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
                 </Link>
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-transparent border border-luxury-slate/20 text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-slate hover:border-luxury-slate hover:text-white transition-colors duration-500 rounded-full w-full sm:w-auto group"
+                >
+                  View Packages
+                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
+                </button>
               </motion.div>
             </motion.div>
           </div>
@@ -316,6 +325,24 @@ export default function SocialMediaPage() {
               </motion.div>
             ))}
           </div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-20"
+          >
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.4em] font-bold rounded-full hover:bg-luxury-gold hover:text-luxury-slate transition-colors duration-500 group"
+            >
+              See Our Packages
+              <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
+            </button>
+          </motion.div>
         </section>
 
         {/* SOCIAL PROOF / CASE STUDIES */}
@@ -408,7 +435,7 @@ export default function SocialMediaPage() {
         </section>
 
         {/* NEXT STEPS */}
-        <section className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
+        <section id="packages" className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-luxury-gold opacity-[0.03] rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
           
           <div className="max-w-5xl mx-auto text-center mb-24 relative z-10">
@@ -444,32 +471,82 @@ export default function SocialMediaPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto relative z-10"
+            className="max-w-6xl mx-auto relative z-10 grid md:grid-cols-2 gap-8"
           >
-            <div className="bg-white/5 backdrop-blur-3xl p-12 lg:p-24 border border-white/10 rounded-[5rem] shadow-2xl text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-luxury-gold/50 text-[10px] uppercase tracking-[0.4em] font-bold text-luxury-gold mb-12 rounded-full">
-                 <Award size={14} /> Brand Authority
+            {/* Regular Package */}
+            <div className="bg-white/5 backdrop-blur-3xl p-10 lg:p-14 border border-white/10 rounded-[4rem] shadow-2xl flex flex-col h-full">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-luxury-gold/50 text-[10px] uppercase tracking-[0.4em] font-bold text-luxury-gold mb-10 rounded-full w-fit">
+                 <Award size={14} /> Regular Package
               </div>
 
-              <div className="mb-16">
-                 <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4">Starting investment</div>
-                 <div className="text-6xl md:text-8xl font-serif text-white tracking-tighter">€800<span className="text-sm uppercase tracking-widest text-luxury-gold ml-4">/ Month</span></div>
+              <div className="mb-10 text-left">
+                 <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4">Starting from</div>
+                 <div className="text-5xl md:text-6xl font-serif text-white tracking-tighter">€800<span className="text-sm uppercase tracking-widest text-luxury-gold ml-4">/ Month</span></div>
               </div>
-
-              <p className="text-white/40 text-lg mb-16 font-light leading-relaxed italic max-w-2xl mx-auto">
-                Final pricing depends on posting frequency, content creation
-                needs, and overall scope.
-              </p>
+              
+              <ul className="space-y-4 mb-12 flex-grow text-left">
+                {[
+                  "Up to 3 platforms",
+                  "4 posts per week per platform",
+                  "Ongoing reel strategy",
+                  "Content planning aligned with booking seasons",
+                  "Caption writing + optimized CTAs",
+                  "Scheduling + publishing",
+                  "Engagement + DM monitoring guidance",
+                  "Monthly analytics report",
+                  "Quarterly strategy deep dive",
+                  "One monthly (2 hour) content creation session included (PGH only)"
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-4 text-sm font-light text-white/70 leading-relaxed">
+                    <CheckCircle size={16} className="text-luxury-gold flex-shrink-0 mt-1" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
 
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center justify-center gap-6 px-16 py-8 bg-white text-luxury-slate text-[10px] uppercase tracking-[0.4em] font-bold rounded-full hover:bg-luxury-gold transition-all duration-700"
+                className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-white text-luxury-slate text-[10px] uppercase tracking-[0.4em] font-bold rounded-full hover:bg-luxury-gold transition-colors duration-500 w-full group"
               >
-                <span className="relative z-10 flex items-center gap-4">
-                  Book Your Consultation
-                  <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-700" />
-                </span>
-                <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
+                Enquire Now
+                <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
+              </Link>
+            </div>
+
+            {/* Content Package */}
+            <div className="bg-white/5 backdrop-blur-3xl p-10 lg:p-14 border border-white/10 rounded-[4rem] shadow-2xl flex flex-col h-full">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-luxury-gold/50 text-[10px] uppercase tracking-[0.4em] font-bold text-luxury-gold mb-10 rounded-full w-fit">
+                 <Sparkles size={14} /> Content Package
+              </div>
+
+              <div className="mb-10 text-left">
+                 <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4">Fixed rate</div>
+                 <div className="text-5xl md:text-6xl font-serif text-white tracking-tighter">€500<span className="text-sm uppercase tracking-widest text-luxury-gold ml-4">/ 10 Reels</span></div>
+              </div>
+
+              <p className="text-white/60 font-light italic mb-8 border-l border-luxury-gold/30 pl-6 leading-relaxed text-left">
+                Perfect for planners who have the raw materials but need professional editing to create engaging reels.
+              </p>
+              
+              <ul className="space-y-4 mb-12 flex-grow text-left">
+                {[
+                  "You provide the raw materials (photos/videos)",
+                  "We edit and create 10 professional reels",
+                  "Delivered ready to post on your schedule"
+                ].map((feature, i) => (
+                  <li key={i} className="flex items-start gap-4 text-sm font-light text-white/70 leading-relaxed">
+                    <CheckCircle size={16} className="text-luxury-gold flex-shrink-0 mt-1" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-4 px-12 py-6 bg-transparent border border-white/20 text-white text-[10px] uppercase tracking-[0.4em] font-bold rounded-full hover:bg-luxury-gold hover:text-luxury-slate hover:border-luxury-gold transition-colors duration-500 w-full group"
+              >
+                Enquire Now
+                <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-500" />
               </Link>
             </div>
           </motion.div>
