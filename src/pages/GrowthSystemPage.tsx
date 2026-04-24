@@ -15,8 +15,8 @@ import { motion } from "framer-motion";
 export default function GrowthSystemPage() {
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
@@ -62,13 +62,13 @@ export default function GrowthSystemPage() {
           </div>
 
           <div className="max-w-7xl mx-auto relative z-10 text-center">
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
               className="max-w-5xl mx-auto"
             >
-              <motion.div 
+              <motion.div
                 variants={fadeIn}
                 className="inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-12 rounded-full font-bold shadow-sm"
               >
@@ -76,15 +76,15 @@ export default function GrowthSystemPage() {
                 Google Ads for Wedding Planners
               </motion.div>
 
-              <motion.h1 
-                variants={fadeIn} 
+              <motion.h1
+                variants={fadeIn}
                 className="text-5xl md:text-8xl font-serif text-luxury-slate mb-10 leading-[1.05] tracking-tight"
               >
                 More Qualified Wedding Requests. <span className="text-luxury-gold italic">Less Guesswork.</span>
               </motion.h1>
 
-              <motion.p 
-                variants={fadeIn} 
+              <motion.p
+                variants={fadeIn}
                 className="text-xl md:text-2xl text-luxury-slate/60 leading-relaxed max-w-4xl mx-auto mb-6 font-light italic"
               >
                 We help wedding planners generate a more consistent flow of
@@ -92,7 +92,7 @@ export default function GrowthSystemPage() {
                 relying only on referrals, Instagram reach, or slow seasons.
               </motion.p>
 
-              <motion.p 
+              <motion.p
                 variants={fadeIn}
                 className="text-lg text-luxury-slate/50 max-w-2xl mx-auto mb-16 font-light leading-relaxed"
               >
@@ -118,7 +118,7 @@ export default function GrowthSystemPage() {
         {/* ----------------------------- MECHANISM ------------------------------- */}
         <section className="px-6 lg:px-12 py-32 bg-white relative">
           <div className="max-w-5xl mx-auto text-center mb-24">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -126,7 +126,7 @@ export default function GrowthSystemPage() {
             >
               HOW WE GENERATE THE OUTCOME
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -134,7 +134,7 @@ export default function GrowthSystemPage() {
             >
               A Structured System Built Around <span className="text-luxury-gold italic">Buying Intent</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -149,158 +149,158 @@ export default function GrowthSystemPage() {
 
           <div className="space-y-32 max-w-6xl mx-auto">
             {/* Step 1 */}
-            <motion.div 
-               initial={{ opacity: 0, y: 40 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               className="grid lg:grid-cols-2 gap-16 items-center"
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid lg:grid-cols-2 gap-16 items-center"
             >
-               <div className="order-2 lg:order-1">
-                  <div className="w-16 h-16 flex items-center justify-center bg-luxury-gold text-white rounded-full mb-8 shadow-xl">
-                    <Search size={28} />
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-serif text-luxury-slate mb-6 leading-tight">
-                    1. We Put You in Front of Couples Already Searching
-                  </h3>
-                  <p className="text-luxury-slate/60 text-lg mb-10 font-light leading-relaxed">
-                    We target the kinds of searches people make when they are no
-                    longer casually browsing, but actively looking for a planner
-                    to help them move forward.
-                  </p>
+              <div className="order-2 lg:order-1">
+                <div className="w-16 h-16 flex items-center justify-center bg-luxury-gold text-white rounded-full mb-8 shadow-xl">
+                  <Search size={28} />
+                </div>
+                <h3 className="text-3xl md:text-4xl font-serif text-luxury-slate mb-6 leading-tight">
+                  1. We Put You in Front of Couples Already Searching
+                </h3>
+                <p className="text-luxury-slate/60 text-lg mb-10 font-light leading-relaxed">
+                  We target the kinds of searches people make when they are no
+                  longer casually browsing, but actively looking for a planner
+                  to help them move forward.
+                </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {[
-                      "Search intent, not passive scrolling",
-                      "Locations aligned with your market",
-                      "Messaging built around serious enquiries",
-                      "Filtering to reduce low-quality clicks"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
-                        <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm font-medium text-luxury-slate/70 tracking-wide leading-relaxed">{item}</span>
-                      </div>
-                    ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {[
+                    "Search intent, not passive scrolling",
+                    "Locations aligned with your market",
+                    "Messaging built around serious enquiries",
+                    "Filtering to reduce low-quality clicks"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 group">
+                      <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium text-luxury-slate/70 tracking-wide leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="order-1 lg:order-2 rounded-[3rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10">
+                <div className="aspect-video bg-luxury-slate/5 flex items-center justify-center p-12">
+                  <div className="w-full h-full bg-white rounded-2xl shadow-lg p-6 border border-luxury-gold/20 flex flex-col justify-center">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-6 h-6 bg-luxury-gold rounded-full flex items-center justify-center text-white text-[10px]">G</div>
+                      <div className="flex-1 h-3 bg-slate-100 rounded-full" />
+                    </div>
+                    <div className="space-y-3">
+                      <div className="h-4 bg-luxury-gold/10 rounded-lg w-3/4" />
+                      <div className="h-4 bg-luxury-gold/10 rounded-lg w-1/2" />
+                      <div className="h-10 bg-luxury-gold/20 rounded-lg w-1/3 mt-4" />
+                    </div>
                   </div>
-               </div>
-               <div className="order-1 lg:order-2 rounded-[3rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10">
-                  <div className="aspect-video bg-luxury-slate/5 flex items-center justify-center p-12">
-                     <div className="w-full h-full bg-white rounded-2xl shadow-lg p-6 border border-luxury-gold/20 flex flex-col justify-center">
-                        <div className="flex items-center gap-3 mb-4">
-                           <div className="w-6 h-6 bg-luxury-gold rounded-full flex items-center justify-center text-white text-[10px]">G</div>
-                           <div className="flex-1 h-3 bg-slate-100 rounded-full" />
-                        </div>
-                        <div className="space-y-3">
-                           <div className="h-4 bg-luxury-gold/10 rounded-lg w-3/4" />
-                           <div className="h-4 bg-luxury-gold/10 rounded-lg w-1/2" />
-                           <div className="h-10 bg-luxury-gold/20 rounded-lg w-1/3 mt-4" />
-                        </div>
-                     </div>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-luxury-slate/50 to-transparent pointer-events-none" />
-               </div>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-luxury-slate/50 to-transparent pointer-events-none" />
+              </div>
             </motion.div>
 
             {/* Step 2 */}
-            <motion.div 
-               initial={{ opacity: 0, y: 40 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               className="grid lg:grid-cols-2 gap-16 items-center"
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid lg:grid-cols-2 gap-16 items-center"
             >
-               <div className="rounded-[3rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10">
-                  <div className="aspect-video bg-luxury-slate/5 flex items-center justify-center p-12">
-                     <div className="w-full h-full bg-white rounded-2xl shadow-lg p-6 border border-luxury-gold/20 relative">
-                        <div className="w-12 h-12 bg-luxury-gold/20 rounded-full absolute -top-4 -right-4 blur-xl" />
-                        <div className="flex-1 flex flex-col items-center justify-center space-y-4 h-full">
-                           <Sparkles size={40} className="text-luxury-gold" />
-                           <div className="text-center font-serif text-xl tracking-wide">Request Received.</div>
-                           <div className="w-24 h-1 bg-luxury-gold rounded-full" />
-                        </div>
-                     </div>
+              <div className="rounded-[3rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10">
+                <div className="aspect-video bg-luxury-slate/5 flex items-center justify-center p-12">
+                  <div className="w-full h-full bg-white rounded-2xl shadow-lg p-6 border border-luxury-gold/20 relative">
+                    <div className="w-12 h-12 bg-luxury-gold/20 rounded-full absolute -top-4 -right-4 blur-xl" />
+                    <div className="flex-1 flex flex-col items-center justify-center space-y-4 h-full">
+                      <Sparkles size={40} className="text-luxury-gold" />
+                      <div className="text-center font-serif text-xl tracking-wide">Request Received.</div>
+                      <div className="w-24 h-1 bg-luxury-gold rounded-full" />
+                    </div>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-luxury-slate/50 to-transparent pointer-events-none" />
-               </div>
-               <div>
-                  <div className="w-16 h-16 flex items-center justify-center bg-luxury-gold text-white rounded-full mb-8 shadow-xl">
-                    <Target size={28} />
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-serif text-luxury-slate mb-6 leading-tight">
-                    2. We Turn Interest Into Requests
-                  </h3>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-luxury-slate/50 to-transparent pointer-events-none" />
+              </div>
+              <div>
+                <div className="w-16 h-16 flex items-center justify-center bg-luxury-gold text-white rounded-full mb-8 shadow-xl">
+                  <Target size={28} />
+                </div>
+                <h3 className="text-3xl md:text-4xl font-serif text-luxury-slate mb-6 leading-tight">
+                  2. We Turn Interest Into Requests
+                </h3>
 
-                  <p className="text-luxury-slate/60 text-lg mb-10 font-light leading-relaxed">
-                    Getting the click is only the first step. We make sure the
-                    message, the page, and the website experience are clear
-                    enough that the right couples actually reach out.
-                  </p>
+                <p className="text-luxury-slate/60 text-lg mb-10 font-light leading-relaxed">
+                  Getting the click is only the first step. We make sure the
+                  message, the page, and the website experience are clear
+                  enough that the right couples actually reach out.
+                </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {[
-                      "Clear, trust-building ad messaging",
-                      "Conversion-focused landing page",
-                      "Request flow designed to reduce drop-off",
-                      "Pre-qualification that helps attract better-fit leads"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
-                        <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm font-medium text-luxury-slate/70 tracking-wide leading-relaxed">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-               </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {[
+                    "Clear, trust-building ad messaging",
+                    "Conversion-focused landing page",
+                    "Request flow designed to reduce drop-off",
+                    "Pre-qualification that helps attract better-fit leads"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 group">
+                      <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium text-luxury-slate/70 tracking-wide leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
 
             {/* Step 3 */}
-            <motion.div 
-               initial={{ opacity: 0, y: 40 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               className="grid lg:grid-cols-2 gap-16 items-center"
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid lg:grid-cols-2 gap-16 items-center"
             >
-               <div>
-                  <div className="w-16 h-16 flex items-center justify-center bg-luxury-gold text-white rounded-full mb-8 shadow-xl">
-                    <BarChart size={28} />
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-serif text-luxury-slate mb-6 leading-tight">
-                    3. We Refine the System Until It Becomes More Predictable
-                  </h3>
+              <div>
+                <div className="w-16 h-16 flex items-center justify-center bg-luxury-gold text-white rounded-full mb-8 shadow-xl">
+                  <BarChart size={28} />
+                </div>
+                <h3 className="text-3xl md:text-4xl font-serif text-luxury-slate mb-6 leading-tight">
+                  3. We Refine the System Until It Becomes More Predictable
+                </h3>
 
-                  <p className="text-luxury-slate/60 text-lg mb-10 font-light leading-relaxed">
-                    Once the system is live, we improve it continuously so lead
-                    quality gets stronger, wasted spend gets reduced, and
-                    performance becomes steadier over time.
-                  </p>
+                <p className="text-luxury-slate/60 text-lg mb-10 font-light leading-relaxed">
+                  Once the system is live, we improve it continuously so lead
+                  quality gets stronger, wasted spend gets reduced, and
+                  performance becomes steadier over time.
+                </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {[
-                      "Search-term filtering",
-                      "Keyword refinement",
-                      "Geographic performance reviews",
-                      "Messaging and conversion adjustments",
-                      "Budget and bid optimization"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3 group">
-                        <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm font-medium text-luxury-slate/70 tracking-wide leading-relaxed">{item}</span>
-                      </div>
-                    ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {[
+                    "Search-term filtering",
+                    "Keyword refinement",
+                    "Geographic performance reviews",
+                    "Messaging and conversion adjustments",
+                    "Budget and bid optimization"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 group">
+                      <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm font-medium text-luxury-slate/70 tracking-wide leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="rounded-[3rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10">
+                <div className="aspect-video bg-luxury-slate flex items-center justify-center p-12">
+                  <div className="w-full space-y-4">
+                    <div className="flex items-end gap-2 h-32">
+                      <div className="flex-1 bg-luxury-gold/20 h-1/2 rounded-t-xl" />
+                      <motion.div initial={{ height: 0 }} whileInView={{ height: '60%' }} className="flex-1 bg-luxury-gold/40 rounded-t-xl" />
+                      <motion.div initial={{ height: 0 }} whileInView={{ height: '85%' }} className="flex-1 bg-luxury-gold/60 rounded-t-xl" />
+                      <motion.div initial={{ height: 0 }} whileInView={{ height: '100%' }} className="flex-1 bg-luxury-gold rounded-t-xl" />
+                    </div>
+                    <div className="flex justify-between text-[10px] uppercase tracking-widest text-white/40 font-bold">
+                      <span>M1</span><span>M2</span><span>M3</span><span>Current</span>
+                    </div>
                   </div>
-               </div>
-               <div className="rounded-[3rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10">
-                  <div className="aspect-video bg-luxury-slate flex items-center justify-center p-12">
-                     <div className="w-full space-y-4">
-                        <div className="flex items-end gap-2 h-32">
-                           <div className="flex-1 bg-luxury-gold/20 h-1/2 rounded-t-xl" />
-                           <motion.div initial={{ height: 0 }} whileInView={{ height: '60%' }} className="flex-1 bg-luxury-gold/40 rounded-t-xl" />
-                           <motion.div initial={{ height: 0 }} whileInView={{ height: '85%' }} className="flex-1 bg-luxury-gold/60 rounded-t-xl" />
-                           <motion.div initial={{ height: 0 }} whileInView={{ height: '100%' }} className="flex-1 bg-luxury-gold rounded-t-xl" />
-                        </div>
-                        <div className="flex justify-between text-[10px] uppercase tracking-widest text-white/40 font-bold">
-                           <span>M1</span><span>M2</span><span>M3</span><span>Current</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                </div>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -308,11 +308,11 @@ export default function GrowthSystemPage() {
         {/* ---------------------------- WHY IT WORKS --------------------------- */}
         <section className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none opacity-20">
-             <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-luxury-gold/10 blur-[150px] rounded-full" />
+            <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-luxury-gold/10 blur-[150px] rounded-full" />
           </div>
 
           <div className="max-w-5xl mx-auto text-center relative z-10 mb-20">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -320,7 +320,7 @@ export default function GrowthSystemPage() {
             >
               WHY THIS WORKS
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -329,7 +329,7 @@ export default function GrowthSystemPage() {
               Because It Reaches Couples at the <span className="text-luxury-gold italic">Exact Moment</span> They’re Looking
             </motion.h2>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -343,26 +343,26 @@ export default function GrowthSystemPage() {
             </motion.p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-               {[
-                 "Couples are already looking for what you offer",
-                 "You appear before they enquire elsewhere",
-                 "The message speaks to people ready to take action",
-                 "Stronger positioning increases trust quickly",
-                 "Better-fit enquiries reduce time wasted on poor leads",
-                 "Ongoing refinement improves efficiency over time"
-               ].map((item, i) => (
-                 <motion.div 
-                   key={i}
-                   initial={{ opacity: 0, x: -20 }}
-                   whileInView={{ opacity: 1, x: 0 }}
-                   viewport={{ once: true }}
-                   transition={{ delay: i * 0.1 }}
-                   className="flex items-center gap-4 group"
-                 >
-                    <div className="w-1.5 h-1.5 bg-luxury-gold rounded-full group-hover:scale-150 transition-transform" />
-                    <span className="text-sm font-bold uppercase tracking-[0.15em] text-white/60 group-hover:text-white transition-colors">{item}</span>
-                 </motion.div>
-               ))}
+              {[
+                "Couples are already looking for what you offer",
+                "You appear before they enquire elsewhere",
+                "The message speaks to people ready to take action",
+                "Stronger positioning increases trust quickly",
+                "Better-fit enquiries reduce time wasted on poor leads",
+                "Ongoing refinement improves efficiency over time"
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex items-center gap-4 group"
+                >
+                  <div className="w-1.5 h-1.5 bg-luxury-gold rounded-full group-hover:scale-150 transition-transform" />
+                  <span className="text-sm font-bold uppercase tracking-[0.15em] text-white/60 group-hover:text-white transition-colors">{item}</span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -370,7 +370,7 @@ export default function GrowthSystemPage() {
         {/* ------------------------------ DIFFERENTIATOR ------------------------------ */}
         <section className="px-6 lg:px-12 py-32 bg-luxury-champagne">
           <div className="max-w-5xl mx-auto text-center mb-20">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -378,7 +378,7 @@ export default function GrowthSystemPage() {
             >
               WHAT MAKES US DIFFERENT
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -386,7 +386,7 @@ export default function GrowthSystemPage() {
             >
               Not General Marketing. <span className="text-luxury-gold italic">Wedding Industry-Specific</span> Lead Generation.
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -414,7 +414,7 @@ export default function GrowthSystemPage() {
                 desc: "We do not treat this like a short burst of activity. We build and refine the system to help you create steadier demand over time."
               }
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -422,7 +422,7 @@ export default function GrowthSystemPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-12 rounded-[2.5rem] border border-luxury-gold/10 shadow-sm hover:shadow-xl transition-all duration-500"
               >
-                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Pillar 0{i+1}</div>
+                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Pillar 0{i + 1}</div>
                 <h3 className="text-xl font-bold uppercase tracking-widest text-luxury-slate mb-6">
                   {item.title}
                 </h3>
@@ -437,7 +437,7 @@ export default function GrowthSystemPage() {
         {/* ------------------------------ SOCIAL PROOF ------------------------------ */}
         <section className="px-6 lg:px-12 py-32 bg-white relative">
           <div className="max-w-6xl mx-auto text-center mb-24">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -445,7 +445,7 @@ export default function GrowthSystemPage() {
             >
               CASE STUDIES
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -453,7 +453,7 @@ export default function GrowthSystemPage() {
             >
               Results Across <span className="text-luxury-gold italic">Different Wedding Markets</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -466,12 +466,12 @@ export default function GrowthSystemPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {[
-              { market: "Italy Destination Planner", stats: ["12 months", "€3,000 / month spend", "144 requests", "~€250 CPL", "14 weddings booked"] },
-              { market: "New York City Planner", stats: ["9 months", "$1,500 / month spend", "58 requests", "~$220 CPL", "7 weddings booked"] },
-              { market: "France + Italy Destination Planner", stats: ["3 months", "€1,800 / month spend", "24 requests", "~€225 CPL", "4 weddings booked"] },
-              { market: "Mexico Destination Planner", stats: ["5 months", "$1,500 / month spend", "40 requests", "~$188 CPL", "4 weddings booked"] }
+              { market: "Italy Destination Planner", stats: ["12 months", "€3,000 / month spend", "144 requests", "16 weddings booked"] },
+              { market: "New York City Planner", stats: ["9 months", "$1,500 / month spend", "60 requests", "7 weddings booked"] },
+              { market: "France + Italy Destination Planner", stats: ["4 months", "€1,800 / month spend", "40 requests", "4 weddings booked"] },
+              { market: "Mexico Destination Planner", stats: ["7 months", "$1,500 / month spend", "70 requests", "6 weddings booked"] }
             ].map((caseStudy, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -494,7 +494,7 @@ export default function GrowthSystemPage() {
             ))}
           </div>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -509,9 +509,9 @@ export default function GrowthSystemPage() {
         {/* ------------------------------ NEXT STEPS / INVESTMENT ------------------------------ */}
         <section className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-luxury-gold opacity-[0.03] rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
-          
+
           <div className="max-w-5xl mx-auto text-center mb-24 relative z-10">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -519,7 +519,7 @@ export default function GrowthSystemPage() {
             >
               NEXT STEPS
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -527,7 +527,7 @@ export default function GrowthSystemPage() {
             >
               See If This Makes Sense for <span className="text-luxury-gold italic">Your Market</span>
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -539,7 +539,7 @@ export default function GrowthSystemPage() {
             </motion.p>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -547,7 +547,7 @@ export default function GrowthSystemPage() {
           >
             <div className="bg-white/5 backdrop-blur-3xl p-12 lg:p-20 border border-white/10 rounded-[4rem] shadow-2xl">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-luxury-gold/50 text-[10px] uppercase tracking-[0.2em] font-bold text-luxury-gold mb-10 rounded-full">
-                 <Award size={14} /> Global Authority
+                <Award size={14} /> Global Authority
               </div>
 
               <h3 className="text-3xl md:text-4xl font-serif text-white mb-8 tracking-tight">
@@ -559,38 +559,38 @@ export default function GrowthSystemPage() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-12 mb-16">
-                 <div>
-                    <div className="text-white/30 text-sm line-through mb-2 font-light tracking-widest">€1,780 SETUP</div>
-                    <div className="text-4xl font-serif text-luxury-gold mb-6 tracking-tighter">€980 <span className="text-xs text-white/40 font-sans tracking-widest uppercase">One-time setup</span></div>
-                    
-                    <ul className="text-white/60 space-y-4 text-xs uppercase tracking-widest font-bold">
-                      <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Campaign strategy and build</li>
-                      <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Tracking setup</li>
-                      <li className="p-4 bg-luxury-gold border border-luxury-gold text-luxury-slate rounded-2xl flex items-center justify-between">
-                         <span>Free conversion page</span>
-                         <span className="opacity-70">(Worth €800)</span>
-                      </li>
-                    </ul>
-                 </div>
-                 
-                 <div className="pt-8 md:pt-16 md:border-l md:border-white/5 md:pl-12">
-                     <div className="text-white/30 text-sm line-through mb-2 font-light tracking-widest">€980/MONTH</div>
-                     <div className="text-4xl font-serif text-white mb-8 tracking-tighter">€480<span className="text-xs text-white/40 font-sans tracking-widest uppercase ml-4">/ Month</span></div>
-                     
-                     <ul className="text-white/60 space-y-4 text-[10px] uppercase tracking-widest font-bold mb-10">
-                        <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Weekly optimisation</li>
-                        <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Performance management</li>
-                        <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Clear monthly insights</li>
-                     </ul>
+                <div>
+                  <div className="text-white/30 text-sm line-through mb-2 font-light tracking-widest">€2,580 SETUP</div>
+                  <div className="text-4xl font-serif text-luxury-gold mb-6 tracking-tighter">€1290 <span className="text-xs text-white/40 font-sans tracking-widest uppercase">One-time setup</span></div>
 
-                     <Link
-                       to="/contact"
-                       className="w-full inline-flex items-center justify-center gap-4 px-10 py-5 bg-white text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold rounded-full hover:bg-luxury-gold transition-all group"
-                     >
-                       Talk About Your Market 
-                       <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-500" />
-                     </Link>
-                 </div>
+                  <ul className="text-white/60 space-y-4 text-xs uppercase tracking-widest font-bold">
+                    <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Campaign strategy and build</li>
+                    <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Tracking setup</li>
+                    <li className="p-4 bg-luxury-gold border border-luxury-gold text-luxury-slate rounded-2xl flex items-center justify-between">
+                      <span>Free conversion page</span>
+                      <span className="opacity-70">(Worth €800)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pt-8 md:pt-16 md:border-l md:border-white/5 md:pl-12">
+                  <div className="text-white/30 text-sm line-through mb-2 font-light tracking-widest">€980/MONTH</div>
+                  <div className="text-4xl font-serif text-white mb-8 tracking-tighter">€580<span className="text-xs text-white/40 font-sans tracking-widest uppercase ml-4">/ Month</span></div>
+
+                  <ul className="text-white/60 space-y-4 text-[10px] uppercase tracking-widest font-bold mb-10">
+                    <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Weekly optimisation</li>
+                    <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Performance management</li>
+                    <li className="flex items-center gap-3"><CheckCircle size={14} className="text-luxury-gold" /> Clear monthly insights</li>
+                  </ul>
+
+                  <Link
+                    to="/contact"
+                    className="w-full inline-flex items-center justify-center gap-4 px-10 py-5 bg-white text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold rounded-full hover:bg-luxury-gold transition-all group"
+                  >
+                    Talk About Your Market
+                    <ArrowRight size={18} className="group-hover:translate-x-2 transition-transform duration-500" />
+                  </Link>
+                </div>
               </div>
 
               <p className="text-white/20 text-[10px] uppercase tracking-[0.3em] font-bold text-center">
@@ -603,9 +603,9 @@ export default function GrowthSystemPage() {
 
         {/* ------------------------------ FINAL CTA ------------------------------ */}
         <section className="px-6 lg:px-12 py-40 text-center bg-white relative">
-           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
+          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
           <div className="max-w-4xl mx-auto">
-            <motion.h3 
+            <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -613,7 +613,7 @@ export default function GrowthSystemPage() {
             >
               Ready to Build a <span className="text-luxury-gold italic">More Predictable</span> Wedding Requests System?
             </motion.h3>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -625,9 +625,9 @@ export default function GrowthSystemPage() {
             </motion.p>
 
             <motion.div
-               initial={{ opacity: 0, scale: 0.9 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-               viewport={{ once: true }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
             >
               <Link
                 to="/contact"
