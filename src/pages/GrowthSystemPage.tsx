@@ -467,8 +467,8 @@ export default function GrowthSystemPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {[
               { market: "Italy Destination Planner", stats: ["12 months", "€3,000 / month spend", "144 requests", "16 weddings booked"] },
-              { market: "New York City Planner", stats: ["9 months", "$1,500 / month spend", "60 requests", "7 weddings booked"] },
-              { market: "France + Italy Destination Planner", stats: ["4 months", "€1,800 / month spend", "40 requests", "4 weddings booked"] },
+              { market: "New York City Planner", stats: ["10 months", "$3,000 / month spend", "130 requests", "16 weddings booked"] },
+              { market: "France + Italy Destination Planner", stats: ["10 months", "€1,800 / month spend", "100 requests", "9 weddings booked"] },
               { market: "Mexico Destination Planner", stats: ["7 months", "$1,500 / month spend", "70 requests", "6 weddings booked"] }
             ].map((caseStudy, idx) => (
               <motion.div

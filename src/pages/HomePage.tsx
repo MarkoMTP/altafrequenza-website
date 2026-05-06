@@ -117,15 +117,15 @@ export default function HomePage() {
     },
     {
       label: "Wedding Planner — New York, USA",
-      headline: "9 bookings. $120K profit.",
-      subheadline: "9 months. $12K total ad spend.",
+      headline: "16 bookings. $320K profit.",
+      subheadline: "10 months. $27K total ad spend.",
       description:
         "This New York-based planner was relying almost entirely on referrals. We launched a focused Google Ads campaign targeting high-intent wedding searches in the US market, built a conversion-structured landing page, and created a lead flow that brought in consistent enquiries for the first time — at a fraction of what larger agencies charge.",
       stats: [
         { value: "100", label: "Leads generated" },
-        { value: "9", label: "Weddings booked" },
-        { value: "$120K", label: "Profit generated" },
-        { value: "9mo", label: "Timeframe" },
+        { value: "16", label: "Weddings booked" },
+        { value: "$320K", label: "Profit generated" },
+        { value: "10mo", label: "Timeframe" },
       ],
       services: ["Google Ads", "Landing Page"],
     },

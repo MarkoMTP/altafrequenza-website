@@ -14,8 +14,8 @@ import { motion } from "framer-motion";
 export default function SocialMediaPage() {
   const fadeIn = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
     }
@@ -72,13 +72,13 @@ export default function SocialMediaPage() {
           </div>
 
           <div className="max-w-7xl mx-auto relative z-10 text-center">
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
               className="max-w-5xl mx-auto"
             >
-              <motion.div 
+              <motion.div
                 variants={fadeIn}
                 className="inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-12 rounded-full font-bold shadow-sm"
               >
@@ -86,15 +86,15 @@ export default function SocialMediaPage() {
                 Social Media for Wedding Planners and Venues
               </motion.div>
 
-              <motion.h1 
-                variants={fadeIn} 
+              <motion.h1
+                variants={fadeIn}
                 className="text-5xl md:text-8xl font-serif text-luxury-slate mb-10 leading-[1.05] tracking-tight"
               >
                 A Social Presence That Builds <span className="text-luxury-gold italic">Trust</span> Before Couples Even Contact You
               </motion.h1>
 
-              <motion.p 
-                variants={fadeIn} 
+              <motion.p
+                variants={fadeIn}
                 className="text-xl md:text-2xl text-luxury-slate/60 leading-relaxed max-w-4xl mx-auto mb-16 font-light italic"
               >
                 We help wedding planners and venues create a stronger online
@@ -128,7 +128,7 @@ export default function SocialMediaPage() {
         {/* MECHANISM */}
         <section className="px-6 lg:px-12 py-32 bg-white relative">
           <div className="max-w-5xl mx-auto text-center mb-24">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -136,7 +136,7 @@ export default function SocialMediaPage() {
             >
               HOW WE CREATE THE OUTCOME
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -144,7 +144,7 @@ export default function SocialMediaPage() {
             >
               We Turn Your Instagram Into a <span className="text-luxury-gold italic">Trust-Building</span> Sales Asset
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -175,7 +175,7 @@ export default function SocialMediaPage() {
                 desc: "Your content is shaped to build trust, communicate value, and make enquiries feel like the natural next step."
               }
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -200,11 +200,11 @@ export default function SocialMediaPage() {
         {/* WHY IT WORKS */}
         <section className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none opacity-20">
-             <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-luxury-gold/10 blur-[150px] rounded-full" />
+            <div className="absolute top-1/2 right-0 w-[800px] h-[800px] bg-luxury-gold/10 blur-[150px] rounded-full" />
           </div>
 
           <div className="max-w-5xl mx-auto text-center relative z-10 mb-20">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -212,7 +212,7 @@ export default function SocialMediaPage() {
             >
               WHY THIS WORKS
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -221,7 +221,7 @@ export default function SocialMediaPage() {
               Because Couples Judge the Experience Before They <span className="text-luxury-gold italic">Ever Contact</span> You
             </motion.h2>
 
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -235,27 +235,27 @@ export default function SocialMediaPage() {
             </motion.p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-               {[
-                 { title: "Higher Trust", desc: "A polished and active profile makes your business feel more established and more dependable." },
-                 { title: "Stronger Perceived Value", desc: "Better presentation helps couples see your service as more premium before they even speak with you." },
-                 { title: "Better Positioning", desc: "Clearer content helps differentiate you from competitors who look inconsistent or generic." },
-                 { title: "More Enquiry Readiness", desc: "When couples trust what they see, reaching out feels easier and safer." }
-               ].map((item, i) => (
-                 <motion.div 
-                   key={i}
-                   initial={{ opacity: 0, scale: 0.95 }}
-                   whileInView={{ opacity: 1, scale: 1 }}
-                   viewport={{ once: true }}
-                   transition={{ delay: i * 0.1 }}
-                   className="p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3rem] group hover:bg-luxury-gold/10 transition-all duration-700"
-                 >
-                    <div className="w-10 h-10 rounded-full bg-luxury-gold/20 flex items-center justify-center text-luxury-gold mb-8 group-hover:scale-110 transition-transform">
-                       <CheckCircle size={20} />
-                    </div>
-                    <h3 className="text-lg font-serif mb-4 italic tracking-wide group-hover:text-luxury-gold transition-colors">{item.title}</h3>
-                    <p className="text-white/40 text-sm font-light leading-relaxed group-hover:text-white/60 transition-colors">{item.desc}</p>
-                 </motion.div>
-               ))}
+              {[
+                { title: "Higher Trust", desc: "A polished and active profile makes your business feel more established and more dependable." },
+                { title: "Stronger Perceived Value", desc: "Better presentation helps couples see your service as more premium before they even speak with you." },
+                { title: "Better Positioning", desc: "Clearer content helps differentiate you from competitors who look inconsistent or generic." },
+                { title: "More Enquiry Readiness", desc: "When couples trust what they see, reaching out feels easier and safer." }
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-10 bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3rem] group hover:bg-luxury-gold/10 transition-all duration-700"
+                >
+                  <div className="w-10 h-10 rounded-full bg-luxury-gold/20 flex items-center justify-center text-luxury-gold mb-8 group-hover:scale-110 transition-transform">
+                    <CheckCircle size={20} />
+                  </div>
+                  <h3 className="text-lg font-serif mb-4 italic tracking-wide group-hover:text-luxury-gold transition-colors">{item.title}</h3>
+                  <p className="text-white/40 text-sm font-light leading-relaxed group-hover:text-white/60 transition-colors">{item.desc}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
@@ -263,7 +263,7 @@ export default function SocialMediaPage() {
         {/* WHAT MAKES US DIFFERENT */}
         <section className="px-6 lg:px-12 py-32 bg-luxury-champagne">
           <div className="max-w-5xl mx-auto text-center mb-24">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -271,7 +271,7 @@ export default function SocialMediaPage() {
             >
               WHAT MAKES US DIFFERENT
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -279,7 +279,7 @@ export default function SocialMediaPage() {
             >
               Not Generic <span className="text-luxury-gold italic">Social Media</span> Management
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -307,7 +307,7 @@ export default function SocialMediaPage() {
                 desc: "We do not just fill a content calendar. We help build a stronger brand presence that supports premium perception."
               }
             ].map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -315,7 +315,7 @@ export default function SocialMediaPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-12 rounded-[3.5rem] border border-luxury-gold/10 shadow-sm hover:shadow-2xl transition-all duration-700"
               >
-                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Pillar 0{i+1}</div>
+                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Pillar 0{i + 1}</div>
                 <h3 className="text-xl font-bold uppercase tracking-[0.1em] text-luxury-slate mb-6">
                   {item.title}
                 </h3>
@@ -326,7 +326,7 @@ export default function SocialMediaPage() {
             ))}
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -348,7 +348,7 @@ export default function SocialMediaPage() {
         {/* SOCIAL PROOF / CASE STUDIES */}
         <section className="px-6 lg:px-12 py-32 bg-white relative">
           <div className="max-w-6xl mx-auto text-center mb-24">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -356,7 +356,7 @@ export default function SocialMediaPage() {
             >
               CASE STUDIES
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -364,7 +364,7 @@ export default function SocialMediaPage() {
             >
               Stronger Presence. <span className="text-luxury-gold italic">Better Signals.</span> Better Results.
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -378,7 +378,7 @@ export default function SocialMediaPage() {
 
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* DESTINATION PLANNER */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -403,14 +403,14 @@ export default function SocialMediaPage() {
             </motion.div>
 
             {/* TESTIMONIAL */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="bg-luxury-champagne/10 p-12 rounded-[4rem] border border-luxury-gold/10 shadow-sm group hover:bg-luxury-slate hover:text-white transition-all duration-1000 italic"
             >
               <h4 className="text-3xl font-serif mb-10 tracking-wide group-hover:text-luxury-gold transition-colors not-italic">
-                 Liz Tuson
+                Liz Tuson
               </h4>
               <p className="text-xl font-light leading-relaxed text-luxury-slate/70 group-hover:text-white/70 transition-colors">
                 "Marko has been fantastic in helping boost my business and online
@@ -422,7 +422,7 @@ export default function SocialMediaPage() {
             </motion.div>
           </div>
 
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -437,9 +437,9 @@ export default function SocialMediaPage() {
         {/* NEXT STEPS */}
         <section id="packages" className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-luxury-gold opacity-[0.03] rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2" />
-          
+
           <div className="max-w-5xl mx-auto text-center mb-24 relative z-10">
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -447,7 +447,7 @@ export default function SocialMediaPage() {
             >
               NEXT STEPS
             </motion.p>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -455,7 +455,7 @@ export default function SocialMediaPage() {
             >
               Let’s See What Your Brand Could <span className="text-luxury-gold italic">Look Like</span> With the Right Structure
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -467,7 +467,7 @@ export default function SocialMediaPage() {
             </motion.p>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -476,14 +476,14 @@ export default function SocialMediaPage() {
             {/* Regular Package */}
             <div className="bg-white/5 backdrop-blur-3xl p-10 lg:p-14 border border-white/10 rounded-[4rem] shadow-2xl flex flex-col h-full">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-luxury-gold/50 text-[10px] uppercase tracking-[0.4em] font-bold text-luxury-gold mb-10 rounded-full w-fit">
-                 <Award size={14} /> Regular Package
+                <Award size={14} /> Regular Package
               </div>
 
               <div className="mb-10 text-left">
-                 <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4">Starting from</div>
-                 <div className="text-5xl md:text-6xl font-serif text-white tracking-tighter">€800<span className="text-sm uppercase tracking-widest text-luxury-gold ml-4">/ Month</span></div>
+                <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4">Starting from</div>
+                <div className="text-5xl md:text-6xl font-serif text-white tracking-tighter">€1000<span className="text-sm uppercase tracking-widest text-luxury-gold ml-4">/ Month</span></div>
               </div>
-              
+
               <ul className="space-y-4 mb-12 flex-grow text-left">
                 {[
                   "Up to 3 platforms",
@@ -516,18 +516,18 @@ export default function SocialMediaPage() {
             {/* Content Package */}
             <div className="bg-white/5 backdrop-blur-3xl p-10 lg:p-14 border border-white/10 rounded-[4rem] shadow-2xl flex flex-col h-full">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 border border-luxury-gold/50 text-[10px] uppercase tracking-[0.4em] font-bold text-luxury-gold mb-10 rounded-full w-fit">
-                 <Sparkles size={14} /> Content Package
+                <Sparkles size={14} /> Content Package
               </div>
 
               <div className="mb-10 text-left">
-                 <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4">Fixed rate</div>
-                 <div className="text-5xl md:text-6xl font-serif text-white tracking-tighter">€500<span className="text-sm uppercase tracking-widest text-luxury-gold ml-4">/ 10 Reels</span></div>
+                <div className="text-[10px] uppercase tracking-[0.5em] text-white/40 mb-4">Fixed rate</div>
+                <div className="text-5xl md:text-6xl font-serif text-white tracking-tighter">€500<span className="text-sm uppercase tracking-widest text-luxury-gold ml-4">/ 10 Reels</span></div>
               </div>
 
               <p className="text-white/60 font-light italic mb-8 border-l border-luxury-gold/30 pl-6 leading-relaxed text-left">
                 Perfect for planners who have the raw materials but need professional editing to create engaging reels.
               </p>
-              
+
               <ul className="space-y-4 mb-12 flex-grow text-left">
                 {[
                   "You provide the raw materials (photos/videos)",
