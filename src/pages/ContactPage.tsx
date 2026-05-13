@@ -223,12 +223,13 @@ export default function ContactPage() {
                            Website or Instagram
                         </label>
                         <input
-                          type="url"
+                          type="text"
+                          inputMode="url"
                           name="website"
                           value={formData.website}
                           onChange={handleFieldChange}
                           className="w-full bg-luxury-champagne/10 border-b border-luxury-gold/20 p-6 text-luxury-slate placeholder:text-luxury-slate/20 outline-none focus:border-luxury-gold transition-colors font-light"
-                          placeholder="https://"
+                          placeholder="yourwebsite.com or @instagram"
                         />
                       </div>
 

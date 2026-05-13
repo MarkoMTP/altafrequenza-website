@@ -233,15 +233,15 @@ export default function HomePage() {
         <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
-      <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen">
+      <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-20 md:pt-24 min-h-screen">
         {/* HERO */}
-        <section className="relative h-screen flex items-center justify-center px-6 lg:px-12 overflow-hidden">
+        <section className="relative min-h-[calc(100svh-5rem)] md:min-h-[calc(100vh-6rem)] flex items-center justify-center px-5 sm:px-6 lg:px-12 py-8 sm:py-14 md:py-20 overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-40">
             <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-luxury-gold/5 blur-[120px] rounded-full" />
             <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-luxury-ethereal/10 blur-[150px] rounded-full animate-pulse" />
           </div>
 
-          <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="max-w-7xl mx-auto text-center relative z-10 w-full">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -249,15 +249,17 @@ export default function HomePage() {
             >
               <motion.div
                 variants={fadeIn}
-                className="mb-10 inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold rounded-full shadow-sm"
+                className="mb-5 sm:mb-10 inline-flex max-w-full items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 glass border border-luxury-gold/20 text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] text-luxury-gold font-bold rounded-full shadow-sm leading-relaxed"
               >
-                <Sparkles size={14} />
-                Marketing for Destination & Luxury Wedding Planners
+                <Sparkles size={14} className="flex-shrink-0" />
+                <span className="min-w-0">
+                  Marketing for Destination & Luxury Wedding Planners
+                </span>
               </motion.div>
 
               <motion.h1
                 variants={fadeIn}
-                className="text-5xl md:text-8xl font-serif leading-[1.05] mb-10 text-luxury-slate tracking-tight"
+                className="text-4xl sm:text-5xl md:text-8xl font-serif leading-[1.04] mb-5 sm:mb-10 text-luxury-slate tracking-tight"
               >
                 Turn Your Marketing Into a Consistent Source of{" "}
                 <span className="text-luxury-gold italic">
@@ -267,18 +269,16 @@ export default function HomePage() {
 
               <motion.p
                 variants={fadeIn}
-                className="text-xl md:text-2xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-6 font-light italic"
+                className="text-base sm:text-xl md:text-2xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-6 font-light italic"
               >
                 Alta Frequenza helps destination and luxury wedding planners
                 attract stronger-budget couples, elevate their online presence,
-                and book more of the weddings they actually want — through
-                growth systems, social media, websites, and AI-powered lead
-                capture.
+                and book more of the weddings they actually want.
               </motion.p>
 
               <motion.div
                 variants={fadeIn}
-                className="flex flex-wrap items-center justify-center gap-6 mb-12 text-[10px] uppercase tracking-[0.3em] text-luxury-slate/40 font-bold"
+                className="hidden sm:flex sm:flex-wrap items-center justify-center gap-6 mb-12 text-[10px] uppercase tracking-[0.3em] text-luxury-slate/40 font-bold"
               >
                 <span className="flex items-center gap-2">
                   <CheckCircle2 size={12} className="text-luxury-gold" /> 100+
@@ -298,26 +298,27 @@ export default function HomePage() {
 
               <motion.div
                 variants={fadeIn}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full"
               >
                 <Link
                   to="/contact"
-                  className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
+                  className="group relative inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-3 sm:gap-4 px-5 sm:px-12 py-4 sm:py-6 bg-luxury-slate text-white text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden leading-relaxed text-center"
                 >
-                  <span className="relative z-10">
+                  <span className="relative z-10 min-w-0">
                     Request My Free Wedding Business Analysis
                   </span>
                   <ArrowRight
                     size={20}
-                    className="relative z-10 group-hover:translate-x-2 transition-transform duration-500"
+                    className="relative z-10 flex-shrink-0 group-hover:translate-x-2 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                 </Link>
                 <a
                   href="#case-studies"
-                  className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] font-bold text-luxury-slate/40 hover:text-luxury-gold transition-colors duration-300"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold text-luxury-slate/40 hover:text-luxury-gold transition-colors duration-300 leading-relaxed text-center"
                 >
-                  See Wedding Planner Results <ArrowRight size={14} />
+                  See Wedding Planner Results{" "}
+                  <ArrowRight size={14} className="flex-shrink-0" />
                 </a>
               </motion.div>
             </motion.div>
@@ -325,25 +326,19 @@ export default function HomePage() {
         </section>
 
         {/* THE REAL PROBLEM */}
-        <section className="py-40 px-6 lg:px-12 bg-white relative overflow-hidden">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2 }}
-              className="relative lg:h-[700px]"
-            >
-              <div className="h-full rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(15,23,42,0.1)] border border-luxury-gold/10 relative group">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-24 items-center relative z-10">
+            <div className="relative lg:h-[700px]">
+              <div className="h-full rounded-[2rem] sm:rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(15,23,42,0.1)] border border-luxury-gold/10 relative group">
                 <img
                   src="https://www.dropbox.com/scl/fi/nb6q6owhc1ig8pqlqp5z3/pexels-westernsydneyweddings-34525884.jpg?rlkey=79mvrch0bt7pnydwtpbx5h491&st=uuxgthdo&raw=1"
                   alt="Wedding planner workflow"
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-luxury-slate/20 mix-blend-overlay" />
               </div>
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-luxury-gold/10 blur-3xl rounded-full -z-10" />
-            </motion.div>
+            </div>
 
             <motion.div
               initial="hidden"
@@ -354,13 +349,13 @@ export default function HomePage() {
             >
               <motion.p
                 variants={fadeIn}
-                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-10 font-bold"
               >
                 THE REAL PROBLEM
               </motion.p>
               <motion.h2
                 variants={fadeIn}
-                className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight"
+                className="text-3xl sm:text-4xl md:text-6xl font-serif text-luxury-slate mb-6 sm:mb-10 tracking-tight leading-tight"
               >
                 Beautiful Work Does Not Automatically Make You{" "}
                 <span className="text-luxury-gold italic">
@@ -369,7 +364,7 @@ export default function HomePage() {
               </motion.h2>
               <motion.div
                 variants={fadeIn}
-                className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed"
+                className="space-y-5 sm:space-y-8 text-base sm:text-xl text-luxury-slate/60 font-light leading-relaxed"
               >
                 <p>
                   Many destination and luxury planners have refined portfolios,
@@ -383,16 +378,16 @@ export default function HomePage() {
                   unsure, and choose another planner who simply appears more
                   clear, trusted, and desirable.
                 </p>
-                <p className="italic text-luxury-slate font-medium text-2xl border-l-[3px] border-luxury-gold pl-8 py-2">
+                <p className="italic text-luxury-slate font-medium text-lg sm:text-2xl border-l-[3px] border-luxury-gold pl-5 sm:pl-8 py-2">
                   The real problem is not just visibility. It is becoming the
                   obvious choice for the weddings you actually want.
                 </p>
               </motion.div>
 
-              <motion.div variants={fadeIn} className="mt-12">
+              <motion.div variants={fadeIn} className="mt-8 sm:mt-12">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-3 px-8 py-4 border border-luxury-gold/30 text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-slate hover:text-white hover:border-luxury-slate transition-all duration-500 rounded-full"
+                  className="inline-flex w-full sm:w-auto items-center justify-center gap-3 px-5 sm:px-8 py-4 border border-luxury-gold/30 text-luxury-slate text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold hover:bg-luxury-slate hover:text-white hover:border-luxury-slate transition-all duration-500 rounded-full text-center"
                 >
                   Contact Us Now <ArrowRight size={16} />
                 </Link>
@@ -402,8 +397,8 @@ export default function HomePage() {
         </section>
 
         {/* HOW COUPLES CHOOSE YOU */}
-        <section className="py-40 px-6 lg:px-12 bg-luxury-champagne border-y border-luxury-gold/5">
-          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-luxury-champagne border-y border-luxury-gold/5">
+          <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -412,13 +407,13 @@ export default function HomePage() {
             >
               <motion.p
                 variants={fadeIn}
-                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-10 font-bold"
               >
                 HOW COUPLES CHOOSE YOU
               </motion.p>
               <motion.h2
                 variants={fadeIn}
-                className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight"
+                className="text-3xl sm:text-4xl md:text-6xl font-serif text-luxury-slate mb-6 sm:mb-10 tracking-tight leading-tight"
               >
                 Couples Do Not Book the Best Planner. They Book the One They{" "}
                 <span className="text-luxury-gold italic">
@@ -427,7 +422,7 @@ export default function HomePage() {
               </motion.h2>
               <motion.div
                 variants={fadeIn}
-                className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed"
+                className="space-y-5 sm:space-y-8 text-base sm:text-xl text-luxury-slate/60 font-light leading-relaxed"
               >
                 <p>
                   Couples search, compare, revisit websites, check Instagram,
@@ -440,7 +435,7 @@ export default function HomePage() {
                   website shapes desire, and retargeting keeps your brand in
                   their mind while they decide.
                 </p>
-                <p className="font-bold text-luxury-slate uppercase tracking-widest text-xs mt-12 bg-luxury-gold/10 px-6 py-3 rounded-full inline-block">
+                <p className="font-bold text-luxury-slate uppercase tracking-[0.12em] sm:tracking-widest text-[10px] sm:text-xs mt-8 sm:mt-12 bg-luxury-gold/10 px-4 sm:px-6 py-3 rounded-[1.5rem] sm:rounded-full inline-block">
                   When these pieces work together, your brand becomes easier to
                   discover, harder to forget, and more likely to receive the
                   wedding requests you actually want.
@@ -448,32 +443,26 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2 }}
-              className="rounded-[4rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10 group"
-            >
+            <div className="rounded-[2rem] sm:rounded-[4rem] overflow-hidden shadow-2xl relative border border-luxury-gold/10 group">
               <img
                 src="https://www.dropbox.com/scl/fi/t8d3dzw1iy4498x5q7k26/ads.jpg?rlkey=uohsisrqbm7w8bwpezz60j61d&st=8at1dxhe&raw=1"
                 alt="Search visibility"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover md:transition-transform md:duration-1000 md:group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-luxury-slate/30 mix-blend-overlay" />
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* FIRST IMPRESSIONS */}
-        <section className="py-40 px-6 lg:px-12 bg-white text-center relative overflow-hidden">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-white text-center relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-luxury-gold/5 blur-[150px] rounded-full pointer-events-none" />
           <div className="max-w-5xl mx-auto relative z-10">
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+              className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-10 font-bold"
             >
               FIRST IMPRESSIONS
             </motion.p>
@@ -481,7 +470,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-7xl font-serif text-luxury-slate mb-12 tracking-tight leading-tight"
+              className="text-3xl sm:text-4xl md:text-7xl font-serif text-luxury-slate mb-8 sm:mb-12 tracking-tight leading-tight"
             >
               Your Brand Should Make Luxury Couples Feel{" "}
               <span className="text-luxury-gold italic">
@@ -489,27 +478,22 @@ export default function HomePage() {
               </span>
             </motion.h2>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="flex justify-center mb-16"
-            >
-              <div className="w-72 h-[480px] bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-luxury-gold/20 p-2 relative group">
+            <div className="flex justify-center mb-10 sm:mb-16">
+              <div className="w-56 sm:w-72 h-[360px] sm:h-[480px] bg-white rounded-[2rem] sm:rounded-[3rem] shadow-2xl overflow-hidden border border-luxury-gold/20 p-2 relative group">
                 <img
                   src="https://www.dropbox.com/scl/fi/jefa1g9vd54uzgl13lppv/Screenshot-2025-12-15-at-22.02.35.png?rlkey=pvgb938zsmgkjkw2mism7d60l&st=7r4ad30r&raw=1"
-                  className="w-full h-full object-cover rounded-[2.5rem] transition-transform duration-1000 group-hover:scale-110"
+                  className="w-full h-full object-cover rounded-[1.5rem] sm:rounded-[2.5rem] md:transition-transform md:duration-1000 md:group-hover:scale-110"
                   alt="Instagram feed preview"
                 />
-                <div className="absolute inset-0 bg-luxury-gold/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                <div className="absolute inset-0 bg-luxury-gold/10 opacity-0 md:group-hover:opacity-100 md:transition-opacity pointer-events-none" />
               </div>
-            </motion.div>
+            </div>
 
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-16 font-light italic"
+              className="text-base sm:text-xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-10 sm:mb-16 font-light italic"
             >
               Before reaching out, many couples will quickly look at your
               website, your Instagram, and the way your brand presents itself. A
@@ -517,44 +501,40 @@ export default function HomePage() {
               feeling that your planning service is worth contacting.
             </motion.p>
 
-            <div className="grid md:grid-cols-3 gap-12 mt-20">
+            <div className="grid md:grid-cols-3 gap-8 sm:gap-12 mt-12 sm:mt-20">
               {[
                 "Raises perceived value instantly",
                 "Builds trust before the first message",
                 "Makes your brand feel like the premium choice",
               ].map((text, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="text-center group"
-                >
-                  <div className="w-12 h-12 bg-luxury-slate text-white rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:bg-luxury-gold group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
+                <div key={i} className="text-center group">
+                  <div className="w-10 sm:w-12 h-10 sm:h-12 bg-luxury-slate text-white rounded-2xl mx-auto mb-4 sm:mb-6 flex items-center justify-center md:group-hover:bg-luxury-gold md:group-hover:-translate-y-2 md:transition-all md:duration-500 shadow-xl">
                     <Star
                       size={20}
-                      className="group-hover:rotate-12 transition-transform"
+                      className="md:group-hover:rotate-12 md:transition-transform"
                     />
                   </div>
-                  <p className="text-luxury-slate font-bold uppercase tracking-widest text-[10px] leading-relaxed">
+                  <p className="text-luxury-slate font-bold uppercase tracking-[0.16em] sm:tracking-widest text-[9px] sm:text-[10px] leading-relaxed">
                     {text}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CASE STUDIES */}
-        <section id="case-studies" className="py-40 px-6 lg:px-12 bg-white">
+        <section
+          id="case-studies"
+          className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-white"
+        >
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-24">
+            <div className="text-center mb-14 sm:mb-24">
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-10 font-bold"
               >
                 CLIENT RESULTS
               </motion.p>
@@ -562,7 +542,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-7xl font-serif text-luxury-slate mb-8 tracking-tight"
+                className="text-3xl sm:text-4xl md:text-7xl font-serif text-luxury-slate mb-6 sm:mb-8 tracking-tight leading-tight"
               >
                 What Happens When Your Marketing Starts Attracting{" "}
                 <span className="text-luxury-gold italic">Better Weddings</span>
@@ -571,7 +551,7 @@ export default function HomePage() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-xl text-luxury-slate/40 max-w-3xl mx-auto font-light leading-relaxed"
+                className="text-base sm:text-xl text-luxury-slate/40 max-w-3xl mx-auto font-light leading-relaxed"
               >
                 Real results from wedding businesses we work with. Not
                 impressions. Not followers. Actual wedding requests, booked
@@ -579,42 +559,34 @@ export default function HomePage() {
               </motion.p>
             </div>
 
-            <div className="space-y-16">
+            <div className="space-y-8 sm:space-y-16">
               {caseStudies.map((cs, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    delay: index * 0.1,
-                    duration: 0.9,
-                    ease: [0.16, 1, 0.3, 1],
-                  }}
-                  className={`rounded-[3rem] border border-luxury-gold/10 overflow-hidden grid lg:grid-cols-2 ${
+                  className={`rounded-[2rem] sm:rounded-[3rem] border border-luxury-gold/10 overflow-hidden grid lg:grid-cols-2 ${
                     index % 2 === 0
                       ? "bg-luxury-champagne/30"
                       : "bg-luxury-slate text-white"
                   }`}
                 >
                   <div
-                    className={`p-14 lg:p-20 flex flex-col justify-between ${
+                    className={`p-7 sm:p-10 lg:p-20 flex flex-col justify-between ${
                       index % 2 !== 0 ? "order-last" : ""
                     }`}
                   >
                     <div>
-                      <p className="text-[10px] uppercase tracking-[0.4em] font-bold mb-6 text-luxury-gold">
+                      <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em] font-bold mb-4 sm:mb-6 text-luxury-gold">
                         {cs.label}
                       </p>
                       <h3
-                        className={`text-4xl md:text-5xl font-serif mb-3 tracking-tight leading-tight ${
+                        className={`text-3xl sm:text-4xl md:text-5xl font-serif mb-3 tracking-tight leading-tight ${
                           index % 2 === 0 ? "text-luxury-slate" : "text-white"
                         }`}
                       >
                         {cs.headline}
                       </h3>
                       <p
-                        className={`text-xl italic mb-12 ${
+                        className={`text-base sm:text-xl italic mb-8 sm:mb-12 ${
                           index % 2 === 0
                             ? "text-luxury-slate/50"
                             : "text-white/50"
@@ -624,21 +596,21 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-6 mb-12">
+                    <div className="grid grid-cols-2 gap-3 sm:gap-6 mb-8 sm:mb-12">
                       {cs.stats.map((stat, i) => (
                         <div
                           key={i}
-                          className={`p-6 rounded-2xl ${
+                          className={`p-4 sm:p-6 rounded-2xl ${
                             index % 2 === 0
                               ? "bg-white border border-luxury-gold/10"
                               : "bg-white/5 border border-white/10"
                           }`}
                         >
-                          <div className="text-3xl md:text-4xl font-serif mb-1 text-luxury-gold">
+                          <div className="text-2xl sm:text-3xl md:text-4xl font-serif mb-1 text-luxury-gold">
                             {stat.value}
                           </div>
                           <div
-                            className={`text-[10px] uppercase tracking-[0.3em] font-bold ${
+                            className={`text-[8px] sm:text-[10px] uppercase tracking-[0.12em] sm:tracking-[0.3em] font-bold ${
                               index % 2 === 0
                                 ? "text-luxury-slate/40"
                                 : "text-white/30"
@@ -654,7 +626,7 @@ export default function HomePage() {
                       {cs.services.map((s, i) => (
                         <span
                           key={i}
-                          className={`px-4 py-2 rounded-full text-[10px] uppercase tracking-[0.3em] font-bold border ${
+                          className={`px-3 sm:px-4 py-2 rounded-full text-[8px] sm:text-[10px] uppercase tracking-[0.12em] sm:tracking-[0.3em] font-bold border ${
                             index % 2 === 0
                               ? "border-luxury-gold/20 text-luxury-gold"
                               : "border-white/10 text-white/40"
@@ -667,14 +639,14 @@ export default function HomePage() {
                   </div>
 
                   <div
-                    className={`p-14 lg:p-20 flex flex-col justify-center ${
+                    className={`p-7 sm:p-10 lg:p-20 flex flex-col justify-center ${
                       index % 2 !== 0
                         ? "border-r border-white/5"
                         : "border-l border-luxury-gold/5"
                     }`}
                   >
                     <p
-                      className={`text-xl font-light leading-relaxed mb-12 ${
+                      className={`text-base sm:text-xl font-light leading-relaxed mb-8 sm:mb-12 ${
                         index % 2 === 0
                           ? "text-luxury-slate/60"
                           : "text-white/60"
@@ -684,7 +656,7 @@ export default function HomePage() {
                     </p>
                     <Link
                       to="/contact"
-                      className={`inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] font-bold transition-colors duration-300 ${
+                      className={`inline-flex items-center gap-3 text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] font-bold transition-colors duration-300 ${
                         index % 2 === 0
                           ? "text-luxury-slate hover:text-luxury-gold"
                           : "text-white hover:text-luxury-gold"
@@ -693,45 +665,40 @@ export default function HomePage() {
                       Request Your Free Analysis <ArrowRight size={16} />
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-24 text-center"
-            >
+            <div className="mt-14 sm:mt-24 text-center">
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
+                className="group relative inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-3 sm:gap-4 px-5 sm:px-12 py-4 sm:py-6 bg-luxury-slate text-white text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden leading-relaxed text-center"
               >
-                <span className="relative z-10">
+                <span className="relative z-10 min-w-0">
                   Request Your Free Wedding Business Analysis
                 </span>
                 <ArrowRight
                   size={20}
-                  className="relative z-10 group-hover:translate-x-2 transition-transform duration-500"
+                  className="relative z-10 flex-shrink-0 group-hover:translate-x-2 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
               </Link>
-              <p className="mt-6 text-[10px] uppercase tracking-[0.3em] text-luxury-slate/30 font-bold">
+              <p className="mt-5 sm:mt-6 text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] text-luxury-slate/30 font-bold">
                 Free strategy session — no commitment
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* TESTIMONIALS */}
-        <section className="py-40 px-6 lg:px-12 bg-luxury-champagne border-y border-luxury-gold/5">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-luxury-champagne border-y border-luxury-gold/5">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-24">
+            <div className="text-center mb-14 sm:mb-24">
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-10 font-bold"
               >
                 WHAT CLIENTS SAY
               </motion.p>
@@ -739,7 +706,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-6xl font-serif text-luxury-slate tracking-tight"
+                className="text-3xl sm:text-4xl md:text-6xl font-serif text-luxury-slate tracking-tight leading-tight"
               >
                 From the{" "}
                 <span className="text-luxury-gold italic">
@@ -749,43 +716,39 @@ export default function HomePage() {
               </motion.h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
               {testimonials.map((t, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1, duration: 0.8 }}
-                  className="bg-white p-10 rounded-[3rem] border border-luxury-gold/10 shadow-sm flex flex-col gap-8"
+                  className="bg-white p-7 sm:p-10 rounded-[2rem] sm:rounded-[3rem] border border-luxury-gold/10 shadow-sm flex flex-col gap-6 sm:gap-8"
                 >
                   <Quote size={28} className="text-luxury-gold/30" />
-                  <p className="text-lg text-luxury-slate/70 font-light leading-relaxed italic flex-1">
+                  <p className="text-base sm:text-lg text-luxury-slate/70 font-light leading-relaxed italic flex-1">
                     "{t.quote}"
                   </p>
-                  <div className="border-t border-luxury-gold/10 pt-8">
+                  <div className="border-t border-luxury-gold/10 pt-6 sm:pt-8">
                     <p className="text-sm font-bold text-luxury-slate">
                       {t.author}
                     </p>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-luxury-gold font-bold mt-1">
+                    <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] text-luxury-gold font-bold mt-1">
                       {t.role}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* SERVICES */}
-        <section className="py-40 px-6 lg:px-12 bg-white">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-32">
+            <div className="text-center mb-14 sm:mb-24 lg:mb-32">
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold mb-10"
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold font-bold mb-6 sm:mb-10"
               >
                 OUR SERVICES
               </motion.p>
@@ -793,7 +756,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-7xl font-serif text-luxury-slate mb-8 tracking-tight"
+                className="text-3xl sm:text-4xl md:text-7xl font-serif text-luxury-slate mb-6 sm:mb-8 tracking-tight leading-tight"
               >
                 Marketing Systems Built Around{" "}
                 <span className="text-luxury-gold italic">
@@ -804,7 +767,7 @@ export default function HomePage() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="text-xl text-luxury-slate/40 max-w-3xl mx-auto font-light leading-relaxed"
+                className="text-base sm:text-xl text-luxury-slate/40 max-w-3xl mx-auto font-light leading-relaxed"
               >
                 We help destination wedding planners, luxury wedding planners,
                 high-end regional planners, and venues become more desirable,
@@ -813,37 +776,33 @@ export default function HomePage() {
               </motion.p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-10">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
               {services.map((service, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group bg-luxury-champagne/10 p-12 rounded-[4rem] border border-luxury-gold/10 hover:bg-luxury-slate hover:text-white transition-all duration-1000 shadow-sm hover:shadow-2xl flex flex-col justify-between"
+                  className="group bg-luxury-champagne/10 p-7 sm:p-10 lg:p-12 rounded-[2rem] sm:rounded-[4rem] border border-luxury-gold/10 md:hover:bg-luxury-slate md:hover:text-white md:transition-all md:duration-700 shadow-sm md:hover:shadow-2xl flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-16 h-16 rounded-3xl bg-luxury-slate text-white flex items-center justify-center mb-10 group-hover:bg-luxury-gold transition-colors duration-700 shadow-xl">
-                      <service.icon size={28} />
+                    <div className="w-12 sm:w-16 h-12 sm:h-16 rounded-2xl sm:rounded-3xl bg-luxury-slate text-white flex items-center justify-center mb-6 sm:mb-10 md:group-hover:bg-luxury-gold md:transition-colors md:duration-700 shadow-xl">
+                      <service.icon size={24} className="sm:w-7 sm:h-7" />
                     </div>
-                    <h3 className="text-3xl font-serif mb-4 group-hover:text-luxury-gold transition-colors duration-700">
+                    <h3 className="text-2xl sm:text-3xl font-serif mb-4 md:group-hover:text-luxury-gold md:transition-colors md:duration-700">
                       {service.title}
                     </h3>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-luxury-gold font-bold mb-8 group-hover:text-white/40">
+                    <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] text-luxury-gold font-bold mb-5 sm:mb-8 md:group-hover:text-white/40">
                       {service.subtitle}
                     </p>
-                    <p className="text-lg text-luxury-slate/50 leading-relaxed mb-10 font-light group-hover:text-white/60">
+                    <p className="text-base sm:text-lg text-luxury-slate/50 leading-relaxed mb-7 sm:mb-10 font-light md:group-hover:text-white/60">
                       {service.description}
                     </p>
-                    <ul className="space-y-4 mb-12">
+                    <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
                       {service.features.map((feature, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-4 text-sm font-medium tracking-wide leading-relaxed"
+                          className="flex items-start gap-3 sm:gap-4 text-sm font-medium tracking-wide leading-relaxed"
                         >
                           <div className="w-1.5 h-1.5 bg-luxury-gold rounded-full mt-1.5 flex-shrink-0" />
-                          <span className="group-hover:text-white/80">
+                          <span className="md:group-hover:text-white/80">
                             {feature}
                           </span>
                         </li>
@@ -852,25 +811,25 @@ export default function HomePage() {
                   </div>
                   <Link
                     to={service.path}
-                    className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.4em] text-luxury-slate group-hover:text-luxury-gold hover:opacity-70 transition-all border-t border-luxury-gold/10 pt-8"
+                    className="inline-flex items-center gap-3 sm:gap-4 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.16em] sm:tracking-[0.4em] text-luxury-slate md:group-hover:text-luxury-gold hover:opacity-70 transition-all border-t border-luxury-gold/10 pt-6 sm:pt-8"
                   >
                     Explore Service <ArrowRight size={18} />
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CASE STUDY LEAD MAGNET */}
-        <section className="py-40 px-6 lg:px-12 bg-luxury-slate text-white relative overflow-hidden">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-luxury-slate text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-luxury-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+              className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-10 font-bold"
             >
               FREE CASE STUDY
             </motion.p>
@@ -878,7 +837,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-7xl font-serif mb-10 leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl md:text-7xl font-serif mb-6 sm:mb-10 leading-tight tracking-tight"
             >
               See How We Helped a Wedding Planner Book More of the Right
               Weddings
@@ -887,7 +846,7 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-xl text-white/40 mb-16 font-light italic leading-relaxed"
+              className="text-base sm:text-xl text-white/40 mb-10 sm:mb-16 font-light italic leading-relaxed"
             >
               Receive the full breakdown of how we helped a wedding planner
               generate consistent wedding requests, attract better-fit couples,
@@ -895,15 +854,10 @@ export default function HomePage() {
               it worked, and how the same framework could apply to your
               business.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-2xl mx-auto"
-            >
+            <div className="max-w-2xl mx-auto">
               <form
                 onSubmit={handleEmailSubmit}
-                className="relative bg-white/5 backdrop-blur-xl p-4 rounded-full border border-white/10 flex flex-col sm:flex-row gap-4"
+                className="relative bg-white/5 backdrop-blur-xl p-4 rounded-[2rem] sm:rounded-full border border-white/10 flex flex-col sm:flex-row gap-4"
               >
                 <input
                   type="email"
@@ -911,11 +865,11 @@ export default function HomePage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address..."
                   required
-                  className="flex-1 px-8 py-5 bg-transparent text-white placeholder-white/20 focus:outline-none text-sm tracking-widest uppercase font-bold"
+                  className="flex-1 px-5 sm:px-8 py-4 sm:py-5 bg-transparent text-white placeholder-white/20 focus:outline-none text-xs sm:text-sm tracking-[0.14em] sm:tracking-widest uppercase font-bold"
                 />
                 <button
                   type="submit"
-                  className="px-12 py-5 bg-luxury-gold text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-white transition-all rounded-full shadow-2xl"
+                  className="w-full sm:w-auto px-5 sm:px-12 py-4 sm:py-5 bg-luxury-gold text-luxury-slate text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold hover:bg-white transition-all rounded-full shadow-2xl leading-relaxed"
                 >
                   Send Me the Case Study
                 </button>
@@ -925,18 +879,18 @@ export default function HomePage() {
                   {status}
                 </p>
               )}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* APPROACH */}
-        <section className="py-40 px-6 lg:px-12 bg-white text-luxury-slate">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-white text-luxury-slate">
           <div className="max-w-7xl mx-auto text-center">
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+              className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-10 font-bold"
             >
               OUR APPROACH
             </motion.p>
@@ -944,7 +898,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-7xl font-serif mb-12 tracking-tight leading-tight"
+              className="text-3xl sm:text-4xl md:text-7xl font-serif mb-8 sm:mb-12 tracking-tight leading-tight"
             >
               Search. Trust. Desire.{" "}
               <span className="text-luxury-gold italic">
@@ -955,14 +909,14 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-xl font-light text-luxury-slate/40 mb-24 max-w-4xl mx-auto leading-relaxed"
+              className="text-base sm:text-xl font-light text-luxury-slate/40 mb-12 sm:mb-24 max-w-4xl mx-auto leading-relaxed"
             >
               Couples rarely book from one touchpoint. They search, compare,
               revisit, check your online presence, and then decide who feels
               worth contacting. Our approach is built around that full journey.
             </motion.p>
 
-            <div className="grid md:grid-cols-3 gap-12 text-left">
+            <div className="grid md:grid-cols-3 gap-6 sm:gap-12 text-left">
               {[
                 {
                   title: "Visibility",
@@ -977,38 +931,34 @@ export default function HomePage() {
                   desc: "Use retargeting, lead magnets, and clearer request flows to bring warm couples back and move them closer to sending a serious wedding request.",
                 },
               ].map((item, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-luxury-champagne/10 p-12 rounded-[3rem] border border-luxury-gold/10 hover:border-luxury-gold/30 transition-all duration-500 shadow-sm"
+                  className="bg-luxury-champagne/10 p-7 sm:p-10 lg:p-12 rounded-[2rem] sm:rounded-[3rem] border border-luxury-gold/10 md:hover:border-luxury-gold/30 md:transition-all md:duration-500 shadow-sm"
                 >
-                  <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-8">
+                  <div className="text-luxury-gold font-bold text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] mb-5 sm:mb-8">
                     Phase 0{i + 1}
                   </div>
-                  <h3 className="text-3xl font-serif mb-6 italic tracking-tight text-luxury-slate border-b border-luxury-gold/10 pb-6">
+                  <h3 className="text-2xl sm:text-3xl font-serif mb-5 sm:mb-6 italic tracking-tight text-luxury-slate border-b border-luxury-gold/10 pb-5 sm:pb-6">
                     {item.title}
                   </h3>
                   <p className="text-luxury-slate/50 text-sm font-light leading-relaxed">
                     {item.desc}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* FINAL CTA */}
-        <section className="py-40 px-6 lg:px-12 bg-luxury-sand/10 relative overflow-hidden">
+        <section className="py-24 sm:py-32 lg:py-40 px-5 sm:px-6 lg:px-12 bg-luxury-sand/10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-8xl font-serif text-luxury-slate mb-12 tracking-tight leading-[1.1]"
+              className="text-3xl sm:text-4xl md:text-8xl font-serif text-luxury-slate mb-8 sm:mb-12 tracking-tight leading-[1.1]"
             >
               Ready to Become the Planner{" "}
               <span className="text-luxury-gold italic">
@@ -1019,40 +969,35 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-xl text-luxury-slate/40 mb-20 font-light leading-relaxed max-w-4xl mx-auto"
+              className="text-base sm:text-xl text-luxury-slate/40 mb-10 sm:mb-20 font-light leading-relaxed max-w-4xl mx-auto"
             >
               If you want to attract stronger-budget couples, elevate the way
               your brand is perceived, and book more weddings that fit your
               vision, the next step is a simple conversation about your market,
               positioning, and current request flow.
             </motion.p>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-6"
-            >
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6">
               <Link
                 to="/contact"
-                className="group relative inline-flex items-center justify-center gap-6 px-16 py-8 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-[0_40px_100px_-20px_rgba(15,23,42,0.3)] overflow-hidden"
+                className="group relative inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-3 sm:gap-6 px-5 sm:px-16 py-5 sm:py-8 bg-luxury-slate text-white text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-[0_40px_100px_-20px_rgba(15,23,42,0.3)] overflow-hidden leading-relaxed text-center"
               >
-                <span className="relative z-10 flex items-center gap-6">
+                <span className="relative z-10 min-w-0">
                   Request Your Free Wedding Business Analysis
-                  <ArrowRight
-                    size={24}
-                    className="group-hover:translate-x-2 transition-transform duration-700"
-                  />
                 </span>
+                <ArrowRight
+                  size={24}
+                  className="relative z-10 flex-shrink-0 group-hover:translate-x-2 transition-transform duration-700"
+                />
                 <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
               </Link>
               <a
                 href="#case-studies"
-                className="text-[10px] uppercase tracking-[0.3em] font-bold text-luxury-slate/30 hover:text-luxury-gold transition-colors duration-300"
+                className="text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold text-luxury-slate/30 hover:text-luxury-gold transition-colors duration-300 text-center"
               >
                 See Results First
               </a>
-            </motion.div>
-            <p className="mt-10 text-[10px] uppercase tracking-[0.3em] text-luxury-slate/20 font-bold">
+            </div>
+            <p className="mt-8 sm:mt-10 text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] text-luxury-slate/20 font-bold">
               Free analysis — no pressure, no agency jargon
             </p>
           </div>

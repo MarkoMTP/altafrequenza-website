@@ -141,7 +141,7 @@ export default function Navigation() {
           >
             <div className="flex flex-col items-center justify-center space-y-8 w-full my-auto">
               {navItems
-                .concat([{ label: "Free Business Analysis", path: "/contact" }])
+                .concat([{ label: "Contact", path: "/contact" }])
                 .map((item, i) => (
                   <motion.div
                     key={item.path}
