@@ -56,7 +56,10 @@ export default function Footer() {
               </h4>
               <ul className="space-y-6">
                 {[
-                  ["Google Ads", "/google-ads"],
+                  [
+                    "Wedding Planner Growth System",
+                    "/wedding-planner-growth-system",
+                  ],
                   ["Social Media", "/social-media"],
                   ["Website", "/website"],
                   ["AI Assistant", "/ai-chat-assistant"],
@@ -111,7 +114,7 @@ export default function Footer() {
                 to="/contact"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-white text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold rounded-full hover:bg-luxury-gold transition-all duration-500 shadow-[0_20px_50px_-10px_rgba(255,255,255,0.1)]"
               >
-                Book a Strategy Call
+                Free Business Analysis
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

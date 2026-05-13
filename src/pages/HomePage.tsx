@@ -11,7 +11,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 export default function HomePage() {
   const [email, setEmail] = useState("");
@@ -26,10 +26,10 @@ export default function HomePage() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email }),
-        }
+        },
       );
       if (res.ok) {
-        setStatus("✅ Thanks! Check your email for the guide.");
+        setStatus("✅ Thanks! Check your email for the case study.");
         setEmail("");
       } else {
         setStatus("❌ Something went wrong. Please try again.");
@@ -43,17 +43,17 @@ export default function HomePage() {
   const services = [
     {
       icon: TrendingUp,
-      title: "Google Ads for Wedding Planners & Venues",
-      subtitle: "Get found by couples already searching",
+      title: "Wedding Planner Growth System",
+      subtitle: "Attract better couples and book more dream weddings",
       description:
-        "We build Google Ads systems around the psychology of couples actively searching for a planner or venue, so your business appears at the exact moment they are ready to take action and send a wedding request.",
+        "A request-building system for destination and luxury wedding planners that connects Google Search, Meta Ads, retargeting, a custom landing page, lead magnet, tracking, and wedding request-flow strategy.",
       features: [
-        "Campaigns built around high intent wedding searches",
-        "Messaging shaped around how couples choose who to contact",
-        "Ongoing optimisation based on performance and lead quality",
-        "Strategy adapted to search behaviour, SEO shifts, and newer discovery trends",
+        "Google Search campaigns for couples already looking",
+        "Meta Ads and retargeting to bring warm couples back",
+        "Campaign-specific landing page and lead magnet included",
+        "Tracking and lead-quality review focused on real booking opportunities",
       ],
-      path: "/google-ads",
+      path: "/wedding-planner-growth-system",
     },
     {
       icon: Sparkles,
@@ -62,7 +62,7 @@ export default function HomePage() {
       description:
         "We create a stronger social presence using the psychology of trust, taste, and first impressions, so couples discover your brand, feel more confident in your level, and become more likely to send a wedding request.",
       features: [
-        "Content structured around trust and premium positioning",
+        "Content structured around trust and luxury positioning",
         "Messaging tailored to how couples emotionally evaluate brands",
         "Consistent posting that strengthens visibility and credibility",
         "Creative direction designed for wedding planners and venues specifically",
@@ -99,67 +99,78 @@ export default function HomePage() {
     },
   ];
 
-  // ─── Case studies ────────────────────────────────────────────────────────
   const caseStudies = [
     {
       label: "Destination Wedding Planner — France",
-      headline: "7 bookings. ~ €70K profit.",
+      headline: "5 destination weddings booked. ~€100K planning revenue.",
       subheadline: "6 months. €8K total ad spend.",
       description:
-        "A destination wedding planner working across France had strong creative work but inconsistent lead flow. We built a targeted Google Ads system around couples actively searching for destination weddings in France, structured landing pages around how international couples compare planners, and tightened messaging around the premium multi-location experience they offered.",
+        "A destination wedding planner working across France had strong creative work and a beautiful portfolio, but her inquiry flow was inconsistent. We built a growth system around couples actively researching luxury destination weddings in France, improved the path from search to trust, and refined the messaging around her premium multi-location planning experience.",
       stats: [
-        { value: "60", label: "Leads generated" },
-        { value: "7", label: "Weddings booked" },
-        { value: "~70K", label: "Profit generated" },
+        { value: "55", label: "Qualified requests generated" },
+        { value: "5", label: "Destination weddings booked" },
+        { value: "~€100K", label: "Estimated planning revenue" },
         { value: "6mo", label: "Timeframe" },
       ],
-      services: ["Google Ads", "Landing Pages"],
+      services: ["Growth System", "Landing Page"],
     },
     {
-      label: "Wedding Planner — New York, USA",
-      headline: "16 bookings. $320K profit.",
+      label: "Luxury Wedding Planner — New York, USA",
+      headline: "9 high-end weddings booked. ~$290K planning revenue.",
       subheadline: "10 months. $27K total ad spend.",
       description:
-        "This New York-based planner was relying almost entirely on referrals. We launched a focused Google Ads campaign targeting high-intent wedding searches in the US market, built a conversion-structured landing page, and created a lead flow that brought in consistent enquiries for the first time — at a fraction of what larger agencies charge.",
+        "This New York-based luxury planner was already established, but growth depended heavily on referrals and word of mouth. We built a more predictable growth system around high-intent search, refined the positioning for affluent couples, and created a clearer request flow so serious clients could find the brand, understand the value, and inquire with more confidence.",
       stats: [
-        { value: "100", label: "Leads generated" },
-        { value: "16", label: "Weddings booked" },
-        { value: "$320K", label: "Profit generated" },
+        { value: "64", label: "Qualified requests generated" },
+        { value: "9", label: "High-end weddings booked" },
+        { value: "~$290K", label: "Estimated planning revenue" },
         { value: "10mo", label: "Timeframe" },
       ],
-      services: ["Google Ads", "Landing Page"],
+      services: ["Growth System", "Landing Page"],
     },
     {
-      label: "Wedding Planner — Tuscany, Italy",
-      headline: "3 bookings. €40K profit.",
+      label: "Destination Wedding Planner — Tuscany, Italy",
+      headline: "3 luxury weddings booked. ~€45K planning revenue.",
       subheadline: "4 months. €4.5K total investment.",
       description:
-        "Working with a lower budget than most of our clients, this Tuscany-based planner needed efficient, targeted lead generation without wasted spend. We built a lean Google Ads setup focused on the most conversion-ready search terms, kept targeting tight to couples planning Tuscan weddings, and structured the enquiry flow to pre-qualify leads before they reached her inbox.",
+        "Working with a lower budget than most of our clients, this Tuscany-based planner needed a more efficient way to attract serious international couples without depending only on referrals. We built a focused request system around high-intent search, clearer messaging, and a stronger inquiry path designed to help pre-qualify couples before they reached her inbox.",
       stats: [
-        { value: "30", label: "Leads generated" },
-        { value: "3", label: "Weddings booked" },
-        { value: "€40K", label: "Profit generated" },
+        { value: "24", label: "Qualified requests generated" },
+        { value: "3", label: "Luxury weddings booked" },
+        { value: "~€45K", label: "Estimated planning revenue" },
         { value: "4mo", label: "Timeframe" },
       ],
-      services: ["Google Ads", "Landing Page"],
+      services: ["Growth System", "Landing Page"],
     },
     {
-      label: "Destination Wedding Planner — Italy (Multi-Region)",
-      headline: "16 bookings. €200K profit.",
+      label: "Destination Wedding Planner — Italy Multi-Region",
+      headline: "10 destination weddings booked. ~€180K planning revenue.",
       subheadline: "12 months. €33K total investment.",
       description:
-        "Our most complete engagement. Over a full year we built and optimised Google Ads campaigns, restructured website and landing page copy around how couples search and decide, and created a social presence that positioned this planner as the premium choice in their market. The result was a consistent pipeline of qualified enquiries throughout the year — not occasional spikes.",
+        "Our most complete engagement. Over a full year, we built and optimised a growth system across search, website improvements, landing page copy, and social positioning. The goal was not occasional spikes, but a more consistent pipeline of qualified wedding requests from better-fit international couples planning weddings across Italy’s most desirable regions.",
       stats: [
-        { value: "140", label: "Leads generated" },
-        { value: "16", label: "Weddings booked" },
-        { value: "€200K", label: "Profit generated" },
+        { value: "82", label: "Qualified requests generated" },
+        { value: "10", label: "Destination weddings booked" },
+        { value: "~€180K", label: "Estimated planning revenue" },
         { value: "12mo", label: "Timeframe" },
       ],
-      services: ["Google Ads", "Website", "Social Media"],
+      services: ["Growth System", "Website", "Social Media"],
+    },
+    {
+      label: "Luxury Wedding Planner — Los Angeles, USA",
+      headline: "From 8–10 weddings to 15 booked in one season.",
+      subheadline: "7 months. Full-season growth system.",
+      description:
+        "This Los Angeles luxury planner was already respected in her market, but her seasons were not as predictable as they should have been. Most years, she averaged around 8–10 high-budget weddings, with growth still depending heavily on referrals, Instagram visibility, and vendor relationships. We built a growth system designed to attract more serious high-budget couples, sharpened her positioning, and improved the inquiry journey. Within 7 months, she booked out her season with 15 high-end weddings.",
+      stats: [
+        { value: "52", label: "Qualified requests generated" },
+        { value: "15", label: "High-end weddings booked" },
+        { value: "+5–7", label: "Additional bookings vs. average season" },
+        { value: "7mo", label: "Timeframe" },
+      ],
+      services: ["Growth System", "Landing Page", "Positioning"],
     },
   ];
-
-  // ─── Testimonials ─────────────────────────────────────────────────────────
   const testimonials = [
     {
       quote:
@@ -181,7 +192,7 @@ export default function HomePage() {
     },
   ];
 
-  const fadeIn = {
+  const fadeIn: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -189,7 +200,8 @@ export default function HomePage() {
       transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
     },
   };
-  const staggerContainer = {
+
+  const staggerContainer: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
@@ -197,25 +209,32 @@ export default function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Alta Frequenza | Marketing Agency for Wedding Pros & Venues</title>
+        <title>
+          Alta Frequenza | Marketing for Destination & Luxury Wedding Planners
+        </title>
         <meta
           name="description"
-          content="Alta Frequenza is a marketing agency for wedding pros and venues. We help wedding professionals grow through data-driven Google Ads, AI automation, and premium social media management."
+          content="Alta Frequenza helps destination wedding planners, luxury wedding planners, U.S. wedding planners, high-end regional planners, and wedding venues attract stronger-budget couples and book more dream weddings through growth systems, social media, websites, and AI assistants."
         />
         <meta
           name="keywords"
-          content="wedding planner marketing, wedding venue marketing, wedding planner google ads, google ads for wedding planners, google ads for wedding venues, wedding planner social media, wedding venue social media, wedding planner website design, wedding venue website design, destination wedding planner website, SEO for wedding planners, GEO for wedding businesses, wedding marketing agency, marketing for wedding planners, marketing for wedding venues"
+          content="destination wedding planner marketing, luxury wedding planner marketing, U.S. wedding planner marketing, regional wedding planner marketing, high-end wedding planner marketing, wedding planner growth system, wedding planner lead generation, wedding planner website design, wedding planner social media, wedding venue marketing, marketing for destination wedding planners, marketing for luxury wedding planners, Google Ads for wedding planners, Meta Ads for wedding planners, wedding request system, wedding bookings marketing, dream wedding clients, luxury wedding marketing agency"
         />
-        <meta property="og:title" content="Alta Frequenza | Marketing Agency for Wedding Pros & Venues" />
-        <meta property="og:description" content="Helping wedding professionals grow through Google Ads, social media, and AI automation." />
+        <meta
+          property="og:title"
+          content="Alta Frequenza | Marketing for Destination & Luxury Wedding Planners"
+        />
+        <meta
+          property="og:description"
+          content="Helping destination and luxury wedding planners elevate their brand, attract stronger-budget couples, and book more dream weddings."
+        />
         <meta property="og:image" content="/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/logo.png" />
       </Helmet>
 
       <div className="bg-luxury-champagne text-luxury-slate selection:bg-luxury-gold/30 pt-24 min-h-screen">
-
-        {/* ─── HERO ─────────────────────────────────────────────────────────── */}
+        {/* HERO */}
         <section className="relative h-screen flex items-center justify-center px-6 lg:px-12 overflow-hidden">
           <div className="absolute inset-0 z-0 opacity-40">
             <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-luxury-gold/5 blur-[120px] rounded-full" />
@@ -223,71 +242,89 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-7xl mx-auto text-center relative z-10">
-            <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
               <motion.div
                 variants={fadeIn}
                 className="mb-10 inline-flex items-center gap-3 px-6 py-2 glass border border-luxury-gold/20 text-[10px] uppercase tracking-[0.4em] text-luxury-gold font-bold rounded-full shadow-sm"
               >
                 <Sparkles size={14} />
-                Marketing for Wedding Planners & Venues
+                Marketing for Destination & Luxury Wedding Planners
               </motion.div>
 
               <motion.h1
                 variants={fadeIn}
                 className="text-5xl md:text-8xl font-serif leading-[1.05] mb-10 text-luxury-slate tracking-tight"
               >
-                Turn Your Marketing Into a{" "}
-                <span className="text-luxury-gold italic">Consistent Source</span>{" "}
-                of Wedding Requests
+                Turn Your Marketing Into a Consistent Source of{" "}
+                <span className="text-luxury-gold italic">
+                  Dream Wedding Requests
+                </span>
               </motion.h1>
 
               <motion.p
                 variants={fadeIn}
                 className="text-xl md:text-2xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-6 font-light italic"
               >
-                We help wedding planners and venues become easier to discover, more trusted at
-                first glance, and more likely to receive enquiries from couples with the right budget.
+                Alta Frequenza helps destination and luxury wedding planners
+                attract stronger-budget couples, elevate their online presence,
+                and book more of the weddings they actually want — through
+                growth systems, social media, websites, and AI-powered lead
+                capture.
               </motion.p>
 
-              {/* Social proof strip under hero subtitle */}
               <motion.div
                 variants={fadeIn}
                 className="flex flex-wrap items-center justify-center gap-6 mb-12 text-[10px] uppercase tracking-[0.3em] text-luxury-slate/40 font-bold"
               >
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={12} className="text-luxury-gold" /> 100+ weddings booked for clients
+                  <CheckCircle2 size={12} className="text-luxury-gold" /> 100+
+                  weddings booked for clients
                 </span>
                 <span className="w-px h-4 bg-luxury-gold/20 hidden sm:block" />
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={12} className="text-luxury-gold" /> €1.000.000+ in client profit generated
+                  <CheckCircle2 size={12} className="text-luxury-gold" /> €1M+
+                  in client revenue created
                 </span>
                 <span className="w-px h-4 bg-luxury-gold/20 hidden sm:block" />
                 <span className="flex items-center gap-2">
-                  <CheckCircle2 size={12} className="text-luxury-gold" /> Exclusively for wedding businesses
+                  <CheckCircle2 size={12} className="text-luxury-gold" /> Built
+                  for destination, luxury & high-end wedding planners
                 </span>
               </motion.div>
 
-              <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <motion.div
+                variants={fadeIn}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              >
                 <Link
                   to="/contact"
                   className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
                 >
-                  <span className="relative z-10">Book a Strategy Session</span>
-                  <ArrowRight size={20} className="relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
+                  <span className="relative z-10">
+                    Request My Free Wedding Business Analysis
+                  </span>
+                  <ArrowRight
+                    size={20}
+                    className="relative z-10 group-hover:translate-x-2 transition-transform duration-500"
+                  />
                   <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                 </Link>
                 <a
                   href="#case-studies"
                   className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.3em] font-bold text-luxury-slate/40 hover:text-luxury-gold transition-colors duration-300"
                 >
-                  See Client Results <ArrowRight size={14} />
+                  See Wedding Planner Results <ArrowRight size={14} />
                 </a>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* ─── THE REAL PROBLEM ─────────────────────────────────────────────── */}
+        {/* THE REAL PROBLEM */}
         <section className="py-40 px-6 lg:px-12 bg-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center relative z-10">
             <motion.div
@@ -315,44 +352,56 @@ export default function HomePage() {
               variants={staggerContainer}
               className="text-left"
             >
-              <motion.p variants={fadeIn} className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold">
+              <motion.p
+                variants={fadeIn}
+                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+              >
                 THE REAL PROBLEM
               </motion.p>
               <motion.h2
                 variants={fadeIn}
                 className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight"
               >
-                The Best Wedding Businesses Are{" "}
-                <span className="text-luxury-gold italic">Not Always</span> the Ones Getting Contacted
+                Beautiful Work Does Not Automatically Make You{" "}
+                <span className="text-luxury-gold italic">
+                  the Planner They Choose
+                </span>
               </motion.h2>
-              <motion.div variants={fadeIn} className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed">
+              <motion.div
+                variants={fadeIn}
+                className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed"
+              >
                 <p>
-                  Couples rarely compare every planner or venue in a region. Usually, they contact
-                  the first few businesses that feel visible, professional, and trustworthy.
+                  Many destination and luxury planners have refined portfolios,
+                  elegant events, and happy clients — but their online presence
+                  does not always make couples feel the full value of what they
+                  offer.
                 </p>
                 <p>
-                  If your business is hard to find or your online presence feels unclear, many
-                  couples simply move on without ever contacting you.
+                  When the brand, website, social presence, and request flow are
+                  not strong enough, high-budget couples may compare you, feel
+                  unsure, and choose another planner who simply appears more
+                  clear, trusted, and desirable.
                 </p>
                 <p className="italic text-luxury-slate font-medium text-2xl border-l-[3px] border-luxury-gold pl-8 py-2">
-                  This is not just a service problem. It is often a visibility and trust problem.
+                  The real problem is not just visibility. It is becoming the
+                  obvious choice for the weddings you actually want.
                 </p>
               </motion.div>
 
-              {/* Inline CTA */}
               <motion.div variants={fadeIn} className="mt-12">
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-3 px-8 py-4 border border-luxury-gold/30 text-luxury-slate text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-slate hover:text-white hover:border-luxury-slate transition-all duration-500 rounded-full"
                 >
-                  Fix Your Visibility <ArrowRight size={16} />
+                  Contact Us Now <ArrowRight size={16} />
                 </Link>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
-        {/* ─── HOW COUPLES DISCOVER YOU ────────────────────────────────────── */}
+        {/* HOW COUPLES CHOOSE YOU */}
         <section className="py-40 px-6 lg:px-12 bg-luxury-champagne border-y border-luxury-gold/5">
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
             <motion.div
@@ -361,28 +410,40 @@ export default function HomePage() {
               viewport={{ once: true }}
               variants={staggerContainer}
             >
-              <motion.p variants={fadeIn} className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold">
-                HOW COUPLES DISCOVER YOU
+              <motion.p
+                variants={fadeIn}
+                className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
+              >
+                HOW COUPLES CHOOSE YOU
               </motion.p>
               <motion.h2
                 variants={fadeIn}
                 className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight"
               >
-                Most Couples Begin Their{" "}
-                <span className="text-luxury-gold italic">Search</span> Online
+                Couples Do Not Book the Best Planner. They Book the One They{" "}
+                <span className="text-luxury-gold italic">
+                  Trust and Desire Most
+                </span>
               </motion.h2>
-              <motion.div variants={fadeIn} className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed">
+              <motion.div
+                variants={fadeIn}
+                className="space-y-8 text-xl text-luxury-slate/60 font-light leading-relaxed"
+              >
                 <p>
-                  Before couples contact you, they search. They look for planners, venues, ideas,
-                  and inspiration in the exact region where they want to get married.
+                  Couples search, compare, revisit websites, check Instagram,
+                  read reviews, look for reassurance, and then decide who feels
+                  safe, premium, and worth contacting.
                 </p>
                 <p>
-                  The businesses that get discovered first are usually the ones that receive the
-                  first wedding requests — and stay in the running.
+                  That is why a strong marketing system cannot rely on one
+                  channel alone. Search creates intent, social builds trust, the
+                  website shapes desire, and retargeting keeps your brand in
+                  their mind while they decide.
                 </p>
                 <p className="font-bold text-luxury-slate uppercase tracking-widest text-xs mt-12 bg-luxury-gold/10 px-6 py-3 rounded-full inline-block">
-                  When your marketing is structured properly, couples searching for weddings in your
-                  area are far more likely to find you first.
+                  When these pieces work together, your brand becomes easier to
+                  discover, harder to forget, and more likely to receive the
+                  wedding requests you actually want.
                 </p>
               </motion.div>
             </motion.div>
@@ -404,8 +465,7 @@ export default function HomePage() {
           </div>
         </section>
 
-
-        {/* ─── FIRST IMPRESSIONS ───────────────────────────────────────────── */}
+        {/* FIRST IMPRESSIONS */}
         <section className="py-40 px-6 lg:px-12 bg-white text-center relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-luxury-gold/5 blur-[150px] rounded-full pointer-events-none" />
           <div className="max-w-5xl mx-auto relative z-10">
@@ -423,8 +483,10 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-4xl md:text-7xl font-serif text-luxury-slate mb-12 tracking-tight leading-tight"
             >
-              Couples Form an Opinion About Your Brand in{" "}
-              <span className="text-luxury-gold italic">Seconds</span>
+              Your Brand Should Make Luxury Couples Feel{" "}
+              <span className="text-luxury-gold italic">
+                They Found the One
+              </span>
             </motion.h2>
 
             <motion.div
@@ -449,16 +511,17 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-xl text-luxury-slate/60 max-w-4xl mx-auto leading-relaxed mb-16 font-light italic"
             >
-              Before reaching out, many couples will quickly look at your website, your Instagram, and
-              the way your brand presents itself. A stronger online presence increases confidence and
-              makes a wedding request feel like a safer next step.
+              Before reaching out, many couples will quickly look at your
+              website, your Instagram, and the way your brand presents itself. A
+              stronger online presence increases desire, confidence, and the
+              feeling that your planning service is worth contacting.
             </motion.p>
 
             <div className="grid md:grid-cols-3 gap-12 mt-20">
               {[
                 "Raises perceived value instantly",
                 "Builds trust before the first message",
-                "Helps you stand out from similar competitors",
+                "Makes your brand feel like the premium choice",
               ].map((text, i) => (
                 <motion.div
                   key={i}
@@ -469,7 +532,10 @@ export default function HomePage() {
                   className="text-center group"
                 >
                   <div className="w-12 h-12 bg-luxury-slate text-white rounded-2xl mx-auto mb-6 flex items-center justify-center group-hover:bg-luxury-gold group-hover:-translate-y-2 transition-all duration-500 shadow-xl">
-                    <Star size={20} className="group-hover:rotate-12 transition-transform" />
+                    <Star
+                      size={20}
+                      className="group-hover:rotate-12 transition-transform"
+                    />
                   </div>
                   <p className="text-luxury-slate font-bold uppercase tracking-widest text-[10px] leading-relaxed">
                     {text}
@@ -480,8 +546,7 @@ export default function HomePage() {
           </div>
         </section>
 
-
-        {/* ─── CASE STUDIES ─────────────────────────────────────────────────── */}
+        {/* CASE STUDIES */}
         <section id="case-studies" className="py-40 px-6 lg:px-12 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
@@ -499,8 +564,8 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="text-4xl md:text-7xl font-serif text-luxury-slate mb-8 tracking-tight"
               >
-                What Happens When{" "}
-                <span className="text-luxury-gold italic">Marketing Actually Works</span>
+                What Happens When Your Marketing Starts Attracting{" "}
+                <span className="text-luxury-gold italic">Better Weddings</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -508,8 +573,9 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="text-xl text-luxury-slate/40 max-w-3xl mx-auto font-light leading-relaxed"
               >
-                Real results from wedding businesses we work with. Not impressions. Not followers.
-                Actual wedding requests from couples with the right budget.
+                Real results from wedding businesses we work with. Not
+                impressions. Not followers. Actual wedding requests, booked
+                weddings, and stronger opportunities.
               </motion.p>
             </div>
 
@@ -520,55 +586,63 @@ export default function HomePage() {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-                  className={`rounded-[3rem] border border-luxury-gold/10 overflow-hidden grid lg:grid-cols-2 ${index % 2 === 0 ? "bg-luxury-champagne/30" : "bg-luxury-slate text-white"
-                    }`}
+                  transition={{
+                    delay: index * 0.1,
+                    duration: 0.9,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className={`rounded-[3rem] border border-luxury-gold/10 overflow-hidden grid lg:grid-cols-2 ${
+                    index % 2 === 0
+                      ? "bg-luxury-champagne/30"
+                      : "bg-luxury-slate text-white"
+                  }`}
                 >
-                  {/* Stats side */}
                   <div
-                    className={`p-14 lg:p-20 flex flex-col justify-between ${index % 2 !== 0 ? "order-last" : ""
-                      }`}
+                    className={`p-14 lg:p-20 flex flex-col justify-between ${
+                      index % 2 !== 0 ? "order-last" : ""
+                    }`}
                   >
                     <div>
-                      <p
-                        className={`text-[10px] uppercase tracking-[0.4em] font-bold mb-6 ${index % 2 === 0 ? "text-luxury-gold" : "text-luxury-gold"
-                          }`}
-                      >
+                      <p className="text-[10px] uppercase tracking-[0.4em] font-bold mb-6 text-luxury-gold">
                         {cs.label}
                       </p>
                       <h3
-                        className={`text-4xl md:text-5xl font-serif mb-3 tracking-tight leading-tight ${index % 2 === 0 ? "text-luxury-slate" : "text-white"
-                          }`}
+                        className={`text-4xl md:text-5xl font-serif mb-3 tracking-tight leading-tight ${
+                          index % 2 === 0 ? "text-luxury-slate" : "text-white"
+                        }`}
                       >
                         {cs.headline}
                       </h3>
                       <p
-                        className={`text-xl italic mb-12 ${index % 2 === 0 ? "text-luxury-slate/50" : "text-white/50"
-                          }`}
+                        className={`text-xl italic mb-12 ${
+                          index % 2 === 0
+                            ? "text-luxury-slate/50"
+                            : "text-white/50"
+                        }`}
                       >
                         {cs.subheadline}
                       </p>
                     </div>
 
-                    {/* Stat grid */}
                     <div className="grid grid-cols-2 gap-6 mb-12">
                       {cs.stats.map((stat, i) => (
                         <div
                           key={i}
-                          className={`p-6 rounded-2xl ${index % 2 === 0
-                            ? "bg-white border border-luxury-gold/10"
-                            : "bg-white/5 border border-white/10"
-                            }`}
+                          className={`p-6 rounded-2xl ${
+                            index % 2 === 0
+                              ? "bg-white border border-luxury-gold/10"
+                              : "bg-white/5 border border-white/10"
+                          }`}
                         >
-                          <div
-                            className={`text-3xl md:text-4xl font-serif mb-1 ${index % 2 === 0 ? "text-luxury-gold" : "text-luxury-gold"
-                              }`}
-                          >
+                          <div className="text-3xl md:text-4xl font-serif mb-1 text-luxury-gold">
                             {stat.value}
                           </div>
                           <div
-                            className={`text-[10px] uppercase tracking-[0.3em] font-bold ${index % 2 === 0 ? "text-luxury-slate/40" : "text-white/30"
-                              }`}
+                            className={`text-[10px] uppercase tracking-[0.3em] font-bold ${
+                              index % 2 === 0
+                                ? "text-luxury-slate/40"
+                                : "text-white/30"
+                            }`}
                           >
                             {stat.label}
                           </div>
@@ -576,15 +650,15 @@ export default function HomePage() {
                       ))}
                     </div>
 
-                    {/* Service tags */}
                     <div className="flex flex-wrap gap-3">
                       {cs.services.map((s, i) => (
                         <span
                           key={i}
-                          className={`px-4 py-2 rounded-full text-[10px] uppercase tracking-[0.3em] font-bold border ${index % 2 === 0
-                            ? "border-luxury-gold/20 text-luxury-gold"
-                            : "border-white/10 text-white/40"
-                            }`}
+                          className={`px-4 py-2 rounded-full text-[10px] uppercase tracking-[0.3em] font-bold border ${
+                            index % 2 === 0
+                              ? "border-luxury-gold/20 text-luxury-gold"
+                              : "border-white/10 text-white/40"
+                          }`}
                         >
                           {s}
                         </span>
@@ -592,34 +666,37 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  {/* Description side */}
                   <div
-                    className={`p-14 lg:p-20 flex flex-col justify-center ${index % 2 !== 0
-                      ? "border-r border-white/5"
-                      : "border-l border-luxury-gold/5"
-                      }`}
+                    className={`p-14 lg:p-20 flex flex-col justify-center ${
+                      index % 2 !== 0
+                        ? "border-r border-white/5"
+                        : "border-l border-luxury-gold/5"
+                    }`}
                   >
                     <p
-                      className={`text-xl font-light leading-relaxed mb-12 ${index % 2 === 0 ? "text-luxury-slate/60" : "text-white/60"
-                        }`}
+                      className={`text-xl font-light leading-relaxed mb-12 ${
+                        index % 2 === 0
+                          ? "text-luxury-slate/60"
+                          : "text-white/60"
+                      }`}
                     >
                       {cs.description}
                     </p>
                     <Link
                       to="/contact"
-                      className={`inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] font-bold transition-colors duration-300 ${index % 2 === 0
-                        ? "text-luxury-slate hover:text-luxury-gold"
-                        : "text-white hover:text-luxury-gold"
-                        }`}
+                      className={`inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.4em] font-bold transition-colors duration-300 ${
+                        index % 2 === 0
+                          ? "text-luxury-slate hover:text-luxury-gold"
+                          : "text-white hover:text-luxury-gold"
+                      }`}
                     >
-                      Get results like this <ArrowRight size={16} />
+                      Request Your Free Analysis <ArrowRight size={16} />
                     </Link>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* Mid-page CTA after case studies */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -630,8 +707,13 @@ export default function HomePage() {
                 to="/contact"
                 className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
               >
-                <span className="relative z-10">Start Attracting Better Couples</span>
-                <ArrowRight size={20} className="relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
+                <span className="relative z-10">
+                  Request Your Free Wedding Business Analysis
+                </span>
+                <ArrowRight
+                  size={20}
+                  className="relative z-10 group-hover:translate-x-2 transition-transform duration-500"
+                />
                 <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
               </Link>
               <p className="mt-6 text-[10px] uppercase tracking-[0.3em] text-luxury-slate/30 font-bold">
@@ -641,7 +723,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ─── TESTIMONIALS ────────────────────────────────────────────────── */}
+        {/* TESTIMONIALS */}
         <section className="py-40 px-6 lg:px-12 bg-luxury-champagne border-y border-luxury-gold/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-24">
@@ -660,7 +742,10 @@ export default function HomePage() {
                 className="text-4xl md:text-6xl font-serif text-luxury-slate tracking-tight"
               >
                 From the{" "}
-                <span className="text-luxury-gold italic">Wedding Professionals</span> We Work With
+                <span className="text-luxury-gold italic">
+                  Wedding Professionals
+                </span>{" "}
+                We Work With
               </motion.h2>
             </div>
 
@@ -679,7 +764,9 @@ export default function HomePage() {
                     "{t.quote}"
                   </p>
                   <div className="border-t border-luxury-gold/10 pt-8">
-                    <p className="text-sm font-bold text-luxury-slate">{t.author}</p>
+                    <p className="text-sm font-bold text-luxury-slate">
+                      {t.author}
+                    </p>
                     <p className="text-[10px] uppercase tracking-[0.3em] text-luxury-gold font-bold mt-1">
                       {t.role}
                     </p>
@@ -690,9 +777,7 @@ export default function HomePage() {
           </div>
         </section>
 
-
-
-        {/* ─── SERVICES ─────────────────────────────────────────────────────── */}
+        {/* SERVICES */}
         <section className="py-40 px-6 lg:px-12 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-32">
@@ -710,8 +795,10 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="text-4xl md:text-7xl font-serif text-luxury-slate mb-8 tracking-tight"
               >
-                The Systems Behind{" "}
-                <span className="text-luxury-gold italic">More Wedding Requests</span>
+                Marketing Systems Built Around{" "}
+                <span className="text-luxury-gold italic">
+                  Dream Weddings & Better Bookings
+                </span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -719,8 +806,10 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="text-xl text-luxury-slate/40 max-w-3xl mx-auto font-light leading-relaxed"
               >
-                We help wedding businesses become easier to find, stronger at first impression, and
-                more consistent in turning online attention into real wedding requests.
+                We help destination wedding planners, luxury wedding planners,
+                high-end regional planners, and venues become more desirable,
+                easier to trust, and more likely to receive serious wedding
+                requests from better-fit couples.
               </motion.p>
             </div>
 
@@ -749,9 +838,14 @@ export default function HomePage() {
                     </p>
                     <ul className="space-y-4 mb-12">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-4 text-sm font-medium tracking-wide leading-relaxed">
+                        <li
+                          key={idx}
+                          className="flex items-start gap-4 text-sm font-medium tracking-wide leading-relaxed"
+                        >
                           <div className="w-1.5 h-1.5 bg-luxury-gold rounded-full mt-1.5 flex-shrink-0" />
-                          <span className="group-hover:text-white/80">{feature}</span>
+                          <span className="group-hover:text-white/80">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -768,7 +862,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ─── CASE STUDY LEAD MAGNET ───────────────────────────────────────── */}
+        {/* CASE STUDY LEAD MAGNET */}
         <section className="py-40 px-6 lg:px-12 bg-luxury-slate text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-luxury-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2" />
           <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -786,7 +880,8 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-4xl md:text-7xl font-serif mb-10 leading-tight tracking-tight"
             >
-              100+ Weddings. €1M Profit.{" "}
+              See How We Helped a Wedding Planner Book More of the Right
+              Weddings
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -794,8 +889,11 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-xl text-white/40 mb-16 font-light italic leading-relaxed"
             >
-              Get the full breakdown of how we built a consistent lead system for  wedding planners across the world — what we changed, why it worked, and how you could
-              apply the same framework to your business.
+              Receive the full breakdown of how we helped a wedding planner
+              generate consistent wedding requests, attract better-fit couples,
+              and fill her season more calmly — including what we changed, why
+              it worked, and how the same framework could apply to your
+              business.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -831,7 +929,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ─── APPROACH ─────────────────────────────────────────────────────── */}
+        {/* APPROACH */}
         <section className="py-40 px-6 lg:px-12 bg-white text-luxury-slate">
           <div className="max-w-7xl mx-auto text-center">
             <motion.p
@@ -848,8 +946,10 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-4xl md:text-7xl font-serif mb-12 tracking-tight leading-tight"
             >
-              More Visibility. More Trust.{" "}
-              <span className="text-luxury-gold italic">More Consistent Wedding Requests.</span>
+              Search. Trust. Desire.{" "}
+              <span className="text-luxury-gold italic">
+                A Clearer Path to Dream Weddings.
+              </span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -857,23 +957,24 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-xl font-light text-luxury-slate/40 mb-24 max-w-4xl mx-auto leading-relaxed"
             >
-              Couples need to discover you, trust you quickly, and feel confident enough to
-              contact you. Our approach is built around those three steps.
+              Couples rarely book from one touchpoint. They search, compare,
+              revisit, check your online presence, and then decide who feels
+              worth contacting. Our approach is built around that full journey.
             </motion.p>
 
             <div className="grid md:grid-cols-3 gap-12 text-left">
               {[
                 {
                   title: "Visibility",
-                  desc: "Help your business appear where couples are already looking for planners and venues across search, social, SEO, and newer AI driven discovery.",
+                  desc: "Help serious couples discover your business when they are actively searching for a destination, luxury, or high-end wedding planner.",
                 },
                 {
-                  title: "Trust",
-                  desc: "Create a stronger online presence that makes your brand feel credible, polished, premium, and worth contacting.",
+                  title: "Desire",
+                  desc: "Strengthen the way your brand appears across your website, social presence, landing pages, and first impression points so couples feel drawn to your level.",
                 },
                 {
-                  title: "Conversion",
-                  desc: "Build systems that turn attention into wedding requests more efficiently by matching how couples actually browse, compare, and decide.",
+                  title: "Follow-Up",
+                  desc: "Use retargeting, lead magnets, and clearer request flows to bring warm couples back and move them closer to sending a serious wedding request.",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -899,7 +1000,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ─── FINAL CTA ────────────────────────────────────────────────────── */}
+        {/* FINAL CTA */}
         <section className="py-40 px-6 lg:px-12 bg-luxury-sand/10 relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-luxury-gold to-transparent opacity-20" />
           <div className="max-w-5xl mx-auto text-center relative z-10">
@@ -909,8 +1010,10 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-4xl md:text-8xl font-serif text-luxury-slate mb-12 tracking-tight leading-[1.1]"
             >
-              Ready to Attract{" "}
-              <span className="text-luxury-gold italic">More Wedding Requests?</span>
+              Ready to Become the Planner{" "}
+              <span className="text-luxury-gold italic">
+                Better Couples Want to Book?
+              </span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -918,9 +1021,10 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="text-xl text-luxury-slate/40 mb-20 font-light leading-relaxed max-w-4xl mx-auto"
             >
-              If you want your marketing to stop feeling inconsistent and start bringing in more of
-              the right couples, the next step is a simple conversation to see what would make the
-              most sense for your business.
+              If you want to attract stronger-budget couples, elevate the way
+              your brand is perceived, and book more weddings that fit your
+              vision, the next step is a simple conversation about your market,
+              positioning, and current request flow.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -933,8 +1037,11 @@ export default function HomePage() {
                 className="group relative inline-flex items-center justify-center gap-6 px-16 py-8 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.4em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-[0_40px_100px_-20px_rgba(15,23,42,0.3)] overflow-hidden"
               >
                 <span className="relative z-10 flex items-center gap-6">
-                  Book Your Consultation
-                  <ArrowRight size={24} className="group-hover:translate-x-2 transition-transform duration-700" />
+                  Request Your Free Wedding Business Analysis
+                  <ArrowRight
+                    size={24}
+                    className="group-hover:translate-x-2 transition-transform duration-700"
+                  />
                 </span>
                 <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
               </Link>
@@ -946,7 +1053,7 @@ export default function HomePage() {
               </a>
             </motion.div>
             <p className="mt-10 text-[10px] uppercase tracking-[0.3em] text-luxury-slate/20 font-bold">
-              Free 30-min session — no agency jargon, no pressure
+              Free analysis — no pressure, no agency jargon
             </p>
           </div>
         </section>

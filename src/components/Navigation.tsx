@@ -39,7 +39,10 @@ export default function Navigation() {
   const navItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Google Ads", path: "/google-ads" },
+    {
+      label: "Wedding Planner Growth System",
+      path: "/wedding-planner-growth-system",
+    },
     { label: "Social Media", path: "/social-media" },
     { label: "Website", path: "/website" },
     { label: "AI Assistant", path: "/ai-chat-assistant" },
@@ -49,20 +52,20 @@ export default function Navigation() {
   const menuVariants = {
     closed: {
       opacity: 0,
-      transition: { duration: 0.3 }
+      transition: { duration: 0.3 },
     },
     opened: {
       opacity: 1,
-      transition: { duration: 0.3 }
-    }
+      transition: { duration: 0.3 },
+    },
   };
 
   return (
     <>
-      <header 
+      <header
         className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ${
           scrolled || mobileMenuOpen
-            ? "bg-white border-b border-luxury-gold/10 py-4 shadow-sm" 
+            ? "bg-white border-b border-luxury-gold/10 py-4 shadow-sm"
             : "bg-transparent py-6 md:py-8"
         }`}
       >
@@ -72,31 +75,38 @@ export default function Navigation() {
               to="/"
               className="text-2xl md:text-3xl font-serif text-luxury-slate tracking-titer transition-all hover:opacity-70 group relative z-[10001]"
             >
-              Alta <span className="text-luxury-gold group-hover:italic transition-all duration-500">Frequenza</span>
+              Alta{" "}
+              <span className="text-luxury-gold group-hover:italic transition-all duration-500">
+                Frequenza
+              </span>
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center space-x-10">
+            <div className="hidden xl:flex items-center gap-7">
               {navItems.map((item) => (
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`text-[10px] uppercase tracking-[0.3em] font-bold transition-all relative group ${
-                    location.pathname === item.path 
-                      ? "text-luxury-gold" 
+                  className={`text-[10px] uppercase tracking-[0.18em] font-bold transition-all relative group ${
+                    location.pathname === item.path
+                      ? "text-luxury-gold"
                       : "text-luxury-slate/60 hover:text-luxury-slate"
                   }`}
                 >
                   {item.label}
-                  <span className={`absolute -bottom-1.5 left-0 h-[1px] bg-luxury-gold transition-all duration-500 ${
-                    location.pathname === item.path ? "w-full" : "w-0 group-hover:w-full"
-                  }`} />
+                  <span
+                    className={`absolute -bottom-1.5 left-0 h-[1px] bg-luxury-gold transition-all duration-500 ${
+                      location.pathname === item.path
+                        ? "w-full"
+                        : "w-0 group-hover:w-full"
+                    }`}
+                  />
                 </Link>
               ))}
 
               <Link
                 to="/contact"
-                className="px-8 py-3.5 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold rounded-full hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-500 shadow-xl"
+                className="px-7 py-3.5 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.2em] font-bold rounded-full hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-500 shadow-xl"
               >
                 Contact
               </Link>
@@ -104,11 +114,15 @@ export default function Navigation() {
 
             {/* Mobile Toggle Button */}
             <button
-              className="lg:hidden text-luxury-slate p-2 relative z-[10001] flex items-center justify-center bg-transparent border-none outline-none"
+              className="xl:hidden text-luxury-slate p-2 relative z-[10001] flex items-center justify-center bg-transparent border-none outline-none"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X size={28} className="text-luxury-slate" /> : <Menu size={28} className="text-luxury-slate" />}
+              {mobileMenuOpen ? (
+                <X size={28} className="text-luxury-slate" />
+              ) : (
+                <Menu size={28} className="text-luxury-slate" />
+              )}
             </button>
           </div>
         </div>
@@ -123,10 +137,12 @@ export default function Navigation() {
             animate="opened"
             exit="closed"
             className="fixed inset-0 bg-white z-[9998] flex flex-col pt-32 pb-12 px-12 overflow-y-auto"
-            style={{ minHeight: '100vh', width: '100vw' }}
+            style={{ minHeight: "100vh", width: "100vw" }}
           >
-             <div className="flex flex-col items-center justify-center space-y-8 w-full my-auto">
-                {navItems.concat([{ label: "Contact", path: "/contact" }]).map((item, i) => (
+            <div className="flex flex-col items-center justify-center space-y-8 w-full my-auto">
+              {navItems
+                .concat([{ label: "Free Business Analysis", path: "/contact" }])
+                .map((item, i) => (
                   <motion.div
                     key={item.path}
                     initial={{ opacity: 0, y: 15 }}
@@ -137,7 +153,9 @@ export default function Navigation() {
                     <Link
                       to={item.path}
                       className={`text-3xl font-serif transition-all block py-2 ${
-                         location.pathname === item.path ? "text-luxury-gold italic" : "text-luxury-slate"
+                        location.pathname === item.path
+                          ? "text-luxury-gold italic"
+                          : "text-luxury-slate"
                       } active:text-luxury-gold`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -145,12 +163,14 @@ export default function Navigation() {
                     </Link>
                   </motion.div>
                 ))}
-             </div>
-             
-             {/* Decorative AF branding in mobile menu footer */}
-             <div className="mt-auto pt-10 text-center opacity-[0.05] select-none pointer-events-none">
-                <span className="text-[25vw] font-serif leading-none block">AF</span>
-             </div>
+            </div>
+
+            {/* Decorative AF branding in mobile menu footer */}
+            <div className="mt-auto pt-10 text-center opacity-[0.05] select-none pointer-events-none">
+              <span className="text-[25vw] font-serif leading-none block">
+                AF
+              </span>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

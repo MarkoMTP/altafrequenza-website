@@ -44,26 +44,26 @@ function ScrollToTop() {
   return null;
 }
 
-import Lenis from 'lenis';
-import 'lenis/dist/lenis.css';
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 function CustomCursor() {
   useEffect(() => {
-    const cursor = document.getElementById('custom-cursor');
+    const cursor = document.getElementById("custom-cursor");
     const moveCursor = (e: MouseEvent) => {
       if (cursor) {
         cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
       }
     };
-    window.addEventListener('mousemove', moveCursor);
-    return () => window.removeEventListener('mousemove', moveCursor);
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
   }, []);
 
   return (
-    <div 
-      id="custom-cursor" 
+    <div
+      id="custom-cursor"
       className="custom-cursor hidden md:block"
-      style={{ top: '-10px', left: '-10px' }}
+      style={{ top: "-10px", left: "-10px" }}
     />
   );
 }
@@ -73,8 +73,8 @@ function App() {
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
+      orientation: "vertical",
+      gestureOrientation: "vertical",
       smoothWheel: true,
       wheelMultiplier: 1,
       touchMultiplier: 2,
@@ -111,7 +111,10 @@ function App() {
             <Route path="/ai-chat-assistant" element={<AssistantPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/google-ads" element={<GrowthSystemPage />} />
+            <Route
+              path="/wedding-planner-growth-system"
+              element={<GrowthSystemPage />}
+            />
             <Route path="/social-media" element={<SocialMediaPage />} />
             <Route path="/website" element={<WebsitesPage />} />
             <Route
@@ -144,7 +147,10 @@ function App() {
               path="/blog/premium-brand-identity"
               element={<PremiumBrandIdentity />}
             />
-            <Route path="/blog/website-must-haves-2026" element={<WebsiteMustHaves2026 />} />
+            <Route
+              path="/blog/website-must-haves-2026"
+              element={<WebsiteMustHaves2026 />}
+            />
             <Route path="/blog/google-ads-guide" element={<GoogleAdsGuide />} />
             <Route
               path="/blog/why-socialmedia-matters"

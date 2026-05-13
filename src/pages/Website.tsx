@@ -5,7 +5,7 @@ import {
   Layout,
   CheckCircle,
   TrendingUp,
-  Award
+  Award,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -17,8 +17,8 @@ export default function WebsitesPage() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any }
-    }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as any },
+    },
   };
 
   const staggerContainer = {
@@ -26,9 +26,9 @@ export default function WebsitesPage() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15
-      }
-    }
+        staggerChildren: 0.15,
+      },
+    },
   };
 
   return (
@@ -47,8 +47,14 @@ export default function WebsitesPage() {
           name="keywords"
           content="wedding planner website design, destination wedding planner website, wedding landing pages, luxury wedding planner website, conversion website wedding planner"
         />
-        <meta property="og:title" content="Websites & Landing Pages for Wedding Pros" />
-        <meta property="og:description" content="Turn your website into a source of high quality wedding requests." />
+        <meta
+          property="og:title"
+          content="Websites & Landing Pages for Wedding Pros"
+        />
+        <meta
+          property="og:description"
+          content="Turn your website into a source of high quality wedding requests."
+        />
         <meta property="og:image" content="/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/logo.png" />
@@ -81,7 +87,9 @@ export default function WebsitesPage() {
                 variants={fadeIn}
                 className="text-5xl md:text-8xl font-serif text-luxury-slate mb-10 leading-[1.05] tracking-tight"
               >
-                Turn Your Website Into a <span className="text-luxury-gold italic">Steady Source</span> of High Quality Wedding Requests
+                Turn Your Website Into a{" "}
+                <span className="text-luxury-gold italic">Steady Source</span>{" "}
+                of High Quality Wedding Requests
               </motion.h1>
 
               <motion.p
@@ -100,7 +108,10 @@ export default function WebsitesPage() {
                   className="group relative inline-flex items-center justify-center gap-4 px-12 py-6 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden"
                 >
                   <span className="relative z-10">Discuss Your Website</span>
-                  <ArrowRight size={20} className="relative z-10 group-hover:translate-x-2 transition-transform duration-500" />
+                  <ArrowRight
+                    size={20}
+                    className="relative z-10 group-hover:translate-x-2 transition-transform duration-500"
+                  />
                   <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                 </Link>
               </motion.div>
@@ -125,7 +136,10 @@ export default function WebsitesPage() {
               viewport={{ once: true }}
               className="text-4xl md:text-6xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight"
             >
-              We Redesign the <span className="text-luxury-gold italic">Entire Visitor Journey</span>
+              We Redesign the{" "}
+              <span className="text-luxury-gold italic">
+                Entire Visitor Journey
+              </span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -165,11 +179,16 @@ export default function WebsitesPage() {
                     "Fast, modern design",
                     "Premium visual presentation",
                     "Mobile first experience",
-                    "A stronger first impression from the first second"
+                    "A stronger first impression from the first second",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3 group">
-                      <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-bold uppercase tracking-widest text-luxury-slate/60 group-hover:text-luxury-slate transition-colors">{item}</span>
+                      <CheckCircle
+                        size={18}
+                        className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform"
+                      />
+                      <span className="text-sm font-bold uppercase tracking-widest text-luxury-slate/60 group-hover:text-luxury-slate transition-colors">
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -219,11 +238,16 @@ export default function WebsitesPage() {
                     "Clear messaging for high end destination couples",
                     "Stronger trust throughout the page",
                     "Pages structured around decision making",
-                    "A smoother path toward contacting you"
+                    "A smoother path toward contacting you",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3 group">
-                      <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-bold uppercase tracking-widest text-luxury-slate/60 group-hover:text-luxury-slate transition-colors">{item}</span>
+                      <CheckCircle
+                        size={18}
+                        className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform"
+                      />
+                      <span className="text-sm font-bold uppercase tracking-widest text-luxury-slate/60 group-hover:text-luxury-slate transition-colors">
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -242,7 +266,8 @@ export default function WebsitesPage() {
                   <TrendingUp size={28} />
                 </div>
                 <h3 className="text-3xl md:text-5xl font-serif text-luxury-slate mb-8 leading-tight">
-                  3. A Website That Converts More of the Traffic You Already Have
+                  3. A Website That Converts More of the Traffic You Already
+                  Have
                 </h3>
 
                 <p className="text-luxury-slate/60 text-lg mb-10 font-light leading-relaxed">
@@ -256,11 +281,16 @@ export default function WebsitesPage() {
                     "Inquiry forms designed to attract better budget weddings",
                     "Better page structure for conversions",
                     "Faster loading speed and stronger mobile performance",
-                    "SEO foundations so couples can actually find you"
+                    "SEO foundations so couples can actually find you",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3 group">
-                      <CheckCircle size={18} className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform" />
-                      <span className="text-sm font-bold uppercase tracking-widest text-luxury-slate/60 group-hover:text-luxury-slate transition-colors">{item}</span>
+                      <CheckCircle
+                        size={18}
+                        className="text-luxury-gold mt-1 group-hover:scale-110 transition-transform"
+                      />
+                      <span className="text-sm font-bold uppercase tracking-widest text-luxury-slate/60 group-hover:text-luxury-slate transition-colors">
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -298,7 +328,9 @@ export default function WebsitesPage() {
               viewport={{ once: true }}
               className="text-4xl md:text-6xl font-serif mb-10 tracking-tight leading-tight"
             >
-              Because Most Wedding Websites Work Like <span className="text-luxury-gold italic">Portfolios</span>, Not Acquisition Systems
+              Because Most Wedding Websites Work Like{" "}
+              <span className="text-luxury-gold italic">Portfolios</span>, Not
+              Acquisition Systems
             </motion.h2>
 
             <motion.p
@@ -321,7 +353,7 @@ export default function WebsitesPage() {
                 "Better conversion from traffic you already have",
                 "Fewer confused visitors leaving the site",
                 "A clearer premium position in your market",
-                "More wedding requests from the right type of couples"
+                "More wedding requests from the right type of couples",
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -332,7 +364,9 @@ export default function WebsitesPage() {
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-1.5 h-1.5 bg-luxury-gold rounded-full group-hover:scale-150 transition-transform" />
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 group-hover:text-white transition-colors leading-relaxed">{item}</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/50 group-hover:text-white transition-colors leading-relaxed">
+                    {item}
+                  </span>
                 </motion.div>
               ))}
             </div>
@@ -356,7 +390,8 @@ export default function WebsitesPage() {
               viewport={{ once: true }}
               className="text-4xl md:text-7xl font-serif text-luxury-slate mb-10 tracking-tight leading-tight"
             >
-              Not Just a <span className="text-luxury-gold italic">Beautiful Website</span>
+              Not Just a{" "}
+              <span className="text-luxury-gold italic">Beautiful Website</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -375,16 +410,16 @@ export default function WebsitesPage() {
             {[
               {
                 title: "Built for Wedding Planners and Venues",
-                desc: "Your site is shaped around how couples actually choose a planner, not around generic design trends."
+                desc: "Your site is shaped around how couples actually choose a planner, not around generic design trends.",
               },
               {
                 title: "Focused on Better Wedding Requests",
-                desc: "The goal is not just more traffic. The goal is more of the right couples contacting you."
+                desc: "The goal is not just more traffic. The goal is more of the right couples contacting you.",
               },
               {
                 title: "Designed to Work With Your Marketing",
-                desc: "Whether visitors come from ads, Instagram, Pinterest, or referrals, the site is built to convert more of them."
-              }
+                desc: "Whether visitors come from ads, Instagram, Pinterest, or referrals, the site is built to convert more of them.",
+              },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -394,7 +429,9 @@ export default function WebsitesPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-12 rounded-[3.5rem] border border-luxury-gold/10 shadow-sm hover:shadow-2xl transition-all duration-700"
               >
-                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">Pillar 0{i + 1}</div>
+                <div className="text-luxury-gold font-bold text-[10px] uppercase tracking-[0.4em] mb-10">
+                  Pillar 0{i + 1}
+                </div>
                 <h3 className="text-xl font-bold uppercase tracking-[0.1em] text-luxury-slate mb-6">
                   {item.title}
                 </h3>
@@ -405,8 +442,6 @@ export default function WebsitesPage() {
             ))}
           </div>
         </section>
-
-
 
         {/* NEXT STEPS (REWRITTEN AS INVESTMENT) */}
         <section className="px-6 lg:px-12 py-32 bg-luxury-slate text-white relative overflow-hidden">
@@ -427,7 +462,10 @@ export default function WebsitesPage() {
               viewport={{ once: true }}
               className="text-4xl md:text-7xl font-serif mb-10 tracking-tight leading-tight"
             >
-              See What Your Website <span className="text-luxury-gold italic">Could Be Doing Better</span>
+              See What Your Website{" "}
+              <span className="text-luxury-gold italic">
+                Could Be Doing Better
+              </span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -435,7 +473,7 @@ export default function WebsitesPage() {
               viewport={{ once: true }}
               className="text-xl text-white/40 max-w-4xl mx-auto font-light leading-relaxed font-light italic"
             >
-              Solutions like this typically start around €1,800 depending on the
+              Solutions like this typically start around €2,500 depending on the
               size of the site and the level of optimization. The next step is a
               short call where we look at your current website, identify where
               couples are dropping off, and outline exactly how we would
@@ -456,7 +494,10 @@ export default function WebsitesPage() {
               </div>
 
               <h3 className="text-3xl md:text-5xl font-serif text-white mb-10 tracking-tight leading-tight">
-                Websites and Landing Pages for <span className="text-luxury-gold italic">Wedding Planners and Venues</span>
+                Websites and Landing Pages for{" "}
+                <span className="text-luxury-gold italic">
+                  Wedding Planners and Venues
+                </span>
               </h3>
 
               <p className="text-white/40 text-lg mb-16 font-light leading-relaxed italic border-l border-luxury-gold/30 pl-8">
@@ -470,18 +511,24 @@ export default function WebsitesPage() {
                   {[
                     "Modern luxury design",
                     "Conversion focused structure",
-                    "Mobile and speed optimization"
+                    "Mobile and speed optimization",
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-4"><CheckCircle size={16} className="text-luxury-gold" /> {item}</li>
+                    <li key={i} className="flex items-center gap-4">
+                      <CheckCircle size={16} className="text-luxury-gold" />{" "}
+                      {item}
+                    </li>
                   ))}
                 </ul>
                 <ul className="text-white/60 space-y-6 text-[10px] uppercase tracking-[0.25em] font-bold">
                   {[
                     "Inquiry forms for better fit",
                     "SEO foundations",
-                    "Built around trust and positioning"
+                    "Built around trust and positioning",
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-4"><CheckCircle size={16} className="text-luxury-gold" /> {item}</li>
+                    <li key={i} className="flex items-center gap-4">
+                      <CheckCircle size={16} className="text-luxury-gold" />{" "}
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -493,14 +540,17 @@ export default function WebsitesPage() {
                 >
                   <span className="relative z-10 flex items-center gap-4">
                     Book a Short Call
-                    <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform duration-700" />
+                    <ArrowRight
+                      size={20}
+                      className="group-hover:translate-x-2 transition-transform duration-700"
+                    />
                   </span>
                   <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                 </Link>
 
                 <p className="text-white/20 text-[10px] uppercase tracking-[0.4em] font-bold text-center leading-relaxed">
-                  If it looks like a good fit, we secure the investment and begin
-                  building the new site.
+                  If it looks like a good fit, we secure the investment and
+                  begin building the new site.
                 </p>
               </div>
             </div>

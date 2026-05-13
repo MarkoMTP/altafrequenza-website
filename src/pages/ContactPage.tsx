@@ -1,34 +1,77 @@
 import { Helmet } from "react-helmet-async";
-import { useState } from "react";
-import { Mail, Calendar, CheckCircle, Sparkles, Send, Globe, Award } from "lucide-react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
+import {
+  Mail,
+  Calendar,
+  CheckCircle,
+  Sparkles,
+  Send,
+  Globe,
+  Award,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+type ContactFormData = {
+  fullName: string;
+  email: string;
+  website: string;
+  services: string[];
+  marketingBudget: string;
+  message: string;
+};
+
+type ContactTextField = Exclude<keyof ContactFormData, "services">;
+
+const initialFormData: ContactFormData = {
+  fullName: "",
+  email: "",
+  website: "",
+  services: [],
+  marketingBudget: "",
+  message: "",
+};
+
+const serviceOptions = [
+  "Growth System",
+  "SMMA / Social Media Management",
+  "Websites & Landing Pages",
+  "AI Wedding Assistant",
+];
+
+const budgetOptions = [
+  "Under €1,000/month",
+  "€1,000-€2,500/month",
+  "€2,500-€5,000/month",
+  "€5,000+/month",
+  "Not sure yet",
+];
+
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    website: "",
-    services: [] as string[],
-    message: "",
-  });
+  const [formData, setFormData] = useState<ContactFormData>(initialFormData);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: any) => {
-    const { name, value, type, checked } = e.target;
-    if (type === "checkbox") {
-      setFormData((prev) => ({
-        ...prev,
-        services: checked
-          ? [...prev.services, value]
-          : prev.services.filter((s) => s !== value),
-      }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
+  const handleFieldChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name as ContactTextField]: value,
+    }));
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleServiceChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      services: checked
+        ? [...prev.services, value]
+        : prev.services.filter((service) => service !== value),
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     try {
@@ -41,13 +84,7 @@ export default function ContactPage() {
         }
       );
       setSubmitted(true);
-      setFormData({
-        fullName: "",
-        email: "",
-        website: "",
-        services: [],
-        message: "",
-      });
+      setFormData(initialFormData);
     } catch (err) {
       console.error("Error:", err);
     } finally {
@@ -96,9 +133,12 @@ export default function ContactPage() {
               <motion.h1 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-5xl md:text-9xl font-serif text-luxury-slate mb-12 tracking-tighter leading-tight"
+                className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-luxury-slate mb-12 tracking-tighter leading-tight"
               >
-                Contact <span className="text-luxury-gold italic">Us</span>
+                Request Your Free{" "}
+                <span className="text-luxury-gold italic">
+                  Wedding Business Analysis
+                </span>
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0 }}
@@ -156,7 +196,7 @@ export default function ContactPage() {
                             name="fullName"
                             required
                             value={formData.fullName}
-                            onChange={handleChange}
+                            onChange={handleFieldChange}
                             className="w-full bg-luxury-champagne/10 border-b border-luxury-gold/20 p-6 text-luxury-slate placeholder:text-luxury-slate/20 outline-none focus:border-luxury-gold transition-colors font-light"
                             placeholder="Your full name"
                           />
@@ -171,7 +211,7 @@ export default function ContactPage() {
                             name="email"
                             required
                             value={formData.email}
-                            onChange={handleChange}
+                            onChange={handleFieldChange}
                             className="w-full bg-luxury-champagne/10 border-b border-luxury-gold/20 p-6 text-luxury-slate placeholder:text-luxury-slate/20 outline-none focus:border-luxury-gold transition-colors font-light"
                             placeholder="you@yourcompany.com"
                           />
@@ -186,40 +226,78 @@ export default function ContactPage() {
                           type="url"
                           name="website"
                           value={formData.website}
-                          onChange={handleChange}
+                          onChange={handleFieldChange}
                           className="w-full bg-luxury-champagne/10 border-b border-luxury-gold/20 p-6 text-luxury-slate placeholder:text-luxury-slate/20 outline-none focus:border-luxury-gold transition-colors font-light"
                           placeholder="https://"
                         />
                       </div>
 
                       <div className="space-y-8">
-                        <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-luxury-gold block ml-2">
-                           What are you interested in?
-                        </label>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                          {[
-                            "Google Ads Management",
-                            "Social Media Management",
-                            "Websites & Landing Pages",
-                            "AI Wedding Assistant",
-                          ].map((service) => (
-                            <label
-                              key={service}
-                              className={`flex items-center gap-4 group cursor-pointer p-5 rounded-2xl border transition-all duration-500 ${formData.services.includes(service) ? 'bg-luxury-slate text-white border-luxury-slate' : 'bg-white border-luxury-gold/10 hover:border-luxury-gold/50'}`}
-                            >
-                              <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-colors ${formData.services.includes(service) ? 'border-luxury-gold bg-luxury-gold' : 'border-luxury-gold/30'}`}>
-                                {formData.services.includes(service) && <CheckCircle size={14} className="text-luxury-slate" />}
-                              </div>
-                              <input
-                                type="checkbox"
-                                value={service}
-                                checked={formData.services.includes(service)}
-                                onChange={handleChange}
-                                className="hidden"
-                              />
-                              <span className="text-[10px] font-bold uppercase tracking-widest">{service}</span>
-                            </label>
-                          ))}
+                        <div className="space-y-4">
+                          <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-luxury-gold block ml-2">
+                            What do you need help with?
+                          </label>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            {serviceOptions.map((service) => {
+                              const selected =
+                                formData.services.includes(service);
+
+                              return (
+                                <label
+                                  key={service}
+                                  className={`flex cursor-pointer items-center gap-4 rounded-2xl border p-5 transition-all duration-500 ${
+                                    selected
+                                      ? "bg-luxury-slate text-white border-luxury-slate"
+                                      : "bg-white border-luxury-gold/10 hover:border-luxury-gold/50"
+                                  }`}
+                                >
+                                  <input
+                                    type="checkbox"
+                                    name="services"
+                                    value={service}
+                                    checked={selected}
+                                    onChange={handleServiceChange}
+                                    className="sr-only"
+                                  />
+
+                                  <div
+                                    className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md border transition-colors ${
+                                      selected
+                                        ? "border-luxury-gold bg-luxury-gold text-luxury-slate"
+                                        : "border-luxury-gold/30 text-transparent"
+                                    }`}
+                                  >
+                                    <CheckCircle size={13} />
+                                  </div>
+                                  <span className="text-[10px] font-bold uppercase tracking-[0.14em] leading-relaxed break-words">
+                                    {service}
+                                  </span>
+                                </label>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        <div className="space-y-4">
+                          <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-luxury-gold block ml-2">
+                            Marketing Budget
+                          </label>
+                          <select
+                            name="marketingBudget"
+                            required
+                            value={formData.marketingBudget}
+                            onChange={handleFieldChange}
+                            className="w-full appearance-none bg-luxury-champagne/10 border-b border-luxury-gold/20 p-6 text-luxury-slate outline-none focus:border-luxury-gold transition-colors font-light"
+                          >
+                            <option value="" disabled>
+                              Select your monthly marketing budget
+                            </option>
+                            {budgetOptions.map((budget) => (
+                              <option key={budget} value={budget}>
+                                {budget}
+                              </option>
+                            ))}
+                          </select>
                         </div>
                       </div>
 
@@ -231,9 +309,9 @@ export default function ContactPage() {
                           name="message"
                           rows={6}
                           value={formData.message}
-                          onChange={handleChange}
+                          onChange={handleFieldChange}
                           className="w-full bg-luxury-champagne/10 border border-luxury-gold/20 p-8 text-luxury-slate placeholder:text-luxury-slate/20 outline-none focus:border-luxury-gold transition-colors font-light resize-none rounded-[2rem]"
-                          placeholder="What kind of weddings do you want more of? What feels inconsistent right now? Are you looking for more wedding requests, a stronger online presence, a better website, or better visibility through Google, SEO, or AI search?"
+                          placeholder="Tell us briefly what you want to improve or what kind of weddings you want more of."
                         />
                       </div>
 
@@ -316,7 +394,7 @@ export default function ContactPage() {
                       >
                         <span className="relative z-10 flex items-center gap-4">
                            <Calendar size={20} className="text-luxury-gold" />
-                           Book a Strategy Call
+                           Contact Us Now
                         </span>
                         <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                       </a>
