@@ -8,6 +8,18 @@ import { useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
+const GA_MEASUREMENT_ID = "G-GTVM9925ED";
+
+declare global {
+  interface Window {
+    gtag?: (
+      command: "config",
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
+  }
+}
+
 // Layout
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -41,6 +53,20 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
+  return null;
+}
+
+function GoogleAnalyticsPageViews() {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.gtag?.("config", GA_MEASUREMENT_ID, {
+      page_path: `${location.pathname}${location.search}${location.hash}`,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, [location]);
+
   return null;
 }
 
@@ -99,6 +125,7 @@ function App() {
         <CustomCursor />
         <Navigation />
         <ScrollToTop />
+        <GoogleAnalyticsPageViews />
         <Analytics />
         <SpeedInsights />
 
