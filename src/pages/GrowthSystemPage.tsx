@@ -111,8 +111,8 @@ export default function GrowthSystemPage() {
     {
       name: "Search Foundation",
       label: "One-channel system",
-      oldPrice: "Normally €1,250 setup + €950/month",
-      price: "€990 setup + €650/month",
+
+      price: "€990 first month, then €650/month",
       description:
         "For planners who want to start lean with Google Search and capture couples already looking for a planner.",
       includes: [
@@ -130,8 +130,8 @@ export default function GrowthSystemPage() {
     {
       name: "Planner Growth System",
       label: "Multi-channel system",
-      oldPrice: "Normally €1,500 setup + €1,500/month",
-      price: "€1,440 setup + €990/month",
+
+      price: "€1,440 first month, then €990/month",
       description:
         "For planners who want Google Search, Meta Ads, and retargeting working together to create more touchpoints before couples decide.",
       includes: [
