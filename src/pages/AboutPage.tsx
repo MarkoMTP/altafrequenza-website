@@ -27,13 +27,12 @@ export default function AboutPage() {
     <>
       <Helmet>
         <title>
-          About Marko Matković | Wedding Planner & Venue Marketing Specialist |
-          Alta Frequenza
+          About Alta Frequenza | Wedding Planner & Venue Marketing Agency
         </title>
 
         <meta
           name="description"
-          content="Learn more about Marko Matković, founder of Alta Frequenza — a marketing agency specialized in wedding planners and wedding venues. Discover why Alta Frequenza was created and how our focused approach helps wedding businesses get the visibility and inquiries they deserve."
+          content="Learn more about Alta Frequenza, a marketing agency specialized in wedding planners and wedding venues. Discover why Alta Frequenza was created and how our focused approach helps wedding businesses get the visibility and inquiries they deserve."
         />
 
         <meta
@@ -56,7 +55,7 @@ export default function AboutPage() {
         />
         <meta
           property="og:description"
-          content="Founded by Marko Matković, Alta Frequenza focuses exclusively on helping wedding professionals and venues grow through specialized marketing systems."
+          content="Alta Frequenza focuses exclusively on helping wedding professionals and venues grow through specialized marketing systems."
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/logo.png" />
@@ -91,13 +90,13 @@ export default function AboutPage() {
                   variants={fadeIn}
                   className="text-4xl sm:text-5xl md:text-8xl font-serif text-luxury-slate mb-6 sm:mb-10 leading-[1.05] tracking-tight"
                 >
-                  I'm Marko Matković and I built a marketing system made <span className="text-luxury-gold italic">specifically</span> for wedding planners and venues.
+                  A marketing agency built <span className="text-luxury-gold italic">specifically</span> for wedding planners and venues.
                 </motion.h1>
 
                 <motion.div variants={fadeIn} className="space-y-5 sm:space-y-8 text-base sm:text-xl text-luxury-slate/60 font-light leading-relaxed italic">
                   <p>
                     Most agencies work with restaurants, real estate, dentists,
-                    e-commerce… I chose one world and went all-in: wedding
+                    e-commerce… we chose one world and went all-in: wedding
                     businesses.
                   </p>
                   <p>
@@ -108,26 +107,27 @@ export default function AboutPage() {
                 </motion.div>
               </motion.div>
 
-              {/* FOUNDER CARD */}
+              {/* AGENCY CARD */}
               <div className="relative group">
                 <div className="absolute -inset-4 bg-luxury-gold/10 blur-2xl rounded-[2rem] sm:rounded-[4rem] md:group-hover:bg-luxury-gold/20 md:transition-all md:duration-700" />
                 <div className="relative bg-white p-7 sm:p-12 lg:p-16 rounded-[2rem] sm:rounded-[4rem] border border-luxury-gold/10 shadow-2xl text-center">
                   <div className="w-32 sm:w-40 h-32 sm:h-40 rounded-full overflow-hidden mx-auto mb-6 sm:mb-10 border-4 border-luxury-gold/20 p-2 relative">
                     <img
                       src="https://www.dropbox.com/scl/fi/hsv6bsy3n85vbmxyljd4h/myself.JPG?rlkey=93y62fxttby3uwmzwj0or1k39&st=kjs4nish&raw=1"
-                      alt="Founder, Marko Matković"
+                      alt="Alta Frequenza founder portrait"
                       className="w-full h-full object-cover rounded-full grayscale md:hover:grayscale-0 md:transition-all md:duration-1000"
                     />
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-serif text-luxury-slate mb-2 tracking-wide italic">
-                    Marko Matković
+                    Alta Frequenza Marketing
                   </h2>
                   <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] sm:tracking-[0.4em] text-luxury-gold mb-6 sm:mb-8 font-bold">
-                    Founder · Alta Frequenza
+                    Wedding Marketing Specialists
                   </p>
                   <p className="text-luxury-slate/50 font-light leading-relaxed text-sm italic border-t border-luxury-gold/10 pt-6 sm:pt-8">
-                    Specialized in marketing for wedding planners & venues,
-                    working with businesses across different regions and markets.
+                    Founded by Marko Matković and built around one clear focus:
+                    helping wedding planners and venues grow with stronger
+                    visibility, trust, and enquiry flow.
                   </p>
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-7xl font-serif text-luxury-slate mb-8 sm:mb-12 tracking-tight leading-tight"
             >
-              From “invisible” talent to a <span className="text-luxury-gold italic">specialized partner</span> for wedding businesses
+              From invisible potential to a <span className="text-luxury-gold italic">specialized partner</span> for wedding businesses
             </motion.h2>
 
             <motion.div
@@ -163,13 +163,14 @@ export default function AboutPage() {
               className="space-y-6 sm:space-y-10 text-base sm:text-xl text-luxury-slate/60 leading-relaxed font-light italic"
             >
               <p>
-                Before officially launching Alta Frequenza Marketing, I was
-                already working behind the scenes with wedding planners and
-                venues, while also managing marketing for my family’s business.
+                Before Alta Frequenza became a dedicated agency, the work had
+                already started behind the scenes with wedding planners, venues,
+                and hospitality businesses that needed a more focused way to
+                attract the right couples.
               </p>
 
               <p>
-                After working with a dozen venues and wedding planners, I kept
+                After working with a dozen venues and wedding planners, we kept
                 seeing the same pattern: incredible work, beautiful weddings and
                 happy couples but inconsistent inquiries and visibility.
               </p>
@@ -181,11 +182,11 @@ export default function AboutPage() {
               </p>
 
               <p className="text-luxury-slate not-italic pt-8 sm:pt-10 border-t border-luxury-gold/10">
-                That’s why in <span className="text-luxury-gold font-bold">2025</span>, I officially launched{" "}
-                <span className="font-bold uppercase tracking-[0.14em] sm:tracking-widest text-xs sm:text-sm">Alta Frequenza Marketing</span>, not as a generic
+                That’s why in <span className="text-luxury-gold font-bold">2025</span>,{" "}
+                <span className="font-bold uppercase tracking-[0.14em] sm:tracking-widest text-xs sm:text-sm">Alta Frequenza Marketing</span> was launched not as a generic
                 agency, but as a specialist focused only on wedding planners and
-                wedding venues. The goal was simple: build a system that finally
-                matches the quality of your work with the visibility you
+                wedding venues. The goal was simple: build systems that finally
+                match the quality of your work with the visibility you
                 deserve.
               </p>
             </motion.div>
@@ -201,7 +202,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold font-bold mb-6 sm:mb-10"
             >
-              WHY I CHOSE ONE INDUSTRY
+              WHY WE CHOSE ONE INDUSTRY
             </motion.p>
 
             <motion.h2
@@ -210,7 +211,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-3xl sm:text-4xl md:text-7xl font-serif text-luxury-slate mb-8 sm:mb-12 tracking-tight leading-tight"
             >
-              I don’t try to be the best at everything, just at <span className="text-luxury-gold italic">wedding marketing</span>.
+              We don’t try to be the best at everything, just at <span className="text-luxury-gold italic">wedding marketing</span>.
             </motion.h2>
 
             <motion.p
@@ -220,7 +221,7 @@ export default function AboutPage() {
               className="text-base sm:text-xl text-luxury-slate/60 mb-12 sm:mb-20 font-light italic"
             >
               While most agencies split their attention across 20 different
-              niches, I decided to master one:{" "}
+              niches, we chose to master one:{" "}
               <span className="text-luxury-slate font-bold not-italic">wedding planners and venues</span>.
             </motion.p>
 
@@ -228,7 +229,7 @@ export default function AboutPage() {
               <div className="p-7 sm:p-10 lg:p-12 bg-white rounded-[2rem] sm:rounded-[3.5rem] border border-luxury-gold/10 shadow-sm">
                 <div className="text-luxury-gold font-bold text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] mb-6 sm:mb-10">Behavioral Insights</div>
                 <p className="text-luxury-slate/50 font-light italic mb-6 sm:mb-8">
-                  I’ve built a system around how couples really behave when
+                  Our systems are built around how couples really behave when
                   they’re planning a wedding:
                 </p>
                 <ul className="space-y-4 sm:space-y-6">
@@ -249,7 +250,7 @@ export default function AboutPage() {
               <div className="p-7 sm:p-10 lg:p-12 bg-white rounded-[2rem] sm:rounded-[3.5rem] border border-luxury-gold/10 shadow-sm">
                 <div className="text-luxury-gold font-bold text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] mb-6 sm:mb-10">Brand Strategy</div>
                 <p className="text-luxury-slate/50 font-light italic mb-6 sm:mb-8">
-                  I also focus on how your online presence supports those
+                  We also focus on how your online presence supports those
                   decisions:
                 </p>
                 <ul className="space-y-4 sm:space-y-6">
@@ -292,7 +293,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="text-[9px] sm:text-[10px] uppercase tracking-[0.24em] sm:tracking-[0.4em] text-luxury-gold font-bold mb-6 sm:mb-10"
             >
-              MY PHILOSOPHY
+              OUR PHILOSOPHY
             </motion.p>
 
             <motion.h2
@@ -311,11 +312,11 @@ export default function AboutPage() {
               className="space-y-5 sm:space-y-8 text-base sm:text-xl text-white/50 leading-relaxed font-light italic"
             >
               <p>
-                My mission is simple: <span className="text-white font-bold not-italic">help wedding businesses get the right couples, consistently</span>.
+                Our mission is simple: <span className="text-white font-bold not-italic">help wedding businesses get the right couples, consistently</span>.
               </p>
 
               <p>
-                I don’t believe planners should lose clients to competitors with
+                We don’t believe planners should lose clients to competitors with
                 weaker work but better marketing. Yet that’s what happens every
                 day when visibility and trust are missing.
               </p>
@@ -371,7 +372,7 @@ export default function AboutPage() {
             >
               Whether you’re a planner or a venue, if you want clearer
               marketing, stronger visibility, and more aligned couples in your
-              inbox, I’d be happy to see if we’re a good fit to work together.
+              inbox, we’d be happy to see if we’re a good fit to work together.
             </motion.p>
 
             <div>
