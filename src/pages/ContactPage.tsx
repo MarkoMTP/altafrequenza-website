@@ -81,7 +81,7 @@ export default function ContactPage() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
-        }
+        },
       );
       setSubmitted(true);
       setFormData(initialFormData);
@@ -105,8 +105,14 @@ export default function ContactPage() {
           name="keywords"
           content="contact wedding marketing agency, wedding planner marketing, wedding venue marketing, google ads wedding planners, social media wedding planners, wedding planner website design, SEO for wedding planners, GEO for wedding businesses"
         />
-        <meta property="og:title" content="Contact Alta Frequenza | Marketing for Wedding Pros & Venues" />
-        <meta property="og:description" content="Get in touch to discuss marketing support for your wedding business." />
+        <meta
+          property="og:title"
+          content="Contact Alta Frequenza | Marketing for Wedding Pros & Venues"
+        />
+        <meta
+          property="og:description"
+          content="Get in touch to discuss marketing support for your wedding business."
+        />
         <meta property="og:image" content="/logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/logo.png" />
@@ -123,14 +129,14 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Header */}
             <div className="text-center mb-24">
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className="text-[10px] uppercase tracking-[0.4em] text-luxury-gold mb-10 font-bold"
               >
                 START THE CONVERSATION
               </motion.p>
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif text-luxury-slate mb-12 tracking-tighter leading-tight"
@@ -140,7 +146,7 @@ export default function ContactPage() {
                   Wedding Business Analysis
                 </span>
               </motion.h1>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
@@ -155,19 +161,19 @@ export default function ContactPage() {
             {/* Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
               {/* LEFT — FORM */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
                 className="lg:col-span-7 bg-white p-12 lg:p-20 rounded-[4rem] border border-luxury-gold/10 shadow-[0_50px_100px_-20px_rgba(15,23,42,0.1)] relative"
               >
                 <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none">
-                   <Sparkles size={120} />
+                  <Sparkles size={120} />
                 </div>
 
                 <AnimatePresence mode="wait">
                   {submitted ? (
-                    <motion.div 
+                    <motion.div
                       key="success"
                       initial={{ opacity: 0, scale: 0.9 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -180,16 +186,20 @@ export default function ContactPage() {
                         Message Received
                       </h3>
                       <p className="text-luxury-slate/50 max-w-md font-light italic text-lg leading-relaxed">
-                        Thanks for reaching out. We’ll review your message and get
-                        back to you shortly with the best next step.
+                        Thanks for reaching out. We’ll review your message and
+                        get back to you shortly with the best next step.
                       </p>
                     </motion.div>
                   ) : (
-                    <form key="form" onSubmit={handleSubmit} className="space-y-12">
+                    <form
+                      key="form"
+                      onSubmit={handleSubmit}
+                      className="space-y-12"
+                    >
                       <div className="grid md:grid-cols-2 gap-10">
                         <div className="space-y-4">
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-luxury-gold block ml-2">
-                             Full Name
+                            Full Name
                           </label>
                           <input
                             type="text"
@@ -204,7 +214,7 @@ export default function ContactPage() {
 
                         <div className="space-y-4">
                           <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-luxury-gold block ml-2">
-                             Email
+                            Email
                           </label>
                           <input
                             type="email"
@@ -220,7 +230,7 @@ export default function ContactPage() {
 
                       <div className="space-y-4">
                         <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-luxury-gold block ml-2">
-                           Website or Instagram
+                          Website or Instagram
                         </label>
                         <input
                           type="text"
@@ -304,7 +314,7 @@ export default function ContactPage() {
 
                       <div className="space-y-4">
                         <label className="text-[10px] font-bold uppercase tracking-[0.3em] text-luxury-gold block ml-2">
-                           Tell us a bit about your business
+                          Tell us a bit about your business
                         </label>
                         <textarea
                           name="message"
@@ -323,7 +333,12 @@ export default function ContactPage() {
                       >
                         <span className="relative z-10 flex items-center gap-4">
                           {loading ? "Sending..." : "Send Message"}
-                          {!loading && <Send size={20} className="group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700" />}
+                          {!loading && (
+                            <Send
+                              size={20}
+                              className="group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-700"
+                            />
+                          )}
                         </span>
                         <div className="absolute inset-0 bg-luxury-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                       </button>
@@ -333,7 +348,7 @@ export default function ContactPage() {
               </motion.div>
 
               {/* RIGHT — INFO */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
@@ -341,9 +356,9 @@ export default function ContactPage() {
               >
                 <div className="bg-white p-12 rounded-[4rem] border border-luxury-gold/10 shadow-sm relative overflow-hidden group">
                   <div className="absolute top-0 right-0 p-8 opacity-[0.02] group-hover:scale-110 transition-transform duration-1000">
-                     <Award size={100} />
+                    <Award size={100} />
                   </div>
-                  
+
                   <h3 className="text-3xl font-serif text-luxury-slate mb-10 italic border-l-2 border-luxury-gold pl-8">
                     What Happens Next
                   </h3>
@@ -352,13 +367,15 @@ export default function ContactPage() {
                       "We review your message, current online presence, and the way your business is positioned today.",
                       "If it looks like a strong fit, we invite you to a private strategy call.",
                       "You get a clear recommendation on what would make the most sense for your business.",
-                      "No pressure, no complicated process, and no long term commitment required."
+                      "No pressure, no complicated process, and no long term commitment required.",
                     ].map((item, i) => (
                       <li key={i} className="flex gap-6 group">
-                         <div className="text-luxury-gold font-serif italic text-xl">0{i+1}</div>
-                         <p className="text-luxury-slate/50 text-base leading-relaxed font-light group-hover:text-luxury-slate transition-colors">
-                           {item}
-                         </p>
+                        <div className="text-luxury-gold font-serif italic text-xl">
+                          0{i + 1}
+                        </div>
+                        <p className="text-luxury-slate/50 text-base leading-relaxed font-light group-hover:text-luxury-slate transition-colors">
+                          {item}
+                        </p>
                       </li>
                     ))}
                   </ul>
@@ -366,11 +383,12 @@ export default function ContactPage() {
 
                 <div className="bg-luxury-slate text-white p-12 rounded-[4rem] shadow-2xl relative overflow-hidden group">
                   <div className="absolute bottom-0 right-0 p-8 opacity-[0.05] group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-1000">
-                     <Globe size={120} />
+                    <Globe size={120} />
                   </div>
 
                   <h3 className="text-2xl font-serif mb-10 italic text-luxury-gold">
-                    Prefer to Reach <span className="text-white">Out Directly?</span>
+                    Prefer to Reach{" "}
+                    <span className="text-white">Out Directly?</span>
                   </h3>
 
                   <div className="space-y-10">
@@ -391,11 +409,11 @@ export default function ContactPage() {
                         href="https://calendly.com/contact-altafrequenzamarketing/30min"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative inline-flex items-center justify-center gap-6 w-full py-8 bg-white/5 border border-white/10 text-white text-[10px] uppercase tracking-[0.4em] font-bold rounded-full overflow-hidden hover:bg-white hover:text-luxury-slate transition-all duration-700"
+                        className="group relative inline-flex items-center justify-center gap-6 w-full py-8 bg-white/5 border border-white/10 text-white text-[10px] uppercase tracking-[0.4em] font-bold rounded-full overflow-hidden  hover:text-luxury-slate transition-all duration-700"
                       >
                         <span className="relative z-10 flex items-center gap-4">
-                           <Calendar size={20} className="text-luxury-gold" />
-                           Contact Us Now
+                          <Calendar size={20} className="text-luxury-gold" />
+                          Book a call Directly
                         </span>
                         <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-700" />
                       </a>
