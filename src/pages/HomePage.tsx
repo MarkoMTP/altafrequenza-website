@@ -301,7 +301,7 @@ export default function HomePage() {
                 className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full"
               >
                 <Link
-                  to="/contact"
+                  to="/free-wedding-business-analysis"
                   className="group relative inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-3 sm:gap-4 px-5 sm:px-12 py-4 sm:py-6 bg-luxury-slate text-white text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden leading-relaxed text-center"
                 >
                   <span className="relative z-10 min-w-0">
@@ -655,7 +655,7 @@ export default function HomePage() {
                       {cs.description}
                     </p>
                     <Link
-                      to="/contact"
+                      to="/free-wedding-business-analysis"
                       className={`inline-flex items-center gap-3 text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] font-bold transition-colors duration-300 ${
                         index % 2 === 0
                           ? "text-luxury-slate hover:text-luxury-gold"
@@ -671,7 +671,7 @@ export default function HomePage() {
 
             <div className="mt-14 sm:mt-24 text-center">
               <Link
-                to="/contact"
+                to="/free-wedding-business-analysis"
                 className="group relative inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-3 sm:gap-4 px-5 sm:px-12 py-4 sm:py-6 bg-luxury-slate text-white text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-2xl overflow-hidden leading-relaxed text-center"
               >
                 <span className="relative z-10 min-w-0">
@@ -978,7 +978,7 @@ export default function HomePage() {
             </motion.p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6">
               <Link
-                to="/contact"
+                to="/free-wedding-business-analysis"
                 className="group relative inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-3 sm:gap-6 px-5 sm:px-16 py-5 sm:py-8 bg-luxury-slate text-white text-[9px] sm:text-[10px] uppercase tracking-[0.16em] sm:tracking-[0.4em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-full shadow-[0_40px_100px_-20px_rgba(15,23,42,0.3)] overflow-hidden leading-relaxed text-center"
               >
                 <span className="relative z-10 min-w-0">

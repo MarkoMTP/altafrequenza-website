@@ -14,6 +14,17 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion, type Variants } from "framer-motion";
 
+type GrowthPackage = {
+  name: string;
+  label: string;
+  oldPrice?: string;
+  price: string;
+  description: string;
+  includes: string[];
+  cta: string;
+  featured: boolean;
+};
+
 export default function GrowthSystemPage() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState("");
@@ -107,7 +118,7 @@ export default function GrowthSystemPage() {
     },
   ];
 
-  const packages = [
+  const packages: GrowthPackage[] = [
     {
       name: "Search Foundation",
       label: "One-channel system",
@@ -219,7 +230,7 @@ export default function GrowthSystemPage() {
                 className="flex flex-col sm:flex-row gap-4 mb-10"
               >
                 <Link
-                  to="/contact"
+                  to="/free-wedding-business-analysis"
                   className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-3 sm:gap-4 px-5 sm:px-10 py-5 bg-luxury-slate text-white text-[10px] uppercase tracking-[0.12em] sm:tracking-[0.3em] font-bold hover:bg-luxury-gold hover:text-luxury-slate transition-all duration-700 rounded-[1.5rem] sm:rounded-full shadow-2xl overflow-hidden text-center leading-relaxed"
                 >
                   <span className="relative z-10">
@@ -684,15 +695,17 @@ export default function GrowthSystemPage() {
                           : "border-luxury-gold/10 bg-luxury-champagne/40"
                       }`}
                     >
-                      <p
-                        className={`text-sm line-through mb-2 ${
-                          offer.featured
-                            ? "text-white/30"
-                            : "text-luxury-slate/30"
-                        }`}
-                      >
-                        {offer.oldPrice}
-                      </p>
+                      {offer.oldPrice && (
+                        <p
+                          className={`text-sm line-through mb-2 ${
+                            offer.featured
+                              ? "text-white/30"
+                              : "text-luxury-slate/30"
+                          }`}
+                        >
+                          {offer.oldPrice}
+                        </p>
+                      )}
 
                       <p className="text-2xl sm:text-3xl font-serif mb-2">
                         {offer.price}
@@ -801,7 +814,7 @@ export default function GrowthSystemPage() {
             </p>
 
             <Link
-              to="/contact"
+              to="/free-wedding-business-analysis"
               className="group relative inline-flex w-full sm:w-auto items-center justify-center gap-3 sm:gap-6 px-5 sm:px-12 py-6 bg-white text-luxury-slate text-[10px] uppercase tracking-[0.12em] sm:tracking-[0.3em] font-bold hover:bg-luxury-gold transition-all duration-700 rounded-[1.5rem] sm:rounded-full shadow-2xl overflow-hidden text-center leading-relaxed"
             >
               <span className="relative z-10 flex items-center justify-center gap-3 sm:gap-5">

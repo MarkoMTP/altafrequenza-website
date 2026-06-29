@@ -33,6 +33,7 @@ import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
 import GrowthSystemPage from "./pages/GrowthSystemPage";
 import SocialMediaPage from "./pages/SocialMediaPage";
+import FreeWeddingBusinessAnalysisPage from "./pages/FreeWeddingBusinessAnalysisPage";
 
 // Blog posts
 import LuxuryClientPsychology from "./pages/blog/LuxuryClientPsychology";
@@ -144,6 +145,10 @@ function App() {
             />
             <Route path="/social-media" element={<SocialMediaPage />} />
             <Route path="/website" element={<WebsitesPage />} />
+            <Route
+              path="/free-wedding-business-analysis"
+              element={<FreeWeddingBusinessAnalysisPage />}
+            />
             <Route
               path="/marketing-partner"
               element={<MarketingPartnerPage />}
